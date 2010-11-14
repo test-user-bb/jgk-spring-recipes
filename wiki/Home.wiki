@@ -8,7 +8,7 @@ I am not employed by SpringSource nor do I speak on its behalf.  I am, however, 
 All the projects in here are maven-based projects.  Some are console applications.  Some are web applications.  And others are just to demonstrate an interesting portion of Spring.
 
 = Sub Projects =
-== simplest ==
+== simple-context ==
  * Ultra-simple spring project.
  * Demonstrates:
   * Loading an application context from an .xml file. 
