@@ -1,0 +1,44 @@
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.jgk</groupId>
+	<artifactId>jgk-spring-recipes</artifactId>
+	<packaging>pom</packaging>
+	<version>0.0.1-SNAPSHOT</version>
+	<properties>
+	  <junit.version>4.8.2</junit.version>
+	  <maven.compiler.source>1.6</maven.compiler.source>
+	  <maven.compiler.target>1.6</maven.compiler.target>
+	  <maven.compiler.plugin.version>2.3.2</maven.compiler.plugin.version>
+	</properties>
+	<organization>
+		<name>John G. Kroubalkian</name>
+		<url>https://code.google.com/p/jgk-spring-recipes/</url>
+	</organization>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>${maven.compiler.plugin.version}</version>
+				<configuration>
+					<showWarnings>true</showWarnings>
+					<source>${maven.compiler.source}</source>
+					<target>${maven.compiler.target}</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${junit.version}</version>
+			<type>jar</type>
+			<scope>compile</scope>
+			
+		</dependency>
+	</dependencies>
+	<modules>
+		<module>simple-context</module>
+	</modules>
+</project>
