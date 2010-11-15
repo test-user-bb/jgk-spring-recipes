@@ -25,6 +25,10 @@ All the projects in here are maven-based projects.  Some are console application
  * Restful Services
 
 = Sub Projects =
+== simple-repository ==
+ * Demonstrate DAO or Repository
+ * Provide stubs for testing
+ * Think about various injection strategies
 == simple-context ==
  * Ultra-simple spring project.
  * Demonstrates:
