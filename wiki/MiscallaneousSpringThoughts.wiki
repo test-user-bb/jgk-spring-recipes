@@ -1,4 +1,6 @@
 #summary Loose ideas about Spring.
 
  * DAO = Repository:  represent your persistence source (database, file system, etc.)
- 
+ * Dependency Injection (DI)
+  * enables different collaborators to be injected for different environments. (test, production, test database, real/production database)
+  * enables testing of classes independent of their collaborators.
