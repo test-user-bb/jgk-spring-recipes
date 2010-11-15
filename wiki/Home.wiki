@@ -13,3 +13,6 @@ All the projects in here are maven-based projects.  Some are console application
  * Demonstrates:
   * Loading an application context from an .xml file. 
   * Provides a simple infrastructure for Spring.
+== simple-context-with-spring-annotations ==
+ * Shows using an annotation
+ * Uses <context:component-scan .../>
