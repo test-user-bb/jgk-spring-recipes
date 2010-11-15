@@ -1,0 +1,3 @@
+#summary Preparation for SpringSource certification.
+
+* [http://www.youtube.com/watch?v=biNx-t2busI Video]
