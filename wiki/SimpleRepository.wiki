@@ -5,5 +5,5 @@
  * In Spring we refer to Repository objects
 
 = Strategy =
- * Develop a Person Repository
+ * Develop a Person Repository (used to load Person objects)
  * Base element is a Person object (name info and date of birth)
