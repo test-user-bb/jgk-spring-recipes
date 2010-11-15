@@ -8,9 +8,9 @@
     <version>0.0.1-SNAPSHOT</version>
   </parent>
   <groupId>com.jgk</groupId>
-  <artifactId>simple-context</artifactId>
-  <version>${project.parent.version}</version>
-  <name>simple-context</name>
+  <artifactId>simple-context-with-spring-annotations</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>simple-context-with-spring-annotations</name>
   <url>http://maven.apache.org</url>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
