@@ -37,8 +37,16 @@
 			<scope>compile</scope>
 			
 		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>3.0.5.RELEASE</version>
+			<type>jar</type>
+			<scope>compile</scope>
+		</dependency>
 	</dependencies>
 	<modules>
 		<module>simple-context</module>
+		<module>simple-context-with-spring-annotations</module>
 	</modules>
 </project>
