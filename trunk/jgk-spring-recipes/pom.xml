@@ -48,5 +48,6 @@
 	<modules>
 		<module>simple-context</module>
 		<module>simple-context-with-spring-annotations</module>
+		<module>simple-repository</module>
 	</modules>
 </project>
