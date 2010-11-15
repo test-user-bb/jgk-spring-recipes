@@ -4,3 +4,12 @@
  * Dependency Injection (DI)
   * enables different collaborators to be injected for different environments. (test, production, test database, real/production database)
   * enables testing of classes independent of their collaborators.
+ * Constructor Injection advantages:
+  * mandatory elements
+  * immutable
+  * natural to Java
+ * Setter Injection advantages:
+  * avoid long constructor parameter lists
+  * can be inherited
+  * clearer/easier to understand since the properties have names
+  * constructor args do not have names
