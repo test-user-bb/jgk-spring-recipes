@@ -1,0 +1,5 @@
+#summary DAO's and Repositories
+
+= Introduction =
+ * Data Access Object (DAO) is a front-end to a data repository
+ * In Spring we refer to Repository objects
