@@ -1,0 +1,4 @@
+#summary Loose ideas about Spring.
+
+ * DAO = Repository:  represent your persistence source (database, file system, etc.)
+ 
