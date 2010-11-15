@@ -13,3 +13,4 @@
   * can be inherited
   * clearer/easier to understand since the properties have names
   * constructor args do not have names
+ * [http://www.youtube.com/watch?v=biNx-t2busI Preparation Video]
