@@ -1,13 +1,29 @@
-#summary One-sentence summary of this page.
+#summary Loose ideas about Spring.
 
-= Introduction =
-
-Add your content here.
-
-
-= Details =
-
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+ * Spring Testability:
+  * easier to test pieces of application in isolation
+  * decouples objects from environment
+  * Junit annotations:  @Test, @Before, @After
+ * Spring Data Access
+  * manages resources (connections, transactions)
+  * provides API helpers (templates)
+  * Spring supports many data access technologies, including:
+   * JDBC
+   * Hibernate
+   * JPA
+   * iBatis
+ * DAO = Repository:  represent your persistence source (database, file system, etc.)
+ * Dependency Injection (DI)
+  * enables different collaborators to be injected for different environments. (test, production, test database, real/production database)
+  * enables testing of classes independent of their collaborators.
+ * Constructor Injection advantages:
+  * mandatory elements
+  * immutable
+  * natural to Java
+ * Setter Injection advantages:
+  * avoid long constructor parameter lists
+  * can be inherited
+  * clearer/easier to understand since the properties have names
+  * constructor args do not have names
+ * [http://www.youtube.com/watch?v=biNx-t2busI Preparation Video]
+ * In Spring a rollback of a transaction occurs in response to a RuntimeException, but if a checked exception is thrown then no rollback.  You can configure so a specific checked exception causes a rollback.
