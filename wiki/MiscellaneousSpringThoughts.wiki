@@ -1,5 +1,7 @@
 #summary Loose ideas about Spring.
 
+ * Common way to get an ApplicationContext:
+  * ApplicationContext ctx = new ClassPathXmlApplicationContext("application-context.xml");
  * Types of Spring Configuration Information
   * XML
   * Annotations
