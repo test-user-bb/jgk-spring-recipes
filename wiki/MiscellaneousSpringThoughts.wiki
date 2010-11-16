@@ -1,5 +1,10 @@
 #summary Loose ideas about Spring.
 
+ * Types of Spring Configuration Information
+  * XML
+  * Annotations
+  * JavaConfig
+  * Factory Method
  * Spring Triangle:
   * Dependency Injection (DI)
   * Aspect-Oriented Programming (AOP)
