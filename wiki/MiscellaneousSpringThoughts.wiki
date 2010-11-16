@@ -1,5 +1,9 @@
 #summary Loose ideas about Spring.
 
+ * Spring Triangle:
+  * Dependency Injection (DI)
+  * Aspect-Oriented Programming (AOP)
+  * Enterprise Service Abstractions
  * Spring Chronology:
    * Spring 3.0 (12/09)
     * requires Java 1.5+ and JUnit 4.7+
