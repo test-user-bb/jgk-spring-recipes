@@ -7,6 +7,7 @@
  * Spring Data Access
   * manages resources (connections, transactions)
   * provides API helpers (templates)
+  * consistent approach to data access
   * Spring supports many data access technologies, including:
    * JDBC
    * Hibernate
