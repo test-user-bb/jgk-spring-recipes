@@ -14,3 +14,4 @@
   * clearer/easier to understand since the properties have names
   * constructor args do not have names
  * [http://www.youtube.com/watch?v=biNx-t2busI Preparation Video]
+ * In Spring a rollback of a transaction occurs in response to a RuntimeException, but if a checked exception is thrown then no rollback.  You can configure so a specific checked exception causes a rollback.
