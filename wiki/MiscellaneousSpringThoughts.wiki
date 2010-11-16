@@ -1,5 +1,18 @@
 #summary Loose ideas about Spring.
 
+ * Spring Chronology:
+   * Spring 3.0 (12/09)
+    * requires Java 1.5+ and JUnit 4.7+
+    * REST Support, JavaConfig, SpEL, even more annotations
+   * Spring 2.5 (11/07, latest 2.5.6)
+    * Requires Java 1.4+, supports JUnit 4
+    * Annotation DI, @MVC controllers, XML namespaces
+   * Spring 2.0 (10/06, latest 2.0.8)
+    * JDK 1.3+
+    * XML simplification
+    * Asynchronous JMS
+    * JPA
+    * AspectJ support
  * Spring Testability:
   * easier to test pieces of application in isolation
   * decouples objects from environment
