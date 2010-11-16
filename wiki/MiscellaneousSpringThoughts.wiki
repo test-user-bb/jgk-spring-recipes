@@ -2,7 +2,7 @@
 
  * Spring manages the lifecycle of beans used in an application.
  * ApplicationContext is the container.  It holds bean implementations chosen for the current deployment.  As such, it conceals the implementation details.
- * Common way to get an ApplicationContext:
+ * Common way to get an ApplicationContext`:`
   * ApplicationContext ctx = new ClassPathXmlApplicationContext("application-context.xml");
  * Types of Spring Configuration Information
   * XML
