@@ -8,6 +8,13 @@
   * manages resources (connections, transactions)
   * provides API helpers (templates)
   * consistent approach to data access
+  * Example:  int count = jdbcTemplate.queryForInt("SELECT COUNT(*) FROM PATIENT");
+   * Gets connection (from pool)
+   * Uses a transaction (if required)
+   * Executes the statement
+   * Process the result set
+   * Handles exceptions
+   * Releases the connection
   * Spring supports many data access technologies, including:
    * JDBC
    * Hibernate
