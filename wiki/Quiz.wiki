@@ -17,6 +17,11 @@
 {{{ 		
   <property name="url" value="http://www.kroubalkian.com"/>  
 }}}
+ * String array conversion example:
+{{{
+     <property name="teamNames"
+				  value="Blue Dolphins,Blue Dragons,Killer Bees, Pink Bonnets"/>
+}}}
  * When does Spring create and wire your components together?
   * when you instantiate the ApplicationContext (or BeanFactory)
  * What is the effect of wiring for both constructor injection and setter injection? _(silly to do this)_
