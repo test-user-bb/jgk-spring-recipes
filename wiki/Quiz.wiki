@@ -1,5 +1,5 @@
 #summary Question and answer
- * What is the effect of wiring for both constructor injection and setter injection?
+ * What is the effect of wiring for both constructor injection and setter injection? _(silly to do this)_
   * Both injections occur in the following order:
    # constructor injection
    # setter injection
