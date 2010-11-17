@@ -3,6 +3,7 @@ package com.jgk.springrecipes.simplecontext;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import com.jgk.springrecipes.simplecontext.beans.Person;
 import com.jgk.springrecipes.simplecontext.beans.SuperSimpleBean;
 
 /**
@@ -18,7 +19,10 @@ public class Main
 		ssb1.doSomething();
 		SuperSimpleBean ssb2 = (SuperSimpleBean) context.getBean("superSimpleBean");
 		ssb2.doSomething();
+		
 		System.out.println(ssb1==ssb2);
+		Person person = (Person) context.getBean("jed");
+		System.out.println(person);
 	}
     public static void main( String[] args )
     {
