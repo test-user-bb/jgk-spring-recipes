@@ -1,4 +1,6 @@
 #summary Question and answer
+ * When does Spring create and wire your components together?
+  * when you instantiate the ApplicationContext (or BeanFactory)
  * What is the effect of wiring for both constructor injection and setter injection? _(silly to do this)_
   * Both injections occur in the following order:
    # constructor injection
