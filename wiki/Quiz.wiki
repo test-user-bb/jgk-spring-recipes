@@ -1,4 +1,18 @@
 #summary Question and answer
+
+ * What Types of Conversions is Spring Capable of Out of the Box?	
+  * Java primitives
+  * Byte arrays
+  * String arrays
+  * Java wrapper classes
+  * Java classes
+  * String
+  * java.lang.Class
+  * java.net.URL
+  * java.io.File
+  * java.util.Locale
+  * java.util.Properties
+  * java.util.Collection
  * When does Spring create and wire your components together?
   * when you instantiate the ApplicationContext (or BeanFactory)
  * What is the effect of wiring for both constructor injection and setter injection? _(silly to do this)_
