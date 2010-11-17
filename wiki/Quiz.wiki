@@ -1,5 +1,7 @@
 #summary Question and answer
 
+ * What is disambiguation?
+  * The process of declaring Spring properties in an unambiguous manner.
  * What Types of Conversions is Spring Capable of Out of the Box?	
   * Java primitives
   * Byte arrays
