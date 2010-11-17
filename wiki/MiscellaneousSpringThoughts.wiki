@@ -1,5 +1,38 @@
 #summary Loose ideas about Spring.
+ Spring notes:
 
+  when a cyclic dependency use setter injection
+
+ * Automatic Value Type Conversion:
+  * bean definition:
+{{{
+<bean id="person" class="com.jgk.people.Jed">
+  <property name="favoriteNumber" value="42"/>
+</bean>
+}}}
+  * translation:
+{{{
+Person jed = new Jed();
+Integer favoriteNumber = 42;
+person.setFavoriteNumber(favoriteNumber);
+}}}
+ * Lists:
+{{{
+	<bean id="jed" class="com.jgk.springrecipes.simplecontext.beans.PersonImpl">
+ 		<constructor-arg name="lastName" value="Clampett"></constructor-arg>
+		<constructor-arg name="firstName" value="Jed"></constructor-arg>
+		<property name="favoriteNumber" value="43"></property>
+		<property name="children">
+		  <list>
+		  	<ref bean="jethro"/>
+		  	<ref bean="elliemae"/>
+		  	<bean class="com.jgk.springrecipes.simplecontext.beans.PersonImpl">
+				<property name="favoriteNumber" value="87"></property>
+		  	</bean>
+		  </list>
+		</property>
+	</bean>
+}}}
  * Spring manages the lifecycle of beans used in an application.
  * ApplicationContext is the container.  It holds bean implementations chosen for the current deployment.  As such, it conceals the implementation details.
  * Common way to get an ApplicationContext
