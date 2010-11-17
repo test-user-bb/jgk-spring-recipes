@@ -1,5 +1,11 @@
 #summary Question and answer
 
+ * Example of Constructor injection:
+{{{
+		<bean id="person" class="PersonImpl">
+			<constructor-arg value="32"/>
+		</bean>
+}}}  
  * What is disambiguation?
   * The process of declaring Spring properties in an unambiguous manner.
  * What Types of Conversions is Spring Capable of Out of the Box?	
