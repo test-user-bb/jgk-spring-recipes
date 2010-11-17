@@ -1,5 +1,8 @@
 #summary Question and answer
-
+ * What is the effect of wiring for both constructor injection and setter injection?
+  * Both injections occur in the following order:
+   # constructor injection
+   # setter injection
  * The name of the class representing a Spring Container.
   * ApplicationContext
  * The 3 dimensions of the Spring Triangle.
