@@ -14,7 +14,7 @@
  * Spring uses this to generate code to wire beans together.
   * Dependency Injection.
  * The 3 techniques for wiring component together.
-  * Construction injection.
+  * Constructor injection.
   * Setter injection.
   * Factory method injection.
  * The XML element for constructor injection.
