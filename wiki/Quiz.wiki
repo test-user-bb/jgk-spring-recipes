@@ -1,0 +1,34 @@
+#summary Question and answer
+
+ * The name of the class representing a Spring Container.
+  * ApplicationContext
+ * The 3 dimensions of the Spring Triangle.
+  * Dependency Injection.
+  * Aspect Oriented Programming.
+  * Enterprise Extensions.
+ * Spring uses this to generate code to wire beans together.
+  * Dependency Injection.
+ * The 3 techniques for wiring component together.
+  * Construction injection.
+  * Setter injection.
+  * Factory method injection.
+ * The XML element for constructor injection.
+  * constructor-arg
+ * The XML element for setter injection.
+  * property
+ * An XML element for factory injection.
+  * factory-method
+ * This distinguishes a prototype.
+  * One instance per getBean invocation.
+ * Used to inject a reference to a named bean.
+  * ref=...
+ * Used to inject a scalar value.
+  * value=...
+ * Use this XML attribute when a constructor has been overloaded to support parameters of different types.
+  * type=...
+ * Use this XML attribute when a constructor has been overloaded to support multiple parameters of the same type.
+  * index=...
+ * The 3 types of ApplicationContexts.
+  * Classpath
+  * FileSystem
+  * WebApplication
