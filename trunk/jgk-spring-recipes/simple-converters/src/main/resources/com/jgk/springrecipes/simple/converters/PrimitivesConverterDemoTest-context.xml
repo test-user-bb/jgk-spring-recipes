@@ -17,6 +17,13 @@
 	   	<property name="shortAttrib" value="3"/>
 	   	<property name="intAttrib" value="4"/>
 	   	<property name="longAttrib" value="5"/>
+	   	<property name="floatAttrib" value="6.34"/>
+	   	<property name="doubleAttrib" value="5.43"/>
+	   	<property name="booleanAttrib" value="true"/>
+	   	<property name="charAttrib" value="a"/>
+	   	<property name="byteAttrib" value="9"/>
+	   	
+	   	
 	 </bean>
 
 </beans>
