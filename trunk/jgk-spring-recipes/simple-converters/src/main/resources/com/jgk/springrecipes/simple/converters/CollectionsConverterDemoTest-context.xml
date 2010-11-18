@@ -14,6 +14,9 @@
 	<bean id="superSimpleSpringAnnotatedBean" class="com.jgk.springrecipes.simple.context.with.spring.annotations.beans.SuperSimpleSpringAnnotatedBean"/>
 	 -->
 	 <bean id="collectionsConverter" class="com.jgk.springrecipes.simple.converters.CollectionsConverterDemo">
+		<property name="nameAgeMap">
+			<map><entry><key><value>Jed</value></key><value>34</value></entry></map>
+		</property>
 		<property name="numberList">
 			<list>
 			   <value>3</value>
