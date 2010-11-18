@@ -8,14 +8,14 @@
 				              http://www.springframework.org/schema/context/spring-context-3.0.xsd"							
               >
 
-	<!-- enabled processing of @PostConstruct, @PreDestroy and @Required -->
 		
-	<!-- 
-	<bean id="superSimpleSpringAnnotatedBean" class="com.jgk.springrecipes.simple.context.with.spring.annotations.beans.SuperSimpleSpringAnnotatedBean"/>
-	 -->
 	 <bean id="collectionsConverter" class="com.jgk.springrecipes.simple.converters.CollectionsConverterDemo">
 		<property name="nameAgeMap">
-			<map><entry><key><value>Jed</value></key><value>34</value></entry></map>
+			
+			<map>
+				<entry><key><value>Jed</value></key><value>34</value></entry>
+				<entry key="Elliemae" value="21" />
+			</map>
 		</property>
 		<property name="numberList">
 			<list>
