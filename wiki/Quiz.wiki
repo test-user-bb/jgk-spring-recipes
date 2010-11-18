@@ -1,11 +1,18 @@
 #summary Question and answer
 
+ * How do you make a bean that is simply a String?
+{{{
+  Answer:  use constructor-arg
+	 <bean id="someString" class="java.lang.String">
+	    <constructor-arg value="Jed Clampett as some string"/>
+	 </bean>
+}}}
  * How do you make a bean that is simply an Integer?
 {{{
+  Answer:  use constructor-arg
 	 <bean id="someNumber" class="java.lang.Integer">
 	    <constructor-arg value="543"/>
 	 </bean>
-
 }}}
  * Example of Constructor injection:
 {{{
