@@ -1,8 +1,7 @@
 #summary Loose ideas about Spring.
- Spring notes:
 
-  when a cyclic dependency use setter injection
-
+ * [http://static.springsource.org/spring/docs/3.0.x/spring-framework-reference/html/testing.html#integration-testing Spring Integration Testing]
+ * when a cyclic dependency use setter injection
  * Automatic Value Type Conversion:
   * bean definition:
 {{{
