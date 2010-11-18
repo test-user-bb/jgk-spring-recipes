@@ -1,5 +1,12 @@
 #summary Question and answer
 
+ * How do you make a bean that is simply a File?
+{{{
+  Answer:  use constructor-arg
+	 <bean id="someFile" class="java.io.File">
+	    <constructor-arg value="/tmp/passwd"/>
+	 </bean>
+}}}
  * How do you make a bean that is simply a String?
 {{{
   Answer:  use constructor-arg
