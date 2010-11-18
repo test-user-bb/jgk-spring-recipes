@@ -1,6 +1,11 @@
 #summary Loose ideas about Spring.
 
  * [http://static.springsource.org/spring/docs/3.0.x/spring-framework-reference/html/testing.html#integration-testing Spring Integration Testing]
+ * [http://static.springsource.org/spring/docs/3.0.x/spring-framework-reference/html/testing.html#integration-testing Spring Integration Testing] Goals
+  * Spring IoC container caching between test execution.
+  * Dependency Injection of test fixture instances.
+  * Transaction management appropriate to integration testing.
+  * Spring-specific support classes that are useful in writing integration tests.
  * when a cyclic dependency use setter injection
  * Automatic Value Type Conversion:
   * bean definition:
