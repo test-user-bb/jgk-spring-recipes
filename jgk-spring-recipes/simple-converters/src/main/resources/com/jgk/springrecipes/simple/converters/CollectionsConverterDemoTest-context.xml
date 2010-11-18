@@ -10,6 +10,12 @@
 
 		
 	 <bean id="collectionsConverter" class="com.jgk.springrecipes.simple.converters.CollectionsConverterDemo">
+		<property name="emailProperties">
+			<props>
+				<prop key="admin">admin@nospam.com</prop>
+			    <prop key="support">support@nospam.com</prop>
+			</props>
+		</property>
 	    <property name="ageSet">
 	       <set>
 	          <value>4</value>
