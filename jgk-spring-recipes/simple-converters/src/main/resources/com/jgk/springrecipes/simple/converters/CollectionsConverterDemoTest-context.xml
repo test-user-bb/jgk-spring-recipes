@@ -10,8 +10,18 @@
 
 		
 	 <bean id="collectionsConverter" class="com.jgk.springrecipes.simple.converters.CollectionsConverterDemo">
+	    <property name="ageSet">
+	       <set>
+	          <value>4</value>
+	          <value>4</value>
+	          <value>5</value>
+	          <value>4</value>
+	          <value>4</value>
+	          <value>4</value>
+	          <value>4</value>
+	       </set>
+	    </property>
 		<property name="nameAgeMap">
-			
 			<map>
 				<entry><key><value>Jed</value></key><value>34</value></entry>
 				<entry key="Elliemae" value="21" />
