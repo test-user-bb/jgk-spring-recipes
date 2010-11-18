@@ -1,5 +1,18 @@
 #summary Loose ideas about Spring.
 
+ * Spring testing annotations:
+  * @ContextConfiguration
+  * @DirtiesContext
+  * @TestExecutionListeners
+  * @TransactionConfiguration
+  * @Rollback
+  * @BeforeTransaction
+  * @AfterTransaction
+  * @IfProfileValue (junit-related)
+  * @ProfileValueSourceConfiguration (junit-related)
+  * @ExpectedException (junit-related)
+  * @Timed (junit-related)
+  * @Repeat (junit-related)
  * [http://static.springsource.org/spring/docs/3.0.x/spring-framework-reference/html/testing.html#integration-testing Spring Integration Testing]
  * [http://static.springsource.org/spring/docs/3.0.x/spring-framework-reference/html/testing.html#integration-testing Spring Integration Testing] Goals
   * Spring IoC container caching between test execution.
