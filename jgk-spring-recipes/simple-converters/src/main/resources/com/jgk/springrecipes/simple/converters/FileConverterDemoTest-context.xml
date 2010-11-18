@@ -8,24 +8,18 @@
 				              http://www.springframework.org/schema/context/spring-context-3.0.xsd"							
               >
 
-	 <bean id="arraysConverter" class="com.jgk.springrecipes.simple.converters.ArraysConverterDemo">
-		<property name="byteArray">
-		  <array>
-		  	<value>2</value>
-		  	<value>2</value>
-		  	<value>2</value>
-		  	<value>2</value>
-		  </array>
-		</property>	   	
-		<property name="stringArray">
-		  <array>
-		  	<value>John</value>
-		  	<value>Jacob</value>
-		  	<value>Jingle</value>
-		  	<value>Heimerschmidt</value>
-		  </array>
-		</property>	   	
-	   	
+
+	<bean id="someFile" class="java.io.File">
+	  <constructor-arg value="/etc/passwd"/>
+	</bean>
+	 <bean id="fileConverter" class="com.jgk.springrecipes.simple.converters.FileConverterDemo">
+		<property name="file" value="file:///c:/Documents%20and%20Settings/"/>
+		<property name="fileList">
+		   <list>
+		      <value>C:/jed/clampett.txt</value>
+		      <ref bean="someFile"/>
+		   </list>
+		</property>
 	 </bean>
 
 </beans>

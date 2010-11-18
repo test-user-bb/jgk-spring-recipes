@@ -10,10 +10,10 @@
 
 		
 	 <bean id="someNumber" class="java.lang.Integer">
-	    <constructor-arg value="543"></constructor-arg>
+	    <constructor-arg value="543"/>
 	 </bean>
 	 <bean id="someString" class="java.lang.String">
-	    <constructor-arg value="Jed Clampett as some string"></constructor-arg>
+	    <constructor-arg value="Jed Clampett as some string"/>
 	 </bean>
 	 <bean id="collectionsConverter" class="com.jgk.springrecipes.simple.converters.CollectionsConverterDemo">
 		<property name="emailProperties">
