@@ -17,7 +17,6 @@ public class PrimitivesConverterDemoTest {
     private ApplicationContext applicationContext;
 	
 	@Test
-	
 	public void someTest() {
 		PrimitivesConverterDemo pcd = applicationContext.getBean(PrimitivesConverterDemo.class);
 		assertNotNull(pcd);

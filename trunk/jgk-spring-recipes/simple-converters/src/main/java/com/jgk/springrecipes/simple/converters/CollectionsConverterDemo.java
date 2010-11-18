@@ -2,17 +2,20 @@ package com.jgk.springrecipes.simple.converters;
 
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 public class CollectionsConverterDemo {
 	List<String> stringList;
 	List<Integer> numberList;
 	Map<String,Integer> nameAgeMap;
+	Set<Integer> ageSet;
 
+	
 	@Override
 	public String toString() {
 		return "CollectionsConverterDemo [stringList=" + stringList
 				+ ", numberList=" + numberList + ", nameAgeMap=" + nameAgeMap
-				+ "]";
+				+ ", ageSet=" + ageSet + "]";
 	}
 	public List<String> getStringList() {
 		return stringList;
@@ -31,6 +34,12 @@ public class CollectionsConverterDemo {
 	}
 	public void setNameAgeMap(Map<String, Integer> nameAgeMap) {
 		this.nameAgeMap = nameAgeMap;
+	}
+	public Set<Integer> getAgeSet() {
+		return ageSet;
+	}
+	public void setAgeSet(Set<Integer> ageSet) {
+		this.ageSet = ageSet;
 	}
 	
 }
