@@ -1,5 +1,17 @@
 #summary Loose ideas about Spring.
 
+ * Bunch 'o Annotations
+  * @Autowired
+  * @Qualifier
+  * @Resource (javax.annotation) if JSR-250 is present
+  * @Inject (javax.inject) if JSR-330 is present
+  * @Named (javax.inject) if JSR-330 is present
+  * @Provider (javax.inject) if JSR-330 is present
+  * @PersistenceContext (javax.persistence) if JPA is present
+  * @PersistenceUnit (javax.persistence) if JPA is present
+  * @Required
+  * @Transactional
+
  * Spring testing annotations:
   * @ContextConfiguration
   * @DirtiesContext
