@@ -9,6 +9,7 @@
 	  <maven.compiler.source>1.6</maven.compiler.source>
 	  <maven.compiler.target>1.6</maven.compiler.target>
 	  <maven.compiler.plugin.version>2.3.2</maven.compiler.plugin.version>
+	  <spring.version>3.0.5.RELEASE</spring.version>
 	</properties>
 	<organization>
 		<name>John G. Kroubalkian</name>
@@ -40,14 +41,22 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context</artifactId>
-			<version>3.0.5.RELEASE</version>
+			<version>${spring.version}</version>
 			<type>jar</type>
 			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<version>${spring.version}</version>
+			<type>jar</type>
+			<scope>test</scope>
 		</dependency>
 	</dependencies>
 	<modules>
 		<module>simple-context</module>
 		<module>simple-context-with-spring-annotations</module>
+		<module>simple-converters</module>
 		<module>simple-repository</module>
 	</modules>
 </project>
