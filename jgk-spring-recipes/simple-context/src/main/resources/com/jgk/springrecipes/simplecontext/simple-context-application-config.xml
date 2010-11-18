@@ -7,8 +7,8 @@
 
 	<bean id="superSimpleBean" class="com.jgk.springrecipes.simplecontext.beans.SuperSimpleBean"/>
 	<bean id="jed" class="com.jgk.springrecipes.simplecontext.beans.PersonImpl">
- 		<constructor-arg name="lastName" value="Clampett"></constructor-arg>
 		<constructor-arg name="firstName" value="Jed"></constructor-arg>
+ 		<constructor-arg name="lastName" value="Clampett"></constructor-arg>
 		<property name="favoriteNumber" value="43"></property>
 		<property name="children">
 		  <list>
