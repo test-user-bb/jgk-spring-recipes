@@ -2,6 +2,7 @@ package com.jgk.springrecipes.simple.converters;
 
 import java.util.List;
 import java.util.Map;
+import java.util.Properties;
 import java.util.Set;
 
 public class CollectionsConverterDemo {
@@ -9,13 +10,15 @@ public class CollectionsConverterDemo {
 	List<Integer> numberList;
 	Map<String,Integer> nameAgeMap;
 	Set<Integer> ageSet;
-
+	Properties emailProperties;
 	
+
 	@Override
 	public String toString() {
 		return "CollectionsConverterDemo [stringList=" + stringList
 				+ ", numberList=" + numberList + ", nameAgeMap=" + nameAgeMap
-				+ ", ageSet=" + ageSet + "]";
+				+ ", ageSet=" + ageSet + ", emailProperties=" + emailProperties
+				+ "]";
 	}
 	public List<String> getStringList() {
 		return stringList;
@@ -40,6 +43,12 @@ public class CollectionsConverterDemo {
 	}
 	public void setAgeSet(Set<Integer> ageSet) {
 		this.ageSet = ageSet;
+	}
+	public Properties getEmailProperties() {
+		return emailProperties;
+	}
+	public void setEmailProperties(Properties emailProperties) {
+		this.emailProperties = emailProperties;
 	}
 	
 }
