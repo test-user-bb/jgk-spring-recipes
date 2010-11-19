@@ -54,9 +54,10 @@
 		</dependency>
 	</dependencies>
 	<modules>
+		<module>converters</module>
 		<module>simple-context</module>
 		<module>simple-context-with-spring-annotations</module>
-		<module>simple-converters</module>
 		<module>simple-repository</module>
+		<module>factorymethod</module>
 	</modules>
 </project>
