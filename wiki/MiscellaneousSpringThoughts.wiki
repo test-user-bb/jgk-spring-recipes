@@ -1,5 +1,8 @@
 #summary Loose ideas about Spring.
 
+ * *PropertyPlaceholderConfigurer* 
+  * class to externalize the deployment details into a properties file
+  * access from bean configuration file using special format – ${variable}
  * [http://www.mkyong.com/spring/spring-collections-list-set-map-and-properties-example/ Spring Converters Examples]
  * Spring TestContext Framework
   * The Spring TestContext Framework (located in the org.springframework.test.context package) provides generic, annotation-driven unit and integration testing support that is agnostic of the testing framework in use, whether JUnit 3.8.2, JUnit 4.5+, TestNG 5.10, and so on.
