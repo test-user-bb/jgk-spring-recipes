@@ -1,5 +1,10 @@
 #summary Question and answer
 
+ * What is PropertyPlaceholderConfigurer an example of?
+  * A BeanFactoryPostProcessor
+ * What is Bean Factory Post Processing?
+  * Applies transformations to groups of bean definitions _before_ any objects are actually created.
+  * Implemented using BeanFactoryPostProcessor
  * How do you make a bean that is simply a File?
 {{{
   Answer:  use constructor-arg
