@@ -12,11 +12,19 @@
 {{{
 	<context:property-placeholder location="classpath:myspringproperties.properties"/>
 }}}
- * If you want to use multiple properties files:
-
+ * If you want to use multiple properties files, use the 'locations' attribute:
 {{{
 	<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
-	  <property name="location" value="classpath:myspringproperties.properties"></property>
+        <property name="locations">
+            <list>
+                <value>classpath:myspringproperties_1.properties</value>
+                <value>classpath:myspringproperties_2.properties</value>
+            </list>
+        </property>
 	</bean>
+}}}
+ * If you want to use multiple properties files, use the 'location' attribute and a comma-separated list of files:
+{{{
+	<context:property-placeholder location="classpath:myspringproperties1.properties, classpath:myspringproperties2.properties"/>
 }}}
  * Spring 3.0 through the introduction of expression language support enables even elements inside the definition of your PropertyPlaceholderConfigurer to be discovered at runtime.
