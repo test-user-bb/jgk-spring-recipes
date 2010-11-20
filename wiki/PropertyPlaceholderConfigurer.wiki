@@ -1,0 +1,14 @@
+#summary Show use of PropertyPlaceholderConfigurer
+= Introduction =
+ * PropertyPlaceholderConfigurer enables you to load properties from a .properties file and then use ${....} syntax to replace the items during Bean Factory Post Processing
+ * The examples show two methods of defining your PropertyPlaceholderConfigurer
+  * Using standard spring bean definition:
+{{{
+	<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+	  <property name="location" value="classpath:myspringproperties.properties"></property>
+	</bean>
+}}}
+  * Using the more concise context namespace:
+{{{
+	<context:property-placeholder location="classpath:myspringproperties.properties"/>
+}}}
