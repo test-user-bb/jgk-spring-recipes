@@ -27,4 +27,16 @@
 {{{
 	<context:property-placeholder location="classpath:myspringproperties1.properties, classpath:myspringproperties2.properties"/>
 }}}
+ * If your properties file looks like:
+{{{
+   greeting=Hello
+   love=amor
+}}}
+ * Then you can use these properties in defining other beans:
+{{{
+   <bean id="myBean" class="com.jgk.SomeBean">
+       <property name="greeting">${greeting}</property>
+       <property name="love">${love}</property>
+   </bean>
+}}}
  * Spring 3.0 through the introduction of expression language support enables even elements inside the definition of your PropertyPlaceholderConfigurer to be discovered at runtime.
