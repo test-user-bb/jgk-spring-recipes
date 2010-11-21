@@ -1,4 +1,25 @@
 #summary Question and answer
+
+ * 12 steps in the life of a Spring bean
+  * Instantiate ApplicationContext.
+  * Parse XML.
+  * Bean Definitions loaded into ApplicationContext.
+  * BeanFactoryPostProcessor invoked.
+  * Instantiate bean.
+  * Dependency injection wires bean dependencies.
+  * BeanPostProcessor initializes bean.
+  * BeanPostProcessor injects proxies.
+  * Get bean.
+  * Invoke business method on bean.
+  * Close ApplicationContext.
+  * Clean up bean.
+ * Singletons in Spring:
+  * Only one instance is created no matter how many times ctx.getBean() is called.
+  * Should be stateless.
+ * What is scope?
+  * Specifies the lifecycle of a bean:
+   * When bean is created
+   * When bean is destroyed
  * ApplicationContext Destruction cycle:
   * Any unreferenced beans acquired from the ApplicationContext will be destroyed.
   * Referenced beans/proxies will continue to exist and be functional.
