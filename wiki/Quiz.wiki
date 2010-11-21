@@ -1,5 +1,17 @@
 #summary Question and answer
 
+ * JSR-250
+  * Create standard annotations to be used instead of XML configuration.
+   * @Generated	Marks sources that have been generated
+   * @Resource	Declares a reference to a resource, e.g. a database
+   * @Resources	Container for multiple Resource annotations
+   * @PostConstruct	Is used on methods that need to get executed after dependency injection is done to perform any initialization.
+   * @PreDestroy	Is used on methods that are called before the instance is removed from the container
+   * @RunAs	Defines the role of the application during execution in a Java EE container
+   * @RolesAllowed	Specifies the security roles permitted to access method(s) in an application.
+   * @PermitAll	Specifies that all security roles are permitted to access the annotated method, or all methods in the annotated class.
+   * @DenyAll	Specifies that no security roles are allowed to invoke the specified method(s).
+   * @DeclareRoles	Used to specify the security roles by the application.
  * For most namespaces you must provide these 3 things:
   * Namespace name   (xmlns:context="http://www.springframework.org/schema/context")
   * Namespace location (xsi:schemaLocation="http://www.springframework.org/schema/context")
