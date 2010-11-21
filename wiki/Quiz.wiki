@@ -1,5 +1,9 @@
 #summary Question and answer
 
+ * How to shorten the declaration of a PropertyPlaceholderConfigurer?
+{{{
+	<context:property-placeholder location="classpath:myspringproperties.properties"/>
+}}}
  * Main phases of spring application:
   * Initialization
   * Use
