@@ -1,5 +1,9 @@
 #summary Question and answer
 
+ * Chronology of post processors:
+  * BeanFactoryPostProcessor executes before bean instances have been created.
+  * BeanPostProcessor executes after bean instances have been created.
+ * NOTE: Information is available to a BeanPostProcessor that is not available to a BeanFactoryPostProcessor.
  * How does a BeanPostProcessors differ from its predecessor, a BeanFactoryPostProcessor?
   * BeanFactoryPostProcessor configures the factory (initializes the meta data).
   * BeanPostProcessor configures the instance (initializes data).
