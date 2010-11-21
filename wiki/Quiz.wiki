@@ -1,5 +1,13 @@
 #summary Question and answer
 
+ * p-namespace
+  * shortens property declarations
+ * Differences between *id* and *name* attribute of a bean tag:
+  * id requires XML syntax
+  * id only holds a single value
+  * name can incorporate non-standard characters
+ * What is the purpose of bean definition inheritance?
+  * To reuse/recycle common properties
  * 12 steps in the life of a Spring bean
   * Instantiate ApplicationContext.
   * Parse XML.
