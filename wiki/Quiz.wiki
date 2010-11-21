@@ -17,6 +17,18 @@
 {{{
 	<context:property-placeholder location="classpath:myspringproperties.properties"/>
 }}}
+ * Full Spring Lifecycle:
+  * Allocate ApplicationContext
+  * Parse XML
+  * Create BeanDefinition Objects
+  * Add BeanDefinitions to ApplicationContext
+  * Invoke BeanFactoryPostProcessor methods
+  * Instantiate Bean
+  * Perform dependency injection on bean to initialize dependencies
+  * Invoke BeanPostProcessor methods
+  * Get bean from ApplicationContext
+  * Use bean
+  * When application is shutdown beans are destroyed
  * Main phases of spring application:
   * Initialization
   * Use
