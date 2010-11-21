@@ -1,6 +1,7 @@
 #summary Question and answer
 
  * JSR-250
+  * Web-Page  http://jcp.org/en/jsr/detail?id=250
   * Create standard annotations to be used instead of XML configuration.
    * @Generated	Marks sources that have been generated
    * @Resource	Declares a reference to a resource, e.g. a database
