@@ -1,5 +1,9 @@
 #summary Question and answer
 
+ * This annotation will generate an exception at deployment time if you have not injected a necessary property:
+{{{
+     @Required
+}}}
  * How to shorten the declaration of a PropertyPlaceholderConfigurer?
 {{{
 	<context:property-placeholder location="classpath:myspringproperties.properties"/>
