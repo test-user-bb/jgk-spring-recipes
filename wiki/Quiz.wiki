@@ -8,6 +8,15 @@
    </property>
 </bean>
 }}}
+  * In the pre-2.0 days, you needed to use:
+{{{
+<bean id="myBean" class="com.jgk.beans.PresidentBean">
+   <property name="dayOfWeek">
+      <bean id="java.util.Calendar.MONDAY"
+         class="org.springframework.beans.factory.config.FieldRetrievingFactoryBean"/>
+   </property>
+</bean>
+}}}
  * util-namespace
   * shortens declaration of different types of collections
 {{{
