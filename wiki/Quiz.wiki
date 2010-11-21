@@ -1,5 +1,11 @@
 #summary Question and answer
 
+ * For most namespaces you must provide these 3 things:
+  * Namespace name
+  * Namespace location
+  * Namespace xsd file
+ * What is the purpose of using xml namespaces in bean configuration files?
+  * To reduce the amount of xml configuration required to wire beans together.
  * What is PropertyPlaceholderConfigurer an example of?
   * A BeanFactoryPostProcessor
  * What is Bean Factory Post Processing?
