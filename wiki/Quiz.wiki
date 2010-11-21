@@ -1,5 +1,10 @@
 #summary Question and answer
 
+ * Common DataSource Properties:
+  * url
+  * user
+  * password
+  * dialect
  * Advantages of using annotations?
   * An alternative to XML for configuration.
   * Metadata is bundled with the class.
