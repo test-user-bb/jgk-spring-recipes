@@ -1,5 +1,14 @@
 #summary Question and answer
 
+ * What is a callback method?
+  * A method invoked on a bean by its container following key events in the life cycle of the bean.
+  * Allows the bean to synchronize application logic with the infrastructure on which the bean depends.
+  * A manifestation of inversion of control (IoC).
+ * What is lazy instantiation?
+  * Instantiation happens when the object is first used
+ * What is eager instantiation?
+  * Instantiation occurs upon declaration
+  * Good when you KNOW the object will be used
  * Spring configuration file header:
 {{{
 <?xml version="1.0" encoding="UTF-8"?>
