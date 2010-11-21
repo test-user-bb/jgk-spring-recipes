@@ -1,5 +1,13 @@
 #summary Question and answer
 
+ * Accessing Static Constants?
+{{{
+<bean id="myBean" class="com.jgk.beans.PresidentBean">
+   <property name="dayOfWeek">
+      <util:constant static-field="java.util.Calendar.MONDAY"/>
+   </property>
+</bean>
+}}}
  * util-namespace
   * shortens declaration of different types of collections
 {{{
