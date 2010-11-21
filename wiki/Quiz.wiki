@@ -1,5 +1,11 @@
 #summary Question and answer
 
+ * util-namespace
+  * shortens declaration of different types of collections
+{{{
+xmlns:util="http://www.springframework.org/schema/util"
+xsi:schemaLocation="http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-2.0.xsd"
+}}}
  * p-namespace
   * shortens property declarations
  * Differences between *id* and *name* attribute of a bean tag:
