@@ -1,5 +1,8 @@
 #summary Question and answer
 
+ * How does a BeanPostProcessors differ from its predecessor, a BeanFactoryPostProcessor?
+  * BeanFactoryPostProcessor configures the factory (initializes the meta data).
+  * BeanPostProcessor configures the instance (initializes data).
  * What is a callback method?
   * A method invoked on a bean by its container following key events in the life cycle of the bean.
   * Allows the bean to synchronize application logic with the infrastructure on which the bean depends.
