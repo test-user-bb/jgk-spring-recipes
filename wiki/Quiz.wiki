@@ -1,5 +1,8 @@
 #summary Question and answer
 
+ * What are java annotations?
+  * A special form of syntax used to declare metadata in a Java source file.
+  * Annotations are used by frameworks as a way of conveniently applying behaviours to user-defined classes and methods that would otherwise be declared in some external source (such as an XML configuration file) or programmatically (with API calls).
  * This annotation will generate an exception at deployment time if you have not injected a necessary property:
 {{{
      @Required
