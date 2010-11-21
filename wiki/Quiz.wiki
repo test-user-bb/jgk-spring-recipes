@@ -1,5 +1,15 @@
 #summary Question and answer
 
+ * What is a proxy?
+  * A surrogate
+  * An object that substitutes for another object.  Exposes the same interface as the object it substitutes for.
+  * Is exposed to the client in lieu of the object it substitutes for.
+  * Provides services before/after the object is substitutes for. (AROUND)
+ * Benefits of the Proxy Pattern?
+  * Wraps services transparently around a business component.
+  * NOTE: This is how AOP is implemented in Spring.
+ * What are the costs of the Proxy Pattern?
+  * Extra layer of processing is added to method calls.
  * Chronology of post processors:
   * BeanFactoryPostProcessor executes before bean instances have been created.
   * BeanPostProcessor executes after bean instances have been created.
