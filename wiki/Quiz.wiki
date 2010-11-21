@@ -1,5 +1,9 @@
 #summary Question and answer
-
+ * ApplicationContext Destruction cycle:
+  * Any unreferenced beans acquired from the ApplicationContext will be destroyed.
+  * Referenced beans/proxies will continue to exist and be functional.
+  * ApplicationContext itself will be destroyed.
+  * Unable to request additional services from the ApplicationContext.
  * What is a proxy?
   * A surrogate
   * An object that substitutes for another object.  Exposes the same interface as the object it substitutes for.
