@@ -54,6 +54,7 @@
 		</dependency>
 	</dependencies>
 	<modules>
+	    <module>beaninitialization</module>
 		<module>converters</module>
 		<module>propertyplaceholderconfigurer</module>
 		<module>simple-context</module>
