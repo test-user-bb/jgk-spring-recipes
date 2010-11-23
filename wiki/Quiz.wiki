@@ -1,5 +1,9 @@
 #summary Question and answer
 
+ * Use this XML element to enable component scanning:
+{{{
+    <context:component-scan base-package="..."/>
+}}}
  * How do you inform Spring of the need to need to process annotations?
 {{{
    <context:annotation-config/>
