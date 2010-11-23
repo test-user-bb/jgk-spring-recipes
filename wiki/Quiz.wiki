@@ -1,5 +1,14 @@
 #summary Question and answer
 
+ * How to get Spring to recognize common annotations?
+  * Method 1:
+{{{
+   <bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor"/>
+}}}
+  * Method 2:
+{{{
+   <context:annotation-config/> 
+}}}
  * Bean Initialization
   * Bean can register for one or more initialization callbacks.
    * JSR-250 @PostConstruct
