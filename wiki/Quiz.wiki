@@ -29,7 +29,7 @@
 {{{
 <context:annotation-config/>
 }}}
- * What is a special feature of the @Repository annotation not available to the @Component annotation?
+ * What is a special feature of the *@Repository* annotation not available to the *@Component* annotation?
   * Automatic conversion of SQLExceptions
  * Accessing Static Constants?
 {{{
