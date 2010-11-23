@@ -1,5 +1,7 @@
 #summary Question and answer
 
+ * Component scanning eliminates the need for this in an XML file:
+  * <bean>
  * Two styles of autowiring are:
   * by name
   * by type
