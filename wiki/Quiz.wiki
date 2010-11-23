@@ -1,5 +1,8 @@
 #summary Question and answer
 
+ * Two styles of autowiring are:
+  * by name
+  * by type
  * Autowiring eliminates the need for what 2 XML tags?
   * <constructor-arg>
   * <property>
