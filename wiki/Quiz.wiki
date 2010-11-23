@@ -1,5 +1,6 @@
 #summary Question and answer
 
+ * NOTE: an init method may have any visibility, but must have *no arguments*.
  * NOTE: when using _init-method_ attribute, you can only have a single _init-method_.
  * NOTE: if you use @PostConstruct annotation, you can have multiple bean initialization opportunities.
  * What is the purpose of _<context:annotation-config/>_?
