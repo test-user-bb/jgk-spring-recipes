@@ -9,8 +9,8 @@
 				              "							
               >
       
-   <bean id="someBean" 
-   			class="com.jgk.springrecipes.beaninitialization.SomeBeanWithInitMethodImpl"
-   			
+   <context:annotation-config/> 
+   <bean id="someBean" class="com.jgk.springrecipes.beaninitialization.SomeBeanWithInitMethodImpl"
+      init-method="firstInit" 
    />              
 </beans>
