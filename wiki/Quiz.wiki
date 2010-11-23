@@ -1,5 +1,9 @@
 #summary Question and answer
 
+ * What is the purpose of _<context:annotation-config/>_?
+  * Enables the following bean post processors:
+   * RequiredAnnotationBeanPostProcessor
+   * CommonAnnotationBeanPostProcessor
  * How to get Spring to recognize common annotations?
   * Method 1:
 {{{
