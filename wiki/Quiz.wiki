@@ -1,5 +1,8 @@
 #summary Question and answer
 
+ * Autowiring eliminates the need for what 2 XML tags?
+  * <constructor-arg>
+  * <property>
  * What do you use to programmatically create an ApplicationContext?
   * JavaConfig
  * *@Bean* annotation is JavaConfig's equivalent of what XML tag?
