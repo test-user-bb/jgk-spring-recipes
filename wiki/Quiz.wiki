@@ -1,5 +1,9 @@
 #summary Question and answer
 
+ * How do you inform Spring of the need to need to process annotations?
+{{{
+   <context:annotation-config/>
+}}}
  * Component scanning eliminates the need for this in an XML file:
   * <bean>
  * Two styles of autowiring are:
