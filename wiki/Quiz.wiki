@@ -1,5 +1,10 @@
 #summary Question and answer
 
+ * What is autowiring?
+  * A process by which Spring detects dependencies between a bean and its properties based on introspection (Java reflection).
+  * Dependencies are inferred without the need for explicit XML configuration.
+  * Autowiring can be implemented in XML or Annotations.
+  * Autowiring is disabled by default.
  * Use this XML element to enable component scanning:
 {{{
     <context:component-scan base-package="..."/>
