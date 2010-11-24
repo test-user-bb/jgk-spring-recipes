@@ -1,5 +1,13 @@
 #summary Question and answer
 
+ * How does Spring respond if a _@Required* annotation is not satisfied?
+{{{
+Caused by: org.springframework.beans.factory.BeanInitializationException: Property 'personName' is required for bean 'simpleBeanWithRequiredAnnotation'
+	at org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor.postProcessPropertyValues(RequiredAnnotationBeanPostProcessor.java:149)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1074)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:517)
+
+}}}
  * How do you tell Spring framework to recognized the *@Required* annotation?
   * Two ways:
    * Register a bean with class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor"
