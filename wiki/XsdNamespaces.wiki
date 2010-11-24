@@ -2,7 +2,7 @@
 
  * aop
  * batch
- * beans
+ * beans (default namespace - mandatory)
  * context
  * faces
  * flex
