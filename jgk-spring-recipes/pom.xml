@@ -55,6 +55,7 @@
 	</dependencies>
 	<modules>
 	    <module>beaninitialization</module>
+	    <module>beanpostprocessor</module>
 		<module>converters</module>
 		<module>propertyplaceholderconfigurer</module>
 		<module>simple-context</module>
