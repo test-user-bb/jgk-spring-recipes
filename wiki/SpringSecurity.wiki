@@ -1,6 +1,6 @@
 #summary spring security
 
- * [http://www.viddler.com/explore/oredev/videos/22/ Flash Video - Ben Alex of SpringSource]
+ * [http://www.viddler.com/explore/oredev/videos/22/ Flash Video - Ben Alex of SpringSource (has Swedish Fiance)]
  * Spring Security used to be Acegi Security - became Spring Security in 2008
  * Spring Security capabilities:
   * Authentication
