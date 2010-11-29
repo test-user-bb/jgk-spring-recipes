@@ -3,6 +3,7 @@
 
  * [http://www.jasig.org/cas CAS: Central Authentication Service]<img width='60' src='http://www.jasig.org/sites/jasig.webchuckhosting.com/files/casLogo.jpg'/>
  * [http://www.josso.org/confluence/display/JOSSO1/JOSSO+-+Java+Open+Single+Sign-On+Project+Home JOSSO - Java Open Single Sign-ON Project] 
+ * [http://www.ietf.org/rfc/rfc2617.txt RFC 22617] HTTP Authentication: Basic and Digest Access Authentication
  * [http://jcifs.samba.org/ jCIFS] - is an Open Source client library that implements the CIFS/SMB networking protocol in 100% Java. CIFS is the standard file sharing protocol on the Microsoft Windows platform (e.g. Map Network Drive ...). This client is used extensively in production on large Intranets.
  * [http://openid.net/ OpenID] 
  * [http://ca.com/us/internet-access-control.aspx SiteMinder]
