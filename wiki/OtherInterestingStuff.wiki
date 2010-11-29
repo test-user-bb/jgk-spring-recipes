@@ -1,6 +1,6 @@
 #summary not directly related but interesting
 
-
+ * NOTE: in 2008, SpringSource acquired G2One (the Grails guys)
  * [http://www.jasig.org/cas CAS: Central Authentication Service]<img width='60' src='http://www.jasig.org/sites/jasig.webchuckhosting.com/files/casLogo.jpg'/>
  * [http://www.josso.org/confluence/display/JOSSO1/JOSSO+-+Java+Open+Single+Sign-On+Project+Home JOSSO - Java Open Single Sign-ON Project] - Java Authentication and Authorization Service
  * [http://www.ietf.org/rfc/rfc2617.txt RFC 22617] HTTP Authentication: Basic and Digest Access Authentication
