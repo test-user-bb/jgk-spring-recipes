@@ -14,5 +14,6 @@
  * [http://www.jasypt.org JASYPT] - Java simplified encryption
  * GRAILS and TRAILS
  * [http://en.wikipedia.org/wiki/Mule_(software) Mule] - light-weight enterprise service bus ([http://en.wikipedia.org/wiki/Enterprise_service_bus ESB])
+ * [http://appfuse.org/display/APF/Home AppFuse] - AppFuse is a project skeleton, similar to the one that's created by your IDE when you click through a wizard to create a new web project.
  * [http://directwebremoting.org/dwr/index.html DWR] - direct web remoting
   * <img width='50' src='http://directwebremoting.org/dwr/media/dwr-logo-200.gif'/>
