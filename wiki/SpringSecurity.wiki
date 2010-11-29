@@ -8,7 +8,7 @@
   * Method invocation authorization
   * Channel security
   * Human user detection
-  * Domain instance based security (ACLs)
+  * Domain instance based security (ACLs - Access Control Lists - e.g. can only see specific domain patient information)
   * WS-Security (via Spring Web Services)
   * Flow Authorization (via Spring Web Flow)
  * What Spring Security *IS NOT*:
