@@ -7,6 +7,7 @@
   * [http://static.springsource.org/spring/docs/3.0.x/javadoc-api/ javadoc | API]
   * [http://static.springsource.org/spring/docs/3.0.x/changelog.txt change log]
 * Topics:
+  * [http://static.springsource.org/spring/docs/3.0.x/spring-framework-reference/html/index.html Reference Documentation]
   * [http://static.springsource.org/spring/docs/3.0.x/spring-framework-reference/html/beans.html General ]
   * [http://static.springsource.org/spring/docs/3.0.x/spring-framework-reference/html/beans.html Lifecycle ]
   * [http://static.springsource.org/spring/docs/3.0.x/spring-framework-reference/html/beans.html Annotations]
@@ -24,3 +25,4 @@
   * [http://static.springsource.org/spring/docs/3.0.x/spring-framework-reference/html/jms.html JMS]
   * [http://static.springsource.org/spring/docs/3.0.x/spring-framework-reference/html/ejb.html EJB Integration]
   * [http://static.springsource.org/spring/docs/3.0.x/spring-framework-reference/html/remoting.html Remoting and web services using Spring]
+  * [http://static.springsource.org/spring/docs/3.0.x/spring-framework-reference/html/cci.html JCA CCI]
