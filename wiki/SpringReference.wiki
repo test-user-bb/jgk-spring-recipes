@@ -9,6 +9,8 @@
   * [http://static.springsource.org/spring/docs/3.0.x/changelog.txt change log]
 * Topics:
   * [http://static.springsource.org/spring/docs/3.0.x/spring-framework-reference/html/index.html Reference Documentation 3.0]
+  * [http://static.springsource.org/spring/docs/3.0.x/spring-framework-reference/html/spring-data-tier.html Data Access]
+  * [http://static.springsource.org/spring/docs/3.0.x/spring-framework-reference/html/expressions.html Spring Expression Language (SpEL) ]
   * [http://static.springsource.org/spring/docs/3.0.x/spring-framework-reference/html/beans.html General ]
   * [http://static.springsource.org/spring/docs/3.0.x/spring-framework-reference/html/beans.html Lifecycle ]
   * [http://static.springsource.org/spring/docs/3.0.x/spring-framework-reference/html/beans.html Annotations]
@@ -20,7 +22,7 @@
   * [http://static.springsource.org/spring/docs/3.0.x/spring-framework-reference/html/orm.html ORM / Hibernate]
   * [http://static.springsource.org/spring/docs/3.0.x/spring-framework-reference/html/mvc.html MVC]
   * [http://static.springsource.org/spring/docs/3.0.x/spring-framework-reference/html/remoting.html#rest-client-access REST]
-  * [http://static.springsource.org/spring-security/site/ Security]
+  * [http://static.springsource.org/spring-security/site/docs/3.0.x/reference/springsecurity.html Security]
   * [http://static.springsource.org/spring/docs/3.0.x/spring-framework-reference/html/mail.html EMail]
   * [http://static.springsource.org/spring/docs/3.0.x/spring-framework-reference/html/jmx.html JMX]
   * [http://static.springsource.org/spring/docs/3.0.x/spring-framework-reference/html/jms.html JMS]
