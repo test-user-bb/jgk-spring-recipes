@@ -20,3 +20,4 @@
   * [http://static.springsource.org/spring/docs/3.0.x/spring-framework-reference/html/remoting.html#rest-client-access REST]
   * [http://static.springsource.org/spring-security/site/ Security]
   * [http://static.springsource.org/spring/docs/3.0.x/spring-framework-reference/html/jmx.html JMX]
+  * [http://static.springsource.org/spring/docs/3.0.x/spring-framework-reference/html/jms.html JMS]
