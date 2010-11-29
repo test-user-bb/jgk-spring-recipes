@@ -101,3 +101,147 @@
   * The arguments to the method being invoked.
   * The target of the request.
   * The type of value to be returned to the client. 
+
+ * Pointcut expression: method starting with *send* that takes a single String parameter and has a void return type:
+{{{
+execution(void send*(String))
+}}}
+ * Pointcut expression: Any method named *send* that takes a single parameter
+{{{
+execution(* send(*))
+}}}
+ * Pointcut expression: Any method named send whose first parameter is an int (the ‚ *..* signifies 0 or more parameters may follow)
+{{{
+execution(* send(int, ..))
+}}}
+ * Pointcut expression:  Any void method in the MessageServiceImpl class
+{{{
+execution(void some.package.MessageServiceImpl.*(..))
+}}}
+ * Pointcut expression: any void method named *send* in any object of type (r subtype) MessageService that takes a single parameter
+{{{
+execution(void some.package.MessageService+.send(*))
+}}}
+ * Pointcut expression: any void method starting with send that is annotated with the @RolesAllowed annotation
+{{{
+execution(@javax.annotation.security.RolesAllowed void send*(..))
+}}}
+ * Pointcut expression: there is one directory between rewards and restaurant
+{{{
+execution(* rewards.*.restaurant.*.*(..))
+}}}
+ * Pointcut expression: there may be several directories between rewards and restaurant
+{{{
+execution(* rewards..restaurant.*.*(..))
+}}}
+ * Pointcut expression: any package (or subpackage) called restaurant
+{{{
+execution(* *..restaurant.*.*(..))
+}}}
+ * Pointcut expressions - these expressions act as filters, specifying to which methods / classes advice will apply. 
+{{{
+		execution(public * *(..))
+		
+		execution(* set*(..))
+		
+		execution(* com.abc.service.BankService.*(..))
+		
+		execution(* com.abc.service.*.*(..))
+			
+		execution(* com.xyz.service..*.*(..))
+
+}}}
+ * Describe the pointcut expression: execution(public * *(..))
+  * Method must be public
+  * Method may return any type (or void)
+  * Method may have any name
+  * Method may receive any number of arguments
+  * SHORT:  matches every *public* method.
+ * Describe the pointcut expression: execution(* set*(..))
+  * Modifier pattern omitted (i.e. public, protected, private, default)
+  * Method may return any type
+  * Method name must begin the the word *set*
+  * Method may receive any number of arguments
+ * Describe the pointcut expression: execution(* com.abc.service.BankService.*(..))
+  * Modifier pattern omitted (i.e. public, protected, private, default)
+  * Method may return any type.
+  * Method must be a member of the com.abc.service.ankService class.
+  * Method may have any name.
+  * Method may receive any number of arguments.
+ * Describe the pointcut expression:  execution(* com.abc.service.*.*(..))
+  * Modifier pattern omitted (i.e. public, protected, private, default)
+  * Method may return any type
+  * Class must be a member of the com.abc.service package
+  * Method may have any name
+  * Method may receive any number of arguments
+ * Describe the pointcut expression:  execution(* com.xyz.service..*.*(..))
+  * Modifier pattern omitted (i.e. public, protected, private, default)
+  * Method may return any type
+  * Class must be a member of the com.abc.service package or any of its subpackages
+  * Class may have any name
+  * Method may have any name
+  * Method may receive any number of arguments
+ * How are aspects implemented in Spring?
+  * Spring AOP aspects are implemented using regular classes (schema-based approach)
+  * Spring AOP aspects may be regular classes annotated with @Aspect annotation (@AspectJ style)
+ * How does Spring model aop advice?
+  * As an interceptor, maintaining a set of interceptors around a joinpoint
+ * In AOP, what is meant by a Target object?
+  * Object being advised by one or more aspects.
+  * Also referred to as the _advised_ object.
+ * What is meant by _weaving_ in AOP?
+  * Linking aspects with other application types or objects to create an advised object.
+ * When can weaving be done?
+  * compile time (e.g. using AspectJ compiler)
+  * load time
+  * runtime
+ * When is weaving done in Spring AOP?
+  * at runtime
+ * How is @AspectJ support enabled?
+  * by adding <aop:aspectj-autoproxy/> to your spring configuration.
+  * or by declaring a bean like the following:
+{{{
+  <bean class="org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator" />
+}}}
+  * you also need 2 AspectJ libraries on the classpath:
+   * aspectjweaver.jar
+   * aspectjrt.jar
+ * Example of declaring an aspect:
+  * Part 1:
+{{{
+   <bean id="myAspect" class="org.xyz.NotVeryUsefulAspect">
+    <!-- configure properties of aspect here as normal - wiring -->
+  </bean>
+}}}
+  * Part 2:
+{{{
+    package org.xyz;
+    import org.aspectj.lang.annotation.Aspect;
+    @Aspect
+    public class NotVeryUsefulAspect {
+    }
+}}}
+ * Aspects (classes annotated with @Aspect) may have methods and fields just like any other class.  They may also contain, advice, and introduction (inter-type) declarations.
+ * Spring AOP execution pointcut designator?
+{{{
+  execution(modifiers-pattern? ret-type-pattern declaring-type-pattern? name-pattern(param-pattern) throws-pattern?)
+}}}
+ * What parts of the AOP pointcut execution designator are mandatory?
+  * return type
+  * name pattern (e.g. name of method)
+  * param pattern ()
+ * Parameters pattern?
+  * () matches a method that takes no parameters
+  * (..) matches any number of parameters (zero or more)
+  * (*) matches a method taking one parameter of any type
+  * (*,String) matches a method taking two parameters, the first can be of any type, the second must be a String.
+
+ * Types of Advice:
+  * @Before - before calling code - aborts if exception is thrown
+  * @After - after unconditionally
+  * @AfterReturning - after on success - takes JoinPoint and return value, can change return value thrown
+  * @AfterThrowing - after on failure - takes JoinPoint and exception, can change exception type thrown
+  * @Around - surrounds - takes ProceedingJoinPoint, can intercept call or eat exception
+ * Best Practice: prefer least powerful advice that can do the job
+
+
