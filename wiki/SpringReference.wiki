@@ -6,3 +6,11 @@
   * [http://static.springsource.org/spring/docs/3.0.x/spring-framework-reference/html HTML] | [http://static.springsource.org/spring/docs/upgrade/spring3/pdf/spring-framework-upgrade.pdf PDF]
   * [http://static.springsource.org/spring/docs/3.0.x/javadoc-api/ javadoc | API]
   * [http://static.springsource.org/spring/docs/3.0.x/changelog.txt change log]
+* Topics:
+  * [http://static.springsource.org/spring/docs/3.0.x/spring-framework-reference/html/beans.html General ]
+  * [http://static.springsource.org/spring/docs/3.0.x/spring-framework-reference/html/beans.html Lifecycle ]
+  * [http://static.springsource.org/spring/docs/3.0.x/spring-framework-reference/html/beans.html Annotations]
+  * [http://static.springsource.org/spring/docs/3.0.x/spring-framework-reference/html/beans.html Miscellaneous]
+  * [http://static.springsource.org/spring/docs/3.0.x/spring-frameworkreference/html/testing.html Testing]
+  * [http://static.springsource.org/spring/docs/3.0.x/spring-framework-reference/html/beans.html JavaConfig]
+  * [http://static.springsource.org/spring/docs/3.0.x/spring-framework-reference/html/aop.html AOP Recommendations]
