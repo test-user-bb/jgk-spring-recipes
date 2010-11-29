@@ -4,6 +4,7 @@
 	<artifactId>jgk-spring-recipes</artifactId>
 	<packaging>pom</packaging>
 	<version>0.0.1-SNAPSHOT</version>
+	
 	<properties>
 	  <junit.version>4.8.2</junit.version>
 	  <maven.compiler.source>1.6</maven.compiler.source>
@@ -66,5 +67,6 @@
 		<module>factorymethod</module>
 		<module>testing</module>
 		<module>security</module>
+		<module>security-samples-contacts</module>
 	</modules>
 </project>
