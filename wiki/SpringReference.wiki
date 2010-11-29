@@ -19,5 +19,8 @@
   * [http://static.springsource.org/spring/docs/3.0.x/spring-framework-reference/html/mvc.html MVC]
   * [http://static.springsource.org/spring/docs/3.0.x/spring-framework-reference/html/remoting.html#rest-client-access REST]
   * [http://static.springsource.org/spring-security/site/ Security]
+  * [http://static.springsource.org/spring/docs/3.0.x/spring-framework-reference/html/mail.html EMail]
   * [http://static.springsource.org/spring/docs/3.0.x/spring-framework-reference/html/jmx.html JMX]
   * [http://static.springsource.org/spring/docs/3.0.x/spring-framework-reference/html/jms.html JMS]
+  * [http://static.springsource.org/spring/docs/3.0.x/spring-framework-reference/html/ejb.html EJB Integration]
+  * [http://static.springsource.org/spring/docs/3.0.x/spring-framework-reference/html/remoting.html Remoting and web services using Spring]
