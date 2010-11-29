@@ -1,0 +1,10 @@
+#summary aop stuff
+
+ * AOP = Aspect Oriented Programming
+ * Advice: code to execute
+ * Joinpoint: place in code where code can be injected.  In Spring this is just before/after methods.
+ * Pointcut: Expression to identify join point
+
+ * Q:  What problems occur with cross-cutting concerns:
+  * Code tangling - method does unrelated things
+  * Code scattering - duplication
