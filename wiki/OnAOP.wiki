@@ -8,3 +8,96 @@
  * Q:  What problems occur with cross-cutting concerns:
   * Code tangling - method does unrelated things
   * Code scattering - duplication
+
+
+ * AOP term for a service applicable to a variety of problem domains.
+  * Cross cutting concert
+ * What are 2 styles of AOP supported by Spring?
+  * CGLib (Inheritance)
+  * Dynamic Proxies (Interfaces)
+ * What do you call a Spring method that implements a cross cutting concert?
+  * Advice
+ * What do you call a point in the business logic to which advice is applied?
+  * Joinpoint
+ * What do you call an expression (filter) that identifies the methods to which advice will be applied?
+  * Pointcut expression
+ * A module (or class) that combines pointcuts and advice?
+  * Aspect
+ * What are the 5 types of advice?
+  * @Before
+  * @After
+  * @AfterReturning
+  * @AfterThrowing
+  * @Around
+ * What XML element is required to enable AOP in Spring?
+  * <aop:aspectj-autoproxy/>
+ * What is the role of the _execution()_ pointcut expression?
+  * To identify the methods to which advice will be applied.
+ * What elements may appear in the method pattern of a pointcut expression?
+  * Modifiers
+  * ReturnType
+  * ClassType
+  * MedhodName( Parameters  ) ExceptionType
+ * What are the mandatory pieces of a pointcut expression?
+  * Return Type
+  * Method Name()
+ * The meaning of (*), when it appears in the parameter list of a method name?
+  * One (1) parameter of any type.
+ * The meaning of ( .. ) when it appears in the parameter list of a method name?
+  * 0+ parameters of any type.
+ * Ways in which around advice differs from other forms of advice?
+  * Around advice forwards the request and response, other forms of advice do not.
+  * Around advice can be used to provide both pre and post processing
+ * 3 forms of loose coupling provide by AOP?
+  * POJO unaware of advice
+  * Advice unaware of POJO
+  * Client unaware of advice
+ * In Spring AOP, advice can be applied only to:
+  * Methods (not attributes or constructors)
+ * What the problems associated with code tangling?
+   * Lack of cohesion.
+   * Unclear purpose.
+   * Increased complexity.
+   * Error prone cut / paste recycling.
+ * Issues with code scattering?
+  * Duplicated code.
+  * Redundant maintenance.
+  * Potential inconsistent implementations.
+ * AOP incorporates features found in several well-known design patterns.
+  * Filter
+  * Decorator
+  * Observer
+  * Proxy
+ * What is the payoff of this approach?
+  * You implement an aspect once, then reuse it again and again. As opposed to implementing the aspect again and again or cutting / pasting the aspect again and again.
+ * Aspects provide 3 kinds of decoupling:
+  * The code being advised (decorated) is unaware of its advisor. This means that advice (services) can be added or removed without having to modify the component benefiting from their services.
+  * The advice code typically knows little about the code being advised. This means that advice is typically reusable across a variety of components.
+  * The client is unaware of the presence or absence of advice. This means that advice (services) can be added or removed without having to modify the client benefiting from their services.
+ * Differences between AspectJ and Spring AOP?
+  * AspectJ is faster.
+  * AspectJ works by modifying the class file being wrapped in an aspect. (Byte code weaving.)
+  * Spring AOP uses proxies that wrap around business components, rather than altering the components themselves.
+  * AspectJ is more powerful. AspectJ offers features not available in competing AOP implementations.
+   * Wraps constructors.
+   * Wraps attributes.
+   * Wraps static initialization blocks.
+ * Spring AOP supports what 2 styles of proxies?
+  * Using Spring's CGLib libraries.
+   * Relies on inheritance.
+   * Historically has provided slightly better performance.
+   * Manifestation of the Class Adapter pattern.
+   * Requires CGLib.
+  * Using the JVM's standard dynamic proxy library.
+   * Relies on interfaces.
+   * Historically has provided slightly worse performance.
+   * Manifestation of the Object Adapter pattern.
+ * How are Spring Aspects applied?
+  * At configuration time any business object matching a pointcut expression will be wrapped in a proxy. _(This happens during the BeanPostProcessor phase in the bean's lifecycle, when the bean instance is created.)_
+  * At runtime, when a method is invoked on the business object, the pointcut expression is applied to determine whether or not to apply the advice.
+  * Advice application can be based on conditions that vary at runtime.
+ * What do you do if, within an Aspect, you need information about the JoinPoint. What information might you get from a JoinPoint?
+  * The name of the method being invoked.
+  * The arguments to the method being invoked.
+  * The target of the request.
+  * The type of value to be returned to the client. 
