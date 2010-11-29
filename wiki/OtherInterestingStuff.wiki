@@ -6,3 +6,6 @@
  * [http://jcifs.samba.org/ jCIFS] - is an Open Source client library that implements the CIFS/SMB networking protocol in 100% Java. CIFS is the standard file sharing protocol on the Microsoft Windows platform (e.g. Map Network Drive ...). This client is used extensively in production on large Intranets.
  * [http://openid.net/ OpenID] 
  * [http://ca.com/us/internet-access-control.aspx SiteMinder]
+ * [http://www.atlassian.com/software/crowd/ Atlassian Crowd] - single sign-on & identity management
+ * [http://jcaptcha.sourceforge.net/ Jcaptcha] - Java Completely Automated Public Test, used to tell Computers and Humans apart. 
+  * For example:<img src='http://forge.octo.com/jcaptcha/confluence/download/attachments/35520514/jcaptcha3.jpg'/>
