@@ -1,0 +1,5 @@
+#summary not directly related but interesting
+
+
+ * [http://www.jasig.org/cas CAS: Central Authentication Service]<img width='60' src='http://www.jasig.org/sites/jasig.webchuckhosting.com/files/casLogo.jpg'/>
+ * 
