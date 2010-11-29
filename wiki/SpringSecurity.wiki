@@ -3,7 +3,14 @@
  * [http://www.viddler.com/explore/oredev/videos/22/ Flash Video - Ben Alex of SpringSource]
  * Spring Security used to be Acegi Security - became Spring Security in 2008
  * Spring Security capabilities:
-  * 
+  * Authentication
+  * Web URL authorization
+  * Method invocation authorization
+  * Channel security
+  * Human user detection
+  * Domain instance based security (ACLs)
+  * WS-Security (via Spring Web Services)
+  * Flow Authorization (via Spring Web Flow)
  * What Spring Security *IS NOT*:
   * [http://en.wikipedia.org/wiki/Firewall_(computing) Firewall]
   * [http://en.wikipedia.org/wiki/Proxy_server Proxy Server]
