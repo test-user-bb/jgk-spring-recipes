@@ -1,5 +1,6 @@
 #summary spring security
  * NOTE: elements here lifted from Ben Alex's book on spring security.
+ * [http://apr.apache.org/versioning.html Apache Portable Runtime Project versioning guidelines]
  * 2007 - Acegi Security is rebranded as *Spring Security*
  * Three main areas of interest in respect of authorization:
   # authorizing web requests
