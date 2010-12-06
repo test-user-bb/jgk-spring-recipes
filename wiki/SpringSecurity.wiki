@@ -1,5 +1,9 @@
 #summary spring security
  * NOTE: elements here lifted from Ben Alex's book on spring security.
+ * three main areas of interest in respect of authorization:
+  # authorizing web requests
+  # authorizing whether methods can be invoked
+  # authorizing access to individual domain object instances
  * [http://jcaptcha.sourceforge.net/ JCaptcha] integration for human user detection
  * Spring Security currently supports authentication integration with:
   * HTTP BASIC authentication headers (an IEFT RFC-based standard)
