@@ -1,6 +1,9 @@
 #summary spring security
  * NOTE: elements here lifted from Ben Alex's book on spring security.
  * [http://apr.apache.org/versioning.html Apache Portable Runtime Project versioning guidelines] _MAJOR.MINOR.PATCH_
+  * Versions are denoted using a standard triplet of integers: MAJOR.MINOR.PATCH. 
+  * The basic intent is that MAJOR versions are incompatible, large-scale upgrades of the API. 
+  * MINOR versions retain source and binary compatibility with older minor versions, and changes in the PATCH level are perfectly compatible, forwards and backwards.
  * 2007 - Acegi Security is rebranded as *Spring Security*
  * Three main areas of interest in respect of authorization:
   # authorizing web requests
