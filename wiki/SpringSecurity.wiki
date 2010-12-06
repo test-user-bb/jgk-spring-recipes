@@ -13,6 +13,12 @@
   * Automatic "remember-me" authentication (so you can tick a box to avoid re-authentication for a
 predetermined period of time)
   * Anonymous authentication (allowing every call to automatically assume a particular security identity)
+  * Run-as authentication (which is useful if one call should proceed with a different security identity)
+  * Java Authentication and Authorization Service (JAAS)
+  * JEE container autentication (so you can still use Container Managed Authentication if desired)
+  * Kerberos
+  * Third Party Providers
+   * Java Open Source Single Sign On (JOSSO), AppFuse, AndroMDA, Mule ESB, Direct Web Request (DWR), Grails,  Tapestry, JTrac, Jasypt, Roller, Elastic Path, Atlassian Crowd
  * *Authorization* refers to the process of deciding whether a principal is allowed to perform an action within your application.
  * *Authentication* is the process of establishing a principal is who they claim to be (a “principal” generally means a user, device or some other system which can perform an action in your application).
  * [http://s3.amazonaws.com/dist.springframework.org/release/SEC/spring-security-3.0.5.RELEASE.zip Download Spring Security 3.0.5.RELEASE]
