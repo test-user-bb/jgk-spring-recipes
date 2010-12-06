@@ -1,4 +1,6 @@
 #summary spring security
+ * NOTE: elements here lifted from Ben Alex's book on spring security.
+ * *Authorization* refers to the process of deciding whether a principal is allowed to perform an action within your application.
  * *Authentication* is the process of establishing a principal is who they claim to be (a “principal” generally means a user, device or some other system which can perform an action in your application).
  * [http://s3.amazonaws.com/dist.springframework.org/release/SEC/spring-security-3.0.5.RELEASE.zip Download Spring Security 3.0.5.RELEASE]
  * Spring Security works with webapps, but also with:
