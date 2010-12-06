@@ -1,5 +1,6 @@
 #summary spring security
  * NOTE: elements here lifted from Ben Alex's book on spring security.
+ * [http://jcaptcha.sourceforge.net/ JCaptcha] integration for human user detection
  * Spring Security currently supports authentication integration with:
   * HTTP BASIC authentication headers (an IEFT RFC-based standard)
   * HTTP Digest authentication headers (an IEFT RFC-based standard)
