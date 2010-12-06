@@ -1,5 +1,18 @@
 #summary spring security
  * NOTE: elements here lifted from Ben Alex's book on spring security.
+ * Spring Security currently supports authentication integration with:
+  * HTTP BASIC authentication headers (an IEFT RFC-based standard)
+  * HTTP Digest authentication headers (an IEFT RFC-based standard)
+  * HTTP X.509 client certificate exchange (an IEFT RFC-based standard)
+  * LDAP
+  * Form-based authentication (for simple user interface needs)
+  * OpenID authentication
+  * Authentication based on pre-established request headers (such as Computer Associates Siteminder)
+  * JA-SIG Central Authentication Service (otherwise known as CAS, which is a popular open source single sign on system)
+  * Transparent authentication context propagation for Remote Method Invocation (RMI) and HttpInvoker (a Spring remoting protocol)
+  * Automatic "remember-me" authentication (so you can tick a box to avoid re-authentication for a
+predetermined period of time)
+  * Anonymous authentication (allowing every call to automatically assume a particular security identity)
  * *Authorization* refers to the process of deciding whether a principal is allowed to perform an action within your application.
  * *Authentication* is the process of establishing a principal is who they claim to be (a “principal” generally means a user, device or some other system which can perform an action in your application).
  * [http://s3.amazonaws.com/dist.springframework.org/release/SEC/spring-security-3.0.5.RELEASE.zip Download Spring Security 3.0.5.RELEASE]
