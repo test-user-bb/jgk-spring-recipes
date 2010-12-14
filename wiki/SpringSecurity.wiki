@@ -1,4 +1,16 @@
 #summary spring security
+ * Security
+{{{
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:security="http://www.springframework.org/schema/security"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+http://www.springframework.org/schema/security
+http://www.springframework.org/schema/security/spring-security-3.0.xsd">
+...
+</beans>
+}}}
  * [http://www.springsource.com/products/sts SpringSource Tool Suite ]
  * NOTE: elements here lifted from Ben Alex's book on spring security.
  * [http://apr.apache.org/versioning.html Apache Portable Runtime Project versioning guidelines] _MAJOR.MINOR.PATCH_
