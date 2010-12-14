@@ -1,4 +1,5 @@
 #summary spring security
+ * [http://www.springsource.com/products/sts SpringSource Tool Suite ]
  * NOTE: elements here lifted from Ben Alex's book on spring security.
  * [http://apr.apache.org/versioning.html Apache Portable Runtime Project versioning guidelines] _MAJOR.MINOR.PATCH_
   * Versions are denoted using a standard triplet of integers: MAJOR.MINOR.PATCH. 
