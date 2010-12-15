@@ -4,5 +4,6 @@
 </head>
 <body>
 <h2>Exercise Spring Security in a Web Application</h2>
+Simple change
 </body>
 </html>
