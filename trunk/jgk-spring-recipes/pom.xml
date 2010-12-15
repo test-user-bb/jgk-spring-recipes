@@ -68,5 +68,6 @@
 		<module>testing</module>
 		<module>security</module>
 		<module>security-samples-contacts</module>
+		<module>security-web</module>
 	</modules>
 </project>
