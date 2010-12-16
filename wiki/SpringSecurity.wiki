@@ -1,4 +1,8 @@
 #summary spring security
+ * Source code available via git:
+{{{
+git clone git://git.springsource.org/spring-security/spring-security.git
+}}}
  * in application configuration:
 {{{
 <authentication-manager>
