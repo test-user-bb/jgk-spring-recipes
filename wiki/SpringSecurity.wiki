@@ -1,4 +1,13 @@
 #summary spring security
+ * Run samples:
+{{{
+ You can also run the sample web applications directly using gradle's Jetty plugin. For example, to run the contacts sample
+
+ $ cd samples/contacts
+ $ gradle jettyRun
+
+which will start the server on port 8080. You can then access it using the URL http://localhost:8080/contacts.
+}}}
  * Source code available via git:
 {{{
 git clone git://git.springsource.org/spring-security/spring-security.git
