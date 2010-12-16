@@ -1,5 +1,9 @@
 #summary spring security
  * Minimum Maven dependencies:
+  * org.springframework.security:spring-security-core:3.0.5.RELEASE
+  * org.springframework.security:spring-security-config:3.0.5.RELEASE
+  * org.springframework.security:spring-security-web:3.0.5.RELEASE
+  * org.springframework:spring-web:3.0.5.RELEASE
 {{{
   	<dependency>
   		<groupId>org.springframework.security</groupId>
