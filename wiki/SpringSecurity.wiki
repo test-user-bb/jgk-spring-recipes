@@ -1,4 +1,11 @@
 #summary spring security
+ * Default settings:
+  * Login page: {{{ /spring_security_login }}}
+  * Failure page: {{{ /spring_security_login?login_error }}}
+  * Posts to: {{{ /j_spring_security_check }}}
+ * Spring Security will auto-render a login page if you do not specify a custom login page URL.
+ * Authentication Mechanisms vs. Authentication Providers
+  * Mechanism bundles user info (e.g. username/password or cookie) into an AuthenticationRequest which is passed to the providers. Provider examines request to determine if sufficient information available to authenticate user.  If 'yes', then returns an AuthenticationResponse (has user roles, their format?, extra profile info) to the Mechanism (the mechanism stores it on on the [http://static.springsource.org/spring-security/site/docs/3.0.x/apidocs/org/springframework/security/core/context/SecurityContextHolder.html SecurityContextHolder]).
  * Run samples:
 {{{
  You can also run the sample web applications directly using gradle's Jetty plugin. For example, to run the contacts sample
