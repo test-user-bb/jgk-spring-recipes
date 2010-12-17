@@ -70,5 +70,6 @@
 		<module>security-samples-contacts</module>
 		<module>security-web</module>
 		<module>security-web-basicauth</module>
+		<module>security-web-basicauth-with-loginpage</module>
 	</modules>
 </project>
