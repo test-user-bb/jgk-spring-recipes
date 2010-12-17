@@ -1,4 +1,9 @@
 #summary spring security
+ * Method Authorization
+  * Web authorization relies on pattern matching
+  * No pattern match means no authorization
+  * Client/UI technology agnostic
+  * Flexible - esp. with Expression Language
  * Better to move this protection to .xml configuration so you do not need to have this similar code in many different places.
   * So in a configuration file (e.g. security-config.xml) you might include:
 {{{
