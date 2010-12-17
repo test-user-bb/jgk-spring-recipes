@@ -1,5 +1,12 @@
 #summary spring security
- * In a .jsp file you can check user in role and throw a spring exception:
+ * Better to move this protection to .xml configuration so you do not need to have this similar code in many different places.
+  * So in a configuration file (e.g. security-config.xml) you might include:
+{{{
+   <security:http auto-config="true">
+       <security:intercept-url pattern="/special_user_page.jsp" access="ROLE_SPECIAL_USER"/>
+   </security:http>
+}}}
+ * In a special_user_page.jsp file you can check user in role and throw a spring exception:
   {{{
      <% 
          if (!request.isUserInRole("ROLE_SPECIAL_USER")) {
