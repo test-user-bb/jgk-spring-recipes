@@ -6,11 +6,14 @@ http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
 http://www.springframework.org/schema/security
 http://www.springframework.org/schema/security/spring-security-3.0.xsd">
 
-<security:http auto-config="true">
+<security:http auto-config="true" >
+  <security:logout logout-url="/logout"/>
+<!--   <security:logout logout-url="/j_spring_security_logout"/>  -->
+  <security:intercept-url pattern="/login" access="IS_AUTHENTICATED_ANONYMOUSLY" />
   <security:intercept-url pattern="/login.jsp*" access="IS_AUTHENTICATED_ANONYMOUSLY" />
   <security:intercept-url pattern="/**" access="ROLE_USER" />
-  <security:form-login login-page='/login.jsp' authentication-failure-url="/login.jsp?login_error=1"/>
-   
+  <security:form-login login-page='/login' authentication-failure-url="/login.jsp?login_error=1"/>
+   <security:session-management invalid-session-url="/sessionTimeout.jsp" />
 </security:http>
 <security:authentication-manager>
   <security:authentication-provider>
