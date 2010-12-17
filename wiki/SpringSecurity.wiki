@@ -1,4 +1,6 @@
 #summary spring security
+ * How to check if user is actually part of a role?
+  {{{ request.isUserInRole("ROLE_USER"); }}}
  * Authorization with Spring Security:
   * web authorization
   * method authorization
