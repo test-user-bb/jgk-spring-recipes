@@ -1,4 +1,5 @@
 #summary spring security
+ * Basic Authentication uses Base64 encoding.  Very simple and not-secure data.  So, best to use over a secure channel (https).
  * Basic Authentication uses HTTP header:
 {{{
    Name: "Authorization"
