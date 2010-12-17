@@ -1,4 +1,12 @@
 #summary spring security
+ * In a .jsp file you can check user in role and throw a spring exception:
+  {{{
+     <% 
+         if (!request.isUserInRole("ROLE_SPECIAL_USER")) {
+             throw new AccessDeniedException("You must be a SPECIAL_USER to use this feature.");
+         }
+     %>
+  }}}
  * How to check if user is actually part of a role?
   {{{ request.isUserInRole("ROLE_USER"); }}}
  * Authorization with Spring Security:
