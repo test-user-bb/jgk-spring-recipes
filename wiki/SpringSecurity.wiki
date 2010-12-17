@@ -1,6 +1,6 @@
 #summary spring security
  * Basic Authentication uses Base64 encoding.  Very simple and not-secure data.  So, best to use over a secure channel (https).
- * Basic Authentication is integrated with Spring's {{{ remoting. [http://static.springsource.org/spring/docs/2.5.x/api/org/springframework/remoting/httpinvoker/SimpleHttpInvokerRequestExecutor.html org.springframework.remoting.httpinvoker.Authentication.SimpleHttpInvokerRequestExecutor] }}}
+ * Basic Authentication is integrated with Spring's  [http://static.springsource.org/spring/docs/2.5.x/api/org/springframework/remoting/httpinvoker/SimpleHttpInvokerRequestExecutor.html org.springframework.remoting.httpinvoker.Authentication.SimpleHttpInvokerRequestExecutor].
  * Basic Authentication uses HTTP header:
 {{{
    Name: "Authorization"
