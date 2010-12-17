@@ -1,4 +1,9 @@
 #summary spring security
+ * Basic Authentication uses HTTP header:
+{{{
+   Name: "Authorization"
+   Value: "Basic" + " " + Base64(username + ":" + password)
+}}}
  * Minimum Maven dependencies:
   * org.springframework.security:spring-security-core:3.0.5.RELEASE
   * org.springframework.security:spring-security-config:3.0.5.RELEASE
