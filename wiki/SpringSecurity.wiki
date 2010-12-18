@@ -1,4 +1,12 @@
 #summary spring security
+ * AspectJ 
+{{{
+<security:global-method-security>
+  <security:protect-pointcut access="ROLE_USER" expression="execution(* *.get*(..))"/>
+  <security:protect-pointcut access="ROLE_ADMIN" expression="execution(* *.set*(..))"/>
+</security:global-method-security>
+
+}}}
  * You can apply method-level security directly in a bean configuration:
 {{{
 <bean id="jed" class="com.jgk.springrecipes.stuff.BigStuff">
