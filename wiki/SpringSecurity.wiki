@@ -1,4 +1,9 @@
 #summary spring security
+ * Spring EL Support (4 annotations)
+  * @PreAuthorize
+  * @PostAuthorize
+  * @PreFilter
+  * @PostFilter
  * AspectJ 
 {{{
 <security:global-method-security>
