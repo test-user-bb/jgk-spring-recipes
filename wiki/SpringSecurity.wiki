@@ -4,6 +4,27 @@
   * @PostAuthorize
   * @PreFilter
   * @PostFilter
+ * Spring EL Expressions:
+  * hasRole(String)
+  * hasAnyRole(String)
+  * hasPermission(String)
+  * isAnonymous
+  * isRememberMe
+  * isFullyAuthenticated
+  * authentication
+  * permitAll
+  * denyAll
+  * access to the arguments and return object
+ * Examples of Spring EL Annotations:
+{{{
+<security:global-method-security expression-annotations="enabled">
+...
+  public interface MyBean {
+     @PreAuthorize("hasRole('ROLE_TELLER') and (#account.balance + #account >= -#account.overdraft)")
+     void post(Account account, float amount);
+  }
+  
+}}}
  * AspectJ 
 {{{
 <security:global-method-security>
