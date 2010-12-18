@@ -4,9 +4,9 @@
   * [http://static.springsource.org/spring-security/site/docs/3.0.x/apidocs/index.html?org/springframework/security/core/Authentication.html InMemoryDaoImpl] - Retrieves user details from an in-memory list created in the application context. Username lookups are case-insensitive.
   * [http://static.springsource.org/spring-security/site/docs/3.0.x/apidocs/index.html?org/springframework/security/core/Authentication.html JdbcDaoImpl] - uses jdbc to get info from database, specifies tables (Users, Authorities) and columns
   * [http://static.springsource.org/spring-security/site/docs/3.0.x/apidocs/index.html?org/springframework/security/core/Authentication.html JdbcUserDetailsManager] - CRUD interface to JdbcDaoImpl
-  * LdapUserDetailsManager
-  * LdapUserDetailsService
-  * UserDetailsServiceWrapper
+  * [http://static.springsource.org/spring-security/site/docs/3.0.x/apidocs/index.html?org/springframework/security/core/Authentication.html LdapUserDetailsManager]
+  * [http://static.springsource.org/spring-security/site/docs/3.0.x/apidocs/index.html?org/springframework/security/core/Authentication.html LdapUserDetailsService]
+  * UserDetailsServiceWrapper - _deprecated_
  * How do you get information about the currently authenticated user?
 {{{
 Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
