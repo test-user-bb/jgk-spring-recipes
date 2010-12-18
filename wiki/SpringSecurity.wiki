@@ -18,7 +18,7 @@
  * Examples of Spring EL Annotations:
 {{{
 ...add the following to your security configuration xml file:
-<security:global-method-security expression-annotations="enabled">
+<security:global-method-security expression-annotations="enabled"/>
 ...
   public interface MyBean {
      @PreAuthorize("hasRole('ROLE_SUPERVISOR') or (hasRole('ROLE_TELLER') and (#account.balance + #account >= -#account.overdraft))")
