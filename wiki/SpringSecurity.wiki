@@ -1,5 +1,5 @@
 #summary spring security
- * Spring EL Support (4 annotations)
+ * Spring EL Annotations (4 annotations)
   * @PreAuthorize
   * @PostAuthorize
   * @PreFilter
