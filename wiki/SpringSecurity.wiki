@@ -5,7 +5,7 @@
 }}}
  * global-method-security
 {{{
-<security:global-method-security 
+<security:global-method-security />
 global-method-security
 Provides method security for all beans registered in 
  the Spring application context. Specifically, beans will 
