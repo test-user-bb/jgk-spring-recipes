@@ -2,7 +2,7 @@
  * What type of [http://static.springsource.org/spring-security/site/docs/3.0.x/apidocs/index.html?org/springframework/security/core/Authentication.html UserDetailsService] implementations exist?
   * CachingUserDetailsService
   * [http://static.springsource.org/spring-security/site/docs/3.0.x/apidocs/index.html?org/springframework/security/core/Authentication.html InMemoryDaoImpl] - Retrieves user details from an in-memory list created in the application context. Username lookups are case-insensitive.
-  * JdbcDaoImpl
+  * [http://static.springsource.org/spring-security/site/docs/3.0.x/apidocs/index.html?org/springframework/security/core/Authentication.html JdbcDaoImpl] - uses jdbc to get info from database, specifies tables (Users, Authorities) and columns
   * JdbcUserDetailsManager
   * LdapUserDetailsManager
   * LdapUserDetailsService
