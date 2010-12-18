@@ -1,5 +1,5 @@
 #summary spring security
- * [http://java.sun.com/developer/technicalArticles/J2EE/security_annotation/ Security Annotations]:  _Note: JSR250 security annotations are the standard, so should be preferred over Spring @Secured_
+ * [http://java.sun.com/developer/technicalArticles/J2EE/security_annotation/ Security Annotations]: 
 {{{
 javax.annotation.security.PermitAll
 javax.annotation.security.DenyAll
@@ -7,6 +7,9 @@ javax.annotation.security.RolesAllowed
 javax.annotation.security.DeclareRoles
 javax.annotation.security.RunAs
 }}}
+ * Spring's @Secured
+  *  _Note: JSR250 security annotations are the standard, so should be preferred over Spring @Secured_
+  * Useful since it can be applied to Interfaces AND classes, whereas the JSR250 security annotations may only be applied to classes.
  * How do you enable JSR250 security?
 {{{
   <security:global-method-security jsr250-annotations="enabled">
