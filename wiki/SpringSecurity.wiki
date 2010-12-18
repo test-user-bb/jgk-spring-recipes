@@ -1,4 +1,5 @@
 #summary spring security
+ * [http://static.springsource.org/spring-security/site/docs/3.0.x/apidocs/org/springframework/security/core/context/SecurityContextHolder.html SecurityContextHolder]
  * [http://static.springsource.org/spring-security/site/faq.html FAQ]
  * Spring Security Basics (3 steps)
   # add spring security jars to your classpath 
