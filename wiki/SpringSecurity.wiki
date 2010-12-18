@@ -1,4 +1,12 @@
 #summary spring security
+ * What type of [http://static.springsource.org/spring-security/site/docs/3.0.x/apidocs/index.html?org/springframework/security/core/Authentication.html UserDetailsService] implementations exist?
+  * CachingUserDetailsService
+  * InMemoryDaoImpl
+  * JdbcDaoImpl
+  * JdbcUserDetailsManager
+  * LdapUserDetailsManager
+  * LdapUserDetailsService
+  * UserDetailsServiceWrapper
  * How do you get information about the currently authenticated user?
 {{{
 Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
