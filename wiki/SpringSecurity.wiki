@@ -1,4 +1,9 @@
 #summary spring security
+ * Official Java EE and Java 6 way of doing method security:
+{{{
+  @DenyAll
+  @RolesAllowed("ROLE_USER")
+}}}
  * Method Authorization
   * Web authorization relies on pattern matching
   * No pattern match means no authorization
