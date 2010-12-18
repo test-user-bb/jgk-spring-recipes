@@ -1,12 +1,12 @@
 #summary spring security
  * You can apply method-level security directly in a bean configuration:
 {{{
-   <bean id="myBean" class="com.jgk.springrecipes.SomeBean">
-      <security:intercept-methods>
-          <security:protect method="MyBean.set*" access="ROLE_ADMIN" />
-          <security:protect method="MyBean.get*" access="ROLE_USER" />
-      </security:intercept-methods>
-   </bean>
+<bean id="jed" class="com.jgk.springrecipes.stuff.BigStuff">
+   <security:intercept-methods>
+     <security:protect access="ROLE_ADMIN" method="set*"/>
+     <security:protect access="ROLE_USER" method="get*"/>
+   </security:intercept-methods>
+</bean>
 }}}
  * [http://java.sun.com/developer/technicalArticles/J2EE/security_annotation/ Security Annotations]: 
 {{{
