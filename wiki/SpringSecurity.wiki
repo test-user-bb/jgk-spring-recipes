@@ -1,4 +1,4 @@
-#summary spring security
+#summary spring security [http://static.springsource.org/spring-security/site/docs/3.0.x/apidocs/ javadoc]
  * [http://static.springsource.org/spring-security/site/docs/3.0.x/apidocs/org/springframework/security/authentication/ProviderManager.html ProviderManager]
  * [http://static.springsource.org/spring-security/site/docs/3.0.x/apidocs/index.html?org/springframework/security/core/Authentication.html Authentication]
  * [http://static.springsource.org/spring-security/site/docs/3.0.x/apidocs/org/springframework/security/authentication/AuthenticationManager.html AuthenticationManager]
