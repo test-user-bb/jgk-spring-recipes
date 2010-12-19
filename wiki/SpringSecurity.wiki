@@ -1,5 +1,6 @@
 #summary spring security
- * [http://static.springsource.org/spring-security/site/docs/3.0.x/apidocs/index.html?org/springframework/security/core/Authentication.html AuthenticationManager]
+ * [http://static.springsource.org/spring-security/site/docs/3.0.x/apidocs/index.html?org/springframework/security/core/Authentication.html Authentication]
+[http://static.springsource.org/spring-security/site/docs/3.0.x/apidocs/org/springframework/security/authentication/AuthenticationManager.html AuthenticationManager]
  * What type of [http://static.springsource.org/spring-security/site/docs/3.0.x/apidocs/index.html?org/springframework/security/core/Authentication.html UserDetailsService] implementations exist?
   * CachingUserDetailsService
   * [http://static.springsource.org/spring-security/site/docs/3.0.x/apidocs/index.html?org/springframework/security/core/Authentication.html InMemoryDaoImpl] - Retrieves user details from an in-memory list created in the application context. Username lookups are case-insensitive.
