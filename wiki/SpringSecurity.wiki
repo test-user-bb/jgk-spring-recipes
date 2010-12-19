@@ -1,5 +1,9 @@
 #summary spring security
+
  * [http://static.springsource.org/spring-security/site/docs/3.0.x/apidocs/ javadoc]
+ * Spring Security Videos:
+  * [http://www.viddler.com/explore/oredev/videos/22/ Spring Security with Ben Alex at Orodev]
+  * [http://www.youtube.com/watch?v=JdwczC5IZH4 MyEclipse Spring Security]
  * [http://static.springsource.org/spring-security/site/docs/3.0.x/apidocs/org/springframework/security/authentication/ProviderManager.html ProviderManager]
  * [http://static.springsource.org/spring-security/site/docs/3.0.x/apidocs/index.html?org/springframework/security/core/Authentication.html Authentication]
  * [http://static.springsource.org/spring-security/site/docs/3.0.x/apidocs/org/springframework/security/authentication/AuthenticationManager.html AuthenticationManager]
