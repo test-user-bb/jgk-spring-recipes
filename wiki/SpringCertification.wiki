@@ -1,6 +1,6 @@
 #summary Preparation for SpringSource certification.
 
-* [http://www.youtube.com/watch?v=biNx-t2busI Preparation Video]
-* [http://springcert.sourceforge.net/ Springcert on sourceforge]
-* [http://www.blackbeltfactory.com/ui#! Black belt factory]
-* [http://www.skill-guru.com/test/81/core-spring-certification-mock Skill Guru]
+ * [http://www.youtube.com/watch?v=biNx-t2busI Preparation Video]
+ * [http://springcert.sourceforge.net/ Springcert on sourceforge]
+ * [http://www.blackbeltfactory.com/ui#! Black belt factory]
+ * [http://www.skill-guru.com/test/81/core-spring-certification-mock Skill Guru]
