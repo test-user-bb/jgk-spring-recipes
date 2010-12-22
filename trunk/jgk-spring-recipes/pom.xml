@@ -60,6 +60,7 @@
 	    <module>beaninitialization</module>
 	    <module>beanpostprocessor</module>
 		<module>converters</module>
+		<module>jdbc</module>
 		<module>propertyplaceholderconfigurer</module>
 		<module>simple-context</module>
 		<module>simple-context-with-spring-annotations</module>
