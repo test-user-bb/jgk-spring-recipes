@@ -31,3 +31,27 @@
         <jdbc:script location="classpath:test-data.sql"/>
 </jdbc:embedded-database>
 }}}
+ * default:
+{{{
+public class DataAccessUnitTestTemplate {
+    private EmbeddedDatabase db;
+    
+    @Before
+    public void setUp() {
+        // creates a HSQL in-memory db populated from default scripts classpath:schema.sql and classpath:test-data.sql
+        db = new EmbeddedDatabaseBuilder().addDefaultScripts().build();		
+    }
+
+    @Test
+    public void testDataAccess() {
+        JdbcTemplate template = new JdbcTemplate(db);
+        template.query(...);
+    }
+
+    @After
+    public void tearDown() {
+        db.shutdown();
+    }
+}
+
+}}}
