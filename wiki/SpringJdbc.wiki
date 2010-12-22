@@ -17,3 +17,17 @@
         <jdbc:script location="classpath:test-data.sql"/>
 </jdbc:embedded-database>
 }}}
+ * config: explicit H2
+{{{
+<jdbc:embedded-database id="dataSource" type="H2">
+        <jdbc:script location="classpath:schema.sql"/>
+        <jdbc:script location="classpath:test-data.sql"/>
+</jdbc:embedded-database>
+}}}
+ * config: explicit Derby
+{{{
+<jdbc:embedded-database id="dataSource" type="Derby">
+        <jdbc:script location="classpath:schema.sql"/>
+        <jdbc:script location="classpath:test-data.sql"/>
+</jdbc:embedded-database>
+}}}
