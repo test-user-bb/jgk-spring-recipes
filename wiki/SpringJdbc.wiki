@@ -2,3 +2,4 @@
 
  * [http://static.springsource.org/spring/docs/3.0.x/javadoc-api/ javadoc]
  * [http://static.springsource.org/spring/docs/3.0.x/spring-framework-reference/html/jdbc.html Spring JDBC Reference]
+ * To get something going you need a bit of scaffolding.  Namely, you need some kind of database.  Spring 3 provides embedded databases.
