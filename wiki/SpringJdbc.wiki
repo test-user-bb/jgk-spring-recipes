@@ -1,3 +1,4 @@
 #summary jdbc under Spring
 
+ * [http://static.springsource.org/spring/docs/3.0.x/javadoc-api/ javadoc]
  * [http://static.springsource.org/spring/docs/3.0.x/spring-framework-reference/html/jdbc.html Spring JDBC Reference]
