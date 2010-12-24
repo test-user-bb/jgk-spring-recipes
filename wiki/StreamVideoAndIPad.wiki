@@ -1,0 +1,6 @@
+#summary Help on streaming video
+
+= Introduction =
+ * [http://inmethod.com/air-video/index.html;jsessionid=A1B020F9AB6FE5D77F0CCF2A9CDF35D1 InMethod Air Video]
+ * [http://www.videolan.org/ VideoLAN]
+ * [http://handbrake.fr/ HandBrake]
