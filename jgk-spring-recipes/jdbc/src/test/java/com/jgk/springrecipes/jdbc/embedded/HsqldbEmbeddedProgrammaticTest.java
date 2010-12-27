@@ -28,20 +28,52 @@ public class HsqldbEmbeddedProgrammaticTest {
 	private JdbcTemplate jdbcTemplate;
 	
 	@Test
+	public void checkUpdate() {
+		Integer rowCount = jdbcTemplate.queryForInt("select count(*) from t_person");
+		assertNotNull(rowCount);
+		String lastName="Bodine";
+		String newFirstName="Helen";
+		Person beforePerson = getPersonByLastName(lastName);
+		this.jdbcTemplate.update(
+		        "update t_person set first_name = ? where last_name = ?", 
+		        newFirstName, lastName);
+		Person afterPerson = getPersonByLastName(lastName);
+		assertEquals(newFirstName, afterPerson.getFirstName());
+	}
+	
+	Person getPersonByLastName(String lastName) {
+		Person person = this.jdbcTemplate.queryForObject(
+		        "select * from t_person where last_name = ?",
+		        new Object[]{lastName},
+		        new PersonRowMapper());
+		return person;
+
+	}
+	
+	@Test
+	public void checkInsertUsingUpdate() {
+		Integer rowCount = jdbcTemplate.queryForInt("select count(*) from t_person");
+		assertNotNull(rowCount);
+		this.jdbcTemplate.update(
+		        "insert into t_person (first_name, last_name) values (?, ?)", 
+		        "Mr.", "Drysdale");
+		rowCount = jdbcTemplate.queryForInt("select count(*) from t_person");
+		assertNotNull(rowCount);
+	}
+	
+	@Test
 	public void basis() {
 		Integer rowCount = jdbcTemplate.queryForInt("select count(*) from t_person");
 		assertNotNull(rowCount);
 		assertEquals(Integer.valueOf(3), rowCount);
 		Integer countOfPersonsNamedClampett = this.jdbcTemplate.queryForInt(
 		        "select count(*) from t_person where last_name = ?", "Clampett");
-		System.out.println(countOfPersonsNamedClampett);
 		
 		String lastName = this.jdbcTemplate.queryForObject(
 		        "select last_name from t_person where first_name = ?", 
 		        new Object[]{"Jed"}, String.class);
-		System.out.println(lastName);
 		
-		Person actor = this.jdbcTemplate.queryForObject(
+		Person person = this.jdbcTemplate.queryForObject(
 		        "select * from t_person where last_name = ?",
 //		        "select id, first_name, last_name from t_person where last_name = ?",
 		        new Object[]{"Bodine"},
@@ -69,13 +101,11 @@ public class HsqldbEmbeddedProgrammaticTest {
 		                return person;
 		            }
 		        });
-		System.out.println(persons);
 		List<Person> personsWithMapper = this.jdbcTemplate.query(
-		        "select first_name, last_name from t_person",new PersonMapper());
-		System.out.println(personsWithMapper);
+		        "select first_name, last_name from t_person",new PersonRowMapper());
 	}
 	
-	static class PersonMapper implements RowMapper<Person> {
+	static class PersonRowMapper implements RowMapper<Person> {
 
 		@Override
 		public Person mapRow(ResultSet rs, int rowNum) throws SQLException {
@@ -88,12 +118,12 @@ public class HsqldbEmbeddedProgrammaticTest {
 	}
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
-		System.out.println("BEFORE CLASS");
+//		System.out.println("BEFORE CLASS");
 	}
 
 	@AfterClass
 	public static void tearDownAfterClass() throws Exception {
-		System.out.println("AFTER CLASS");
+//		System.out.println("AFTER CLASS");
 	}
 
 	@Before
