@@ -28,6 +28,12 @@ public class HsqldbEmbeddedProgrammaticTest {
 	private JdbcTemplate jdbcTemplate;
 	
 	@Test
+	public void checkDDL() {
+		this.jdbcTemplate.execute("create table mytable (id integer, name varchar(100))");
+		assertEquals(Integer.valueOf(0),getTableCount("mytable"));
+	}
+	
+	@Test
 	public void checkUpdate() {
 		Integer rowCount = jdbcTemplate.queryForInt("select count(*) from t_person");
 		assertNotNull(rowCount);
@@ -41,10 +47,14 @@ public class HsqldbEmbeddedProgrammaticTest {
 		assertEquals(newFirstName, afterPerson.getFirstName());
 	}
 	
-	Integer getPersonCount() {
-		Integer rowCount = jdbcTemplate.queryForInt("select count(*) from t_person");
+	Integer getTableCount(String tableName) {
+		Integer rowCount = jdbcTemplate.queryForInt("select count(*) from "+tableName);
 		assertNotNull(rowCount);
 		return rowCount;
+		
+	}
+	Integer getPersonCount() {
+		return getTableCount("t_person");
 	}
 	
 	Person getPersonByLastName(String lastName) {
