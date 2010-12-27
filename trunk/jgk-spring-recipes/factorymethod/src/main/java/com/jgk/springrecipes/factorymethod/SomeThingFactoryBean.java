@@ -10,7 +10,7 @@ public class SomeThingFactoryBean implements FactoryBean<SomeThing> {
 
 			@Override
 			public void doSomeAction() {
-				System.out.println("GREAT JOB DOING SOME ACTION");
+				//System.out.println("GREAT JOB DOING SOME ACTION");
 				
 			}
 			
