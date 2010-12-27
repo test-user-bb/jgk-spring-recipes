@@ -1,6 +1,9 @@
 #summary jdbc under Spring
 
  * [http://static.springsource.org/spring/docs/3.0.x/javadoc-api/ javadoc]
+ * Embedded database usage - create programmatic implementation and a declarative implemenation.
+  * JDBC Embedded - programmatic
+  * JDBC Embedded - declarative
  * [http://static.springsource.org/spring/docs/3.0.x/spring-framework-reference/html/jdbc.html Spring JDBC Reference]
  * Maven jdbc dependencies:
 {{{
