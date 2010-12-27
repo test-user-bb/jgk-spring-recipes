@@ -7,6 +7,7 @@ import static org.junit.Assert.assertTrue;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
+import java.util.Map;
 
 import javax.sql.DataSource;
 
@@ -27,6 +28,16 @@ public class HsqldbEmbeddedProgrammaticTest {
 	private EmbeddedDatabase db;
 	private JdbcTemplate jdbcTemplate;
 	
+	@Test
+	public void checkList() {
+		List<Map<String, Object>> list=getList("t_person");
+		assertNotNull(list);
+		assertTrue(!list.isEmpty());
+		//System.out.println(list);
+	}
+	public List<Map<String, Object>> getList(String tableName) {
+	    return this.jdbcTemplate.queryForList("select * from "+tableName);
+	}
 	@Test
 	public void checkDDL() {
 		this.jdbcTemplate.execute("create table mytable (id integer, name varchar(100))");
