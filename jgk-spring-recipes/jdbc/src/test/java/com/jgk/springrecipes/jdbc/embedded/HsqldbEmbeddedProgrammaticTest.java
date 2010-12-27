@@ -41,6 +41,12 @@ public class HsqldbEmbeddedProgrammaticTest {
 		assertEquals(newFirstName, afterPerson.getFirstName());
 	}
 	
+	Integer getPersonCount() {
+		Integer rowCount = jdbcTemplate.queryForInt("select count(*) from t_person");
+		assertNotNull(rowCount);
+		return rowCount;
+	}
+	
 	Person getPersonByLastName(String lastName) {
 		Person person = this.jdbcTemplate.queryForObject(
 		        "select * from t_person where last_name = ?",
@@ -50,6 +56,15 @@ public class HsqldbEmbeddedProgrammaticTest {
 
 	}
 	
+	@Test
+	public void checkDelete() {
+		Integer before = getPersonCount();
+		this.jdbcTemplate.update(
+		        "delete from t_person where id = ?",
+		        Integer.valueOf(2));
+		Integer after = getPersonCount();
+		System.out.println("before,after:"+before+","+after);
+	}
 	@Test
 	public void checkInsertUsingUpdate() {
 		Integer rowCount = jdbcTemplate.queryForInt("select count(*) from t_person");
