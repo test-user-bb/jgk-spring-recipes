@@ -1,6 +1,12 @@
 package com.jgk.springrecipes.jdbc;
 
 public class Person {
+	@Override
+	public String toString() {
+		return "Person [firstName=" + firstName + ", lastName=" + lastName
+				+ "]";
+	}
+
 	private String firstName,lastName;
 
 	public String getFirstName() {

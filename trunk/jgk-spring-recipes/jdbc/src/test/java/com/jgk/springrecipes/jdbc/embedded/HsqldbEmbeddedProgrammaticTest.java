@@ -1,6 +1,12 @@
 package com.jgk.springrecipes.jdbc.embedded;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertTrue;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.List;
 
 import javax.sql.DataSource;
 
@@ -10,21 +16,76 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.datasource.embedded.EmbeddedDatabase;
 import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseBuilder;
 import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType;
 
+import com.jgk.springrecipes.jdbc.Person;
+
 public class HsqldbEmbeddedProgrammaticTest {
 	private EmbeddedDatabase db;
+	private JdbcTemplate jdbcTemplate;
 	
 	@Test
 	public void basis() {
-		JdbcTemplate jdbcTemplate = new JdbcTemplate(db);
 		Integer rowCount = jdbcTemplate.queryForInt("select count(*) from t_person");
 		assertNotNull(rowCount);
 		assertEquals(Integer.valueOf(3), rowCount);
+		Integer countOfPersonsNamedClampett = this.jdbcTemplate.queryForInt(
+		        "select count(*) from t_person where last_name = ?", "Clampett");
+		System.out.println(countOfPersonsNamedClampett);
+		
+		String lastName = this.jdbcTemplate.queryForObject(
+		        "select last_name from t_person where first_name = ?", 
+		        new Object[]{"Jed"}, String.class);
+		System.out.println(lastName);
+		
+		Person actor = this.jdbcTemplate.queryForObject(
+		        "select * from t_person where last_name = ?",
+//		        "select id, first_name, last_name from t_person where last_name = ?",
+		        new Object[]{"Bodine"},
+		        new RowMapper<Person>() {
+		            public Person mapRow(ResultSet rs, int rowNum) throws SQLException {
+		            	Person person = new Person();
+		            	int cols = rs.getMetaData().getColumnCount();
+//		            	System.out.println("No. columns: "+cols);
+//		            	for (int i = 0; i < cols; i++) {
+//							System.out.println(rs.getMetaData().getColumnName(i+1));
+//						}
+		                person.setFirstName(rs.getString("first_name"));
+		                person.setLastName(rs.getString("last_name"));
+//		                System.out.println("id="+rs.getInt("id"));
+		                return person;
+		            }
+		        });
+		List<Person> persons = this.jdbcTemplate.query(
+		        "select first_name, last_name from t_person",
+		        new RowMapper<Person>() {
+		            public Person mapRow(ResultSet rs, int rowNum) throws SQLException {
+		            	Person person = new Person();
+		                person.setFirstName(rs.getString("first_name"));
+		                person.setLastName(rs.getString("last_name"));
+		                return person;
+		            }
+		        });
+		System.out.println(persons);
+		List<Person> personsWithMapper = this.jdbcTemplate.query(
+		        "select first_name, last_name from t_person",new PersonMapper());
+		System.out.println(personsWithMapper);
 	}
 	
+	static class PersonMapper implements RowMapper<Person> {
+
+		@Override
+		public Person mapRow(ResultSet rs, int rowNum) throws SQLException {
+        	Person person = new Person();
+            person.setFirstName(rs.getString("first_name"));
+            person.setLastName(rs.getString("last_name"));
+            return person;
+		}
+		
+	}
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
 		System.out.println("BEFORE CLASS");
@@ -43,6 +104,9 @@ public class HsqldbEmbeddedProgrammaticTest {
 				.addScript("/com/jgk/springrecipes/jdbc/embedded/hsqldb-test-data.sql").build();
 		assertNotNull(db);
 		assertTrue(db instanceof DataSource);
+		jdbcTemplate = new JdbcTemplate(db);
+		assertNotNull(jdbcTemplate);
+
 	}
 
 	@After
