@@ -28,6 +28,7 @@ import org.springframework.jdbc.support.GeneratedKeyHolder;
 import org.springframework.jdbc.support.KeyHolder;
 
 import com.jgk.springrecipes.jdbc.Person;
+import com.jgk.springrecipes.jdbc.repository.PersonRowMapper;
 
 public class HsqldbEmbeddedProgrammaticTest {
 	private EmbeddedDatabase db;
@@ -179,17 +180,6 @@ public class HsqldbEmbeddedProgrammaticTest {
 		        "select first_name, last_name from t_person",new PersonRowMapper());
 	}
 	
-	static class PersonRowMapper implements RowMapper<Person> {
-
-		@Override
-		public Person mapRow(ResultSet rs, int rowNum) throws SQLException {
-        	Person person = new Person();
-            person.setFirstName(rs.getString("first_name"));
-            person.setLastName(rs.getString("last_name"));
-            return person;
-		}
-		
-	}
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
 //		System.out.println("BEFORE CLASS");
