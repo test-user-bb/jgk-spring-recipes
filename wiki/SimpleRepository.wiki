@@ -3,6 +3,7 @@
 = Introduction =
  * Data Access Object (DAO) is a front-end to a data repository
  * In Spring we refer to Repository objects
+ * You can annotate a class with {{{@Repository}}}
 
 = Strategy =
  * Develop a Person Repository (used to load Person objects)
