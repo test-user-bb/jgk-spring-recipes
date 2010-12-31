@@ -2,3 +2,4 @@
 
  * [http://static.springsource.org/spring/docs/3.0.x/spring-framework-reference/html/orm.html Spring ORM]
  * [http://static.springsource.org/spring/docs/3.0.x/javadoc-api/ javadoc]
+ * The recommended integration style is to code DAOs against plain Hibernate, JPA, and JDO APIs. The older style of using Spring's DAO templates is no longer recommended.
