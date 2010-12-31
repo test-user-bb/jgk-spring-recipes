@@ -1,3 +1,4 @@
 #summary ORM
 
  * [http://static.springsource.org/spring/docs/3.0.x/spring-framework-reference/html/orm.html Spring ORM]
+ * [http://static.springsource.org/spring/docs/3.0.x/javadoc-api/ javadoc]
