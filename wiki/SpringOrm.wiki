@@ -3,6 +3,43 @@
  * [http://static.springsource.org/spring/docs/3.0.x/spring-framework-reference/html/orm.html Spring ORM]
  * [http://static.springsource.org/spring/docs/3.0.x/javadoc-api/ javadoc]
  * The recommended integration style is to code DAOs against plain Hibernate, JPA, and JDO APIs. The older style of using Spring's DAO templates is no longer recommended.
+ * Dependencies:
+{{{
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-orm</artifactId>
+		<version>3.0.5.RELEASE</version>
+		<type>jar</type>
+		<scope>compile</scope>
+	</dependency>
+}}}
 
 === Hibernate ===
  * [http://static.springsource.org/spring/docs/3.0.x/spring-framework-reference/html/orm.html#orm-hibernate Spring Hibernate]
+ * Hibernate Maven Dependency
+{{{
+	<dependency>
+		<groupId>org.hibernate</groupId>
+		<artifactId>hibernate</artifactId>
+		<version>3.5.0</version>
+		<classifier>Final</classifier>
+	</dependency>
+	<dependency>
+		<groupId>javax.transaction</groupId>
+		<artifactId>jta</artifactId>
+		<version>1.1</version>
+		<type>jar</type>
+		<scope>compile</scope>
+	</dependency>
+	<dependency>
+		<groupId>dom4j</groupId>
+		<artifactId>dom4j</artifactId>
+		<version>1.6.1</version>
+		<type>jar</type>
+		<scope>compile</scope>
+	</dependency>
+}}}
+
+ * When I added Hibernate 3.5.0-Final dependency I discovered I needed all of the following:
+{{{
+}}}
