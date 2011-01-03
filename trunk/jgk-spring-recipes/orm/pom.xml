@@ -10,6 +10,7 @@
   <groupId>com.jgk</groupId>
   <artifactId>orm</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
   <name>orm</name>
   <url>http://maven.apache.org</url>
   <properties>
@@ -72,4 +73,7 @@
 		<scope>compile</scope>
 	</dependency>
   </dependencies>
+  <modules>
+  	<module>hibernate</module>
+  </modules>
 </project>
