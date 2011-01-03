@@ -43,6 +43,7 @@ public class HsqldbEmbeddedDeclarativeWithSpringPoolTest {
 	@Before
 	public void setUp() throws Exception {
 		System.out.println("BEFORE");
+		
 		DataSource ds = applicationContext.getBean("otherDataSource",DataSource.class);
 		assertNotNull(ds);
 		DataSource dbcpDataSource = applicationContext.getBean("dbcpDataSource",DataSource.class); 
