@@ -18,6 +18,7 @@
  * [http://static.springsource.org/spring/docs/3.0.x/spring-framework-reference/html/orm.html#orm-hibernate Spring Hibernate]
  * As of Spring 3.0, Spring requires Hibernate 3.2 or later.
  * [http://docs.jboss.org/hibernate/core/3.5/reference/en-US/html/tutorial.html#tutorial-firstapp-setup Hibernate Tutorial First App]
+ 
  * Hibernate Maven Dependency
 {{{
 	<dependency>
@@ -26,6 +27,13 @@
 		<version>3.5.0</version>
 		<classifier>Final</classifier>
 	</dependency>
+  	<dependency>
+  		<groupId>org.javassist</groupId>
+  		<artifactId>javassist</artifactId>
+  		<version>3.14.0-GA</version>
+  		<type>jar</type>
+  		<scope>compile</scope>
+  	</dependency>
 	<dependency>
 		<groupId>javax.transaction</groupId>
 		<artifactId>jta</artifactId>
