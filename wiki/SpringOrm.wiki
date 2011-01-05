@@ -16,6 +16,7 @@
 
 === Hibernate ===
  * [http://static.springsource.org/spring/docs/3.0.x/spring-framework-reference/html/orm.html#orm-hibernate Spring Hibernate]
+ * As of Spring 3.0, Spring requires Hibernate 3.2 or later.
  * Hibernate Maven Dependency
 {{{
 	<dependency>
