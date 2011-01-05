@@ -1,5 +1,5 @@
 #summary log4j
- * XML style (log4j.xml)
+ * XML style (log4j.xml) from [http://wiki.apache.org/logging-log4j/Log4jXmlFormat HERE]
 {{{
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
