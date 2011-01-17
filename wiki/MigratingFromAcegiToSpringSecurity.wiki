@@ -4,22 +4,28 @@
  * Here is a discussion of the experience of migrating a project from using Acegi Security (1.0.3) to using Spring Security (
  * From
 {{{
-<acegi.security.version>1.0.3</acegi.security.version>
-
+    <properties>
+        <acegi.security.version>1.0.3</acegi.security.version>
+    </properties>
+    <dependencies>
                 <dependency>
                         <groupId>org.acegisecurity</groupId>
                         <artifactId>acegi-security</artifactId>
                         <version>${acegi.security.version}</version>
                 </dependency>
+    </dependencies>
 
 }}}
  * To:
 {{{
-<org.springframework.version>3.0.5.RELEASE</org.springframework.version>
-
-		<dependency>
+    <properties>
+        <org.springframework.version>3.0.5.RELEASE</org.springframework.version>
+    </properties>
+    <dependencies>
+	<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-security</artifactId>
 			<version>${org.springframework.version}</version>
-		</dependency>
+	</dependency>
+    </dependencies>
 }}}
