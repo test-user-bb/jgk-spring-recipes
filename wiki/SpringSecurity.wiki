@@ -3,7 +3,7 @@
  * [http://static.springsource.org/spring-security/site/docs/3.0.x/apidocs/ javadoc]
  * [http://static.springsource.org/spring-security/site/start-here.html Getting Started]
  * [http://www.infoq.com/presentations/Spring-Security-3 Mike Weisner - Video : Spring Security 3]
-  * Email: mweisner@vmware.com
+  * Email: [mailto:mweisner@vmware.com mweisner@vmware.com]
  * Moving from Acegi to spring-security:
   * put stuff here
   * [http://raibledesigns.com/rd/entry/upgrading_to_spring_security_2 Matt Raible - Upgrading to Spring Security 2.0]
