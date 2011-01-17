@@ -1,6 +1,8 @@
 #summary spring security
 
  * [http://static.springsource.org/spring-security/site/docs/3.0.x/apidocs/ javadoc]
+ * Moving from Acegi to spring-security:
+  * put stuff here
  * Spring Security Videos:
   * [http://www.viddler.com/explore/oredev/videos/22/ Spring Security with Ben Alex at Orodev 2008]
   * [http://www.youtube.com/watch?v=JdwczC5IZH4 MyEclipse Spring Security]
