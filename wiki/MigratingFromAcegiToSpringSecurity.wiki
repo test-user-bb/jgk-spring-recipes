@@ -1,0 +1,14 @@
+#summary Migrating from acegi security to spring security
+
+= Dependencies =
+
+{{{
+<acegi.security.version>1.0.3</acegi.security.version>
+
+                <dependency>
+                        <groupId>org.acegisecurity</groupId>
+                        <artifactId>acegi-security</artifactId>
+                        <version>${acegi.security.version}</version>
+                </dependency>
+
+}}}
