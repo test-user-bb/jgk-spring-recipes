@@ -15,7 +15,8 @@
    * CAS - spring-security-cas-client.jar
    * OpenID - spring-security-openid.jar
   * Steps needed:
-   # create application context
+   # create application context 
+   # within the application context create an authentication manager - responsible for holding all the user information
  * Moving from Acegi to spring-security:
   * put stuff here
   * [http://raibledesigns.com/rd/entry/upgrading_to_spring_security_2 Matt Raible - Upgrading to Spring Security 2.0]
