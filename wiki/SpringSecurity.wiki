@@ -3,6 +3,21 @@
  * [http://static.springsource.org/spring-security/site/docs/3.0.x/apidocs/ javadoc]
  * [http://static.springsource.org/spring-security/site/start-here.html Getting Started]
  *  There is no real conceptual difference between a user who is “anonymously authenticated” and an unauthenticated user.
+ * To use the spring provided security tags in .jsp files you need the following:
+  * In each .jsp file:
+{{{
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
+
+}}}
+  * In the pom.xml:
+{{{
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-taglibs</artifactId>
+			<version>${org.springframework.version}</version>
+		</dependency>		
+
+}}}
  * Using jdbc
   * You can use multiple authentication providers!  This is cool, since if user is not matched on first it will continue hitting subsequent authentication providers.  In the following example there are 3 authentication providers specified.  The first two are actually doing the same thing since the underlying database (dataSource) is the same, and the database uses the standard Spring security tables (USERS, AUTHORITIES):
 {{{
