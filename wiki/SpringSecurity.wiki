@@ -2,7 +2,14 @@
 
  * [http://static.springsource.org/spring-security/site/docs/3.0.x/apidocs/ javadoc]
  * [http://static.springsource.org/spring-security/site/start-here.html Getting Started]
- * 
+ * Using jdbc
+  * 
+  {{{
+     !-- Configure the authentication provider -->
+     <security:authentication-provider>
+         <security:jdbc-user-service data-source-ref="dataSource" />
+     </security:authentication-provider>
+  }}}
 {{{
 CREATE TABLE users
 (
