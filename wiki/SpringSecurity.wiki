@@ -3,7 +3,33 @@
  * [http://static.springsource.org/spring-security/site/docs/3.0.x/apidocs/ javadoc]
  * [http://static.springsource.org/spring-security/site/start-here.html Getting Started]
  * Using jdbc
-  * 
+  * You can use multiple authentication providers!  This is cool, since if user is not matched on first it will continue hitting subsequent authentication providers.
+{{{
+	<security:authentication-manager>
+		<security:authentication-provider user-service-ref='myUserDetailsService'/>
+		<security:authentication-provider>
+			<security:user-service>
+				<security:user name="helen" password="helen" authorities="ROLE_USER"/>
+				<security:user name="ted" password="ted" authorities="ROLE_USER"/>
+			</security:user-service>
+			<!-- 
+		<security:authentication-provider>
+			<security:jdbc-user-service data-source-ref="someDataSource" />
+		</security:authentication-provider>
+			<security:user-service>
+				<security:user name="helen" password="helen" authorities="ROLE_USER"/>
+				<security:user name="ted" password="ted" authorities="ROLE_USER"/>
+			</security:user-service>
+			<security:jdbc-user-service data-source-ref="someDataSource" />
+		<security:authentication-provider user-service-ref='myUserDetailsService'/>
+			 -->
+		</security:authentication-provider>
+	</security:authentication-manager>
+	<bean id="myUserDetailsService" class="org.springframework.security.core.userdetails.jdbc.JdbcDaoImpl">
+		<property name="dataSource" ref="someDataSource"/> 
+	</bean>	
+
+}}}
   * Standard tables used by Spring:
 [http://i299.photobucket.com/albums/mm283/javapda/Spring/spring-security-tutorial-database.png]
   {{{
