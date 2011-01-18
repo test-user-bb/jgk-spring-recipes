@@ -204,6 +204,17 @@ Provides method security for all beans registered in
    Name: "Authorization"
    Value: "Basic" + " " + Base64(username + ":" + password)
 }}}
+ * If using jdbc then you need the following Maven dependency:
+{{{
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-security-jdbc</artifactId>
+			<version>${org.springframework.version}</version>
+			<type>jar</type>
+			<scope>compile</scope>
+		</dependency>
+
+}}}
  * Minimum Maven dependencies:
   * org.springframework.security:spring-security-core:3.0.5.RELEASE
   * org.springframework.security:spring-security-config:3.0.5.RELEASE
