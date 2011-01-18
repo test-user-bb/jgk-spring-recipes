@@ -3,7 +3,7 @@
  * [http://static.springsource.org/spring-security/site/docs/3.0.x/apidocs/ javadoc]
  * [http://static.springsource.org/spring-security/site/start-here.html Getting Started]
  * Using jdbc
-  * You can use multiple authentication providers!  This is cool, since if user is not matched on first it will continue hitting subsequent authentication providers.
+  * You can use multiple authentication providers!  This is cool, since if user is not matched on first it will continue hitting subsequent authentication providers.  In the following example there are 3 authentication providers specified.  The first two are actually doing the same thing since the underlying database (dataSource) is the same, and the database uses the standard Spring security tables (USERS, AUTHORITIES):
 {{{
 	<security:authentication-manager>
 		<security:authentication-provider>
