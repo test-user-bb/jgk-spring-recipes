@@ -208,7 +208,7 @@ Provides method security for all beans registered in
 {{{
 		<dependency>
 			<groupId>org.springframework</groupId>
-			<artifactId>spring-security-jdbc</artifactId>
+			<artifactId>spring-jdbc</artifactId>
 			<version>${org.springframework.version}</version>
 			<type>jar</type>
 			<scope>compile</scope>
