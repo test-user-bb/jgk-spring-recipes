@@ -1,7 +1,26 @@
 #summary Prior acegi configuration
 
 = Acegi =
-* 
+== web.xml ==
+{{{
+  <!-- Define Acegi Filter Chain Proxy -->
+  <filter>      
+	<filter-name>Acegi Filter Chain Proxy</filter-name>       
+		<filter-class>org.acegisecurity.util.FilterToBeanProxy</filter-class>       
+		<init-param>          
+			<param-name>targetClass</param-name>          
+			<param-value>org.acegisecurity.util.FilterChainProxy</param-value>      
+		</init-param>  
+  </filter>  
+  
+  <!-- Filter Acegi servlet -->
+  <filter-mapping>    
+	<filter-name>Acegi Filter Chain Proxy</filter-name>    
+	<url-pattern>/*</url-pattern>  
+  </filter-mapping> 
+
+}}}
+== Config ==
 {{{
 <!-- Acegi bean definitions begin --> 
 	<bean id="filterChainProxy"
