@@ -33,6 +33,7 @@ This content will only be visible to users who are authorized to send requests t
 
 
 }}}
+== jdbc ==
  * Using jdbc
   * You can use multiple authentication providers!  This is cool, since if user is not matched on first it will continue hitting subsequent authentication providers.  In the following example there are 3 authentication providers specified.  The first two are actually doing the same thing since the underlying database (dataSource) is the same, and the database uses the standard Spring security tables (USERS, AUTHORITIES):
 {{{
