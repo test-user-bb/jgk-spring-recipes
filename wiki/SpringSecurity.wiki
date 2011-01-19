@@ -18,6 +18,21 @@
 		</dependency>		
 
 }}}
+ * Tags
+{{{
+<sec:authorize access="hasRole('supervisor')">
+This content will only be visible to users who have
+the "supervisor" authority in their list of <tt>GrantedAuthority</tt>s.
+</sec:authorize>
+
+<sec:authorize url="/admin">
+This content will only be visible to users who are authorized to send requests to the "/admin" URL.
+</sec:authorize>
+
+<sec:authentication property="principal.username" /> will render the name of the current user.
+
+
+}}}
  * Using jdbc
   * You can use multiple authentication providers!  This is cool, since if user is not matched on first it will continue hitting subsequent authentication providers.  In the following example there are 3 authentication providers specified.  The first two are actually doing the same thing since the underlying database (dataSource) is the same, and the database uses the standard Spring security tables (USERS, AUTHORITIES):
 {{{
