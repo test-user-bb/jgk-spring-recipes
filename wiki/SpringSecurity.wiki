@@ -102,6 +102,17 @@ CREATE UNIQUE INDEX ix_auth_username
   ON authorities
   (username, authority);
 }}}
+ * What if your database already has some tables to support this?  No problem.
+{{{
+	<security:authentication-manager>
+		<security:authentication-provider>
+			<security:jdbc-user-service data-source-ref="someDataSource"
+				authorities-by-username-query="select username, 'ROLE_' || user_type as authority from username where username = ?"
+				 users-by-username-query="select username, password, 1 from username where username = ?" />
+		</security:authentication-provider>
+	</security:authentication-manager>
+
+}}}
  * [http://www.infoq.com/presentations/Spring-Security-3 Mike Weisner - Video : Spring Security 3]
   * Email: [mailto:mweisner@vmware.com mweisner@vmware.com]
   * Security Framework for Enterprise
