@@ -1,0 +1,5 @@
+#summary One-sentence summary of this page.
+
+= Introduction =
+
+[http://stackoverflow.com/questions/474159/hibernate-second-level-cache-with-spring hibernate second level cache with spring and hibernate issue]
