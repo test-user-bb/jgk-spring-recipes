@@ -1,7 +1,7 @@
 #summary Migrating from acegi security to spring security
 
 = Dependencies =
- * Package names changed to {{{ org.springframework.security.* }}} from {{{ org.acegisecurity.* }}}
+ * Package names changed to {{{ org.springframework.security.core* }}} from {{{ org.acegisecurity.* }}}
  * Here is a discussion of the experience of migrating a project from using Acegi Security (1.0.3) to using Spring Security (
  * From
 {{{
