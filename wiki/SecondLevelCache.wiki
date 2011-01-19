@@ -1,0 +1,17 @@
+#summary Shows problem regarding Second-level cache
+
+= Introduction =
+
+{{{
+Caused by: org.hibernate.cache.NoCachingEnabledException: Second-level cache is not enabled for usage [hibernate.cache.use_second_level_cache | hibernate.cache.use_query_cache]
+	at org.hibernate.cache.impl.NoCachingRegionFactory.buildEntityRegion(NoCachingRegionFactory.java:70)
+	at org.hibernate.impl.SessionFactoryImpl.<init>(SessionFactoryImpl.java:291)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1385)
+	at org.springframework.orm.hibernate3.LocalSessionFactoryBean.newSessionFactory(LocalSessionFactoryBean.java:860)
+	at org.springframework.orm.hibernate3.LocalSessionFactoryBean.buildSessionFactory(LocalSessionFactoryBean.java:779)
+	at org.springframework.orm.hibernate3.AbstractSessionFactoryBean.afterPropertiesSet(AbstractSessionFactoryBean.java:211)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1477)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1417)
+	... 64 more
+
+}}}
