@@ -3,6 +3,19 @@
  * [http://static.springsource.org/spring-security/site/docs/3.0.x/apidocs/ javadoc]
  * [http://static.springsource.org/spring-security/site/start-here.html Getting Started]
  *  There is no real conceptual difference between a user who is “anonymously authenticated” and an unauthenticated user.
+== Scaffolding ==
+ * You need some minimal stuff in your configuration:
+{{{
+	<security:http auto-config='true' use-expressions="true">
+		<security:intercept-url pattern="/sessionTimeout.jsp*" filters="none" />
+		<security:intercept-url pattern="/admin/**" access="hasAnyRole('ROLE_ADMIN','ROLE_AD')" />
+		<security:intercept-url pattern="/manager/**" access="hasAnyRole('ROLE_ADMIN','ROLE_manager')" />
+		<security:session-management invalid-session-url="/sessionTimeout.jsp" />
+		<security:intercept-url pattern="/**" access="hasAnyRole('ROLE_USER','ROLE_USER','ROLE_PR','ROLE_AD','ROLE_manager','ROLE_PT')" />
+	</security:http>
+
+}}}
+== Other ==
  * To use the spring provided security tags in .jsp files you need the following:
   * In each .jsp file:
 {{{
