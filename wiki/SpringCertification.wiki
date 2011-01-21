@@ -4,3 +4,4 @@
  * [http://springcert.sourceforge.net/ Springcert on sourceforge]
  * [http://www.blackbeltfactory.com/ui#! Black belt factory]
  * [http://www.skill-guru.com/test/81/core-spring-certification-mock Skill Guru]
+ * [http://www.selikoff.net/2010/08/20/jeannes-core-spring-3-certification-experiences/ Jeanne's Blog]
