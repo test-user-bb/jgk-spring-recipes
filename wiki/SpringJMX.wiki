@@ -1,0 +1,4 @@
+#summary JMX in Spring 3
+
+= Introduction =
+ * [http://static.springsource.org/spring/docs/3.0.x/spring-framework-reference/html/jmx.html Docs]
