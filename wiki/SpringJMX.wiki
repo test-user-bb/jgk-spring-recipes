@@ -4,3 +4,7 @@
  * [http://static.springsource.org/spring/docs/3.0.x/spring-framework-reference/html/jmx.html Docs]
 == JMX Info ==
  * [http://java.sun.com/javase/technologies/core/mntr-mgmt/javamanagement/ JMX]
+ * [http://jcp.org/aboutJava/communityprocess/final/jsr003/index3.html JMX Spec (JSR-000003)]
+ * [http://jcp.org/aboutJava/communityprocess/final/jsr160/index.html JMX Remote API]
+ * [http://mx4j.sourceforge.net/ MX4J (open source JMX implementation]
+ * [http://java.sun.com/developer/technicalArticles/J2SE/jmx.html JMX: Getting Started]
