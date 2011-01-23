@@ -87,8 +87,8 @@
         </property>
      </bean>
     }}}
-   * Automatically exporting preexisting MBeans [http://raibledesigns.com/wiki/Wiki.jsp?page=HibernateJMX article on StatisticsService]
-    * some beans are MBeans (e.g. Hibernate's {{{ org.hibernate.jmx.StatisticsService }}})
+   * Automatically exporting preexisting MBeans [http://raibledesigns.com/wiki/Wiki.jsp?page=HibernateJMX article on StatisticsService], some beans are MBeans:
+    * Hibernate's {{{ org.hibernate.jmx.StatisticsService }}}
 {{{
     <context:mbean-export/>
     <bean id="statisticsService" class="org.hibernate.jmx.StatisticsService">
@@ -113,6 +113,23 @@
       		</value>
 		</property>
 	</bean>
+
+}}}
+    * Log4j's {{{ org.apache.log4j.jmx.LoggerDynamicMBean }}}
+{{{
+    <context:mbean-export/>
+
+    <bean class="org.apache.log4j.jmx.LoggerDynamicMBean">
+
+        <constructor-arg>
+
+             <bean class="org.apache.log4j.Logger" factory-method="getLogger">
+                  <constructor-arg value="org.springframework.jmx"/>
+             </bean>
+
+        </constructor-arg>
+
+    </bean>
 
 }}}
   
