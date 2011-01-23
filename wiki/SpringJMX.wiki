@@ -39,7 +39,7 @@
         @ManagedOperationParameter
         @ManagedOperationParameters
     }}}
-  * How it gets done:
+  * How to export a bean as a JMX MBean using Annotations:
    * Annotate your class (@ManagedResource) and methods (@ManagedAttribute, @ManagedOperation) to be exposed
    * Activate exporter in Spring configuration:
     {{{
