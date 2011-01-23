@@ -21,7 +21,7 @@
       {{{
            <context:mbean-server/>
       }}}
-    * Or declare MBeanServer explicitly:
+   * Or declare MBeanServer explicitly:
       {{{
            <bean id="mbeanServer"
                  class="org.springframework.jmx.support.MBeanServerFactoryBean">
