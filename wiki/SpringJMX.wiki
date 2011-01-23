@@ -28,6 +28,17 @@
               <property name="locateExistingServerIfPossible" value="true"/>
            </bean>
       }}}
+  * Spring JMX Annotations ({{{org.springframework.jmx.export.annotation.*}}}):
+    {{{
+        @ManagedResource - class-level
+        @ManagedAttribute - method-level, becomes JMX attribute
+        @ManagedOperation - method-level, becomes JMX operation
+        @ManagedMetric
+        @ManagedNotification
+        @ManagedNotifications
+        @ManagedOperationParameter
+        @ManagedOperationParameters
+    }}}
 == JMX Learning ==
  * JMX Architecture
   * MBeanServer acts as broker for communication between:
