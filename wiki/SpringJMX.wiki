@@ -133,6 +133,11 @@
     </bean>
 
 }}}
+   * Summarized Spring JMX:
+    * Easy export of spring managed beans to JMX MBeanServer
+    * Use {{{ <context:mbean-server/> }}} to create MBean server
+    * Use Spring annotations to declare JMX metadata
+    * Use {{{ <context:mbean-export/> }}} to automatically export preexisting MBean(s)
   
 
 == JMX Learning ==
