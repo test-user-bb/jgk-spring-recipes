@@ -14,3 +14,6 @@
 == Exam Locations ==
  * Pearson VUE Test Center
  * [http://www.pearsonvue.com/vtclocator Pearson VUE Test Center Locator]
+
+== Questions for Training with SpringSource ==
+ * *SpringSourceUniversity@vmware.com*
