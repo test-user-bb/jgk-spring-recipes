@@ -66,6 +66,12 @@
 </beans>
 }}}
    * ObjectName(s) derived from fully qualified class name or passwed as attribute to {{{@ManagedResource}}} as in:  {{{ @ManagedResource(objectName = "statistics:name=monitorFactory") }}} 
+  * MBeanExporter (from Spring)
+   * Transparently exposes an existing POJO bean to the MBeanServer
+    * so you don't have to write all the MBean registration code
+   * Out-of-the-box you do not need to create an explicit MBean management interface or create an {{{ ObjectName }}} instance.
+    * Spring JMX uses reflection to manage all properties and methods
+    * Spring JMX uses map key as the {{{ ObjectName }}}
 
 == JMX Learning ==
  * JMX Architecture
