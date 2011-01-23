@@ -2,6 +2,19 @@
 
 = Introduction =
  * [http://static.springsource.org/spring/docs/3.0.x/spring-framework-reference/html/jmx.html Docs]
+== Spring JMX ==
+ * Motivation:
+  * JMX API is difficult and complex
+  * Goal of Spring's JMX support is to simplify the use of JMX while hiding the complexity of the API
+ * Goals:
+  * Configuration JMX infrastructure
+   * Declaratively using:
+     * context namespace or 
+     * FactoryBeans
+  * Exposing Spring beans as MBeans
+   * Annotation based metadata
+   * Declaratively using Spring bean definitions
+  * 
 == JMX Learning ==
  * JMX Architecture
   * MBeanServer acts as broker for communication between:
