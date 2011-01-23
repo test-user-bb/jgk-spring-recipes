@@ -10,6 +10,9 @@
    * Clients available (jconsole, jvisualvm, Hyperic)
  * MBean 
   * an object with management metadata
+  * an MBean is an object with additional management metadata
+   * Attributes (properties)
+   * Operations (methods)
  * Goals of JMX - Java Management Extensions:
    * A standard, dynamic way of managing and monitoring resources such as applications, devices, and services.
    * Databases.
