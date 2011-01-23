@@ -3,6 +3,13 @@
 = Introduction =
  * [http://static.springsource.org/spring/docs/3.0.x/spring-framework-reference/html/jmx.html Docs]
 == JMX Learning ==
+ * JMX Architecture
+  * MBeanServer acts as broker for communication between:
+   * Multiple local MBean(s)
+   * Remote clients and remote MBean(s)
+   * Clients available (jconsole, jvisualvm, Hyperic)
+ * MBean 
+  * an object with management metadata
  * Goals of JMX - Java Management Extensions:
    * A standard, dynamic way of managing and monitoring resources such as applications, devices, and services.
    * Databases.
@@ -11,6 +18,11 @@
    * EJB modules.
    * Application components.
    * Application servers.
+ * Things you can do with JMX:
+  * Retrieve info about and application at runtime
+  * Dynamically reconfiguration application (while it's running)
+  * Trigger operations inside an application
+
 
 == JMX Info ==
  * [http://java.sun.com/javase/technologies/core/mntr-mgmt/javamanagement/ JMX]
