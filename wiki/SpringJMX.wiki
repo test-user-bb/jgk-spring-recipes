@@ -116,6 +116,7 @@
 
 }}}
     * Log4j's {{{ org.apache.log4j.jmx.LoggerDynamicMBean }}}
+     * The following xml exposes the logger for org.springframework.jmx as a JMX MBean.
 {{{
     <context:mbean-export/>
 
