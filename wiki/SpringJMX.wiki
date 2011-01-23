@@ -14,7 +14,20 @@
   * Exposing Spring beans as MBeans
    * Annotation based metadata
    * Declaratively using Spring bean definitions
-  * 
+  * Consuming JMX managed beans
+   * transparently using a proxy-based mechanism
+  * To locate or create and MBeanServer declaratively:
+   * Use context namespace 
+      {{{
+           <context:mbean-server/>
+      }}}
+    * Or declare MBeanServer explicitly:
+      {{{
+           <bean id="mbeanServer"
+                 class="org.springframework.jmx.support.MBeanServerFactoryBean">
+              <property name="locateExistingServerIfPossible" value="true"/>
+           </bean>
+      }}}
 == JMX Learning ==
  * JMX Architecture
   * MBeanServer acts as broker for communication between:
