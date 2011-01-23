@@ -7,7 +7,7 @@
   * MBeanServer acts as broker for communication between:
    * Multiple local MBean(s)
    * Remote clients and remote MBean(s)
-   * Clients available (jconsole, jvisualvm, Hyperic)
+   * Clients available ([http://download.oracle.com/javase/1.5.0/docs/guide/management/jconsole.html jconsole], jvisualvm, Hyperic)
  * MBean 
   * an object with management metadata
   * an MBean is an object with additional management metadata
