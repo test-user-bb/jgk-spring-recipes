@@ -17,6 +17,7 @@
   </properties>
   <dependencies>
   	<dependency>
+  		<!-- Hibernate gives you a choice of bytecode providers between cglib and javassist -->
   		<groupId>org.javassist</groupId>
   		<artifactId>javassist</artifactId>
   		<version>3.14.0-GA</version>
