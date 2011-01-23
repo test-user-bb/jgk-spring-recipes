@@ -13,6 +13,9 @@
   * an MBean is an object with additional management metadata
    * Attributes (properties)
    * Operations (methods)
+  * MBean management metadata can be defined statically with a Java interface or defined dynamically at runtime.
+   * Simple MBean - statically defined MBean with a Java interface
+   * Dynamic MBean - metadata defined dynamically at runtime
  * Goals of JMX - Java Management Extensions:
    * A standard, dynamic way of managing and monitoring resources such as applications, devices, and services.
    * Databases.
