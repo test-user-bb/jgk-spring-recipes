@@ -87,8 +87,35 @@
         </property>
      </bean>
     }}}
-   * Automatically exporting preexisting MBeans
-    * some beans are MBeans (e.g. Hibernate StatisticsService {{{ org.hibernate.jmx.StatisticsService }}})
+   * Automatically exporting preexisting MBeans [http://raibledesigns.com/wiki/Wiki.jsp?page=HibernateJMX article on StatisticsService]
+    * some beans are MBeans (e.g. Hibernate's {{{ org.hibernate.jmx.StatisticsService }}})
+{{{
+    <context:mbean-export/>
+    <bean id="statisticsService" class="org.hibernate.jmx.StatisticsService">
+        <property name="sessionFactory" ref="mySessionFactory"/>
+    </bean>
+	<bean id="mySessionFactory"
+		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="dataSource" ref="myDataSource" />
+		<property name="mappingResources">
+			<list>
+				<value>com/jgk/springrecipes/orm/hibernate/domain/Event.hbm.xml</value>
+			</list>
+		</property>
+		<property name="hibernateProperties">
+			<value>
+				hibernate.dialect=org.hibernate.dialect.HSQLDialect
+				hibernate.show_sql=true
+				<!-- Drop and re-create the database schema on startup -->
+				hibernate.hbm2ddl.auto=update
+				<!-- Need the following for statistics -->
+                                hibernate.generate_statistics=true
+      		</value>
+		</property>
+	</bean>
+
+}}}
+  
 
 == JMX Learning ==
  * JMX Architecture
