@@ -82,7 +82,7 @@ public class SimpleAgent {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		SimpleAgent agent = new SimpleAgent();
+	    SimpleAgent agent = new SimpleAgent();
 	    System.out.println("SimpleAgent is running...");
 	    SimpleAgent.waitForEnterPressed();
 	    System.out.println("Good-bye");
