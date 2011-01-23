@@ -65,6 +65,8 @@
 
 </beans>
 }}}
+   * ObjectName(s) derived from fully qualified class name or passwed as attribute to {{{@ManagedResource}}} as in:  {{{ @ManagedResource(objectName = "statistics:name=monitorFactory") }}} 
+
 == JMX Learning ==
  * JMX Architecture
   * MBeanServer acts as broker for communication between:
