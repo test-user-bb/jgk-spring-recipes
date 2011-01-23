@@ -66,7 +66,7 @@
 </beans>
 }}}
    * ObjectName(s) derived from fully qualified class name or passwed as attribute to {{{@ManagedResource}}} as in:  {{{ @ManagedResource(objectName = "statistics:name=monitorFactory") }}} 
-  * MBeanExporter (from Spring)
+  * {{{ MBeanExporter }}} (from Spring)
    * Transparently exposes an existing POJO bean to the MBeanServer
     * so you don't have to write all the MBean registration code
    * Out-of-the-box you do not need to create an explicit MBean management interface or create an {{{ ObjectName }}} instance.
@@ -87,6 +87,9 @@
         </property>
      </bean>
     }}}
+   * Automatically exporting preexisting MBeans
+    * some beans are MBeans (e.g. Hibernate StatisticsService {{{ org.hibernate.jmx.StatisticsService }}})
+
 == JMX Learning ==
  * JMX Architecture
   * MBeanServer acts as broker for communication between:
