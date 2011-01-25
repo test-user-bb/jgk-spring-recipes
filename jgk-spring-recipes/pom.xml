@@ -76,5 +76,6 @@
 		<module>security-web</module>
 		<module>security-web-basicauth</module>
 		<module>security-web-basicauth-with-loginpage</module>
+		<module>util</module>
 	</modules>
 </project>
