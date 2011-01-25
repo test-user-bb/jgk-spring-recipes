@@ -19,9 +19,8 @@
   <dependencies>
 	<dependency>
 		<groupId>org.hibernate</groupId>
-		<artifactId>hibernate</artifactId>
-		<version>3.5.0</version>
-		<classifier>Final</classifier>
+		<artifactId>hibernate-core</artifactId>
+		<version>3.5.6-Final</version>
 	</dependency>
 	<dependency>
 		<groupId>commons-dbcp</groupId>
