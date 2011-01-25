@@ -74,5 +74,6 @@
   </dependencies>
   <modules>
   	<module>hibernate</module>
+  	<module>jpa</module>
   </modules>
 </project>
