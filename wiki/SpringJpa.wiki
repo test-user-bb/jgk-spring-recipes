@@ -19,8 +19,7 @@
 == Table Mapping Strategies ==
  * single table per class hierarchy
  * table per concrete entity class
- * strategy in which fields that are specific to a subclass are mapped to a separate table than the
-fields that are common to the parent class, and a join is performed to instantiate the subclass.
+ * strategy in which fields that are specific to a subclass are mapped to a separate table than the fields that are common to the parent class, and a join is performed to instantiate the subclass.
 == Collections supported ==
  * Collection
  * List
@@ -54,14 +53,12 @@ relationship determines the updates to the relationship in the database.
  * In ManyToMany there is a join table that is named A_B (owner name first).
 === Rules for bidirectional relationships ===
  * The following rules apply to bidirectional relationships:
-  * The inverse side of a bidirectional relationship must refer to its owning side by use of the
-mappedBy element of the OneToOne, OneToMany, or ManyToMany annotation. The
-mappedBy element designates the property or field in the entity that is the owner of the relationship.
-   * The many side of one-to-many / many-to-one bidirectional relationships must be the owning
+  * The inverse side of a bidirectional relationship must refer to its owning side by use of the mappedBy element of the OneToOne, OneToMany, or ManyToMany annotation. The mappedBy element designates the property or field in the entity that is the owner of the relationship.
+  * The many side of one-to-many / many-to-one bidirectional relationships must be the owning
 side, hence the mappedBy element cannot be specified on the ManyToOne annotation.
-   * For one-to-one bidirectional relationships, the owning side corresponds to the side that contains
+  * For one-to-one bidirectional relationships, the owning side corresponds to the side that contains
 the corresponding foreign key.
-   * For many-to-many bidirectional relationships either side may be the owning side.
+  * For many-to-many bidirectional relationships either side may be the owning side.
 == Resources ==
  * [http://jcp.org/aboutJava/communityprocess/final/jsr220/ JPA Spec - jsr-220]
  * [http://www.oracle.com/technetwork/java/javaee/downloads/index.html JPA Reference Implementation]
