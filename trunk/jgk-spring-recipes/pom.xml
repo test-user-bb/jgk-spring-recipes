@@ -15,6 +15,8 @@
 	  <slf4j-api.version>1.6.1</slf4j-api.version>
 	  <slf4j-log4j12.version>1.6.1</slf4j-log4j12.version>
 	  <log4j.version>1.2.12</log4j.version>
+	  <hibernate-commons-annotations.version>3.2.0.Final</hibernate-commons-annotations.version>
+	  <hibernate-jpa-2.0-api.version>1.0.0.Final</hibernate-jpa-2.0-api.version>
 	</properties>
 	<organization>
 		<name>John G. Kroubalkian</name>

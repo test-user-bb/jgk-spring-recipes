@@ -8,34 +8,19 @@
     <version>0.0.1-SNAPSHOT</version>
   </parent>
   <groupId>com.jgk</groupId>
-  <artifactId>jpa</artifactId>
+  <artifactId>jpaspec</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <name>jpa</name>
+  <name>jpaspec</name>
   <url>http://maven.apache.org</url>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
   <dependencies>
-
 	<dependency>
 		<groupId>org.hibernate</groupId>
 		<artifactId>hibernate-annotations</artifactId>
 		<version>${org.hibernate.version}</version>		
 	</dependency>
-	<dependency>
-		<groupId>org.hibernate</groupId>
-		<artifactId>hibernate-commons-annotations</artifactId>
-		<version>${hibernate-commons-annotations.version}</version>		
-	</dependency>
-	<dependency>
-		<groupId>org.hibernate</groupId>
-		<artifactId>hibernate-entitymanager</artifactId>
-		<version>${org.hibernate.version}</version>		
-	</dependency>
-	<dependency>
-	  <groupId>org.hibernate.javax.persistence</groupId>
-	  <artifactId>hibernate-jpa-2.0-api</artifactId>
-	  <version>${hibernate-jpa-2.0-api.version}</version>
-	</dependency>  
-	</dependencies>
+  
+  </dependencies>
 </project>
