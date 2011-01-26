@@ -20,6 +20,7 @@
 == Libraries/Dependencies ==
  * javax.persistence.Entity  org.hibernate:hibernate-jpa-2.0-api:3.5.6-Final
 == Good to know ==
+ * A mapped superclass, unlike an entity, is not queryable and cannot be passed as an argument to EntityManager or Query operations. A mapped superclass cannot be the target of a persistent relationship.
  * An entity may inherit from another entity class. Entities support inheritance, polymorphic associations,
 and polymorphic queries.
  * Both abstract and concrete classes can be entities. Both abstract and concrete classes can be annotated
