@@ -22,13 +22,16 @@ public class JpaFootballTeamRepository implements FootballTeamRepository {
 
 	@PersistenceContext
 	public void setEntityManager(EntityManager entityManager) {
+		System.out.println("SET ENETI "+entityManager);
 		this.entityManager = entityManager;
 	}
 	
 	@Override
 	public List<FootballTeam> findAllFootballTeams() {
 		String sqlString = "select f from FootballTeam f";
-		return entityManager.createQuery(sqlString).getResultList();
+		List<FootballTeam> teams = entityManager.createQuery(sqlString).getResultList();
+		System.out.println("TEAMS:  "+teams);
+		return teams;
 	}
 
 }

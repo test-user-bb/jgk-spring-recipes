@@ -39,6 +39,7 @@ public class FootballTest {
 		assertNotNull(entityManagerFactory);
 		assertNotNull(footballTeamRepository);
 		System.out.println("ALL HERE");
+//		entityManager = entityManagerFactory.createEntityManager();
 	}
 	
 	@Test
@@ -50,8 +51,13 @@ public class FootballTest {
 //		entityManager = entityManagerFactory.createEntityManager();
 		System.out.println(entityManager);
 		System.out.println("A1: " + footballTeamRepository.findAllFootballTeams());
-		FootballTeam ft = FootballTeam.createFootballTeam("bills");
-		footballTeamRepository.save(ft);
+		FootballTeam ft1 = FootballTeam.createFootballTeam("bills");
+		entityManager.persist(ft1);
+		System.out.println("FT ID: " + ft1.getId());
+		FootballTeam ft2 = FootballTeam.createFootballTeam("jeds");
+		footballTeamRepository.save(ft2);
+		
+		System.out.println("FT ID: " + ft2.getId());
 		System.out.println("A2: " + footballTeamRepository.findAllFootballTeams());
 		
 		
