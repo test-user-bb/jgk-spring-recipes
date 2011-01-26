@@ -77,5 +77,6 @@
   	<module>jpa</module>
   	<module>jpaec</module>
   	<module>jpaspec</module>
+  	<module>springjpaminimalist</module>
   </modules>
 </project>
