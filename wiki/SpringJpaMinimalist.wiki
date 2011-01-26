@@ -1,0 +1,8 @@
+#summary Most basic/simplest Spring and JPA application.
+
+= Description =
+ * The idea here is to put together the instructions for generating a very basic Spring and JPA application.
+== Requirements ==
+ * Single database (embedded)
+ * Single Repository
+ * Maven-based application
