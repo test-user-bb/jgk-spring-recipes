@@ -10,6 +10,9 @@
  * List
  * Set
  * Map
+== Good to know ==
+ * Runtime exceptions thrown by property accessor methods cause the current transaction to be rolled
+back.
 == Resources ==
  * [http://jcp.org/aboutJava/communityprocess/final/jsr220/ JPA Spec - jsr-220]
  * [http://www.oracle.com/technetwork/java/javaee/downloads/index.html JPA Reference Implementation]
