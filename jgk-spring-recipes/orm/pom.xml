@@ -75,5 +75,7 @@
   <modules>
   	<module>hibernate</module>
   	<module>jpa</module>
+  	<module>jpaec</module>
+  	<module>jpaspec</module>
   </modules>
 </project>
