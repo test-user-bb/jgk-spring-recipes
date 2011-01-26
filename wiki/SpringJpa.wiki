@@ -23,12 +23,12 @@ transaction to be rolled back.
  * Sample usage:
 {{{
 @Stateless public class OrderEntryBean implements OrderEntry {
-@PersistenceContext EntityManager em;
-public void enterOrder(int custID, Order newOrder) {
-Customer cust = em.find(Customer.class, custID);
-cust.getOrders().add(newOrder);
-newOrder.setCustomer(cust);
-}
+   @PersistenceContext EntityManager em;
+   public void enterOrder(int custID, Order newOrder) {
+      Customer cust = em.find(Customer.class, custID);
+      cust.getOrders().add(newOrder);
+      newOrder.setCustomer(cust);
+   }
 }
 }}}
 === persistence.xml ===
