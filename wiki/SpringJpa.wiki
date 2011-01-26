@@ -32,7 +32,7 @@ transaction to be rolled back.
    }
 }
 }}}
- * 
+ * Query sample:
 {{{
 public List findWithName(String name) {
    return em.createQuery(
