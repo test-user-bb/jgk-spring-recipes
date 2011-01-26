@@ -16,6 +16,8 @@
  * @DiscriminatorValue("FT")
  * @PrimaryKeyJoinColumn(name="FT_EMPID")
  * @Id
+== Entity Manager ==
+ * The set of entities that can be managed by a given EntityManager instance is defined by a persistence unit. A persistence unit defines the set of all classes that are related or grouped by the application, and which must be colocated in their mapping to a single database.
 == Table Mapping Strategies ==
  * single table per class hierarchy
  * table per concrete entity class
