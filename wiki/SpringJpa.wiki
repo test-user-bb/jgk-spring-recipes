@@ -19,6 +19,9 @@ back.
  * Composite primary keys typically arise when mapping from legacy databases when the
 database key is comprised of several columns. The EmbeddedId and IdClass annotations are used
 to denote composite primary keys.
+ * The primary key class must define equals and hashCode methods. The semantics of value
+equality for these methods must be consistent with the database equality for the database types
+to which the key is mapped.
 == Resources ==
  * [http://jcp.org/aboutJava/communityprocess/final/jsr220/ JPA Spec - jsr-220]
  * [http://www.oracle.com/technetwork/java/javaee/downloads/index.html JPA Reference Implementation]
