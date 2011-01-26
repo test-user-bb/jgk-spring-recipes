@@ -8,9 +8,9 @@
     <version>0.0.1-SNAPSHOT</version>
   </parent>
   <groupId>com.jgk</groupId>
-  <artifactId>jpaec</artifactId>
+  <artifactId>springjpaminimalist</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <name>jpaec</name>
+  <name>springjpaminimalist</name>
   <url>http://maven.apache.org</url>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -26,6 +26,5 @@
 		<artifactId>hibernate-entitymanager</artifactId>
 		<version>${org.hibernate.version}</version>		
 	</dependency>
-  
   </dependencies>
 </project>
