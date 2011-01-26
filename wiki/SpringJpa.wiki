@@ -10,6 +10,8 @@
  * List
  * Set
  * Map
+== Libraries/Dependencies ==
+ * javax.persistence.Entity  org.hibernate:hibernate-jpa-2.0-api:3.5.6-Final
 == Good to know ==
  * Runtime exceptions thrown by property accessor methods cause the current transaction to be rolled
 back.
