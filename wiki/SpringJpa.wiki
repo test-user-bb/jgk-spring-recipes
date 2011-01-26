@@ -4,6 +4,9 @@
  * JPA = Java Persistence API
 == Annotations ==
  * @Entity
+ * @OneToOne
+ * @ManyToOne
+ * @ManyToMany(mappedBy = "employees")
  * @Transient
  * @Table(name="FT_EMP")
  * @DiscriminatorValue("FT")
