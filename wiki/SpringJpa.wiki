@@ -22,7 +22,14 @@
 transaction to be rolled back.
 == Query ==
  * A named parameter is an identifier that is prefixed by the ":" symbol.
-
+{{{
+User user = (User)em.createQuery
+("SELECT u FROM User u WHERE u.name=:name AND
+u.pass=:pass")
+.setParameter("name", args[0])
+.setParameter("pass", args[1])
+.getSingleResult();
+}}}
 === Examples ===
  * Sample usage:
 {{{
