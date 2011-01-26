@@ -4,4 +4,5 @@
  * JPA = Java Persistence API
 == Resources ==
  * [http://jcp.org/aboutJava/communityprocess/final/jsr220/ JPA Spec - jsr-220]
+ * [http://www.oracle.com/technetwork/java/javaee/downloads/index.html JPA Reference Implementation]
  * [http://en.wikipedia.org/wiki/Java_Persistence_API Wikipedia]
