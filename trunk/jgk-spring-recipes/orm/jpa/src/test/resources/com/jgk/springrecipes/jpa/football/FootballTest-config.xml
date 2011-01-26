@@ -33,8 +33,9 @@
 		<property name="persistenceUnitName" value="myFootballUnit"/>
 		<property name="jpaVendorAdapter" ref="jpaVendorAdapter"/>
 		<property name="jpaPropertyMap" ref="jpaPropertyMap"></property>
-		<property name="persistenceXmlLocation" value="classpath:/com/jgk/springrecipes/jpa/football/football-persistence.xml"></property>
+		<property name="persistenceXmlLocation" value="classpath:/META-INF/football-persistence.xml"></property>
 		<!-- 
+		<property name="persistenceXmlLocation" value="classpath:/com/jgk/springrecipes/jpa/football/football-persistence.xml"></property>
 		<property name="persistenceXmlLocation" value="classpath:/META-INF/football-persistence.xml"></property>
 		<property name="persistenceXmlLocation" value="classpath:/com/jgk/springrecipes/jpa/football/football-persistence.xml"></property>
 		 -->
