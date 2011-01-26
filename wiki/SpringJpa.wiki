@@ -11,6 +11,7 @@
  * @MappedSuperclass
  * @AttributeOverride
  * @AssociationOverride
+ * @JoinColumn(name="ADDR_ID")
  * @Table(name="FT_EMP")
  * @DiscriminatorValue("FT")
  * @PrimaryKeyJoinColumn(name="FT_EMPID")
