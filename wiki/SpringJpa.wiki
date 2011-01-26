@@ -29,7 +29,7 @@ are polymorphic.
  * Relationships may be bidirectional or unidirectional. A bidirectional relationship has both an owning
 side and an inverse side. A unidirectional relationship has only an owning side. The owning side of a
 relationship determines the updates to the relationship in the database.
-The following rules apply to bidirectional relationships:
+ *The following rules apply to bidirectional relationships:
   * The inverse side of a bidirectional relationship must refer to its owning side by use of the
 mappedBy element of the OneToOne, OneToMany, or ManyToMany annotation. The
 mappedBy element designates the property or field in the entity that is the owner of the relationship.
