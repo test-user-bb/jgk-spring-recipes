@@ -6,9 +6,18 @@
  * Single database (embedded)
  * Single Repository
  * Maven-based application
+=== Pieces ===
+ * Libraries
+ * Domain (annotated)
+ * Repository (annotated)
+ * Spring configuration
+ * persistence.xml
 === Domain ===
  * Log
   * id
   * message
   * date (when it occurred)
   * author (not unique)
+=== Spring configuration ===
+{{{
+}}}
