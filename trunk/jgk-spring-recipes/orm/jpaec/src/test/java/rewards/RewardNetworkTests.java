@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import rewards.internal.account.AccountRepository;
+
 import common.money.MonetaryAmount;
 
 @ContextConfiguration(locations="classpath:/rewards/system-test-config.xml")
@@ -19,7 +21,14 @@ public class RewardNetworkTests {
 	@Autowired
 	private RewardNetwork rewardNetwork;
 
-	@Test
+	@Autowired
+	AccountRepository accountRepository;
+	
+	@Test 
+	public void other() {
+		System.out.println(accountRepository);
+	}
+//	@Test
 	public void testRewardForDining() {
 		// create a new dining of 100.00 charged to credit card '1234123412341234' by merchant '123457890' as test input
 		Dining dining = Dining.createDining("100.00", "1234123412341234", "1234567890");
