@@ -86,6 +86,7 @@ public class PersonJpaRepositoryTest {
 		//jpaProperties.put("hibernate.connection.username", "sa");
 		//jpaProperties.put("hibernate.connection.password", "");
 		entityManagerFactoryBean.setJpaPropertyMap(jpaProperties);
+		entityManagerFactoryBean.setPersistenceXmlLocation("classpath:/META-INF/persistence.xml");
 		entityManagerFactoryBean.afterPropertiesSet();
 		return entityManagerFactoryBean.getObject();
 	}
