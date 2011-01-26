@@ -8,6 +8,7 @@
  * @ManyToOne
  * @ManyToMany(mappedBy = "employees")
  * @Transient
+ * @MappedSuperclass
  * @Table(name="FT_EMP")
  * @DiscriminatorValue("FT")
  * @PrimaryKeyJoinColumn(name="FT_EMPID")
