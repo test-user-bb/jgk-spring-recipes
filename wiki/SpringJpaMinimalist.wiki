@@ -6,3 +6,9 @@
  * Single database (embedded)
  * Single Repository
  * Maven-based application
+=== Domain ===
+ * Log
+  * id
+  * message
+  * date (when it occurred)
+  * author (not unique)
