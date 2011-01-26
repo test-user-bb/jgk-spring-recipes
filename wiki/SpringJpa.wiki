@@ -24,6 +24,20 @@ equality for these methods must be consistent with the database equality for the
 to which the key is mapped.
  * Embeddable classes are not annotated as Entity. Embeddable classes must be annotated as
 Embeddable or denoted in the XML descriptor as such.
+ * Relationships among entities may be one-to-one, one-to-many, many-to-one, or many-to-many. Relationships
+are polymorphic.
+ * Relationships may be bidirectional or unidirectional. A bidirectional relationship has both an owning
+side and an inverse side. A unidirectional relationship has only an owning side. The owning side of a
+relationship determines the updates to the relationship in the database.
+The following rules apply to bidirectional relationships:
+  * The inverse side of a bidirectional relationship must refer to its owning side by use of the
+mappedBy element of the OneToOne, OneToMany, or ManyToMany annotation. The
+mappedBy element designates the property or field in the entity that is the owner of the relationship.
+  * The many side of one-to-many / many-to-one bidirectional relationships must be the owning
+side, hence the mappedBy element cannot be specified on the ManyToOne annotation.
+  * For one-to-one bidirectional relationships, the owning side corresponds to the side that contains
+the corresponding foreign key.
+  * For many-to-many bidirectional relationships either side may be the owning side.
 == Resources ==
  * [http://jcp.org/aboutJava/communityprocess/final/jsr220/ JPA Spec - jsr-220]
  * [http://www.oracle.com/technetwork/java/javaee/downloads/index.html JPA Reference Implementation]
