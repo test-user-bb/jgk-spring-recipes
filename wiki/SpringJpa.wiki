@@ -7,7 +7,7 @@
  * {{{@AttributeOverride}}}
  * {{{@AttributeOverrides}}}
  * {{{@DiscriminatorColumn}}}
- * {{{@DiscriminatorValue}}}
+ * {{{@DiscriminatorValue("FT")}}}
  * {{{@Entity}}}
  * {{{@Embedded}}}
  * {{{@EmbeddedId}}}
@@ -24,10 +24,10 @@
  * {{{@OrderBy}}}
  * {{{@JoinColumn(name="ADDR_ID")}}}
  * {{{@JoinTable(name="FIRST_SECOND")}}}
- * {{{@Table(name="FT_EMP")}}}
- * {{{@DiscriminatorValue("FT")}}}
  * {{{@PrimaryKeyJoinColumn(name="FT_EMPID")}}}
  * {{{@PrimaryKeyJoinColumns}}}
+ * {{{@SequenceGenerator}}}
+ * {{{@Table(name="FT_EMP")}}}
 == Annotation Attributes ==
  * {{{cascade}}} - The operations that must be cascaded to the target of the association. ({{{CascadeType[] - ALL, PERSIST, MERGE, REMOVE, DETACH)}}}
  * {{{catalog}}} - The catalog of the table.
