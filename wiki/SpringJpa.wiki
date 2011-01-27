@@ -6,6 +6,7 @@
  * {{{@Entity}}}
  * {{{@EmbeddedId}}}
  * {{{@Embeddable}}}
+ * {{{@Inheritance}}}
  * {{{@OneToOne}}}
  * {{{@ManyToOne}}}
  * {{{@ManyToMany(mappedBy = "employees")}}}
