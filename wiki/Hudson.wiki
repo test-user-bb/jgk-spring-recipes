@@ -1,3 +1,5 @@
 #summary Hudson automated testing
 
 == YES, TESTING ==
+ * [http://hudson-ci.org/ Hudson]
+ * [http://hudson-ci.org/images/butler.png]
