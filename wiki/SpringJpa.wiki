@@ -30,11 +30,13 @@
  * {{{@SequenceGenerator}}}
  * {{{@Table(name="FT_EMP")}}}
 == Annotation Attributes ==
+ * {{{allocationSize}}} - The amount to increment by when allocating sequence numbers from the sequence. (default: 50)
  * {{{cascade}}} - The operations that must be cascaded to the target of the association. ({{{CascadeType[] - ALL, PERSIST, MERGE, REMOVE, DETACH)}}}
  * {{{catalog}}} - The catalog of the table.
  * {{{columnDefinition}}} - The SQL fragment that is used when generating the DDL for the discriminator column.
  * {{{discriminatorType}}} - The type of object/column to use as a class discriminator.
  * {{{fetch}}} - Whether the association should be lazily loaded or must be eagerly fetched. The EAGER strategy is a requirement on the persistence provider runtime that the associated entity must be eagerly fetched. The LAZY strategy is a hint to the persistence provider runtime.
+ * {{{initialValue}}} - The value from which the sequence object is to start generating.
  * {{{inverseJoinColumns}}} - The foreign key columns of the join table which reference the primary table of the entity that does not own the association (i.e. the inverse side of the association).
  * {{{joinColumns}}} - The foreign key columns of the join table which reference the primary table of the entity owning the association (i.e. the owning side of the association).
   * Ex.: {{{@JoinTable(name="CUST_PHONE", joinColumns=@JoinColumn(name="CUST_ID",referencedColumnName="ID"),inverseJoinColumns=@JoinColumn(name="PHONE_ID", referencedColumnName="ID"))}}}
@@ -46,6 +48,7 @@
  * {{{schema}}} - The schema of the table.
  * {{{strategy}}} - ?
   * Ex.: {{{@Inheritance(strategy=InheritanceType.JOINED)}}}
+ * {{{sequenceName}}} - The name of the database sequence object from which to obtain primary key values.
  * {{{targetEntity}}} - The entity class that is the target of the association.
   * Ex.: {{{@OneToMany(targetEntity=com.jgk.springrecipes.domain.Customer.class, cascade=ALL, mappedBy=”company”)}}}
  * {{{uniqueConstraints}}} - Unique constraints that are to be placed on the table. These are only used if table generation is in effect.
