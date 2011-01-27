@@ -12,6 +12,7 @@
  * Repository (annotated)
  * Spring configuration
  * persistence.xml
+ * Test
 === Domain ===
  * Log
   * id
