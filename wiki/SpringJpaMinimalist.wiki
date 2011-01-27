@@ -2,6 +2,7 @@
 
 = Description =
  * The idea here is to put together the instructions for generating a very basic Spring and JPA application.
+ * Part of this will be testing what is generated and then presenting the output.
 == Requirements ==
  * Single database (embedded)
  * Single Repository
@@ -391,4 +392,30 @@ public class LogMessageRepositoryTest {
   </root>
   
 </log4j:configuration>
+}}}
+=== Output ===
+{{{
+Hibernate: 
+    insert 
+    into
+        LOG_MSG
+        (id, author, date, message) 
+    values
+        (default, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        LOG_MSG
+        (id, author, date, message) 
+    values
+        (default, ?, ?, ?)
+Hibernate: 
+    select
+        logmessage0_.id as id0_,
+        logmessage0_.author as author0_,
+        logmessage0_.date as date0_,
+        logmessage0_.message as message0_ 
+    from
+        LOG_MSG logmessage0_
+
 }}}
