@@ -23,6 +23,7 @@
  * {{{fetch}}} - Whether the association should be lazily loaded or must be eagerly fetched. The EAGER strategy is a requirement on the persistence provider runtime that the associated entity must be eagerly fetched. The LAZY strategy is a hint to the persistence provider runtime.
  * {{{inverseJoinColumns}}} - The foreign key columns of the join table which reference the primary table of the entity that does not own the association (i.e. the inverse side of the association).
  * {{{joinColumns}}} - The foreign key columns of the join table which reference the primary table of the entity owning the association (i.e. the owning side of the association).
+  * Ex.: {{{@JoinTable(name="CUST_PHONE", joinColumns=@JoinColumn(name="CUST_ID",referencedColumnName="ID"),inverseJoinColumns=@JoinColumn(name="PHONE_ID", referencedColumnName="ID"))}}}
  * {{{mappedBy}}} - The field that owns the relationship. The mappedBy element is only specified on the inverse (non-owning) side of the association. (JoinColumn[])
  * {{{nullable}}} - ?
  * {{{optional}}} - Whether the association is optional. If set to false then a non-null relationship must always exist.
