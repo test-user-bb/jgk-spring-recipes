@@ -26,6 +26,7 @@
 == Annotation Attributes ==
  * {{{cascade}}} - The operations that must be cascaded to the target of the association. ({{{CascadeType[] - ALL, PERSIST, MERGE, REMOVE, DETACH)}}}
  * {{{catalog}}} - The catalog of the table.
+ * {{{discriminatorType}}} - The type of object/column to use as a class discriminator.
  * {{{fetch}}} - Whether the association should be lazily loaded or must be eagerly fetched. The EAGER strategy is a requirement on the persistence provider runtime that the associated entity must be eagerly fetched. The LAZY strategy is a hint to the persistence provider runtime.
  * {{{inverseJoinColumns}}} - The foreign key columns of the join table which reference the primary table of the entity that does not own the association (i.e. the inverse side of the association).
  * {{{joinColumns}}} - The foreign key columns of the join table which reference the primary table of the entity owning the association (i.e. the owning side of the association).
