@@ -3,6 +3,7 @@
 
  * JPA = Java Persistence API
 == Annotations ==
+ * {{{@DiscriminatorColumn}}}
  * {{{@Entity}}}
  * {{{@EmbeddedId}}}
  * {{{@Embeddable}}}
