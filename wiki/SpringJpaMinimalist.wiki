@@ -119,7 +119,7 @@
   </dependencies>
 }}}
 === Java:Domain ===
- * LogMessageRepository
+ * {{{LogMessageRepository}}}
 {{{
 package com.jgk.springrecipes.orm.springjpaminimalist.repository;
 
@@ -133,7 +133,7 @@ public interface LogMessageRepository {
 }
 
 }}}
- * JpaLogMessageRepository
+ * {{{JpaLogMessageRepository}}}
 {{{
 package com.jgk.springrecipes.orm.springjpaminimalist.repository;
 
@@ -169,7 +169,7 @@ public class JpaLogMessageRepository implements LogMessageRepository {
 }
 
 }}}
- * LogMessage
+ * {{{LogMessage}}}
 {{{
 package com.jgk.springrecipes.orm.springjpaminimalist.domain;
 
