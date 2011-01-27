@@ -1,0 +1,3 @@
+#summary Hudson automated testing
+
+== YES, TESTING ==
