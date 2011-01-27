@@ -23,6 +23,7 @@
  * {{{@Table(name="FT_EMP")}}}
  * {{{@DiscriminatorValue("FT")}}}
  * {{{@PrimaryKeyJoinColumn(name="FT_EMPID")}}}
+ * {{{@PrimaryKeyJoinColumns}}}
  * {{{@Id}}}
 == Annotation Attributes ==
  * {{{cascade}}} - The operations that must be cascaded to the target of the association. ({{{CascadeType[] - ALL, PERSIST, MERGE, REMOVE, DETACH)}}}
@@ -37,6 +38,7 @@
  * {{{mappedBy}}} - The field that owns the relationship. The mappedBy element is only specified on the inverse (non-owning) side of the association. (JoinColumn[])
  * {{{nullable}}} - ?
  * {{{optional}}} - Whether the association is optional. If set to false then a non-null relationship must always exist.
+ * {{{referencedColumnName}}}
  * {{{schema}}} - The schema of the table.
  * {{{strategy}}} - ?
   * Ex.: {{{@Inheritance(strategy=InheritanceType.JOINED)}}}
