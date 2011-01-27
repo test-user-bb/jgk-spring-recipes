@@ -3,11 +3,15 @@
 
  * JPA = Java Persistence API
 == Annotations ==
+ * {{{@AssociationOverride}}}
+ * {{{@AttributeOverride}}}
  * {{{@DiscriminatorColumn}}}
  * {{{@DiscriminatorValue}}}
  * {{{@Entity}}}
  * {{{@EmbeddedId}}}
  * {{{@Embeddable}}}
+ * {{{@Id}}}
+ * {{{@IdClass}}}
  * {{{@Inheritance}}}
  * {{{@OneToOne}}}
  * {{{@ManyToOne}}}
@@ -16,15 +20,12 @@
  * {{{@MappedSuperclass}}}
  * {{{@MapKey}}}
  * {{{@OrderBy}}}
- * {{{@AttributeOverride}}}
- * {{{@AssociationOverride}}}
  * {{{@JoinColumn(name="ADDR_ID")}}}
  * {{{@JoinTable(name="FIRST_SECOND")}}}
  * {{{@Table(name="FT_EMP")}}}
  * {{{@DiscriminatorValue("FT")}}}
  * {{{@PrimaryKeyJoinColumn(name="FT_EMPID")}}}
  * {{{@PrimaryKeyJoinColumns}}}
- * {{{@Id}}}
 == Annotation Attributes ==
  * {{{cascade}}} - The operations that must be cascaded to the target of the association. ({{{CascadeType[] - ALL, PERSIST, MERGE, REMOVE, DETACH)}}}
  * {{{catalog}}} - The catalog of the table.
