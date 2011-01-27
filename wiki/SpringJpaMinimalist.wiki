@@ -159,6 +159,10 @@ public class LogMessage {
 </persistence>
 }}}
 === Spring configuration ===
+ * Two files are used here
+  * repository-config.xml (com/jgk/springrecipes/orm/springjpaminimalist/repository/repository-config.xml)
+  * LogMessageRepositoryTest-config.xml (classpath:/com/jgk/springrecipes/orm/springjpaminimalist/LogMessageRepositoryTest-config.xml)
+ * repository-config.xml
 {{{
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
@@ -180,6 +184,9 @@ public class LogMessage {
 	<context:annotation-config />
 		
 </beans>		
+}}}
+ * LogMessageRepositoryTest-config.xml
+{{{
 }}}
 === log4j ===
  * log4j.xml
