@@ -9,7 +9,7 @@
 		http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc-3.0.xsd
 		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
 	
-	<import resource="classpath:com/jgk/springrecipes/orm/springjpaminimalist/repository/repository-config.xml"/>
+	<import resource="classpath:/com/jgk/springrecipes/orm/springjpaminimalist/repository/repository-config.xml"/>
 	
 	<!-- FactoryBean that creates the EntityManagerFactory  -->
 	<bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
