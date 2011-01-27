@@ -15,11 +15,12 @@
  * log4j.xml (for logging)
  * Test
 === Domain ===
- * Log
+ * LogMessage
   * id
   * message
   * date (when it occurred)
   * author (not unique)
+ * LogMessageRepository (and implementation JpaLogMessageRepository)
 === Libraries ===
 {{{
 }}}
