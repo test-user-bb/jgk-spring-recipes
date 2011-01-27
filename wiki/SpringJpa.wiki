@@ -5,6 +5,7 @@
 == Annotations ==
  * {{{@AssociationOverride}}}
  * {{{@AttributeOverride}}}
+ * {{{@AttributeOverrides}}}
  * {{{@DiscriminatorColumn}}}
  * {{{@DiscriminatorValue}}}
  * {{{@Entity}}}
