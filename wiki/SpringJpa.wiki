@@ -8,6 +8,7 @@
  * {{{@DiscriminatorColumn}}}
  * {{{@DiscriminatorValue}}}
  * {{{@Entity}}}
+ * {{{@Embedded}}}
  * {{{@EmbeddedId}}}
  * {{{@Embeddable}}}
  * {{{@Id}}}
