@@ -18,6 +18,16 @@
   * message
   * date (when it occurred)
   * author (not unique)
+=== Libraries ===
+{{{
+}}}
+=== Domain ===
+{{{
+}}}
+=== persistence.xml ===
+ * This file needs to end up on your classpath at location {{{ /META-INF/persistence.xml }}}
+{{{
+}}}
 === Spring configuration ===
 {{{
 }}}
