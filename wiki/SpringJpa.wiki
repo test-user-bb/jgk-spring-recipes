@@ -34,6 +34,7 @@
  * {{{optional}}} - Whether the association is optional. If set to false then a non-null relationship must always exist.
  * {{{schema}}} - The schema of the table.
  * {{{strategy}}} - ?
+  * Ex.: {{{@Inheritance(strategy=InheritanceType.JOINED)}}}
  * {{{targetEntity}}} - The entity class that is the target of the association.
   * Ex.: {{{@OneToMany(targetEntity=com.jgk.springrecipes.domain.Customer.class, cascade=ALL, mappedBy=”company”)}}}
  * {{{uniqueConstraints}}} - Unique constraints that are to be placed on the table. These are only used if table generation is in effect.
