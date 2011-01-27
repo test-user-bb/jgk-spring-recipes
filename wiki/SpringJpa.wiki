@@ -27,6 +27,7 @@
  * {{{@OrderBy}}}
  * {{{@PrimaryKeyJoinColumn(name="FT_EMPID")}}}
  * {{{@PrimaryKeyJoinColumns}}}
+ * {{{@SecondaryTable}}}
  * {{{@SequenceGenerator}}}
  * {{{@Table(name="FT_EMP")}}}
  * {{{@TableGenerator}}}
