@@ -31,6 +31,7 @@
  * {{{@Table(name="FT_EMP")}}}
 == Annotation Attributes ==
  * {{{allocationSize}}} - The amount to increment by when allocating sequence numbers from the sequence. (default: 50)
+  * Ex.: {{{@SequenceGenerator(name="EMP_SEQ", allocationSize=25)}}}
  * {{{cascade}}} - The operations that must be cascaded to the target of the association. ({{{CascadeType[] - ALL, PERSIST, MERGE, REMOVE, DETACH)}}}
  * {{{catalog}}} - The catalog of the table.
  * {{{columnDefinition}}} - The SQL fragment that is used when generating the DDL for the discriminator column.
