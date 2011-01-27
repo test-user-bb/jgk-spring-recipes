@@ -43,6 +43,7 @@
  * {{{targetEntity}}} - The entity class that is the target of the association.
   * Ex.: {{{@OneToMany(targetEntity=com.jgk.springrecipes.domain.Customer.class, cascade=ALL, mappedBy=”company”)}}}
  * {{{uniqueConstraints}}} - Unique constraints that are to be placed on the table. These are only used if table generation is in effect.
+ * {{{value}}} - ?
 == Entity Manager ==
  * The set of entities that can be managed by a given EntityManager instance is defined by a persistence unit. A persistence unit defines the set of all classes that are related or grouped by the application, and which must be colocated in their mapping to a single database.
  * Runtime exceptions thrown by the methods of the EntityManager interface will cause the current
