@@ -4,11 +4,15 @@
  * JPA = Java Persistence API
 == Annotations ==
  * {{{@Entity}}}
+ * {{{@EmbeddedId}}}
+ * {{{@Embeddable}}}
  * {{{@OneToOne}}}
  * {{{@ManyToOne}}}
  * {{{@ManyToMany(mappedBy = "employees")}}}
  * {{{@Transient}}}
  * {{{@MappedSuperclass}}}
+ * {{{@MapKey}}}
+ * {{{@OrderBy}}}
  * {{{@AttributeOverride}}}
  * {{{@AssociationOverride}}}
  * {{{@JoinColumn(name="ADDR_ID")}}}
