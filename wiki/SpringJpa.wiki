@@ -3,19 +3,19 @@
 
  * JPA = Java Persistence API
 == Annotations ==
- * @Entity
- * @OneToOne
- * @ManyToOne
- * @ManyToMany(mappedBy = "employees")
- * @Transient
- * @MappedSuperclass
- * @AttributeOverride
- * @AssociationOverride
- * @JoinColumn(name="ADDR_ID")
- * @Table(name="FT_EMP")
- * @DiscriminatorValue("FT")
- * @PrimaryKeyJoinColumn(name="FT_EMPID")
- * @Id
+ * {{{@Entity}}}
+ * {{{@OneToOne}}}
+ * {{{@ManyToOne}}}
+ * {{{@ManyToMany(mappedBy = "employees")}}}
+ * {{{@Transient}}}
+ * {{{@MappedSuperclass}}}
+ * {{{@AttributeOverride}}}
+ * {{{@AssociationOverride}}}
+ * {{{@JoinColumn(name="ADDR_ID")}}}
+ * {{{@Table(name="FT_EMP")}}}
+ * {{{@DiscriminatorValue("FT")}}}
+ * {{{@PrimaryKeyJoinColumn(name="FT_EMPID")}}}
+ * {{{@Id}}}
 == Entity Manager ==
  * The set of entities that can be managed by a given EntityManager instance is defined by a persistence unit. A persistence unit defines the set of all classes that are related or grouped by the application, and which must be colocated in their mapping to a single database.
  * Runtime exceptions thrown by the methods of the EntityManager interface will cause the current
