@@ -12,15 +12,16 @@
  * {{{@Embedded}}}
  * {{{@EmbeddedId}}}
  * {{{@Embeddable}}}
+ * {{{@GeneratedValue}}}
  * {{{@Id}}}
  * {{{@IdClass}}}
  * {{{@Inheritance}}}
- * {{{@OneToOne}}}
  * {{{@ManyToOne}}}
  * {{{@ManyToMany(mappedBy = "employees")}}}
- * {{{@Transient}}}
- * {{{@MappedSuperclass}}}
  * {{{@MapKey}}}
+ * {{{@MappedSuperclass}}}
+ * {{{@OneToOne}}}
+ * {{{@Transient}}}
  * {{{@OrderBy}}}
  * {{{@JoinColumn(name="ADDR_ID")}}}
  * {{{@JoinTable(name="FIRST_SECOND")}}}
