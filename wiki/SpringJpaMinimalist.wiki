@@ -23,6 +23,7 @@
  * LogMessageRepository (and implementation JpaLogMessageRepository)
 === Libraries ===
 {{{
+  <dependencies>
     <dependency>
       <groupId>org.hibernate</groupId>
       <artifactId>hibernate-annotations</artifactId>
@@ -113,7 +114,7 @@
       <version>3.0.5.RELEASE</version>
       <scope>test</scope>
     </dependency>
-
+  </dependencies>
 }}}
 === Domain ===
  * LogMessageRepository
