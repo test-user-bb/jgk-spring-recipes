@@ -8,12 +8,13 @@
  * Maven-based application
 === Pieces ===
  * Libraries
- * Domain (annotated)
- * Repository (annotated)
- * Spring configuration
- * persistence.xml
- * log4j.xml (for logging)
- * Test
+ * Java Code
+  * Domain classes (annotated)
+  * Test class
+ * Configuration
+  * Spring configuration
+  * persistence.xml (for jpa)
+  * log4j.xml (for logging)
 === Domain ===
  * LogMessage
   * id
