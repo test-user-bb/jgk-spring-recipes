@@ -394,6 +394,7 @@ public class LogMessageRepositoryTest {
 </log4j:configuration>
 }}}
 === Output ===
+ * Here is the output from running the integration test.
 {{{
 Hibernate: 
     insert 
