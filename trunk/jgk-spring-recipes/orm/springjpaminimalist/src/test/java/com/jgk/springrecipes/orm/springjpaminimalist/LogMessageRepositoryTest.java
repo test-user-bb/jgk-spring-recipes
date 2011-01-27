@@ -1,10 +1,13 @@
 package com.jgk.springrecipes.orm.springjpaminimalist;
 
-import org.junit.Before;
+import static org.junit.Assert.*;
+
+import java.util.ArrayList;
+import java.util.List;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.ApplicationContext;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
@@ -16,24 +19,24 @@ import com.jgk.springrecipes.orm.springjpaminimalist.repository.LogMessageReposi
 public class LogMessageRepositoryTest {
 	
 	@Autowired
-	ApplicationContext applicationContext;
-	
-	@Autowired
 	LogMessageRepository logMessageRepository;
 	
-	@Before
-	public void onSetup() {
-		for (String n : applicationContext.getBeanDefinitionNames()) {
-			System.out.println(n);
-		}
-	}
-
 	@Test
 	public void jed() {
-		String msg="HELLO";
-		String author="Hemingway";
-		LogMessage lm = LogMessage.createLogMessage(msg,author);
-//		logMessageRepository.findAll();
-		logMessageRepository.save(lm);
+		LogMessage hemingway = LogMessage.createLogMessage("Old man and the Sea","Hemingway");
+		LogMessage melville = LogMessage.createLogMessage("Moby Dick","Melville");
+		List<LogMessage> msgs = new ArrayList<LogMessage>();
+		msgs.add(hemingway);
+		msgs.add(melville);
+		for (LogMessage logMessage : msgs) {
+			logMessageRepository.save(logMessage);
+			assertNotNull(logMessage.getId());
+		}
+		
+		List<LogMessage> stuff = logMessageRepository.findAll();
+		assertNotNull(stuff);
+		assertFalse(stuff.isEmpty());
+		assertEquals(msgs.size(), stuff.size());
+		
 	}
 }

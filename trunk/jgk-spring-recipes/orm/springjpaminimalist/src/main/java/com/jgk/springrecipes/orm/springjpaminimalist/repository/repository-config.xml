@@ -9,17 +9,12 @@
 		http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc-3.0.xsd
 		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
 
-
-	<!-- Loads accounts from the JPA system -->
 	<bean id="logMessageRepository" class="com.jgk.springrecipes.orm.springjpaminimalist.repository.JpaLogMessageRepository" />
 
 	<!-- Instructs the container to look for beans with @Transactional and decorate them -->
 	<tx:annotation-driven transaction-manager="transactionManager" />
 
-	<!-- Enables annotation-config, needed for @PersistenceContext annotations -->
+	<!-- Enable annotation-config, needed for @PersistenceContext annotations -->
 	<context:annotation-config />
-	
-	
-	
 		
 </beans>		

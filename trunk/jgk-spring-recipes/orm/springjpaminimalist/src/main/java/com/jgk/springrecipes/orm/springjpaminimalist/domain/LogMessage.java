@@ -8,18 +8,23 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-
 @Entity
-@Table(name="LOG_MSG")
+@Table(name = "LOG_MSG")
 public class LogMessage {
+
+	@Override
+	public String toString() {
+		return "LogMessage [id=" + id + ", message=" + message + ", author="
+				+ author + ", date=" + date + "]";
+	}
+
 	private Long id;
-	private String message;
-	private String author;
+	private String message, author;
 	private Date date;
 
 	@Id
 	@GeneratedValue
-	@Column(name="id")
+	@Column(name = "id")
 	public Long getId() {
 		return id;
 	}
@@ -56,10 +61,8 @@ public class LogMessage {
 		LogMessage logMessage = new LogMessage();
 		logMessage.setMessage(message);
 		logMessage.setAuthor(author);
-		
+		logMessage.setDate(new Date());
 		return logMessage;
 	}
 
-	
-	
 }
