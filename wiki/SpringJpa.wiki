@@ -6,6 +6,7 @@
  * {{{@AssociationOverride}}}
  * {{{@AttributeOverride}}}
  * {{{@AttributeOverrides}}}
+ * {{{@Basic}}}
  * {{{@DiscriminatorColumn}}}
  * {{{@DiscriminatorValue("FT")}}}
  * {{{@Entity}}}
@@ -16,19 +17,21 @@
  * {{{@Id}}}
  * {{{@IdClass}}}
  * {{{@Inheritance}}}
+ * {{{@JoinColumn(name="ADDR_ID")}}}
+ * {{{@JoinTable(name="FIRST_SECOND")}}}
  * {{{@ManyToOne}}}
  * {{{@ManyToMany(mappedBy = "employees")}}}
  * {{{@MapKey}}}
  * {{{@MappedSuperclass}}}
  * {{{@OneToOne}}}
- * {{{@Transient}}}
  * {{{@OrderBy}}}
- * {{{@JoinColumn(name="ADDR_ID")}}}
- * {{{@JoinTable(name="FIRST_SECOND")}}}
  * {{{@PrimaryKeyJoinColumn(name="FT_EMPID")}}}
  * {{{@PrimaryKeyJoinColumns}}}
  * {{{@SequenceGenerator}}}
  * {{{@Table(name="FT_EMP")}}}
+ * {{{@TableGenerator}}}
+ * {{{@Transient}}}
+ * {{{@Version}}}
 == Annotation Attributes ==
  * {{{allocationSize}}} - The amount to increment by when allocating sequence numbers from the sequence. (default: 50)
   * Ex.: {{{@SequenceGenerator(name="EMP_SEQ", allocationSize=25)}}}
@@ -45,15 +48,18 @@
  * {{{mappedBy}}} - The field that owns the relationship. The mappedBy element is only specified on the inverse (non-owning) side of the association. (JoinColumn[])
  * {{{nullable}}} - ?
  * {{{optional}}} - Whether the association is optional. If set to false then a non-null relationship must always exist.
+ * {{{pkColumnName}}} - Name of the primary key column in the table.
  * {{{referencedColumnName}}}
  * {{{schema}}} - The schema of the table.
  * {{{strategy}}} - ?
   * Ex.: {{{@Inheritance(strategy=InheritanceType.JOINED)}}}
  * {{{sequenceName}}} - The name of the database sequence object from which to obtain primary key values.
+ * {{{table}}} - ?
  * {{{targetEntity}}} - The entity class that is the target of the association.
   * Ex.: {{{@OneToMany(targetEntity=com.jgk.springrecipes.domain.Customer.class, cascade=ALL, mappedBy=”company”)}}}
  * {{{uniqueConstraints}}} - Unique constraints that are to be placed on the table. These are only used if table generation is in effect.
  * {{{value}}} - ?
+ * {{{valueColumnName}}} - Name of the column that stores the last value generated.
 == Entity Manager ==
  * The set of entities that can be managed by a given EntityManager instance is defined by a persistence unit. A persistence unit defines the set of all classes that are related or grouped by the application, and which must be colocated in their mapping to a single database.
  * Runtime exceptions thrown by the methods of the EntityManager interface will cause the current
