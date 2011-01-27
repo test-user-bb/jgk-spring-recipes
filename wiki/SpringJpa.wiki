@@ -17,7 +17,7 @@
  * {{{@PrimaryKeyJoinColumn(name="FT_EMPID")}}}
  * {{{@Id}}}
 == Annotation Attributes ==
- * {{{cascade}}} - The operations that must be cascaded to the target of the association.
+ * {{{cascade}}} - The operations that must be cascaded to the target of the association. ({{{CascadeType[]}}}
  * {{{fetch}}} - Whether the association should be lazily loaded or must be eagerly fetched. The EAGER strategy is a requirement on the persistence provider runtime that the associated entity must be eagerly fetched. The LAZY strategy is a hint to the persistence provider runtime.
  * {{{mappedBy}}} - The field that owns the relationship. The mappedBy element is only specified on the inverse (non-owning) side of the association.
  * {{{optional}}} - Whether the association is optional. If set to false then a non-null relationship must always exist.
