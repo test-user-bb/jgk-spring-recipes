@@ -7,6 +7,7 @@
  * {{{@AttributeOverride}}}
  * {{{@AttributeOverrides}}}
  * {{{@Basic}}}
+ * {{{@Column}}}
  * {{{@DiscriminatorColumn}}}
  * {{{@DiscriminatorValue("FT")}}}
  * {{{@Entity}}}
