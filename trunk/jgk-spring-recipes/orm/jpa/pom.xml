@@ -10,6 +10,8 @@
   <groupId>com.jgk</groupId>
   <artifactId>jpa</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  
   <name>jpa</name>
   <url>http://maven.apache.org</url>
   <properties>
@@ -38,4 +40,7 @@
 	  <version>${hibernate-jpa-2.0-api.version}</version>
 	</dependency>  
 	</dependencies>
+  <modules>
+  	<module>jpa-joined-subclass</module>
+  </modules>
 </project>
