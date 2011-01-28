@@ -28,7 +28,6 @@
  * {{{@OrderBy}}}
  * {{{@PrimaryKeyJoinColumn(name="FT_EMPID")}}}
  * {{{@PrimaryKeyJoinColumns}}}
- * {{{@referencedColumnName}}}
  * {{{@SecondaryTable}}}
  * {{{@SequenceGenerator}}}
  * {{{@Table(name="FT_EMP")}}}
@@ -52,7 +51,7 @@
  * {{{nullable}}} - ?
  * {{{optional}}} - Whether the association is optional. If set to false then a non-null relationship must always exist.
  * {{{pkColumnName}}} - Name of the primary key column in the table.
- * {{{referencedColumnName}}}
+ * {{{referencedColumnName}}} - The name of the primary key column of the table being joined to.
  * {{{schema}}} - The schema of the table.
  * {{{strategy}}} - ?
   * Ex.: {{{@Inheritance(strategy=InheritanceType.JOINED)}}}
