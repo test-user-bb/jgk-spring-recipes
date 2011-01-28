@@ -1,5 +1,6 @@
 #summary One-sentence summary of this page.
 
+ * [http://jcp.org/aboutJava/communityprocess/final/jsr330 Spec home page]
  * Spring supports JSR-330 annotations if they are on the classpath.
  * JSR-330 Annotations:
   * {{{ @Inject  }}}
