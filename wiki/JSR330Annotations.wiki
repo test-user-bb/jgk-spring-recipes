@@ -26,7 +26,7 @@
      ...
    }
 }}}
- * Qualifier
+ * {{{@Qualifier}}}
 {{{
 A qualifier may annotate an injectable field or parameter and, combined with the type, identify the implementation to inject. Qualifiers are optional, and when used with @Inject in injector-independent classes, no more than one qualifier should annotate a single field or parameter. The qualifiers are bold in the following example:
 
