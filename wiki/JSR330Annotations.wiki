@@ -5,9 +5,9 @@
  * JSR-330 Annotations:
   * {{{ @Inject  }}}
   * {{{ @Named  }}}
-  * {{{ Qualifier  }}}
-  * {{{ Scope  }}}
-  * {{{ Singleton }}}
+  * {{{ @Qualifier  }}}
+  * {{{ @Scope  }}}
+  * {{{ @Singleton }}}
  * JSR-330 Interfaces:
   * {{{ Provider  }}}
  * Maven dependency
