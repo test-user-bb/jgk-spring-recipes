@@ -1,7 +1,7 @@
 #summary Shows a simple spring and jpa implementation with a joined subclass hierarchy
 
 = Introduction =
- * @Inheritance(strategy=InheritanceType.JOINED)
+ * {{{@Inheritance(strategy=InheritanceType.JOINED)}}}
 
 == Domain ==
  * Parent table (vehicle)
