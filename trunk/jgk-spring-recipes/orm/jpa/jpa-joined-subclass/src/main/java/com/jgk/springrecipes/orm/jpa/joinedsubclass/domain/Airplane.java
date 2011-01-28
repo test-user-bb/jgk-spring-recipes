@@ -24,6 +24,11 @@ public class Airplane extends Vehicle {
 	public void setNumberOfEngines(Integer numberOfEngines) {
 		this.numberOfEngines = numberOfEngines;
 	}
+	@Override
+	public String toString() {
+		return super.toString()+", Airplane [numberOfWings=" + numberOfWings
+				+ ", numberOfEngines=" + numberOfEngines + "]";
+	}
 	
 	
 

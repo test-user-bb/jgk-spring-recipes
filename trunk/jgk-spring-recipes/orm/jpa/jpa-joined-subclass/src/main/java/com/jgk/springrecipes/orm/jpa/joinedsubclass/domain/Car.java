@@ -9,6 +9,11 @@ import javax.persistence.PrimaryKeyJoinColumn;
 @PrimaryKeyJoinColumn(name="VIN")
 public class Car extends Vehicle {
 
+	@Override
+	public String toString() {
+		return super.toString()+", Car [make=" + make + ", model=" + model + "]";
+	}
+
 	private String make, model;
 
 	public String getMake() {
