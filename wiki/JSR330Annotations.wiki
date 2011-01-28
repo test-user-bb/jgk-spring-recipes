@@ -1,6 +1,13 @@
 #summary One-sentence summary of this page.
 
  * Spring supports JSR-330 annotations if they are on the classpath.
+ * JSR-330 Annotations:
+  * {{{ @Inject  }}}
+  * {{{ Named  }}}
+  * {{{ Provider  }}}
+  * {{{ Qualifier  }}}
+  * {{{ Scope  }}}
+  * {{{ Singleton }}}
  * Maven dependency
 {{{
 <dependency>
