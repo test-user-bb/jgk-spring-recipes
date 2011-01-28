@@ -1,0 +1,11 @@
+#summary One-sentence summary of this page.
+
+ * Spring supports JSR-330 annotations if they are on the classpath.
+ * Maven dependency
+{{{
+<dependency>
+  <groupId>javax.inject</groupId>
+  <artifactId>javax.inject</artifactId>
+  <version>1.0-PFD-1</version>
+</dependency>
+}}}
