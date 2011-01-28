@@ -13,6 +13,7 @@ import javax.persistence.Version;
 @Table(name="VEHICLE_HERE")
 @Inheritance(strategy=InheritanceType.JOINED)
 public abstract class Vehicle {
+	@Version protected Integer version;
 	
 	@Id
 	@GeneratedValue
@@ -27,7 +28,12 @@ public abstract class Vehicle {
 		this.id = id;
 	}
 
-	@Version protected Integer version;
+
+	@Override
+	public String toString() {
+		return "Vehicle [id=" + id + ", version=" + version + ", getId()="
+				+ getId() + "]";
+	}
 	
 
 }
