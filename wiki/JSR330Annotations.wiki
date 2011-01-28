@@ -18,6 +18,22 @@
 </dependency>
 }}}
 == Examples ==
+ * {{{@Inject}}}
+{{{
+Identifies injectable constructors, methods, and fields. May apply to static as well as instance members. An injectable member may have any access modifier (private, package-private, protected, public). Constructors are injected first, followed by fields, and then methods. Fields and methods in superclasses are injected before those in subclasses. Ordering of injection among fields and among methods in the same class is not specified.
+
+   public class Car {
+     // Injectable constructor
+     @Inject public Car(Engine engine) { ... }
+
+     // Injectable field
+     @Inject private Provider<Seat> seatProvider;
+
+     // Injectable package-private method
+     @Inject void install(Windshield windshield, Trunk trunk) { ... }
+   }
+
+}}}
  * {{{@Named}}}
 {{{
    public class Car {
