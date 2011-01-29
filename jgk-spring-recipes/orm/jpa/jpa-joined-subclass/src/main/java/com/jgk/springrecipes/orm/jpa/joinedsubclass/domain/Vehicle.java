@@ -3,6 +3,7 @@ package com.jgk.springrecipes.orm.jpa.joinedsubclass.domain;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
@@ -16,7 +17,7 @@ public abstract class Vehicle {
 	@Version protected Integer version;
 	
 	@Id
-	@GeneratedValue
+	@GeneratedValue(strategy=GenerationType.TABLE)
 	@Column(name="VEHICLE_ID")
 	protected Integer id;
 	

@@ -20,8 +20,12 @@ import com.jgk.springrecipes.orm.jpa.joinedsubclass.domain.Vehicle;
 @Repository("vehicleRepository")
 public class VehicleRepositoryJpa implements VehicleRepository {
 	private EntityManager entityManager;
+	
+//	@PersistenceContext(unitName="entityManagerFactory")
+//	private EntityManager entityManager2;
 
-	@PersistenceContext
+	
+	@PersistenceContext//(unitName="entityManagerFactory")
 	public void setEntityManager(EntityManager entityManager) {
 		System.out.println("SET ENETI "+entityManager);
 		this.entityManager = entityManager;
@@ -58,6 +62,12 @@ public class VehicleRepositoryJpa implements VehicleRepository {
 	public Vehicle makePersistent(Vehicle vehicle) {
 		entityManager.persist(vehicle);
 		return vehicle;
+	}
+
+	@Override
+	@Transactional
+	public Vehicle merge(Vehicle vehicle) {
+		return entityManager.merge(vehicle);
 	}
 
 
