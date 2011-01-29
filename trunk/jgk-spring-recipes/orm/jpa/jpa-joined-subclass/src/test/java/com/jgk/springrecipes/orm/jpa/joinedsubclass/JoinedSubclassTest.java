@@ -9,6 +9,7 @@ import org.junit.runner.RunWith;
 import org.springframework.context.ApplicationContext;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.jgk.springrecipes.orm.jpa.joinedsubclass.domain.Airplane;
 import com.jgk.springrecipes.orm.jpa.joinedsubclass.domain.Car;
@@ -26,6 +27,7 @@ public class JoinedSubclassTest {
 	VehicleRepository vehicleRepository;
 
 	@Test
+//	@Transactional
 	public void something() {
 		System.out.println(applicationContext);
 		Car car = new Car();
@@ -41,5 +43,22 @@ public class JoinedSubclassTest {
 		for (Vehicle vehicle : vehicles) {
 			System.out.println(vehicle);
 		}
+		System.out.println("BEFORE:  " + vehicleRepository.findAll().size());
+		System.out.println("CAR ID: "+car.getId());
+//		car.setId(25423);
+		for (int i = 0; i < 30; i++) {
+			System.out.println("NUMBER "+i);
+//			car.setId(null);
+//			car = (Car) vehicleRepository.findById(car.getId());
+			car.setMake(car.getMake()+i);
+//			car.setMake(car.getMake());
+			car =(Car)vehicleRepository.merge(car);
+			
+			
+		}
+//		vehicleRepository.merge(car);
+		System.out.println("AFTER:  " + vehicleRepository.findAll().size());
+		System.out.println("CAR ID: "+car.getId());
+		System.out.println("ALL DONE");
 	}
 }

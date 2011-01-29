@@ -2,6 +2,7 @@ package com.jgk.springrecipes.orm.jpa.joinedsubclass.repository;
 
 import java.util.List;
 
+import com.jgk.springrecipes.orm.jpa.joinedsubclass.domain.Car;
 import com.jgk.springrecipes.orm.jpa.joinedsubclass.domain.Vehicle;
 
 public interface VehicleRepository {
@@ -9,6 +10,7 @@ public interface VehicleRepository {
 	List<Vehicle> findAll();
 	List<Vehicle> findByExample(Vehicle vehicleExample);
 	Vehicle makePersistent(Vehicle vehicle);
+	Vehicle merge(Vehicle vehicle);
 		
 	
 }

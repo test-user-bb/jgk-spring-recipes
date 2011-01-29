@@ -5,7 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.PrimaryKeyJoinColumn;
 
 @Entity
-@DiscriminatorValue("CAR")
+//@DiscriminatorValue("CAR")
 @PrimaryKeyJoinColumn(name="VIN")
 public class Car extends Vehicle {
 
