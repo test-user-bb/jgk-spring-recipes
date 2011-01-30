@@ -6,6 +6,10 @@ Place Spring Transaction stuff here...
 == Stuff ==
  * Spring Framework {{{@Transactional}}} annotation with the {{{@TransactionAttribute}}} annotation found in the EJB 3.0 specification
  * ORM-based frameworks *require a transaction* in order to trigger the synchronization between the object cache and the database. It is through a transaction commit that the SQL code is generated and the database affected by the desired action (that is, insert, update, delete). Without a transaction there is no trigger for the ORM to generate SQL code and persist the changes.
+ * When using the @Transactional annotation in Spring, you must add the following line to your Spring configuration file:
+{{{
+<tx:annotation-driven transaction-manager="transactionManager"/>
+}}}
 
 == Resources ==
  * [http://www.ibm.com/developerworks/java/library/j-ts1.html IBM Transaction Pitfalls]
