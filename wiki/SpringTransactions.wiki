@@ -3,5 +3,8 @@
 Place Spring Transaction stuff here...
  * [http://static.springsource.org/spring/docs/3.0.x/spring-framework-reference/html/transaction.html#transaction-declarative Declarative Transactions]
 
+== Stuff ==
+ * Spring Framework {{{@Transactional}}} annotation with the {{{@TransactionAttribute}}} annotation found in the EJB 3.0 specification
+
 == Resources ==
  * [http://www.ibm.com/developerworks/java/library/j-ts1.html IBM Transaction Pitfalls]
