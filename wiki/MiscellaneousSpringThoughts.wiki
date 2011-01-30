@@ -8,30 +8,30 @@
   * The Spring TestContext Framework (located in the org.springframework.test.context package) provides generic, annotation-driven unit and integration testing support that is agnostic of the testing framework in use, whether JUnit 3.8.2, JUnit 4.5+, TestNG 5.10, and so on.
   * TestContext framework also places a great deal of importance on convention over configuration with reasonable defaults that can be overridden through annotation-based configuration.
  * Bunch 'o Annotations
-  * @Autowired
-  * @Qualifier
-  * @Resource (javax.annotation) if JSR-250 is present
-  * @Inject (javax.inject) if JSR-330 is present
-  * @Named (javax.inject) if JSR-330 is present
-  * @Provider (javax.inject) if JSR-330 is present
-  * @PersistenceContext (javax.persistence) if JPA is present
-  * @PersistenceUnit (javax.persistence) if JPA is present
-  * @Required
-  * @Transactional
+  * {{{@Autowired}}}
+  * {{{@Qualifier}}}
+  * {{{@Resource (javax.annotation) if JSR-250 is present}}}
+  * {{{@Inject (javax.inject) if JSR-330 is present}}}
+  * {{{@Named (javax.inject) if JSR-330 is present}}}
+  * {{{@Provider (javax.inject) if JSR-330 is present}}}
+  * {{{@PersistenceContext (javax.persistence) if JPA is present}}}
+  * {{{@PersistenceUnit (javax.persistence) if JPA is present}}}
+  * {{{@Required}}}
+  * {{{@Transactional}}}
 
  * Spring testing annotations:
-  * @ContextConfiguration
-  * @DirtiesContext
-  * @TestExecutionListeners
-  * @TransactionConfiguration
-  * @Rollback
-  * @BeforeTransaction
-  * @AfterTransaction
-  * @IfProfileValue (junit-related)
-  * @ProfileValueSourceConfiguration (junit-related)
-  * @ExpectedException (junit-related)
-  * @Timed (junit-related)
-  * @Repeat (junit-related)
+  * {{{@ContextConfiguration}}}
+  * {{{@DirtiesContext}}}
+  * {{{@TestExecutionListeners}}}
+  * {{{@TransactionConfiguration}}}
+  * {{{@Rollback}}}
+  * {{{@BeforeTransaction}}}
+  * {{{@AfterTransaction}}}
+  * {{{@IfProfileValue (junit-related)}}}
+  * {{{@ProfileValueSourceConfiguration (junit-related)}}}
+  * {{{@ExpectedException (junit-related)}}}
+  * {{{@Timed (junit-related)}}}
+  * {{{@Repeat (junit-related)}}}
  * [http://static.springsource.org/spring/docs/3.0.x/spring-framework-reference/html/testing.html#integration-testing Spring Integration Testing]
  * [http://static.springsource.org/spring/docs/3.0.x/spring-framework-reference/html/testing.html#integration-testing Spring Integration Testing] Goals
   * Spring IoC container caching between test execution.
