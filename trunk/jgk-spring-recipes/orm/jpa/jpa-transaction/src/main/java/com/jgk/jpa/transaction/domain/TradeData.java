@@ -1,5 +1,6 @@
 package com.jgk.jpa.transaction.domain;
 
+import javax.inject.Inject;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -9,8 +10,9 @@ import javax.persistence.Id;
 public class TradeData {
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	@GeneratedValue(strategy=GenerationType.TABLE)
 	private Long id;
+	
 	
 	private String ticker;
 	private Double amount;
