@@ -42,5 +42,6 @@
 	</dependencies>
   <modules>
   	<module>jpa-joined-subclass</module>
+  	<module>jpa-transaction</module>
   </modules>
 </project>
