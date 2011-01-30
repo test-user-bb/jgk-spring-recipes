@@ -8,9 +8,9 @@
     <version>0.0.1-SNAPSHOT</version>
   </parent>
   <groupId>com.jgk</groupId>
-  <artifactId>jpa-joined-subclass</artifactId>
+  <artifactId>jpa-transaction</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <name>jpa-joined-subclass</name>
+  <name>jpa-transaction</name>
   <url>http://maven.apache.org</url>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -22,5 +22,6 @@
 	  <artifactId>javax.inject</artifactId>
 	  <version>${javax.inject.version}</version>
 	</dependency>  
+  
   </dependencies>
 </project>
