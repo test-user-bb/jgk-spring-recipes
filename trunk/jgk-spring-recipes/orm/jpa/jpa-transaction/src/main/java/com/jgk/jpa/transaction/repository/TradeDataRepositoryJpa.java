@@ -5,19 +5,30 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.jgk.jpa.transaction.domain.TradeData;
 
-@Repository(value="tradeDataRepository")
+@Repository("tradeDataRepository")
 public class TradeDataRepositoryJpa implements TradeDataRepository {
 	
 	@Inject
 	private String brokerageName;
 
-	@PersistenceContext
 	private EntityManager entityManager;
 	
+	public EntityManager getEntityManager() {
+		return entityManager;
+	}
+
+
+	@PersistenceContext
+	public void setEntityManager(EntityManager entityManager) {
+		this.entityManager = entityManager;
+	}
+
+
 	@Override
 	public String toString() {
 		return "TradeDataRepositoryJpa [brokerageName=" + brokerageName + "]";
@@ -31,9 +42,8 @@ public class TradeDataRepositoryJpa implements TradeDataRepository {
 
 
 	@Override
-	@Transactional
+	@Transactional(readOnly=false,propagation=Propagation.REQUIRED)
 	public TradeData makePersistent(TradeData td) {
-		System.out.println("persist it");
 		entityManager.persist(td);
 		return td;
 	}

@@ -2,7 +2,6 @@ package com.jgk.springrecipes.orm.jpa.joinedsubclass.repository;
 
 import java.util.List;
 
-import com.jgk.springrecipes.orm.jpa.joinedsubclass.domain.Car;
 import com.jgk.springrecipes.orm.jpa.joinedsubclass.domain.Vehicle;
 
 public interface VehicleRepository {

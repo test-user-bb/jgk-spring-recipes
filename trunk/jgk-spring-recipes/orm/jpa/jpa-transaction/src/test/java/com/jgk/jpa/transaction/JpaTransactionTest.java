@@ -10,6 +10,7 @@ import org.junit.runner.RunWith;
 import org.springframework.context.ApplicationContext;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.jgk.jpa.transaction.domain.TradeData;
 import com.jgk.jpa.transaction.repository.TradeDataRepository;
@@ -34,6 +35,7 @@ public class JpaTransactionTest {
 		td.setTicker("IBM");
 		td.setAmount(243.23);
 		tradeDataRepository.makePersistent(td);
+		assertNotNull(tradeDataRepository.findById(td.getId()));
 		System.out.println(td.getId());
 		
 	}
