@@ -1,22 +1,25 @@
 package com.jgk.jpa.transaction.domain;
 
-import javax.inject.Inject;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table(name="THE_TRADE_DATA")
 public class TradeData {
 
-	@Id
-	@GeneratedValue(strategy=GenerationType.TABLE)
 	private Long id;
 	
 	
 	private String ticker;
 	private Double amount;
 	
+	@Id
+	@GeneratedValue(strategy=GenerationType.TABLE)
+	@Column(name="TRADE_ID")
 	public Long getId() {
 		return id;
 	}
