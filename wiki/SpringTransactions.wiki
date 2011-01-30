@@ -5,6 +5,7 @@ Place Spring Transaction stuff here...
 
 == Stuff ==
  * Spring Framework {{{@Transactional}}} annotation with the {{{@TransactionAttribute}}} annotation found in the EJB 3.0 specification
+ * ORM-based frameworks *require a transaction* in order to trigger the synchronization between the object cache and the database.
 
 == Resources ==
  * [http://www.ibm.com/developerworks/java/library/j-ts1.html IBM Transaction Pitfalls]
