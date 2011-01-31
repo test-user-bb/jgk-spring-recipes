@@ -8,9 +8,11 @@
  * MessageProducer
  * MessageConsumer
 
-== Message Implementations javax.jms ==
- * TextMessage
- * ObjectMessage
- * MapMessage
- * BytesMessage
- * StreamMessage
+== Message ==
+ * from {{{geronimo-jms_1.1_spec-1.1.1.jar}}}
+=== Implementations javax.jms ===
+ * {{{TextMessage}}}
+ * {{{ObjectMessage}}}
+ * {{{MapMessage}}}
+ * {{{BytesMessage}}}
+ * {{{StreamMessage}}}
