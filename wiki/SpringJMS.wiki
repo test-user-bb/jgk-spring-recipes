@@ -5,8 +5,8 @@
  * Destination
  * Connection
  * Session
- * MessageProducer
- * MessageConsumer
+ * {{{MessageProducer}}}
+ * {{{MessageConsumer}}}
 
 == Message ==
  * from {{{geronimo-jms_1.1_spec-1.1.1.jar}}}
