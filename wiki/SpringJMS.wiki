@@ -16,3 +16,12 @@
  * {{{MapMessage}}}
  * {{{BytesMessage}}}
  * {{{StreamMessage}}}
+
+== Destination ==
+ * from {{{geronimo-jms_1.1_spec-1.1.1.jar}}}
+=== Implementations javax.jms ===
+ * Queue
+  * Point-to-point messaging
+ * Topic
+  * Publish/subscribe messaging
+_NOTE:  difference between sending email to a single person or to a List Server_
