@@ -1,0 +1,16 @@
+#summary JMS - Java Message Service
+
+= Core =
+ * Message
+ * Destination
+ * Connection
+ * Session
+ * MessageProducer
+ * MessageConsumer
+
+== Message Implementations javax.jms ==
+ * TextMessage
+ * ObjectMessage
+ * MapMessage
+ * BytesMessage
+ * StreamMessage
