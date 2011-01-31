@@ -85,6 +85,7 @@
 		<module>converters</module>
 		<module>jdbc</module>
 		<module>jmx</module>
+		<module>jms</module>
 		<module>orm</module>
 		<module>propertyplaceholderconfigurer</module>
 		<module>simple-context</module>
