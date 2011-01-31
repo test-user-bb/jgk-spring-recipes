@@ -1,6 +1,11 @@
 #summary JMS - Java Message Service
 
  * [http://static.springsource.org/spring/docs/3.0.x/spring-framework-reference/html/jms.html Spring JMS Reference]
+= General JMS =
+ * API Walk
+{{{
+ConnectionFactory->Connection->Session->MessageProducer->send
+}}}
 = Core =
  * Message
  * Destination
