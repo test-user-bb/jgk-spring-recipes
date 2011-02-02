@@ -22,7 +22,7 @@
 	</bean>
 
 }}}
- * Uses a {{{jmsTemplate}}} defaulting to clampettQueue
+ * Uses a {{{jmsTemplate}}} defaulting to {{{clampettQueue}}}
 {{{
 	<bean id="jmsTemplate" class="org.springframework.jms.core.JmsTemplate">
 		<property name="connectionFactory" ref="jmsConnectionFactory"/>
