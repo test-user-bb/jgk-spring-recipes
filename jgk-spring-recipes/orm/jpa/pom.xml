@@ -43,5 +43,6 @@
   <modules>
   	<module>jpa-joined-subclass</module>
   	<module>jpa-transaction</module>
+  	<module>hades</module>
   </modules>
 </project>

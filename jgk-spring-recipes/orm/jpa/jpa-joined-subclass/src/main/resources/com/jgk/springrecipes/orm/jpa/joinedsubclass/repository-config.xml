@@ -17,7 +17,5 @@
 
 	<!-- Enable annotation-config, needed for @PersistenceContext annotations -->
 	<context:annotation-config />
-	<!-- Instructs the container to look for beans with @Transactional and decorate them -->
-	<tx:annotation-driven transaction-manager="transactionManager" />
 		
 </beans>		
