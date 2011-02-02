@@ -83,17 +83,18 @@
 	    <module>beaninitialization</module>
 	    <module>beanpostprocessor</module>
 		<module>converters</module>
+		<module>factorymethod</module>
 		<module>jdbc</module>
-		<module>jmx</module>
 		<module>jms</module>
+		<module>jmx</module>
+		<module>mvc</module>
 		<module>orm</module>
 		<module>propertyplaceholderconfigurer</module>
+		<module>security</module>
 		<module>simple-context</module>
 		<module>simple-context-with-spring-annotations</module>
 		<module>simple-repository</module>
-		<module>factorymethod</module>
 		<module>testing</module>
-		<module>security</module>
 		<!-- 
 		<module>security-samples-contacts</module>
 		 -->
