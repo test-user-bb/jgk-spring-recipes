@@ -13,6 +13,7 @@ import javax.persistence.metamodel.EntityType;
 import javax.persistence.metamodel.Metamodel;
 
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.jgk.springrecipes.orm.jpa.joinedsubclass.domain.Vehicle;
@@ -58,7 +59,7 @@ public class VehicleRepositoryJpa implements VehicleRepository {
 	}
 
 	@Override
-	@Transactional
+	@Transactional(propagation=Propagation.MANDATORY)
 	public Vehicle makePersistent(Vehicle vehicle) {
 		entityManager.persist(vehicle);
 		return vehicle;

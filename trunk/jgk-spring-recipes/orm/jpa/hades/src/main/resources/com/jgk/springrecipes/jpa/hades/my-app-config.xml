@@ -13,7 +13,5 @@
 
 	<import resource="classpath:/com/jgk/springrecipes/jpa/hades/infrastructure-config.xml"/>
 	
-	<!-- 
-	<hades:dao-config base-package="com.jgk.springrecipes.jpa.hades.*.dao" />
-	 -->
+	<hades:dao-config base-package="com.jgk.springrecipes.jpa.hades.dao" />
 </beans>
