@@ -25,9 +25,11 @@ public class JoinedSubclassTest {
 	
 	@Inject
 	VehicleRepository vehicleRepository;
+	
+	
 
 	@Test
-//	@Transactional
+	@Transactional(readOnly=true)
 	public void something() {
 		System.out.println(applicationContext);
 		Car car = new Car();
