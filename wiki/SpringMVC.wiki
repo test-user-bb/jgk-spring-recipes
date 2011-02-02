@@ -1,5 +1,5 @@
 #summary Spring MVC
 
  * [http://static.springsource.org/spring/docs/3.0.x/reference/mvc.html Spring MVC Reference]
- * DispatcherServlet is an expression of the [http://java.sun.com/blueprints/patterns/FrontController.html “Front Controller” design pattern].
+ * {{{DispatcherServlet}}} is an expression of the [http://java.sun.com/blueprints/patterns/FrontController.html “Front Controller” design pattern].
  * [http://static.springsource.org/spring/docs/3.0.x/reference/images/mvc.png]
