@@ -14,7 +14,6 @@
               >
               
     <import resource="classpath:/com/jgk/springrecipes/jms/jms-config.xml"/>
-    <context:annotation-config/>              
     <context:component-scan base-package="com.jgk.springrecipes.jms"/>
            
 	<jms:listener-container connection-factory="jmsConnectionFactory">
