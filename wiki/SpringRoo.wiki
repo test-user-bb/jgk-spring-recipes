@@ -5,7 +5,7 @@
 == Repositories ==
  * these can go in your pom.xml
 {{{
-        <repositories>
+    <repositories>
         <repository>
             <id>spring-maven-release</id>
             <name>Spring Maven Release Repository</name>
