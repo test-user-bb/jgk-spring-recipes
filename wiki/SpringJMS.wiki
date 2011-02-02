@@ -30,6 +30,12 @@
 	</bean>
 
 }}}
+ * Uses a {{{connectionFactory}}}
+{{{
+	<bean id="jmsConnectionFactory" class="org.apache.activemq.ActiveMQConnectionFactory">
+		<property name="brokerURL" value="vm://embedded?broker.persistent=false"/>
+	</bean>
+}}}
 = Simple JMS =
  * setup a connection factory
  * setup a queue
