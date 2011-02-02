@@ -1,6 +1,17 @@
 #summary JMS - Java Message Service
 
  * [http://static.springsource.org/spring/docs/3.0.x/spring-framework-reference/html/jms.html Spring JMS Reference]
+== jms module ==
+ * added a jms module to the source base
+ * uses pojo's as jms listeners
+{{{
+<jms:listener-container connection-factory="jmsConnectionFactory">
+		<jms:listener ref="clampettFamily" method="familyArrived" destination="clampett.queue.family" response-destination="clampett.queue.familyarrived"/>
+		<jms:listener ref="familyArrivedLogger" method="log" destination="clampett.queue.familyarrived"/>
+	</jms:listener-container>
+    
+}}}
+ * Uses 2 queues
 = Simple JMS =
  * setup a connection factory
  * setup a queue
