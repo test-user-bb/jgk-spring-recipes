@@ -14,4 +14,8 @@
     <context:annotation-config/>              
     <context:component-scan base-package="com.jgk.springrecipes.jms"/>
               
+	<bean id="connectionFactory" class="org.apache.activemq.ActiveMQConnectionFactory">
+		<property name="brokerURL" value="vm://embedded?broker.persistent=false"/>
+	</bean>
+              
 </beans>
