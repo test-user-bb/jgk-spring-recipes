@@ -36,6 +36,10 @@
 		<property name="brokerURL" value="vm://embedded?broker.persistent=false"/>
 	</bean>
 }}}
+ * Uses component scanning:
+{{{
+    <context:component-scan base-package="com.jgk.springrecipes.jms"/>
+}}}
 = Simple JMS =
  * setup a connection factory
  * setup a queue
