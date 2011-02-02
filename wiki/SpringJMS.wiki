@@ -22,6 +22,14 @@
 	</bean>
 
 }}}
+ * Uses a {{{jmsTemplate}}} defaulting to clampettQueue
+{{{
+	<bean id="jmsTemplate" class="org.springframework.jms.core.JmsTemplate">
+		<property name="connectionFactory" ref="jmsConnectionFactory"/>
+		<property name="defaultDestination" ref="clampettQueue"/>
+	</bean>
+
+}}}
 = Simple JMS =
  * setup a connection factory
  * setup a queue
