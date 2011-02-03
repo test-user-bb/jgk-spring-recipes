@@ -2,7 +2,7 @@
 
  * [http://static.springsource.org/spring/docs/3.0.x/reference/mvc.html Spring MVC Reference]
  * [http://static.springsource.org/spring/docs/3.0.x/javadoc-api/ Spring MVC javadoc]
- * {{{WebApplicationContext}}} is bound in the {{{ServletContext}}}, and by using static methods on the {{{RequestContextUtils}}} class you can always look up the {{{WebApplicationContext}}} if you need access to it.
+ * {{{WebApplicationContext}}} is bound in the {{{ServletContext}}}, and by using static methods on the [http://static.springsource.org/spring/docs/3.0.x/javadoc-api/org/springframework/web/servlet/support/RequestContextUtils.html RequestContextUtils] class you can always look up the {{{WebApplicationContext}}} if you need access to it.
  * In the Web MVC framework, each [http://static.springsource.org/spring/docs/3.0.x/javadoc-api/org/springframework/web/servlet/DispatcherServlet.html DispatcherServlet] has its own {{{WebApplicationContext}}}, which inherits all the beans already defined in the root {{{WebApplicationContext}}}.
 [http://static.springsource.org/spring/docs/3.0.x/reference/images/mvc-contexts.gif]
  * {{{DispatcherServlet}}} is an expression of the [http://java.sun.com/blueprints/patterns/FrontController.html “Front Controller” design pattern].
