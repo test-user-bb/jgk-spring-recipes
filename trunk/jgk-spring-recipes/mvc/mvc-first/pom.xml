@@ -3,22 +3,26 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
   <parent>
-    <artifactId>jgk-spring-recipes</artifactId>
-    <groupId>com.jgk</groupId>
+    <artifactId>mvc</artifactId>
+    <groupId>com.jgk.springrecipes</groupId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
   <groupId>com.jgk.springrecipes</groupId>
-  <artifactId>mvc</artifactId>
+  <artifactId>mvc-first</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <packaging>pom</packaging>
-  <name>mvc</name>
+  <packaging>war</packaging>
+  <name>mvc-first Maven Webapp</name>
   <url>http://maven.apache.org</url>
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-  </properties>
   <dependencies>
+  	<dependency>
+  		<groupId>org.springframework</groupId>
+  		<artifactId>spring-webmvc</artifactId>
+  		<version>${spring.version}</version>
+  		<type>jar</type>
+  		<scope>compile</scope>
+  	</dependency>
   </dependencies>
-  <modules>
-  	<module>mvc-first</module>
-  </modules>
+  <build>
+    <finalName>mvc-first</finalName>
+  </build>
 </project>
