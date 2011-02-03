@@ -8,8 +8,8 @@ import org.springframework.stereotype.Component;
 
 @Aspect
 @Component(value="pctAspect")
-public class PropertyChangeTracker {
-	private Logger log = Logger.getLogger(PropertyChangeTracker.class);
+public class PropertyChangeTrackerAspect {
+	private Logger log = Logger.getLogger(PropertyChangeTrackerAspect.class);
 	
 	@Before("execution(void set*(*)) or execution(void set*()) ")
 	public void trackChange() {
