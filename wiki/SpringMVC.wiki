@@ -1,5 +1,8 @@
 #summary Spring MVC
 
+== Annotations ==
+ * annotation-based programming model for MVC controllers that uses annotations such as {{{@RequestMapping}}}, {{{@RequestParam}}}, {{{@ModelAttribute}}}.
+== Reference ==
  * [http://static.springsource.org/spring/docs/3.0.x/reference/mvc.html Spring MVC Reference]
  * [http://static.springsource.org/spring/docs/3.0.x/javadoc-api/ Spring MVC javadoc]
  * [http://static.springsource.org/spring/docs/3.0.x/javadoc-api/org/springframework/web/multipart/MultipartHttpServletRequest.html MultipartHttpServletRequest] - file upload support.
