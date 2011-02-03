@@ -1,6 +1,7 @@
-#summary aop stuff
+ #summary aop stuff
 
  * AOP = Aspect Oriented Programming
+ * Aspect: a module that encapsulates pointcuts and advice.
  * Advice: code to execute
  * Joinpoint: place in code where code can be injected.  In Spring this is just before/after methods.
  * Pointcut: Expression to identify join point
