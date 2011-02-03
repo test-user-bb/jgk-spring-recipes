@@ -5,7 +5,13 @@
 <h2>Hello World!</h2>
 <%
 ApplicationContext ctx = WebApplicationContextUtils.getRequiredWebApplicationContext(application);
+for( String bn : ctx.getBeanDefinitionNames() ) {
+%>	
+	<%=bn %><br/>
+<%	
+}
 %>
+
 
 <br/>
 <%= ctx %>
