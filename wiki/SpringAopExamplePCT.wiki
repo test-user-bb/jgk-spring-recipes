@@ -4,10 +4,10 @@
  * Java
   * Pojo component
   * Aspect pojo
+  * test
  * Configuration
- * Spring config
- * log4j
- * test
+  * Spring config
+  * log4j
 
 == Java ==
 === Pojo Component ===
