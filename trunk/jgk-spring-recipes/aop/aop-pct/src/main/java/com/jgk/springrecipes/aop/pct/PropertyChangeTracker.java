@@ -16,6 +16,4 @@ public class PropertyChangeTracker {
 		System.out.println("Property about to change");
 		log.info("Property about to change");
 	}
-	
-	
 }
