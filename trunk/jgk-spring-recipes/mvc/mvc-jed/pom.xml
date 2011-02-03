@@ -12,6 +12,7 @@
   <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
   <name>mvc-jed Maven Webapp</name>
+  <description>simple spring mvc web application</description>
   <url>http://maven.apache.org</url>
   <dependencies>
     <dependency>
