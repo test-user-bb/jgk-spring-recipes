@@ -27,6 +27,17 @@
   	</dependency>
 }}}
 == web.xml ==
+ * web.xml with {{{ContextLoaderListener}}}
+{{{
+  <context-param>
+  	<param-name>contextConfigLocation</param-name>
+  	<param-value>/WEB-INF/jed-webapp-config.xml</param-value>
+  </context-param>
+  <listener>
+  	<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+  </listener>
+
+}}}
  * web.xml
 {{{
 <?xml version="1.0" encoding="ASCII"?>
