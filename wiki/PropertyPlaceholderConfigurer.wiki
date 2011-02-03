@@ -1,5 +1,25 @@
 #summary Show use of PropertyPlaceholderConfigurer
 = Introduction =
+ * You can have multiple PropertyPlaceholderConfigurer beans.  You can specify an order in the bean definition.  The first match wins:
+{{{
+	<context:property-placeholder order="1" location="classpath:first.properties"/>
+	<context:property-placeholder order="2" location="classpath:second.properties"/>
+	<util:list id="wordList" list-class="java.util.LinkedList">
+		<value>one</value>
+		<value>two</value>
+		<value>three</value>
+		<value>${lastname}</value>
+	</util:list>
+Here the ${lastname} would be replaced with 'clampett'
+--------------
+first.properties:
+firstname=jed
+lastname=clampett
+--------------
+second.properties:
+firstname=wilma
+lastname=flintstone
+}}}
  * PropertyPlaceholderConfigurer enables you to load properties from a .properties file and then use ${....} syntax to replace the items during Bean Factory Post Processing
  * The examples show two methods of defining your PropertyPlaceholderConfigurer
   * Using standard spring bean definition:
