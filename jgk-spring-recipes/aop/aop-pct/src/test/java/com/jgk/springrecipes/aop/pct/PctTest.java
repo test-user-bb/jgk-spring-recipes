@@ -19,6 +19,7 @@ public class PctTest {
 	
 	@Test
 	public void testIt() {
+		pojoWithSetterMethod.setNothing();
 		pojoWithSetterMethod.setDescription("HOWDY FRIEND");
 		for (String name : applicationContext.getBeanDefinitionNames()){
 			System.out.println(name);

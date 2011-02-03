@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 public class PropertyChangeTracker {
 	private Logger log = Logger.getLogger(PropertyChangeTracker.class);
 	
-	@Before("execution(void set*(*))")
+	@Before("execution(void set*(*)) or execution(void set*()) ")
 	public void trackChange() {
 		System.out.println("Property about to change");
 		log.info("Property about to change");
