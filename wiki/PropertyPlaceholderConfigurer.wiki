@@ -1,6 +1,6 @@
 #summary Show use of PropertyPlaceholderConfigurer
 = Introduction =
- * You can have multiple PropertyPlaceholderConfigurer beans.  You can specify an order in the bean definition.  The first match wins:
+ * You can have multiple PropertyPlaceholderConfigurer beans.  You can specify an *order* in the bean definition.  The first match wins:
 {{{
 	<context:property-placeholder order="1" location="classpath:first.properties"/>
 	<context:property-placeholder order="2" location="classpath:second.properties"/>
