@@ -6,6 +6,10 @@ import org.springframework.stereotype.Component;
 public class PojoWithSetterMethod {
 
 	private String description;
+	
+	public void setNothing() {
+		System.out.println("SETTING NOTHING");
+	}
 
 	public String getDescription() {
 		return description;
