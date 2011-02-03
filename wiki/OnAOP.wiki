@@ -41,7 +41,7 @@
  * What are the mandatory pieces of a pointcut expression?
   * Return Type
   * Method Name()
- * The meaning of (*), when it appears in the parameter list of a method name?
+ * The meaning of (***), when it appears in the parameter list of a method name?
   * One (1) parameter of any type.
  * The meaning of ( .. ) when it appears in the parameter list of a method name?
   * 0+ parameters of any type.
@@ -243,5 +243,3 @@ execution(* *..restaurant.*.*(..))
   * @AfterThrowing - after on failure - takes JoinPoint and exception, can change exception type thrown
   * @Around - surrounds - takes ProceedingJoinPoint, can intercept call or eat exception
  * Best Practice: prefer least powerful advice that can do the job
-
-
