@@ -2,6 +2,7 @@
 
  * [http://static.springsource.org/spring/docs/3.0.x/reference/mvc.html Spring MVC Reference]
  * In the Web MVC framework, each DispatcherServlet has its own {{{WebApplicationContext}}}, which inherits all the beans already defined in the root {{{WebApplicationContext}}}.
+[http://static.springsource.org/spring/docs/3.0.x/reference/images/mvc-contexts.gif]
  * {{{DispatcherServlet}}} is an expression of the [http://java.sun.com/blueprints/patterns/FrontController.html “Front Controller” design pattern].
  * [http://static.springsource.org/spring/docs/3.0.x/reference/images/mvc.png]
 == Dependency ==
