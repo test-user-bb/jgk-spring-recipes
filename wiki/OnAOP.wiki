@@ -41,7 +41,7 @@
  * What are the mandatory pieces of a pointcut expression?
   * Return Type
   * Method Name()
- * The meaning of (***), when it appears in the parameter list of a method name?
+ * The meaning of {{{(*)}}}, when it appears in the parameter list of a method name?
   * One (1) parameter of any type.
  * The meaning of ( .. ) when it appears in the parameter list of a method name?
   * 0+ parameters of any type.
