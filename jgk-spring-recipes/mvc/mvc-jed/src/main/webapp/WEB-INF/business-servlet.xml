@@ -16,14 +16,14 @@
 				              "							
               >
               
-    <context:component-scan base-package="com.jgk.springrecipes.mvc.jed"></context:component-scan>
-	<context:property-placeholder order="1" location="classpath:first.properties"/>
-	<context:property-placeholder order="2" location="classpath:second.properties"/>
+<!-- JSR-303 support will be detected on classpath and enabled automatically -->
+	<context:component-scan base-package="com.jgk.springrecipes.mvc.jed.controllers"/>   
+    <mvc:annotation-driven />
 	<util:list id="wordList" list-class="java.util.LinkedList">
-		<value>one</value>
-		<value>two</value>
-		<value>three</value>
-		<value>${lastname}</value>
+		<value>one-example</value>
+		<value>two-example</value>
+		<value>three-example</value>
+		<value>${lastname}-example</value>
 	</util:list>
 	
 </beans>
