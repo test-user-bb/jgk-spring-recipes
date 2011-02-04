@@ -23,7 +23,7 @@ public class HelloWorldController {
       model.addAttribute("owner", owner);  
       return "displayOwner"; 
     }    
-    @RequestMapping(value="/meds/bymedid/{medId}", method=RequestMethod.GET)
+    @RequestMapping(value="/oldmeds/bymedid/{medId}", method=RequestMethod.GET)
     public String findMedName(@PathVariable("medId") String medId, Model model) {
     	System.out.println("medId:"+medId);
     	String medName="Aspirin";

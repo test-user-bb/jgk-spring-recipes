@@ -25,12 +25,22 @@
             column="eventType"
         />
 
+		
         <version
             name="version"
             column="version"
             type="integer"
         />
 
+		<many-to-one name="patient"  
+			cascade="none" outer-join="auto" 
+			class="com.gs.core.domain.visit.Patient" 
+			insert="true" 
+			update="true">
+		   
+		   <column name="patient_id"></column>
+		
+		</many-to-one>
         <property
             name="annotation"
             type="java.lang.String"
@@ -66,6 +76,8 @@
             name="com.gs.core.domain.visit.Visit"
             discriminator-value="VIST"
         >
+        
+        
 
         <set
             name="clinicalObservations"

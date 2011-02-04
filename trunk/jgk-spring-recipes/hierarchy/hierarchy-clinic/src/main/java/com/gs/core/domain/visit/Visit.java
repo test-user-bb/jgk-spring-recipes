@@ -9,6 +9,7 @@ public class Visit extends ClinicalEvent {
 	private Long bulletsScored;
 	private Date scheduledStartTime;
 	private Boolean firstVisit;
+
 	public Long getBulletsScored() {
 		return bulletsScored;
 	}
