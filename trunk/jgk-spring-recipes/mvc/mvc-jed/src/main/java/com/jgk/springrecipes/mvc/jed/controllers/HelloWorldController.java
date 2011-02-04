@@ -30,4 +30,21 @@ public class HelloWorldController {
       model.addAttribute("medName", medName);  
       return "displayMedName"; 
     }    
+    
+    /**
+     * http://localhost:8080/<context>/<servlet-name>/practitioner/234/patient/2356
+     * http://localhost:8080/mywebapp/business/practitioner/234/patient/2356
+     * @param practitionerId
+     * @param patientId
+     * @param model
+     * @return
+     */
+    @RequestMapping(value="/practitioner/{practitionerId}/patient/{patientId}", method=RequestMethod.GET)
+    public String findPet(@PathVariable("practitionerId") String practitionerId, @PathVariable("patientId") Long patientId, Model model) {
+    	String practitioner = "HAWKEYE";
+    	String patient = "Onks";
+        model.addAttribute("practitioner", practitioner);  
+        model.addAttribute("patient", patient);  
+      return "displayPatientDashboard"; 
+    }    
 }
