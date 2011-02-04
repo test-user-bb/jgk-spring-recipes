@@ -3,6 +3,8 @@ package com.gs.core.domain.events;
 import java.util.HashSet;
 import java.util.Set;
 
+import com.gs.core.domain.visit.Patient;
+
 abstract public class ClinicalEvent {
 
 	private Long id;
@@ -10,6 +12,18 @@ abstract public class ClinicalEvent {
 	private Integer siblingOrder;
 	private String annotation, displayValue;
 	protected Set<ClinicalObservation> clinicalObservations= new HashSet<ClinicalObservation>();
+	private Patient patient;
+	
+	public Patient getPatient() {
+		return patient;
+	}
+
+	public void setPatient(Patient patient) {
+		this.patient = patient;
+//		patient.addVisit(this);
+	}
+
+	
 	public String getAnnotation() {
 		return annotation;
 	}
