@@ -1,6 +1,7 @@
 #summary Spring MVC
 
 == Related Annotations ==
+ * {{{@Controller}}}
  * {{{@CookieValue}}}
  * {{{@RequestHeaders}}}
 == MVC Namespace ==
