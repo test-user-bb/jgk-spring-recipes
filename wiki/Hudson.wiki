@@ -1,5 +1,6 @@
 #summary Hudson automated testing
 
 == YES, TESTING ==
+ * [http://jenkins-ci.org/ Jenkins] (was Hudson)
  * [http://hudson-ci.org/ Hudson]
  * [http://hudson-ci.org/images/butler.png]
