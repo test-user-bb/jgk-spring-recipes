@@ -1,0 +1,7 @@
+#summary Bean validation api
+
+= Introduction =
+ * [http://jcp.org/aboutJava/communityprocess/final/jsr303/index.html JSR 303]
+
+= Annotations =
+ * {{{@Valid}}}
