@@ -11,6 +11,14 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller//(value="FunksterJoe")
 public class HelloWorldController {
+	@RequestMapping("/getupfront")
+	public String doGetUpfront() {
+		return "upfront";
+	}
+	@RequestMapping("/gethowdy")
+	public String doGetHowdy() {
+		return "howdy";
+	}
 	@RequestMapping("/displayHeaderInfo")
 	@ResponseBody
 	public String displayHeaderInfo(@RequestHeader("Accept-Encoding") String encoding){//,
