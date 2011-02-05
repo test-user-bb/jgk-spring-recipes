@@ -1,5 +1,12 @@
 #summary Spring MVC
 
+== Handler return types ==
+ * {{{ModelAndView}}}
+ * {{{Model}}}
+ * {{{Map}}}
+ * {{{View}}}
+ * {{{String}}} value that is interpreted as the logical view name
+ * {{{void}}} if the method handles the response itself (by writing the response content directly, declaring an argument of type {{{ServletResponse}}} / {{{HttpServletResponse}}} for that purpose) or if the view name is supposed to be implicitly determined through a {{{RequestToViewNameTranslator}}} (not declaring a response argument in the handler method signature).
 == Annotations ==
  * annotation-based programming model for MVC controllers that uses annotations such as 
   * {{{@RequestMapping}}}
