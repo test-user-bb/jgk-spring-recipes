@@ -1,5 +1,8 @@
 #summary Spring MVC
 
+== WARNING ==
+ * Note
+_When using controller interfaces (e.g. for AOP proxying), make sure to consistently put all your mapping annotations - such as {{{@RequestMapping}}} and {{{@SessionAttributes}}} - on the controller interface rather than on the implementation class._
 == Handler return types ==
  * {{{ModelAndView}}}
  * {{{Model}}}
