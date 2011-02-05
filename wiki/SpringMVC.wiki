@@ -17,6 +17,7 @@
 	}
 }}}
  * {{{HttpEntity<?>}}} or {{{ResponseEntity<?>}}} object to provide access to the Servlet reponse HTTP headers and contents. The entity body will be converted to the response stream using {{{HttpMessageConverters}}}.
+ * Any other return type is considered to be a single model attribute to be exposed to the view, using the attribute name specified through {{{@ModelAttribute}}} at the method level (or the default attribute name based on the return type class name). The model is implicitly enriched with command objects and the results of {{{@ModelAttribute}}} annotated reference data accessor methods.
 == Annotations ==
  * annotation-based programming model for MVC controllers that uses annotations such as 
   * {{{@RequestMapping}}}
