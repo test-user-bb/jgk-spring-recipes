@@ -3,12 +3,38 @@ package com.jgk.springrecipes.mvc.jed.controllers;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller//(value="FunksterJoe")
 public class HelloWorldController {
+	@RequestMapping("/displayHeaderInfo")
+	@ResponseBody
+	public String displayHeaderInfo(@RequestHeader("Accept-Encoding") String encoding){//,
+//	                              @RequestHeader("Keep-Alive") Long keepAlive)  {
+
+	  StringBuilder sb = new StringBuilder();
+	  sb.append("Accept-Encoding:"+encoding);
+	  sb.append("<br/>");
+//	  sb.append("Keep-Alive:"+keepAlive);
+//	  sb.append("<br/>");
+	  return sb.toString();
+
+	}	
+	
+	@RequestMapping("/friend")
+	@ResponseBody
+	public String theFriend() {
+		return "<html><body><h1>FRIEND Hello There MOFO JSON</h1></body></html>";
+	}
+	@RequestMapping("/json")
+	@ResponseBody
+	public String infoJson() {
+		return "{name:'jed',age:34}";
+	}
     @RequestMapping("/helloWorld")
     public ModelAndView helloWorld() {
         ModelAndView mav = new ModelAndView();
