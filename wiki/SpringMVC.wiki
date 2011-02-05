@@ -7,6 +7,16 @@
  * {{{View}}}
  * {{{String}}} value that is interpreted as the logical view name
  * {{{void}}} if the method handles the response itself (by writing the response content directly, declaring an argument of type {{{ServletResponse}}} / {{{HttpServletResponse}}} for that purpose) or if the view name is supposed to be implicitly determined through a {{{RequestToViewNameTranslator}}} (not declaring a response argument in the handler method signature).
+ * If the method is annotated with {{{@ResponseBody}}}, the return type is written to the response HTTP body. The return value will be converted to the declared method argument type using {{{HttpMessageConverters.}}}
+  * Sample using {{{@ResponseBody}}} to return raw html:
+{{{
+	@RequestMapping("/friend")
+	@ResponseBody
+	public String theFriend() {
+		return "<html><body><h1>FRIEND Hello There MOFO JSON</h1></body></html>";
+	}
+
+}}}
 == Annotations ==
  * annotation-based programming model for MVC controllers that uses annotations such as 
   * {{{@RequestMapping}}}
