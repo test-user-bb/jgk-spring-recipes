@@ -15,8 +15,8 @@
 	public String theFriend() {
 		return "<html><body><h1>FRIEND Hello There JSON</h1></body></html>";
 	}
-
 }}}
+ * {{{HttpEntity<?>}}} or {{{ResponseEntity<?>}}} object to provide access to the Servlet reponse HTTP headers and contents. The entity body will be converted to the response stream using {{{HttpMessageConverters}}}.
 == Annotations ==
  * annotation-based programming model for MVC controllers that uses annotations such as 
   * {{{@RequestMapping}}}
