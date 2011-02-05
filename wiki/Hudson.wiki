@@ -2,5 +2,6 @@
 
 == YES, TESTING ==
  * [http://jenkins-ci.org/ Jenkins] (was Hudson)
+  * [http://wiki.jenkins-ci.org/display/JENKINS/Upgrading+from+Hudson+to+Jenkins Upgrading to Jenkins (from Hudson)]
  * [http://hudson-ci.org/ Hudson]
  * [http://hudson-ci.org/images/butler.png]
