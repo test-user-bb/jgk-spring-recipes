@@ -1,5 +1,7 @@
 #summary Spring MVC
 
+== View Resolvers ==
+ * You want to position a InternalResourceViewResolver (UrlBasedViewResolver) last.  You can only use one of these since the underlying implementation makes use of a {{{RequestDispatcher}}} call - which can only be done once.
 == WARNING ==
  * Note
 _When using controller interfaces (e.g. for AOP proxying), make sure to consistently put all your mapping annotations - such as {{{@RequestMapping}}} and {{{@SessionAttributes}}} - on the controller interface rather than on the implementation class._
