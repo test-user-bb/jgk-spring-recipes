@@ -24,6 +24,7 @@ public void createRoute(HttpServletRequest request, Model model) {
 }}}
 == REST + JAVA:  a match made in Jersey? ==
  * [http://en.wikipedia.org/wiki/JAX-RS JAX-RS] is JEE 6 standard for building RESTful applications _NOTE: Spring MVC does NOT implement JAX-RS_
+ * _JSR 311: JAX-RS_
  * Programmatic clients - (don't worry about the browser - data to data)
  * JAX-RS Implementations:
   * [http://jersey.java.net/ Jersey] - reference implementation (RI)
