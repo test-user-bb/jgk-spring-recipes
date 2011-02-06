@@ -1,4 +1,22 @@
 #summary Spring MVC
+== Controller time ==
+{{{
+@Controller
+public class SomeController {
+  private SomeService myService;
+  
+  @Autowired
+  public SomeController(SomeService svc) {
+      this.myService=svc;
+  }
+  @RequestMapping("/some/show")
+  public String show(@RequestParam("id") long id, Model model) {
+     SomeThing st = myService.lookupSomething(id);
+     model.addAttribute(st);
+     returne "someView";   // selects the 'someView' to render SomeThing
+  }
+}
+}}}
 == Setup config ==
 {{{
 <beans>
