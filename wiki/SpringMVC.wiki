@@ -1,5 +1,10 @@
 #summary Spring MVC
-
+== How to do it ==
+ * Deploy {{{DispatcherServlet}}
+ * Implement a request handler (controller)
+ * Implement Views
+ * Register Controller with {{{DispatcherServlet}}}
+ * Deploy / Test
 == Interesting JSR's ==
  *  [http://jcp.org/aboutJava/communityprocess/final/jsr303/index.html JSR-303] Bean Validation API
   * define a meta-data model and API for JavaBeanTM validation based on annotations, with overrides and extended meta-data through the use of XML validation descriptors. 
