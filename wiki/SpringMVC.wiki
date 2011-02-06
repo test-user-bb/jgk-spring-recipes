@@ -1,5 +1,19 @@
 #summary Spring MVC
-== Controller time ==
+== How to do it ==
+ * Deploy {{{DispatcherServlet}}}
+ * Implement a request handler (controller)
+ * Implement Views
+ * Register Controller with {{{DispatcherServlet}}}
+ * Deploy / Test
+=== {{{DispatcherServlet}}} ===
+{{{
+<servlet-mapping>
+   <servlet-name>somestuff</servlet-name>
+   <url-pattern>/somestuff/*</url-pattern>
+</servlet-mapping>
+}}}
+ * {{{http://host:portnum/context/somestuff/show?id=345}}}
+=== Controller time ===
 {{{
 @Controller
 public class SomeController {
@@ -17,7 +31,7 @@ public class SomeController {
   }
 }
 }}}
-== View time ==
+=== View time ===
  * {{{/WEB-INF/views/someView.jsp}}}
  * Here's the view markup:
 {{{
@@ -31,7 +45,7 @@ public class SomeController {
   </body>
 </html>
 }}}
-== Setup config ==
+=== Setup config ===
 {{{
 <beans>
    <bean class="org.springframework.web....InternalResourceViewResolver">
@@ -40,12 +54,6 @@ public class SomeController {
    </bean>
 </beans>
 }}}
-== How to do it ==
- * Deploy {{{DispatcherServlet}}}
- * Implement a request handler (controller)
- * Implement Views
- * Register Controller with {{{DispatcherServlet}}}
- * Deploy / Test
 == Interesting JSR's ==
  *  [http://jcp.org/aboutJava/communityprocess/final/jsr303/index.html JSR-303] Bean Validation API
   * define a meta-data model and API for JavaBeanTM validation based on annotations, with overrides and extended meta-data through the use of XML validation descriptors. 
