@@ -11,11 +11,25 @@ public class SomeController {
   }
   @RequestMapping("/some/show")
   public String show(@RequestParam("id") long id, Model model) {
-     SomeThing st = myService.lookupSomething(id);
-     model.addAttribute(st);
+     SomeThing something = myService.lookupSomething(id);
+     model.addAttribute(something);
      returne "someView";   // selects the 'someView' to render SomeThing
   }
 }
+}}}
+== View time ==
+ * {{{/WEB-INF/views/someView.jsp}}}
+ * Here's the view markup:
+{{{
+<html>
+  <head><title>Some Thing</title></head>
+  <body>
+    Amount=${something.amount}<br/>
+    Date=${something.date}<br/>
+    Account Number=${something.account.id}<br/>
+    Store Number=${something.storeNumber}<br/>
+  </body>
+</html>
 }}}
 == Setup config ==
 {{{
