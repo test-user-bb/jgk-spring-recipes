@@ -1,0 +1,34 @@
+#summary Spring MVC to build RESTful web services
+
+== REST General ==
+ * REST = REpresentational State Transfer (Roy Fielding's term)
+ * HTTP as an application protocol, not just transport
+ * Emphasizes scalability
+== REST ==
+ * Expose resources through {{{URIs}}}
+  * Model nouns, not verbs
+ * Resource operations:
+  * GET - read or retrieve a resource
+  * PUT - update (or put) a resource
+  * POST
+  * DELETE
+== What comes back? ==
+ * Clients ask for the specific representation
+  * HTML
+  * XML
+  * JSON
+  * ...anything you can imagine (or just about)
+== Value of REST ==
+ * loose coupling between client and server
+ * clients track state (not server - stateless)
+ * MIME types provide contract for resource interaction
+== More REST ==
+ * REST is a *Stateless* architecture
+  * so no {{{HttpSession}}} used
+  * GETs can be cached on the URL
+  * It is {{{statelessness}}} that makes it scalable
+== Communication ==
+ * Communicate to clients through
+  * HTTP Headers
+  * HTTP Status codes
+  _defined in HTTP specification_
