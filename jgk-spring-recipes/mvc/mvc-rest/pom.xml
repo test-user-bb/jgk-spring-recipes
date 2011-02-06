@@ -3,24 +3,20 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
   <parent>
-    <artifactId>jgk-spring-recipes</artifactId>
-    <groupId>com.jgk</groupId>
+    <artifactId>mvc</artifactId>
+    <groupId>com.jgk.springrecipes</groupId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
   <groupId>com.jgk.springrecipes</groupId>
-  <artifactId>mvc</artifactId>
+  <artifactId>mvc-rest</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <packaging>pom</packaging>
-  <name>mvc</name>
+  <packaging>war</packaging>
+  <name>mvc-rest RESTful</name>
+  <description>All about REST</description>
   <url>http://maven.apache.org</url>
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-  </properties>
   <dependencies>
   </dependencies>
-  <modules>
-  	<module>mvc-first</module>
-  	<module>mvc-jed</module>
-  	<module>mvc-rest</module>
-  </modules>
+  <build>
+    <finalName>mvc-rest</finalName>
+  </build>
 </project>
