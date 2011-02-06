@@ -14,7 +14,7 @@
  * {{{@Produces}}}, specifies the returned MIME media types
  * {{{@Consumes}}}, specifies the acceptable request media types.
  * {{{@PathParam}}}, {{{@QueryParam}}}, {{{@HeaderParam}}}, {{{@CookieParam}}}, {{{@MatrixParam}}}, {{{@FormParam}}}, specifies the source of the method parameter values
-  *{{{@PathParam}}} comes from URL path
+  * {{{@PathParam}}} comes from URL path
   * {{{@QueryParam}}} comes from URL query parameter
   * {{{@HeaderParam}}} comes from HTTP header 
   * {{{@CookieParam}}} comes from Cookie in HTTP request.
