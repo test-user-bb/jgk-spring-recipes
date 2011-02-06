@@ -1,3 +1,4 @@
 #summary One-sentence summary of this page.
 
  * [http://jcp.org/en/jsr/detail?id=250 JSR-250] - Common Annotations for the JavaTM Platform
+ * JSR 311: JAX-RS
