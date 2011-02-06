@@ -1,6 +1,6 @@
 #summary Spring MVC
 == How to do it ==
- * Deploy {{{DispatcherServlet}}
+ * Deploy {{{DispatcherServlet}}}
  * Implement a request handler (controller)
  * Implement Views
  * Register Controller with {{{DispatcherServlet}}}
