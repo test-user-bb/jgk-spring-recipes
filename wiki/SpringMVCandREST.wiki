@@ -1,5 +1,27 @@
 #summary Spring MVC to build RESTful web services
 
+== Spring MVC RESTful applications ==
+ * Request/Response processing
+ * Uses {{{MessageConverters}}}
+ * Content negotiation
+== Spring MVC REST ==
+ * URI templates to parse {{{RESTful}}} URLs
+ * Views for multiple resource representations (json, pdf, xml, etc.)
+=== Request mapping at method ===
+ * you can map HTTP requests based on method
+  * same URL can be mapped to multiple methods
+  * used for form-based controllers (GET/POST)
+{{{
+@RequestMapping(value="/routes", method=RequestMethod.GET)
+public void getTheRoutes(Model model) {
+  // retrieve all administration routes and add them to the model
+}
+
+@RequestMapping(value="/routes", method=RequestMethod.POST)
+public void createRoute(HttpServletRequest request, Model model) {
+  // process route data from request
+}
+}}}
 == REST + JAVA:  a match made in Jersey? ==
  * [http://en.wikipedia.org/wiki/JAX-RS JAX-RS] is JEE 6 standard for building RESTful applications _NOTE: Spring MVC does NOT implement JAX-RS_
  * Programmatic clients - (don't worry about the browser - data to data)
