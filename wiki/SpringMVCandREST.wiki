@@ -1,5 +1,7 @@
 #summary Spring MVC to build RESTful web services
 
+== Articles et al ==
+ * [http://blog.springsource.com/2009/03/08/rest-in-spring-3-mvc/ Blog rest + spring mvc]
 == Spring MVC RESTful applications ==
  * Request/Response processing
  * Uses {{{MessageConverters}}}
