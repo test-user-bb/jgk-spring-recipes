@@ -4,6 +4,14 @@
 
 == Dependencies ==
 {{{
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <servlet-api.version>2.5</servlet-api.version>
+    <jsp-api.version>2.1</jsp-api.version>
+    <jstl.version>1.2</jstl.version>
+  </properties>
+
+  <dependencies>
   	<dependency>
   		<groupId>javax.servlet</groupId>
   		<artifactId>servlet-api</artifactId>
@@ -25,5 +33,6 @@
   		<type>jar</type>
   		<scope>provided</scope>
   	</dependency>
+  </dependencies>
 
 }}}
