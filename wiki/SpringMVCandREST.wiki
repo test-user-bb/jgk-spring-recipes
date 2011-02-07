@@ -2,6 +2,9 @@
 
 == Articles et al ==
  * [http://blog.springsource.com/2009/03/08/rest-in-spring-3-mvc/ Blog rest + spring mvc]
+== Content negotiation ==
+ * Do not rely on accept header
+ * Use file extension (or path mechanism)
 == Spring MVC RESTful applications ==
  * Request/Response processing
  * Uses {{{MessageConverters}}}
