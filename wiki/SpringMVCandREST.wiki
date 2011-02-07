@@ -73,6 +73,7 @@ public void createRoute(HttpServletRequest request, Model model) {
   * so no {{{HttpSession}}} used
   * GETs can be cached on the URL
   * It is {{{statelessness}}} that makes it scalable
+ * Focus on nouns (rather than verbs)
 == Communication ==
  * Communicate to clients through
   * HTTP Headers
