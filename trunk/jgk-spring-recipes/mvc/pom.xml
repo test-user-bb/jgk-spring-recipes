@@ -38,6 +38,7 @@
   <modules>
   	<module>mvc-first</module>
   	<module>mvc-jed</module>
+  	<module>mvc-jpa-release</module>
   	<module>mvc-rest</module>
   </modules>
 </project>
