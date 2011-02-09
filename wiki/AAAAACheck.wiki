@@ -1,13 +1,32 @@
-#summary Work it
+#summary Go from zero to webapp in x seconds
 
-= Introduction =
+== Sumary ==
+ * Maven webapp
+ * add dependencies
+ * add logging config
+ * add spring config
+ * modify web.xml to add context
+ * add spring web config
+ * modify web.xml to add dispatcher servlet
+ * add controllers
+ * add views
+ * add domain objects
+ * add repository
+ * run it
+===  Maven webapp ===
+ * use maven webapp archetype
+{{{
+ $ mvn archetype:create -DgroupId=com.jgk.springrecipes.app -DartifactId=release-webapp -DarchetypeArtifactId=maven-archetype-webapp
+}}}
 
-Add your content here.
-
-
-= Details =
-
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+=== add dependencies ===
+=== add logging config ===
+=== add spring config ===
+=== modify web.xml to add context ===
+=== add spring web config ===
+=== modify web.xml to add dispatcher servlet ===
+=== add controllers ===
+=== add views ===
+=== add domain objects ===
+=== add repository ===
+=== run it ===
