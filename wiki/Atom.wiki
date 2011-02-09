@@ -2,3 +2,4 @@
 
  * [http://www.ietf.org/rfc/rfc5023.txt RFC-5023]
  * [http://en.wikipedia.org/wiki/Atom_(standard) wikipedia]
+ * [http://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Feed-icon.svg/128px-Feed-icon.svg.png]
