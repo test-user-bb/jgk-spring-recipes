@@ -12,6 +12,8 @@
  * add views
  * add domain objects
  * add repository
+ * add persistence.xml
+ * add entity manager support
  * run it
 ===  Maven webapp ===
  * use maven webapp archetype
@@ -97,11 +99,30 @@
 </log4j:configuration>
 }}}
 === add spring config ===
+ * located in {{{/WEB-INF/my-webapp-config.xml}}}
+{{{
+}}}
 === modify web.xml to add context ===
+ * located in {{{/WEB-INF}}}
+{{{
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app 
+	id="WebApp_ID" 
+	version="2.5" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+	
+	
+</web-app>
+}}}
 === add spring web config ===
 === modify web.xml to add dispatcher servlet ===
 === add controllers ===
 === add views ===
 === add domain objects ===
 === add repository ===
+=== add persistence.xml === 
+=== add entity manager support === 
+
 === run it ===
