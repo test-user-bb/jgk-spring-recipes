@@ -1,0 +1,3 @@
+#summary Atom Publishing Protocol
+
+ * [http://www.ietf.org/rfc/rfc5023.txt RFC-5023]
