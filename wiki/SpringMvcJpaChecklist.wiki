@@ -141,7 +141,7 @@
 				              "							
               >
               
-    <context:component-scan base-package="com.jgk.springrecipes.mvc.release"></context:component-scan>
+    <context:component-scan base-package="com.jgk.springrecipes.mvc.release"/>
 	<context:property-placeholder order="1" location="classpath:first.properties"/>
 	<context:property-placeholder order="2" location="classpath:second.properties"/>
 	<util:list id="wordList" list-class="java.util.LinkedList">
@@ -163,7 +163,6 @@
 	
 	
 </beans>
-
 }}}
 === modify web.xml to add context ===
  * located in {{{/WEB-INF}}}
