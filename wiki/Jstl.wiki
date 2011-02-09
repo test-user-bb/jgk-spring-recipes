@@ -36,3 +36,9 @@
   </dependencies>
 
 }}}
+=== NOTE ===
+ * without the dependencies you could get the following:
+{{{
+SEVERE: Servlet.service() for servlet release threw exception
+java.lang.ClassNotFoundException: javax.servlet.jsp.jstl.core.Config
+}}}
