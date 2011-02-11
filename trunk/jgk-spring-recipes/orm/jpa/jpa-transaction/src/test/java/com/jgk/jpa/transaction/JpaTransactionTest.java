@@ -26,17 +26,19 @@ public class JpaTransactionTest {
 	TradeDataRepository tradeDataRepository;
 	
 	@Test
+	@Transactional
 	public void doit() {
-		System.out.println(applicationContext);
+//		System.out.println(applicationContext);
 		assertNotNull(applicationContext.getBean("tradeDataRepository"));
 		assertNotNull(applicationContext.getBean(TradeDataRepository.class));
-		System.out.println(applicationContext.getBean(TradeDataRepository.class));
+//		System.out.println(applicationContext.getBean(TradeDataRepository.class));
 		TradeData td = new TradeData();
 		td.setTicker("IBM");
 		td.setAmount(243.23);
 		tradeDataRepository.makePersistent(td);
 		assertNotNull(tradeDataRepository.findById(td.getId()));
-		System.out.println(td.getId());
+		
+//		System.out.println(td.getId());
 		
 	}
 

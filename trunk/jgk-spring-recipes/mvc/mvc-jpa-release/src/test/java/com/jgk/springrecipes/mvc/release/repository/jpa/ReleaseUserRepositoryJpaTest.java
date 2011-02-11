@@ -14,9 +14,11 @@ import javax.persistence.PersistenceContext;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.stereotype.Component;
+import org.springframework.test.annotation.ExpectedException;
 import org.springframework.test.annotation.Rollback;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.transaction.IllegalTransactionStateException;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -38,6 +40,7 @@ public class ReleaseUserRepositoryJpaTest {
 	TransTester tt;
 
 	@Test
+	@ExpectedException(value=IllegalTransactionStateException.class)
 	@Transactional(readOnly=true, propagation=Propagation.SUPPORTS)
 	public void testeee() {
 		ReleaseUser ru=ReleaseUser.createUser("jed", "clampett", true); 
@@ -54,16 +57,31 @@ public class ReleaseUserRepositoryJpaTest {
 		System.out.println(releaseUserRepository.findAll().size());
 	}
 	
-	//@Test
+	@Test
 	@Transactional(readOnly=true)
-	public void testIt() {
-		assertTrue(true);
+	public void testItShowsPersistCallsPassingQuietlyWithoutPersistence() {
 		List<ReleaseUser> users = new ArrayList<ReleaseUser>();
 		users.add(ReleaseUser.createUser("jed", "clampett", true));
 		users.add(ReleaseUser.createUser("jethro", "bodine", true));
 		for (ReleaseUser releaseUser : users) {
-//			releaseUserRepository.save(releaseUser);
-			saveIt(releaseUser);
+			releaseUserRepository.save(releaseUser);
+//			saveIt(releaseUser);
+			System.out.println(releaseUser.getUsername());
+		}
+		List<ReleaseUser> savedUsers = releaseUserRepository.findAll();
+		// Nothing actually saved due to readOnly=true
+		assertEquals(0, savedUsers.size());
+	}
+
+	@Test
+	@Transactional(readOnly=false)
+	public void testItShowsPersistCallsWithSuccessfulPersistence() {
+		List<ReleaseUser> users = new ArrayList<ReleaseUser>();
+		users.add(ReleaseUser.createUser("jed", "clampett", true));
+		users.add(ReleaseUser.createUser("jethro", "bodine", true));
+		for (ReleaseUser releaseUser : users) {
+			releaseUserRepository.save(releaseUser);
+//			saveIt(releaseUser);
 			System.out.println(releaseUser.getUsername());
 		}
 		List<ReleaseUser> savedUsers = releaseUserRepository.findAll();

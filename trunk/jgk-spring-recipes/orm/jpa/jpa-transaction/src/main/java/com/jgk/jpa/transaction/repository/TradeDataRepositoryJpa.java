@@ -42,7 +42,8 @@ public class TradeDataRepositoryJpa implements TradeDataRepository {
 
 
 	@Override
-	@Transactional(readOnly=false,propagation=Propagation.REQUIRED)
+	//@Transactional(readOnly=false,propagation=Propagation.REQUIRED)
+	@Transactional(readOnly=false,propagation=Propagation.MANDATORY)
 	public TradeData makePersistent(TradeData td) {
 		entityManager.persist(td);
 		return td;
