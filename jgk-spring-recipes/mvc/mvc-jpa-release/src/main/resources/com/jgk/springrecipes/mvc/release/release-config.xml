@@ -14,6 +14,7 @@
 				              http://schemas.synyx.org/hades http://schemas.synyx.org/hades/hades.xsd
 						http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
 				              ">
+	<tx:annotation-driven transaction-manager="transactionManager" />
 
 	<bean id='releaseUserRepository' class="com.jgk.springrecipes.mvc.release.repository.jpa.ReleaseUserRepositoryJpa"/>
 	<context:annotation-config/>
