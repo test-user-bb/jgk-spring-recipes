@@ -5,6 +5,7 @@
  * [http://www.atomenabled.org/ Atom Enabled]
  * [http://www.slideshare.net/iasadenver/resourceoriented-architecture-roa-and-rest Scott Davis - Resource Oriented Architecture (ROA) and REST]
  * [http://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Feed-icon.svg/128px-Feed-icon.svg.png]
+ * [http://java.net/projects/rome/ Project ROME] - java API for feeds (ATOM/RSS)
 
 == Terminology ==
  * RESTafarian - a zealous REST advocate
