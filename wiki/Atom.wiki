@@ -1,6 +1,7 @@
 #summary Atom Publishing Protocol
 
- * [http://www.ietf.org/rfc/rfc5023.txt RFC-5023]
+ * [http://www.ietf.org/rfc/rfc5023.txt RFC-5023] - Atom Publishing Protocol
+ * [? RFC-4287] - Atom Syndication Format
  * [http://en.wikipedia.org/wiki/Atom_(standard) wikipedia]
  * [http://www.atomenabled.org/ Atom Enabled]
  * [http://www.slideshare.net/iasadenver/resourceoriented-architecture-roa-and-rest Scott Davis - Resource Oriented Architecture (ROA) and REST]
