@@ -8,6 +8,9 @@
  * [http://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Feed-icon.svg/128px-Feed-icon.svg.png]
  * [http://java.net/projects/rome/ Project ROME] - java API for feeds (ATOM/RSS)
 
+== Examples ==
+ * Twitter
+{{{http://search.twitter.com/search.atom?q=restful}}} - [http://search.twitter.com/search.atom?q=restful Try it]
 == Terminology ==
  * RESTafarian - a zealous REST advocate
  * SOA - Service Oriented Architecture - RPC & verb-oriented
