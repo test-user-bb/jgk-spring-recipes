@@ -8,3 +8,5 @@
 
 == Terminology ==
  * RESTafarian - a zealous REST advocate
+ * SOA - Service Oriented Architecture - RPC & verb-oriented
+ * ROA - Resource Oriented Architecture - noun-oriented
