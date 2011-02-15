@@ -11,7 +11,7 @@
 == Examples ==
  * Twitter
   * {{{http://search.twitter.com/search.atom?q=restful}}} - [http://search.twitter.com/search.atom?q=restful Try it - atom]
-  * {{{http://search.twitter.com/search.json?q=restful}}} - [http://search.twitter.com/search.atom?q=restful Try it - json]
+  * {{{http://search.twitter.com/search.json?q=restful}}} - [http://search.twitter.com/search.json?q=restful Try it - json]
 == Terminology ==
  * RESTafarian - a zealous REST advocate
  * SOA - Service Oriented Architecture - RPC & verb-oriented
