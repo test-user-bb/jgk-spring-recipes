@@ -10,3 +10,8 @@
  * RESTafarian - a zealous REST advocate
  * SOA - Service Oriented Architecture - RPC & verb-oriented
  * ROA - Resource Oriented Architecture - noun-oriented
+  * GET
+  * PUT - upload a changed copy
+  * POST - actions with side effects (e.g. ordering a medication)
+  * DELETE - remove
+  * ?
