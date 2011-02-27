@@ -31,7 +31,7 @@ public class SomeController {
   public String show(@RequestParam("id") long id, Model model) {
      SomeThing something = myService.lookupSomething(id);
      model.addAttribute(something);
-     returne "someView";   // selects the 'someView' to render SomeThing
+     return "someView";   // selects the 'someView' to render SomeThing
   }
 }
 }}}
