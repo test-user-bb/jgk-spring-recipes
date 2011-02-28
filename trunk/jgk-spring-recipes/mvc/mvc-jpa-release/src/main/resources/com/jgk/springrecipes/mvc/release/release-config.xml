@@ -14,8 +14,9 @@
 				              http://schemas.synyx.org/hades http://schemas.synyx.org/hades/hades.xsd
 						http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
 				              ">
+				              
 	<tx:annotation-driven transaction-manager="transactionManager" />
-
+	
 	<bean id='releaseUserRepository' class="com.jgk.springrecipes.mvc.release.repository.jpa.ReleaseUserRepositoryJpa"/>
 	<context:annotation-config/>
 	<context:component-scan base-package="com.jgk.springrecipes.mvc.release"/>
@@ -37,9 +38,10 @@
 		</property>
 		
 	</bean>
+	
 	<bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
 		<property name="entityManagerFactory" ref="entityManagerFactory" />
-	</bean>	
+	</bean>
    <jdbc:embedded-database id="dataSource" type="HSQL"/>
 	
 </beans>

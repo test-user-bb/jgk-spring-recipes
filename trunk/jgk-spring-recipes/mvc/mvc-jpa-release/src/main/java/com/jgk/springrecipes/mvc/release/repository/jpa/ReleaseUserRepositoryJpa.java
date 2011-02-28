@@ -16,7 +16,7 @@ import com.jgk.springrecipes.mvc.release.repository.ReleaseUserRepository;
 public class ReleaseUserRepositoryJpa implements ReleaseUserRepository {
 	private EntityManager entityManager;
 
-	@PersistenceContext(unitName="loveReleases")
+	@PersistenceContext//(unitName="loveReleases")
 	public void setEntityManager(EntityManager entityManager) {
 		this.entityManager = entityManager;
 	}
