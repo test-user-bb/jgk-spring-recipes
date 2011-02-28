@@ -1,0 +1,13 @@
+#summary One-sentence summary of this page.
+
+ * [SpringMvcFaq#Why_are_my_@Controller_annotations_ignored? Why are my @Controller annotations ignored?]
+ * [SpringMvcFaq#]
+ * [SpringMvcFaq#]
+ * [SpringMvcFaq#]
+ * [SpringMvcFaq#]
+
+=== Why are my @Controller annotations ignored? ===
+ * Make sure you have the following:
+{{{
+<context:component-scan base-package="com.jgk.springrecipes.mvc.release.controllers"/>
+}}}
