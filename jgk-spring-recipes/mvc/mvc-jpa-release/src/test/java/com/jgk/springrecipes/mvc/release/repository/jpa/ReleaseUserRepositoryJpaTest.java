@@ -39,18 +39,23 @@ public class ReleaseUserRepositoryJpaTest {
 	@Inject
 	TransTester tt;
 
+	/**
+	 *  DO NOT FORGET
+	 *  <tx:annotation-driven transaction-manager="transactionManager" />
+	 * 
+	 */
 	@Test
 	@ExpectedException(value=IllegalTransactionStateException.class)
 	@Transactional(readOnly=true, propagation=Propagation.SUPPORTS)
 	public void testeee() {
-		ReleaseUser ru=ReleaseUser.createUser("jed", "clampett", true); 
+		ReleaseUser ru=ReleaseUser.createUser("jed", "clampett", true);
 		tt.doMandatoryTransactional(ru,em);
 		assertEquals(0,releaseUserRepository.findAll().size());
 		System.out.println(releaseUserRepository.findAll().size());
 	}
 	@Test
 	@Transactional
-	public void testPersists() {
+	public void testPersistsWithInn() {
 		ReleaseUser ru=ReleaseUser.createUser("jed", "clampett", true); 
 		tt.doMandatoryTransactional(ru,em);
 		assertEquals(1,releaseUserRepository.findAll().size());
