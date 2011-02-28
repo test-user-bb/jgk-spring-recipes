@@ -18,7 +18,8 @@
               >
               
     <!-- JSR-303 support will be detected on classpath and enabled automatically -->
-	<context:component-scan base-package="com.jgk.springrecipes.mvc.release.controllers"/>   
+	<context:component-scan base-package="com.jgk.springrecipes.mvc.release.controllers"/>
     <mvc:annotation-driven />
+
 	
 </beans>
