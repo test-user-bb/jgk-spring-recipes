@@ -8,7 +8,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="USERS")
-public class ReleaseUser {
+public class ReleaseUser extends AbstractReleaseEntity {
 
 	@Id
 	@Column(name="username")
