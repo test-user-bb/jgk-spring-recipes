@@ -27,9 +27,9 @@ public class RestController {
 	Project projectGs = Project.createProject("gs","Main web application");
 	
 	List<Release> releases = new ArrayList<Release>() {{
-		add(Release.createRelease(2002L,user,projectGs,"gs-1.0.0"));
-		add(Release.createRelease(2003L,user,projectGs,"gs-1.0.1"));
-		add(Release.createRelease(2004L,user,projectGs,"gs-1.0.2"));
+		add(Release.createRelease(user,projectGs,"gs-1.0.0"));
+		add(Release.createRelease(user,projectGs,"gs-1.0.1"));
+		add(Release.createRelease(user,projectGs,"gs-1.0.2"));
 	}};
 	
 	@RequestMapping(value="/releases",method=RequestMethod.GET) 

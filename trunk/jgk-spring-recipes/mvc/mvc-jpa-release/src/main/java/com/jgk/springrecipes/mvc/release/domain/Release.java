@@ -21,16 +21,15 @@ public class Release extends AbstractReleaseEntity {
 
 	
 	@ManyToOne
-	@JoinColumn(name = "USER")
+	@JoinColumn(name = "RELEASE_USER", insertable=false,updatable=false)
 	private ReleaseUser user;
 	private String releaseVersion;
 	
 	@ManyToOne
 	@JoinColumn(name = "PROJECT")
 	private Project project;
-	public static Release createRelease(Long _id,ReleaseUser _user,Project _project, String _releaseVersion) {
+	public static Release createRelease(ReleaseUser _user,Project _project, String _releaseVersion) {
 		Release release = new Release();
-		release.id=_id;
 		release.user = _user;
 		release.project=_project;
 		release.releaseVersion=_releaseVersion;
