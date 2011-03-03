@@ -7,7 +7,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="AUTHORITIES")
-public class ReleaseUserRole {
+public class ReleaseUserRole extends AbstractReleaseEntity {
 	@Id
 	@Column(name="username")
 	private String username;
