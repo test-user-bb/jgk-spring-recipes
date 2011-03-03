@@ -28,8 +28,8 @@ public class ProjectReleaseServicesIntegrationTest {
 	public void populateDatabase() {
 		checkAllThere();
 		System.out.println("Populate Databases");
-//		ReleaseUser user = ReleaseUser.createUser("fakeuser", "fakepassword", Boolean.TRUE);
-//		releaseUserService.saveReleaseUser(user);
+		ReleaseUser user = ReleaseUser.createUser("fakeuser", "fakepassword", Boolean.TRUE);
+		releaseUserService.saveReleaseUser(user);
 	}
 	public void checkAllThere() {
 		assertNotNull(releaseService);
@@ -39,7 +39,7 @@ public class ProjectReleaseServicesIntegrationTest {
 	@Test
 	public void basic() {
 //		System.out.println(releaseService);
-//		assertEquals(1,releaseUserService.findAllReleaseUsers().size());
+		assertEquals(1,releaseUserService.findAllReleaseUsers().size());
 		
 	}
 
