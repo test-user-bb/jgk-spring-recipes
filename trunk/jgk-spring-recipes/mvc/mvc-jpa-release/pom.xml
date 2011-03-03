@@ -17,6 +17,13 @@
   	<javax.inject.version>1.0-PFD-1</javax.inject.version>
   </properties>
   <dependencies>
+    <dependency>
+      <groupId>org.aspectj</groupId>
+      <artifactId>aspectjweaver</artifactId>
+      <version>1.6.1</version>
+      <scope>compile</scope>
+    </dependency>
+  
 	<dependency>
 		<groupId>org.hibernate</groupId>
 		<artifactId>hibernate-annotations</artifactId>
@@ -74,6 +81,12 @@
   		<version>1.2</version>
   		<type>jar</type>
   	</dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-aop</artifactId>
+      <version>${spring.version}</version>
+      <scope>compile</scope>
+    </dependency>
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-jdbc</artifactId>
