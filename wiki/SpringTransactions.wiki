@@ -10,6 +10,45 @@ Place Spring Transaction stuff here...
 {{{
 <tx:annotation-driven transaction-manager="transactionManager"/>
 }}}
+ * To support the {{{<tx:annotation-driven/>}}} element you will need the xmlns for tx and the schema definitions:
+{{{
+<?xml version="1.0" encoding="UTF-8"?>
+<beans 
+    xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:p="http://www.springframework.org/schema/p"
+    xmlns:tx="http://www.springframework.org/schema/tx"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+					http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+				              "							
+              >
+
+	<tx:annotation-driven transaction-manager="transactionManager"/>
+	<bean id="transactionManager" 
+			class="org.springframework.orm.jpa.JpaTransactionManager" 
+			p:entityManagerFactory-ref="entityManagerFactory"/> 
+
+	<bean id="entityManagerFactory"
+		class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="jpaVendorAdapter">
+			<bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
+				<property name="showSql" value="true" />
+				<property name="generateDdl" value="true" />
+			</bean>
+		</property>
+		<property name="jpaProperties">
+			<props>
+				<prop key="hibernate.show_sql">true</prop>
+				<prop key="hibernate.format_sql">true</prop>
+				<prop key="hibernate.hbm2ddl.auto">create-drop</prop>
+			</props>
+		</property>
+		
+	</bean>
+
+</beans>
+}}}
  * When using the @Transactional annotation by itself without any parameters, the propagation mode is set to REQUIRED, the read-only flag is set to false, the transaction isolation level is set to the database default (usually READ_COMMITTED), and the transaction will not roll back on a checked exception.
 
 == Resources ==
