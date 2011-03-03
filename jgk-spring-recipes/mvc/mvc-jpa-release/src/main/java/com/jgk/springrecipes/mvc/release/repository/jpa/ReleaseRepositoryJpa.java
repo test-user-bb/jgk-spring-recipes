@@ -9,31 +9,32 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.jgk.springrecipes.mvc.release.domain.ReleaseUser;
-import com.jgk.springrecipes.mvc.release.repository.ReleaseUserRepository;
+import com.jgk.springrecipes.mvc.release.domain.Release;
+import com.jgk.springrecipes.mvc.release.repository.ReleaseRepository;
 
-@Repository("releaseUserRepository")
+@Repository("releaseRepository")
 @Transactional(readOnly=true,propagation=Propagation.SUPPORTS)
-public class ReleaseUserRepositoryJpa implements ReleaseUserRepository {
+public class ReleaseRepositoryJpa implements ReleaseRepository {
+	
+	@PersistenceContext(unitName="loveReleases")
 	private EntityManager entityManager;
 
-	@PersistenceContext(unitName="loveReleases")
 	public void setEntityManager(EntityManager entityManager) {
 		this.entityManager = entityManager;
 	}
 
 
 	@Override
-	public List<ReleaseUser> findAll() {
-		return entityManager.createQuery("select p from ReleaseUser p",
-				ReleaseUser.class).getResultList();
+	public List<Release> findAll() {
+		return entityManager.createQuery("select p from Release p",
+				Release.class).getResultList();
 
 	}
 
 	@Override
 	@Transactional(propagation=Propagation.MANDATORY)
-	public void save(ReleaseUser releaseUser) {
-		entityManager.persist(releaseUser);
+	public void save(Release release) {
+		entityManager.persist(release);
 
 	}
 
