@@ -1,3 +1,4 @@
 #summary Criteria API in JPA
 = Introduction =
  * [http://www.altuure.com/2010/09/23/jpa-criteria-api-by-samples-part-i/ Tutorial]
+ * [http://www.ibm.com/developerworks/java/library/j-typesafejpa/ TypeSafe JPA and MetaModel API]
