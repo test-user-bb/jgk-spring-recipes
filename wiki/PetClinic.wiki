@@ -1,0 +1,3 @@
+#summary Spring's Pet Clinic
+
+ * [svn co https://src.springframework.org/svn/spring-samples/petclinic/trunk spring-petclinic HERE]
