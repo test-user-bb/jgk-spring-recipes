@@ -1,0 +1,7 @@
+#summary Spring and git
+
+= Introduction =
+
+ * [http://git.springsource.org/spring-samples spring-samples]
+  * git:  *git://git.springsource.org/spring-samples/spring-samples.git*
+  * http:  *http://http.git.springsource.org/spring-samples/spring-samples.git*
