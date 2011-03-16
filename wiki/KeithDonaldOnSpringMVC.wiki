@@ -1,3 +1,4 @@
 #summary One-sentence summary of this page.
 
  * [http://www.infoq.com/presentations/Mastering-Spring-MVC-3 Keith Donald Spring MVC 3]
+ * [https://src.springsource.org/svn/spring-samples/mvc-showcase/ MVC Showcase source code]
