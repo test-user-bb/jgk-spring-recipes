@@ -8,7 +8,7 @@
 {{{
 @RequestMapping("path", method=RequestMethod.GET)
 }}}
- ** Supports:  GET, POST, PUT, DELETE, OPTIONS, and TRACE
+ * Supports:  GET, POST, PUT, DELETE, OPTIONS, and TRACE
 
  * Presence of a query parameter
 {{{
@@ -16,3 +16,7 @@
 }}}
   * Negation supported: {{{ params={"jed","!jethro"} }}}
  * Presence of a request header
+{{{
+@RequestMapping("path", header="context-type=text/*")
+}}}
+  * Negation supported
