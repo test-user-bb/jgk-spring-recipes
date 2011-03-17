@@ -1,1 +1,9 @@
 #summary @RequestMapping options
+
+ * Path
+{{{
+@RequestMapping("path")
+}}}
+ * HTTP method
+ * Presence of a query parameter
+ * Presence of a request header
