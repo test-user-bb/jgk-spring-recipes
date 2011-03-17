@@ -1,5 +1,5 @@
 #summary nice
-
+=== [http://jquery.com/ jquery home]
 {{{
  $(document).ready(function() {
     alert('do some things once the document is ready');
