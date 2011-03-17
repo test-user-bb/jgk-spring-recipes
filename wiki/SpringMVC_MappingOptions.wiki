@@ -8,8 +8,7 @@
 {{{
 @RequestMapping("path", method=RequestMethod.GET)
 }}}
- * Supports:  GET, POST, PUT, DELETE, OPTIONS, and TRACE
-
+  * Supports:  GET, POST, PUT, DELETE, OPTIONS, and TRACE
  * Presence of a query parameter
 {{{
 @RequestMapping("path", method=RequestMethod.GET,params="jed")
