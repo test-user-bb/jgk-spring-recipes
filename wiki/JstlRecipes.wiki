@@ -1,0 +1,25 @@
+#summary One-sentence summary of this page.
+
+ 
+ * URL
+  * Nice sample [http://www.roseindia.net/jsp/simple-jsp-example/JSTLConstructingURLs.shtml HERE]
+  * use {{{ <c:url/> }}}
+   * {{{ <c:url value=""/> }}}
+{{{
+<c:url value="${param.url}" var="url">
+<c:param name="name" value="Ben.Franklin/>
+<c:param name="pwd" value="bfrank"/>
+<c:param name="email" value="kiteman@philly.org"/>
+</c:url>
+....
+The url is: ${url}, which can be used in a link:
+<a href="${url}"/>
+}}}
+   * Other
+{{{
+<c:url value="${param.url}" var="url">
+<c:param name="name" value="${param.name}"/>
+<c:param name="pwd" value="${param.pwd}"/>
+<c:param name="email" value="${param.email}"/>
+</c:url>
+}}}
