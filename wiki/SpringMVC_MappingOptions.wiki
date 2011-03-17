@@ -5,5 +5,10 @@
 @RequestMapping("path")
 }}}
  * HTTP method
+{{{
+@RequestMapping("path", method=RequestMethod.GET)
+}}}
+ ** Supports:  GET, POST, PUT, DELETE, OPTIONS, and TRACE
+
  * Presence of a query parameter
  * Presence of a request header
