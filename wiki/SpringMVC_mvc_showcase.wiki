@@ -1,0 +1,4 @@
+#summary sample
+
+ * Uses jquery to send an Ajax request to application to exercise a mapping rule ({{{ @RequestMapping(...) }}}) to show that it works.
+ * An acceptance test suite for Spring MVC.
