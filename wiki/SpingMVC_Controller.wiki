@@ -1,0 +1,13 @@
+#summary @Controller
+
+=== Simplest ===
+{{{
+@Controller
+public class HomeController {
+  @RequestMapping("/",method=RequestMethod.GET,headers="Accept=text/plain")
+  public @ResponseBody String home() {
+     return "some text here"
+  }
+}
+
+}}}
