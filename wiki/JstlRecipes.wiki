@@ -1,6 +1,10 @@
 #summary One-sentence summary of this page.
 
 === fmt ===
+ * Need the following page directive:
+{{{
+<%@ taglib uri="http://java.sun.com/jstl/fmt" prefix="fmt" %>
+}}}
 === out ===
  * sends output to the page
 {{{
