@@ -1,0 +1,13 @@
+#summary message converters
+
+
+
+ * {{{ StringHttpMessageConverter }}}
+ * {{{ FormHttpMessageConverter }}}
+ * {{{ ByteArrayMessageConverter }}}
+ * {{{ Jaxb2RootElementHttpMessageConverter }}}
+ * {{{ MappingJacksonHttpMessageConverter }}}
+ * {{{ SourceHttpMessageConverter }}}
+ * {{{ ResourceHttpMessageConverter }}}
+ * {{{ AtomFeedHttpMessageConverter }}}
+ * {{{ RssChannelHttpMessageConverter }}}
