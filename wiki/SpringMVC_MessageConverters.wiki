@@ -1,7 +1,7 @@
 #summary message converters
 
 
-
+== Out of the box Message Converters ==
  * {{{ StringHttpMessageConverter }}}
  * {{{ FormHttpMessageConverter }}}
  * {{{ ByteArrayMessageConverter }}}
@@ -11,3 +11,8 @@
  * {{{ ResourceHttpMessageConverter }}}
  * {{{ AtomFeedHttpMessageConverter }}}
  * {{{ RssChannelHttpMessageConverter }}}
+ * {{{ BufferedImageHttpMessageConverter }}}
+ * {{{ MarshallingHttpMessageConverter }}}
+
+== Custom ==
+ * You can register your own or customize the ones provided by setting the *messageConverters* property of the {{{ AnnotationMethodHandlerAdapter }}} bean.
