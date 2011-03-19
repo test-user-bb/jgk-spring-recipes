@@ -4,5 +4,5 @@
  * Source code access:
   * [https://src.springsource.org/svn/spring-samples/mvc-showcase/ MVC Showcase source code]
   * Within Eclipse's SVN Explorer add a repository to:  
-  *{{{https://src.springsource.org/svn/spring-samples/mvc-showcase/}}}*
+  * *{{{https://src.springsource.org/svn/spring-samples/mvc-showcase/}}}*
    * [http://i299.photobucket.com/albums/mm283/javapda/Spring/Screenshot2011-03-16at22942AM.png]
