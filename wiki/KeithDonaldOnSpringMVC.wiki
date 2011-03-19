@@ -1,4 +1,4 @@
-#summary One-sentence summary of this page.
+#summary Keith Donald's talk on Spring MVC
 
  * [http://www.infoq.com/presentations/Mastering-Spring-MVC-3 Keith Donald Spring MVC 3]
  * Source code access:
