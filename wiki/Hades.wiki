@@ -7,6 +7,11 @@
  * Includes some great DSL to simplify creation of some sophisticated queries.
 === Dependency ===
 {{{
+  <properties>
+      <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+      <javax.inject.version>1.0-PFD-1</javax.inject.version>
+  </properties>
+    <dependencies>
 	<dependency>
 	     <groupId>org.synyx.hades</groupId>
 	     <artifactId>org.synyx.hades</artifactId>
@@ -18,6 +23,7 @@
 	     	</exclusion>
 	     </exclusions>
 	 </dependency>
+    </dependencies>
 }}}
 === Configuration Files ===
 ==== {{{ MyHadesTest-config.xml }}} ====
