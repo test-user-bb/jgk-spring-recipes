@@ -1,7 +1,10 @@
 #summary Spring Hades
 
  * [http://redmine.synyx.org/projects/hades Hades home page]
-
+=== General ===
+ * Hades simplifies and standardizes the way DAO objects are developed.
+ * You only define an interface and Hades does the rest.
+ * Includes some great DSL to simplify creation of some sophisticated queries.
 === Dependency ===
 {{{
 	<dependency>
@@ -14,8 +17,7 @@
 	     		<artifactId>org.springframework.orm</artifactId>
 	     	</exclusion>
 	     </exclusions>
-	 </dependency>  
-
+	 </dependency>
 }}}
 === Configuration Files ===
 ==== {{{ MyHadesTest-config.xml }}} ====
