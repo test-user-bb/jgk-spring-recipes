@@ -1,3 +1,19 @@
 #summary Spring Hades
 
  * [http://redmine.synyx.org/projects/hades Hades home page]
+
+
+{{{
+	<dependency>
+	     <groupId>org.synyx.hades</groupId>
+	     <artifactId>org.synyx.hades</artifactId>
+	     <version>2.0.2.RELEASE</version>
+	     <exclusions>
+	     	<exclusion>
+	     		<groupId>org.springframework</groupId>
+	     		<artifactId>org.springframework.orm</artifactId>
+	     	</exclusion>
+	     </exclusions>
+	 </dependency>  
+
+}}}
