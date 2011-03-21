@@ -80,7 +80,7 @@ public class User {
 }
 
 }}}
-=== UserDao ===
+=== {{{UserDao}}} ===
 {{{
 @Repository
 public interface UserDao extends GenericDao<User, Long> {
