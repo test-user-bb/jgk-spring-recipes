@@ -1,0 +1,17 @@
+#summary <mvc:.../>
+
+= [http://static.springsource.org/spring/docs/3.0.x/spring-framework-reference/html/mvc.html#mvc-static-resources Static Resources] =
+
+
+ * public resources:
+{{{
+<mvc:resources mapping="/resources/**" location="/public-resources/"/>
+}}} 
+ * images
+{{{
+<mvc:resources mapping="/images/**" location="/images/"/>
+}}}
+ * Use a cache expiration date:
+{{{
+<mvc:resources mapping="/resources/**" location="/public-resources/" cache-period="31556926"/>
+}}}
