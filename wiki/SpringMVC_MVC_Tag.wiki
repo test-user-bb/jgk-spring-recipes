@@ -15,3 +15,7 @@
 {{{
 <mvc:resources mapping="/resources/**" location="/public-resources/" cache-period="31556926"/>
 }}}
+ * Can use multiple locations:
+{{{
+<mvc:resources mapping="/resources/**" location="/, classpath:/META-INF/public-web-resources/"/>
+}}}
