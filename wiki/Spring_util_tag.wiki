@@ -1,0 +1,6 @@
+#summary <util:.../>
+
+ * Make properties available to SpEL:
+{{{
+<util:properties id="applicationProps" location="/WEB-INF/spring/application.properties"/>
+}}}
