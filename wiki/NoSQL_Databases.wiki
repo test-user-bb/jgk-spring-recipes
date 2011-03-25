@@ -14,7 +14,7 @@
 == NoSQL Examples ==
  * [http://neo4j.org Neo4J]
  * [www.db4o.com db4o]
- * Objectivity
+ * [http://www.objectivity.com/pages/objectivity/ Objectivity]
  * Amazon Dynamo
  * Scalaris
  * HBase
@@ -40,7 +40,7 @@
  * BerkeleyDB
  * MemcacheDB
  * Tamino
- * InfiniteGraph
+ * [http://www.objectivity.com/infinitegraph/ InfiniteGraph]
  * Chordless
 == Why NoSQL ==
  * Internet scale is main driver in using non-relational databases
