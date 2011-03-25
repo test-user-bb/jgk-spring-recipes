@@ -1,0 +1,14 @@
+#summary all about NoSQL
+
+ * based on talks by [http://www.infoq.com/presentations/Using-Spring-with-NoSQL-Databases Chris Richardson and Mark Pollack]
+
+== Why NoSQL ==
+
+== Problems with RDBMS ==
+ * ORM impedance mismatch
+  * complicated to map domain model to relational schema
+  * relational schema is rigid (non-flexible, not easily changed)
+ * RDBMS difficult to scale writes to DB
+  * vertical scaling is expensive
+  * horizontal also
+ * Performance could be better
