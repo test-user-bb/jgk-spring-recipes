@@ -1,7 +1,13 @@
 #summary all about NoSQL
 
  * based on talks by [http://www.infoq.com/presentations/Using-Spring-with-NoSQL-Databases Chris Richardson and Mark Pollack]
-
+== NoSQL Data Models ==
+ * Key Value (Amazon Dynamo)
+  * key -> value
+  * Redis, Riak, Voldemort...
+ * Column (Google Bigtable)
+  * key -> column families
+  * HBase, Cassandra
 == NoSQL == 
  * No joins
  * very limited "transactions"
