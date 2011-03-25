@@ -2,7 +2,51 @@
 
  * based on talks by [http://www.infoq.com/presentations/Using-Spring-with-NoSQL-Databases Chris Richardson and Mark Pollack]
 
+== NoSQL == 
+ * No joins
+ * very limited "transactions"
+ * different durability and consistency guarantees
+ * NoSQL datastores are used as "point solutions"
+  * Amazon
+  * Google
+  * Facebook
+  * LinkedIn
+== NoSQL Examples ==
+ * Neo4J
+ * db4o
+ * Objectivity
+ * Amazon Dynamo
+ * Scalaris
+ * HBase
+ * CouchDB
+ * Terrastore
+ * Gemfire
+ * Sones
+ * InfoGrid
+ * Hadoop
+ * MongoDB
+ * RavenDB
+ * Tokyo Cabinet
+ * Hypertable
+ * Cassandra
+ * Azure Table
+ * Coherence
+ * Mnesia
+ * Riak
+ * Voldemort
+ * Gigaspaces
+ * Amazon SimpleDB
+ * Redis
+ * BerkeleyDB
+ * MemcacheDB
+ * Tamino
+ * InfiniteGraph
+ * Chordless
 == Why NoSQL ==
+ * Internet scale is main driver in using non-relational databases
+  * Large data size - TBs to PBs
+  * High Transaction rates
+  * Need for high availability
 
 == Problems with RDBMS ==
  * ORM impedance mismatch
@@ -12,3 +56,4 @@
   * vertical scaling is expensive
   * horizontal also
  * Performance could be better
+ * Transactions and joins reduce access rates
