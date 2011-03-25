@@ -13,7 +13,7 @@
   * LinkedIn
 == NoSQL Examples ==
  * [http://neo4j.org Neo4J]
- * db4o
+ * [www.db4o.com db4o]
  * Objectivity
  * Amazon Dynamo
  * Scalaris
