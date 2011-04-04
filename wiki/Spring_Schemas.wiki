@@ -1,0 +1,33 @@
+#summary List of xml schemas available for Spring
+
+[http://www.springframework.org/schema/ HERE]
+
+ * aop/
+ * batch/
+ * beans/
+ * cache/
+ * context/
+ * data/
+ * dm-server/
+ * faces/
+ * flex/
+ * gemfire/
+ * integration/
+ * jdbc/
+ * jee/
+ * jms/
+ * lang/
+ * mobile/
+ * mvc/
+ * osgi-compendium/
+ * osgi/
+ * oxm/
+ * redis/
+ * security/
+ * task/
+ * tool/
+ * tx/
+ * util/
+ * web-services/
+ * webflow-config/
+ * webflow/
