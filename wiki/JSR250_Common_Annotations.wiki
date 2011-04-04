@@ -1,0 +1,4 @@
+#summary common annotations
+
+ * [http://jcp.org/en/jsr/detail?id=250 JSR-250] - Common Annotations for the JavaTM Platform
+ * {{{javax.annotation.*}}}
