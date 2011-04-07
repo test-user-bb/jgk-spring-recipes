@@ -41,6 +41,7 @@
 	</dependency>  
 	</dependencies>
   <modules>
+	<module>jpa-data</module>
   	<module>jpa-joined-subclass</module>
   	<module>jpa-transaction</module>
   	<module>hades</module>
