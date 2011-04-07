@@ -14,7 +14,11 @@
                          <name>JBoss Maven 2 repo</name>
                          <url>https://repository.jboss.org/nexus/content/groups/public/</url>
                  </repository>
-
+                 <repository>
+                    <id>org.springframework.maven.milestone</id>
+                    <name>Spring Maven Milestone Repository</name>
+                    <url>http://maven.springframework.org/milestone</url>
+                 </repository>
         <repository>
             <id>spring-maven-release</id>
             <name>Spring Maven Release Repository</name>
