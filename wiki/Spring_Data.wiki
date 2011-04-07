@@ -7,6 +7,10 @@
  * [http://static.springsource.org/spring-data/data-jpa/docs/1.0.0.M2/reference/pdf/spring-data-jpa-reference.pdf pdf]
 
 === Dependencies ===
+ * General
+  * spring-data-jpa (1.0.0.M2)
+  * spring-data-commons-core (1.0.0.M5)
+  * spring-data-commons-parent (1.0.0.M5)
 {{{
 	<dependency>
 	    <groupId>org.springframework.data</groupId>
@@ -16,7 +20,7 @@
 	<dependency>
 	    <groupId>org.springframework.data</groupId>
 	    <artifactId>spring-data-commons-core</artifactId>
-	    <version>1.0.0.M2</version>
+	    <version>1.0.0.M5</version>
 	</dependency>  
 }}}
 
