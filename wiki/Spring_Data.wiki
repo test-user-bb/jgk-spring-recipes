@@ -1,6 +1,10 @@
 #summary Hades replacement
 
+=== Spring Data JPA 1.0.0.M2 ===
  * [http://www.springsource.org/node/3074 Spring Data JPA 1.0.0.M2]
+ * [http://static.springsource.org/spring-data/data-jpa/docs/1.0.0.M2/reference/html/ Reference Docs]
+ * [http://static.springsource.org/spring-data/data-jpa/docs/1.0.0.M2/api/ javadoc]
+ * [http://static.springsource.org/spring-data/data-jpa/docs/1.0.0.M2/reference/pdf/spring-data-jpa-reference.pdf pdf]
 
 === Dependencies ===
 {{{
