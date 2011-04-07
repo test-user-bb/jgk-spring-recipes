@@ -9,5 +9,6 @@
 	http://www.springframework.org/schema/data/jpa 
 	http://www.springframework.org/schema/data/jpa/spring-jpa.xsd ">
 	
-	<repositories base-package="com.acme.repositories" />
+	<beans:import resource="classpath:/my-app-config.xml"/>
+	<repositories base-package="com.jgk.springrecipes.orm.jpa.data.repository" />
 </beans:beans>
