@@ -45,7 +45,7 @@
 	<dependency>
 	    <groupId>org.springframework.data</groupId>
 	    <artifactId>spring-data-commons-core</artifactId>
-	    <version>1.0.0.M2</version>
+	    <version>1.0.0.M5</version>
 	</dependency>  
   </dependencies>
 </project>
