@@ -1,4 +1,0 @@
-#summary simple-converters
-
-= Introduction =
-Demonstrates the various converters possible with Spring.
