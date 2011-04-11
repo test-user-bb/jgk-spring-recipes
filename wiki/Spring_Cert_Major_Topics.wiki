@@ -8,7 +8,7 @@
 === Lifecycle ===
 === Annotations ===
 === Miscellaneous ===
-=== JavaConfig ===
+=== {{{JavaConfig}}} ===
 === Testing ===
 
 == AOP ==
