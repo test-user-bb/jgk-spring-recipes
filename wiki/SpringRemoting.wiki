@@ -1,4 +1,4 @@
-#summary Remoting
+#summary Remoting - *exporter*s on the server, *proxy* on the client
 
  * [http://static.springsource.org/spring/docs/2.5.x/reference/remoting.html Spring Remoting]
 
