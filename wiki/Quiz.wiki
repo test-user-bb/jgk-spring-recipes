@@ -46,9 +46,9 @@ public class SimpleBeanWithRequiredAnnotation {
 }}}
  * Bean Initialization
   * Bean can register for one or more initialization callbacks.
-   * JSR-250 @PostConstruct
+   * JSR-250 {{{@PostConstruct}}}
    * <bean ... init-method=""/>
-   * Implement Spring's InitializingBean interface (ties you to Spring)
+   * Implement Spring's {{{InitializingBean}}} interface (ties you to Spring)
  * What is autowiring?
   * A process by which Spring detects dependencies between a bean and its properties based on introspection (Java reflection).
   * Dependencies are inferred without the need for explicit XML configuration.
