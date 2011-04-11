@@ -54,6 +54,22 @@
  * Spring provides {{{FactoryBean}}}s that generate *proxies* to handle client-side requirements
   * Communicate with server-side endpoint
   * convert remote exceptions to a runtime hierarchy
+==== Configuring RMI Service Exporter ====
+ * Star with an existing POJO service:
+{{{
+  <bean id="myService" class="com.jgk.MyServiceImpl">
+    <property name="myRepository" ref="someMyRepository"/>
+  </bean>
+}}}
+ * Define a bean to export it
+{{{
+  <bean class="org.springframework.remoting.rmi.RmiServiceExporter">
+    <property name="serviceName" value="myService"/>  (binds to rmiRegistry as "myService")
+    <property name="serviceInterface" value="com.jgk.MyService"/>
+    <property name="service" ref="myService"/>
+    <property name="registryPort" value="1099"/>  (not required but enables changing RMI registry port)
+  </bean>
+}}}
 
 === Goal/Cfg of RMI Proxy Generator ===
 
