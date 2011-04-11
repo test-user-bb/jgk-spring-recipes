@@ -70,9 +70,9 @@ public class SimpleBeanWithRequiredAnnotation {
  * Autowiring eliminates the need for what 2 XML tags?
   * <constructor-arg>
   * <property>
- * What do you use to programmatically create an ApplicationContext?
+ * What do you use to programmatically create an {{{ApplicationContext}}}?
   * JavaConfig
- * *@Bean* annotation is JavaConfig's equivalent of what XML tag?
+ * *@Bean* annotation is {{{JavaConfig}}}'s equivalent of what XML tag?
 {{{
     <bean>
 }}}
@@ -91,8 +91,8 @@ public class SimpleBeanWithRequiredAnnotation {
 {{{
 <context:annotation-config/>
 }}}
- * What is a special feature of the *@Repository* annotation not available to the *@Component* annotation?
-  * Automatic conversion of SQLExceptions
+ * What is a special feature of the *{{{@Repository}}}* annotation not available to the *{{{@Component}}}* annotation?
+  * Automatic conversion of {{{SQLException}}}s
  * Accessing Static Constants?
 {{{
 <bean id="myBean" class="com.jgk.beans.PresidentBean">
