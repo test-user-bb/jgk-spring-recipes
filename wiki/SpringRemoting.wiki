@@ -128,4 +128,33 @@
 }}}
 === {{{HttpInvoker}}} Questions ===
  * Does {{{HttpInvoker}}} require running on a web server on the client side?
+  * *{{{HttpInvokerServiceExporter}}}*
  * Does {{{HttpInvoker}}} require running on a web server on the server side?
+  * *{{{HttpInvokerProxyFactoryBean}}}*
+
+
+=== Hessian and Burlap ===
+ * lightweight protocols for sending XML over HTTP
+ * Hessian is binary
+ * Burlap is textual
+ * Server-Side
+  * {{{org.springframework.remoting.caucho.HessianServiceExporter}}}
+  * {{{org.springframework.remoting.caucho.BurlapServiceExporter}}}
+ * Client-Side
+  * {{{org.springframework.remoting.caucho.HessianProxyFactoryBean}}}
+  * {{{org.springframework.remoting.caucho.BurlapProxyFactoryBean}}}
+
+=== Choosing Remoting protocol ===
+ * If spring is running on both client and server:
+  * {{{HttpInvoker}}}
+ * If Java environment without a web server:
+  * {{{RMI}}}
+ * If you need to interoperate with other languages using HTTP:
+  * Hessian
+ * If you need to interoperate with other languages without HTTP:
+  * {{{RMI-IIOP}}} (CORBA)
+ * When using Java serialization:
+  * classes & interfaces must be available on the client
+  * Versions must match
+ * If serving up public clients beyond your control, Web Services (REST or SOAP) are good option:
+  * document-based messaging promotes loose coupling
