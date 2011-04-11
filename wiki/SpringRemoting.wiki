@@ -16,6 +16,23 @@
   * *Violates a separation of concerns*
   * *Couples business logic to remoting infrastructure*
 
+=== Spring Remoting:  Declarative Approach ===
+ * Spring's abstraction uses a configuration-based approach
+ * Server side:
+  * Expose existing services with *NO* code changes!
+ * Client side:
+  * Invoke remote methods from existing code
+  * Take advantage of polymorphism by using dependency injection
+=== Spring Remoting: Consistency across protocols ===
+ * Spring's exporters and proxy {{{FactoryBean}}}s bring consistent approach to multiple protocols:
+  * provides flexibility
+  * promotes ease of adoption
+ * Server Side
+  * expose a single service over multiple protocols
+ * Client Side
+  * switch easily between protocols
+  * migrate between remote vs. local deployments
+
 === Goal/Cfg of RMI Service Exporter ===
  * Spring provides *exporters* to handle server-side requirements:
   * binding to registry or exposing an endpoint
@@ -25,6 +42,7 @@
   * convert remote exceptions to a runtime hierarchy
 
 === Goal/Cfg of RMI Proxy Generator ===
+
 === Difference between RMI Service Exporter and {{{HttpInvoker}}} ===
 === {{{HttpInvoker}}} Questions ===
  * Does {{{HttpInvoker}}} require running on a web server on the client side?
