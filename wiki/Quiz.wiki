@@ -26,15 +26,15 @@ public class SimpleBeanWithRequiredAnnotation {
     }
 }
 }}}
- * What BeanPostProcessor provided by the Spring framework enforces that properties are set?
+ * What {{{BeanPostProcessor}}} provided by the Spring framework enforces that properties are set?
   * *@Required*
  * NOTE: an init method may have any visibility, but must have *no arguments*.
  * NOTE: when using _init-method_ attribute, you can only have a single _init-method_.
- * NOTE: if you use @PostConstruct annotation, you can have multiple bean initialization opportunities.
+ * NOTE: if you use {{{@PostConstruct}}} annotation, you can have multiple bean initialization opportunities.
  * What is the purpose of _<context:annotation-config/>_?
   * Enables the following bean post processors:
-   * RequiredAnnotationBeanPostProcessor
-   * CommonAnnotationBeanPostProcessor
+   * {{{RequiredAnnotationBeanPostProcessor}}}
+   * {{{CommonAnnotationBeanPostProcessor}}}
  * How to get Spring to recognize common annotations?
   * Method 1:
 {{{
