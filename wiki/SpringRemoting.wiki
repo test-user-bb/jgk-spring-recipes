@@ -17,10 +17,16 @@
   * {{{Client}}} must catch *{{{RemoteException}}}s*
   * *Violates a separation of concerns*
   * *Couples business logic to remoting infrastructure*
- * RMI model is invasiv - server and client code is coupled to the framework
+ * RMI model is invasive - server and client code is coupled to the framework
   * RMI: server-side exposes a skeleton
   * RMI: client-side invokes methods on a stub (proxy)
   * RMI: java serialization is used for marshalling
+ * Spring's RMI Service Exporter
+  * Transparently expose an existing {{{POJO}}} service to the RMI registry
+   * no need to write binding code
+  * Avoids typical RMI requirements:
+   * Service interface does not extend {{{Remote}}}
+   * Service class is a {{{POJO}}}
 
 === Spring Remoting:  Declarative Approach ===
  * Spring's abstraction uses a configuration-based approach
