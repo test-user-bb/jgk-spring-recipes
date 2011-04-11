@@ -17,8 +17,14 @@
   * *Couples business logic to remoting infrastructure*
 
 === Goal/Cfg of RMI Service Exporter ===
+ * Spring provides *exporters* to handle server-side requirements:
+  * binding to registry or exposing an endpoint
+  * conforming to a programming model if needed
+ * Spring provides {{{FactoryBean}}}s that generate *proxies* to handle client-side requirements
+  * Communicate with server-side endpoint
+  * convert remote exceptions to a runtime hierarchy
 
-=== Goal/Cfg of RMI Proxy Generator
+=== Goal/Cfg of RMI Proxy Generator ===
 === Difference between RMI Service Exporter and {{{HttpInvoker}}} ===
 === {{{HttpInvoker}}} Questions ===
  * Does {{{HttpInvoker}}} require running on a web server on the client side?
