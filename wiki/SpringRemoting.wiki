@@ -32,7 +32,9 @@
  * Server Side
   * expose a single service over multiple protocols
  * Client Side
-  * switch easily between protocols (RMI, HttpInvoker, Hessian/Burlap)
+  * switch easily between protocols (RMI, {{{HttpInvoker}}}, Hessian/Burlap)
+   * Hessian - binary web service protocol
+   * Burlap - xml web service protocol
   * migrate between remote vs. local deployments
 
 === Goal/Cfg of RMI Service Exporter ===
