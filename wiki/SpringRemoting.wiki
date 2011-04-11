@@ -51,9 +51,7 @@
  * Spring provides *exporters* to handle server-side requirements:
   * binding to registry or exposing an endpoint
   * conforming to a programming model if needed
- * Spring provides {{{FactoryBean}}}s that generate *proxies* to handle client-side requirements
-  * Communicate with server-side endpoint
-  * convert remote exceptions to a runtime hierarchy
+
 ==== Configuring RMI Service Exporter ====
  * Star with an existing POJO service:
 {{{
@@ -72,6 +70,24 @@
 }}}
 
 === Goal/Cfg of RMI Proxy Generator ===
+ * Spring provides {{{FactoryBean}}}s that generate *proxies* to handle client-side requirements
+  * Communicate with server-side endpoint
+  * convert remote exceptions to a runtime hierarchy
+==== Configuring RMI Proxy ====
+ * define a factory bean to generate the proxy
+{{{
+  <bean id="myService"
+        class="org.springframework.remoting.rmi.RmiProxyFactoryBean">
+    <property name="serviceInterface" value="com.jgk.MyService"/>
+    <property name="serviceUrl" value="rmi://jgk:1099/myService"/>
+  </bean>
+}}}
+ * Inject the factory bean into the client
+{{{
+  <bean id="myDesktopUI" class="com.jgk.client.MyDesktopUI">
+    <property name="myService" ref="myService"/>
+  </bean>
+}}}
 
 === Difference between RMI Service Exporter and {{{HttpInvoker}}} ===
 === {{{HttpInvoker}}} ===
