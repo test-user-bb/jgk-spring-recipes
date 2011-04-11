@@ -96,7 +96,7 @@
   * method result is returned as an HTTP response
   * method parameters and return values are marshalled with standard Java serialization.
  * Spring's HTTP invoker. Spring provides a special remoting strategy which allows for Java serialization via HTTP, supporting any Java interface (just like the RMI invoker). The corresponding support classes are {{{HttpInvokerProxyFactoryBean}}} and {{{HttpInvokerServiceExporter}}}.
-==== Configuring {{{HttpInvoker}}} Service Exporter ====
+==== Configuring {{{HttpInvoker}}} Service Exporter (server) ====
  * start with an existing POJO
 {{{
   <bean id="myService" class="com.jgk.MyServiceImpl">
@@ -112,7 +112,20 @@
   </bean>
 }}}
 ==== Configuring {{{HttpInvoker}}} Proxy (client) ====
-
+ * define a factory bean to generate the proxy
+{{{
+  <bean id="myService"
+       class="org.springframework.remoting.httpinvoker.HttpInvokerProxyFactoryBean">
+    <property name="serviceInterface" value="com.jgk.MyService"/>
+    <property name="serviceUrl" value="http://jgkhost:8080/services/servitup"/>  (HTTP Post requests sent to this URL)
+  </bean>
+}}}
+ * inject the factory bean into the client
+{{{
+   <bean id="myDesktopUI" class="com.jgk.MyDesktopUI">
+      <property name="myService" ref="myService"/>
+   </bean>
+}}}
 === {{{HttpInvoker}}} Questions ===
  * Does {{{HttpInvoker}}} require running on a web server on the client side?
  * Does {{{HttpInvoker}}} require running on a web server on the server side?
