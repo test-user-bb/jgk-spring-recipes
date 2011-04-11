@@ -91,7 +91,28 @@
 
 === Difference between RMI Service Exporter and {{{HttpInvoker}}} ===
 === {{{HttpInvoker}}} ===
+ * Lightweight HTTP-based remoting protocol:
+  * method invocation is converted to an HTTP Post
+  * method result is returned as an HTTP response
+  * method parameters and return values are marshalled with standard Java serialization.
  * Spring's HTTP invoker. Spring provides a special remoting strategy which allows for Java serialization via HTTP, supporting any Java interface (just like the RMI invoker). The corresponding support classes are {{{HttpInvokerProxyFactoryBean}}} and {{{HttpInvokerServiceExporter}}}.
+==== Configuring {{{HttpInvoker}}} Service Exporter ====
+ * start with an existing POJO
+{{{
+  <bean id="myService" class="com.jgk.MyServiceImpl">
+     <property name="myRepository" ref="myRepository"/>
+  </bean>
+}}}
+ * define a bean to export the POJO
+{{{
+  <bean name="/servitup"  (endpoint for HTTP request handling)
+     class="org.springframework.remoting.httpinvoker.HttpInvokerServiceExporter">
+    <property name="serviceInterface" value="com.jgk.MyService"/>
+    <property name="service" ref="myService"/>
+  </bean>
+}}}
+==== Configuring {{{HttpInvoker}}} Proxy (client) ====
+
 === {{{HttpInvoker}}} Questions ===
  * Does {{{HttpInvoker}}} require running on a web server on the client side?
  * Does {{{HttpInvoker}}} require running on a web server on the server side?
