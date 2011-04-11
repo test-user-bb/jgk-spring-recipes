@@ -47,7 +47,7 @@
 
 === Difference between RMI Service Exporter and {{{HttpInvoker}}} ===
 === {{{HttpInvoker}}} ===
- * Spring's HTTP invoker. Spring provides a special remoting strategy which allows for Java serialization via HTTP, supporting any Java interface (just like the RMI invoker). The corresponding support classes are HttpInvokerProxyFactoryBean and HttpInvokerServiceExporter.
+ * Spring's HTTP invoker. Spring provides a special remoting strategy which allows for Java serialization via HTTP, supporting any Java interface (just like the RMI invoker). The corresponding support classes are {{{HttpInvokerProxyFactoryBean}}} and {{{HttpInvokerServiceExporter}}}.
 === {{{HttpInvoker}}} Questions ===
  * Does {{{HttpInvoker}}} require running on a web server on the client side?
  * Does {{{HttpInvoker}}} require running on a web server on the server side?
