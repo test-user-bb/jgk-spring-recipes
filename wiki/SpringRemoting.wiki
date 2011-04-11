@@ -32,7 +32,7 @@
  * Server Side
   * expose a single service over multiple protocols
  * Client Side
-  * switch easily between protocols
+  * switch easily between protocols (RMI, HttpInvoker, Hessian/Burlap)
   * migrate between remote vs. local deployments
 
 === Goal/Cfg of RMI Service Exporter ===
