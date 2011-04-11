@@ -1,0 +1,25 @@
+#summary Remoting
+
+=== Goals of Spring Remoting ===
+ * Hide 'plumbing' code
+ * Configure and expose services *declaratively*
+ * Support multiple protocols in a consistent way
+
+=== Advantages: Spring Remoting vs. RMI ===
+==== Problems with traditional remoting and RMI ====
+ * Big Picture: _Remoting mechanisms provide an abstraction over transport details._
+ * Abstractions are 'leaky', meaning the code must conform to a particular model.
+ * RMI:
+  * {{{Service}}} interface extends *{{{Remote}}}*
+  * {{{Service}}} client extends *{{{UnicasterRemoteObject}}}*
+  * {{{Client}}} must catch *{{{RemoteException}}}s*
+  * *Violates a separation of concerns*
+  * *Couples business logic to remoting infrastructure*
+
+=== Goal/Cfg of RMI Service Exporter ===
+
+=== Goal/Cfg of RMI Proxy Generator
+=== Difference between RMI Service Exporter and {{{HttpInvoker}}} ===
+=== {{{HttpInvoker}}} Questions ===
+ * Does {{{HttpInvoker}}} require running on a web server on the client side?
+ * Does {{{HttpInvoker}}} require running on a web server on the server side?
