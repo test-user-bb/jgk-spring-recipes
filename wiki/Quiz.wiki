@@ -11,7 +11,7 @@ Caused by: org.springframework.beans.factory.BeanInitializationException: Proper
 }}}
  * How do you tell Spring framework to recognized the *@Required* annotation?
   * Two ways:
-   * Register a bean with class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor"
+   * Register a bean with {{{class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor"}}}
    * Use the xml namespace element:  <context:annotation-config/>
  * How is the @Required annotation used?
   * Here's a bean class:
