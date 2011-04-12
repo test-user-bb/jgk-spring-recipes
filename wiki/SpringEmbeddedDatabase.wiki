@@ -1,5 +1,13 @@
 #summary jdbc:embedded-database
 
+=== HSQL Support ===
+{{{
+   <jdbc:embedded-database id="dataSource" type="HSQL">
+        <jdbc:script location="classpath:/com/jgk/springrecipes/jdbc/embedded/hsqldb-schema.sql"/>
+        <jdbc:script location="classpath:/com/jgk/springrecipes/jdbc/embedded/hsqldb-test-data.sql"/>
+    </jdbc:embedded-database>   
+}}}
+=== Basic ===
 {{{
 <jdbc:embedded-database id="dataSource">
   <jdbc:script location="classpath:schema.sql"/>
