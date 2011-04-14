@@ -1,5 +1,7 @@
 #summary Spring expression language
 
+=== Resources ===
+ * [http://static.springsource.org/spring/docs/3.0.x/reference/expressions.html SpEL]
 === Dependencies ===
 {{{
 <dependency>
