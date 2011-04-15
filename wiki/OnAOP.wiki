@@ -25,11 +25,13 @@
  * A module (or class) that combines pointcuts and advice?
   * Aspect
  * What are the 5 types of advice?
-  * @Before
-  * @After
-  * @AfterReturning
-  * @AfterThrowing
-  * @Around
+  * {{{@Before}}}
+  * {{{@After}}}
+  * {{{@AfterReturning}}}
+  * {{{@AfterThrowing}}}
+  * {{{@Around}}}
+ * More on advice types:
+  * After - Advice to be executed regardless of the means by which a join point exits (normal or exceptional return)
  * What XML element is required to enable AOP in Spring?
   * <aop:aspectj-autoproxy/>
  * What is the role of the _execution()_ pointcut expression?
