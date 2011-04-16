@@ -13,7 +13,7 @@ public class PropertyChangeTrackerAspect {
 	
 	@Before("execution(void set*(*)) or execution(void set*()) ")
 	public void trackChange() {
-		System.out.println("Property about to change");
+		System.out.println("Property about to change now");
 		log.info("Property about to change");
 	}
 }
