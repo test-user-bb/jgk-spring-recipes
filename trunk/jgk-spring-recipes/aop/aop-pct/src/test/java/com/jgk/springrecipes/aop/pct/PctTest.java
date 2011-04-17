@@ -1,5 +1,7 @@
 package com.jgk.springrecipes.aop.pct;
 
+import javax.inject.Inject;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,7 +19,17 @@ public class PctTest {
 	@Autowired
 	PojoWithSetterMethod pojoWithSetterMethod;
 	
+	@Inject
+	FunComponent funComponent;
+	
 	@Test
+	public void testAnother() {
+		funComponent.saveNoParams();
+		funComponent.saveOneParam("FRED");
+		funComponent.getKangaroo();
+	}
+	
+	//@Test
 	public void testIt() {
 		pojoWithSetterMethod.setNothing();
 		pojoWithSetterMethod.setDescription("HOWDY FRIEND");

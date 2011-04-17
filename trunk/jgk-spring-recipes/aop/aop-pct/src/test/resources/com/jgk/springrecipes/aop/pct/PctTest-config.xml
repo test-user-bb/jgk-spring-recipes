@@ -15,11 +15,18 @@
 	<aop:aspectj-autoproxy>
 		<aop:include name="pctAspect" />
 	</aop:aspectj-autoproxy>
-	<!-- 
-	<bean id="pctAspect" class="com.jgk.springrecipes.aop.pct.PropertyChangeTracker" />
-	<bean id="pctAspect" class="com.jgk.springrecipes.aop.pct.PropertyChangeTracker" />
- -->
 
+	<aop:config>
+		<aop:aspect id="saveAndGetAspect" ref="anotherPctAspect">
+			<aop:pointcut id="savePointcut"
+				expression="execution(* com.jgk.springrecipes.aop.pct.*.save*(..))" />
+			<aop:pointcut id="getPointcut"
+				expression="execution(* com.jgk.springrecipes..*.get*(..))" />
+			<aop:before pointcut-ref="savePointcut" method="saveit" />	
+			<aop:before pointcut-ref="getPointcut" method="getit" />	
+		</aop:aspect>
+	</aop:config>
+	
 <!-- 
 	<aop:aspectj-autoproxy>
 		<aop:include name="stuffAspect" />
