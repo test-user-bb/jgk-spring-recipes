@@ -2,3 +2,5 @@
 
  * [http://jcp.org/en/jsr/detail?id=250 JSR-250] - Common Annotations for the JavaTM Platform
  * JSR 311: JAX-RS
+ * [http://jcp.org/aboutJava/communityprocess/final/jsr168/ JSR-168 The Java Portlet Specification]
+  * [http://developers.sun.com/prodtech/portalserver/reference/techart/jsr168/ Introduction to JSR-168]
