@@ -3,3 +3,18 @@
 = Spring 3 Certification Mock =
 
  * [http://www.blackbeltfactory.com/QuestionnaireDefDisplay.wwa?questPublicId=1712 Black Belt Factory]
+
+== General  3 questions ==
+ * Define Dependency Injection and Inversion of Control
+ * List the advantages of Dependency Injection
+ * Be able to write XML code for constructor injection
+ * Be able to write XML code for setter injection
+ * List the (non-web) scopes for beans
+ * Identify the default scope for beans
+
+== Lifecycle  4 questions ==
+ * Use the init-method and destroy-method attributes in XML
+ * Identify when singleton and prototype beans are instantiated
+ * Know that {{{BeanPostProcessors}}} allow for custom modification of new bean instances, e.g. checking for marker interfaces or wrapping them with proxies.
+ * Know that {{{BeanFactoryPostProcessors}}} for custom modification of an application context's bean definitions, adapting the bean property values of the context's underlying bean factory.
+ * Know the container lifecycle sequence with respect to XML Parsing, {{{BeanFactoryPostProcessors}}}, {{{BeanPostProcessors}}}, validation, init method, {{{@PostConstruct}}}
