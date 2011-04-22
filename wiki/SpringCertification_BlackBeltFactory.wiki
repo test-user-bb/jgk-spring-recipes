@@ -27,3 +27,15 @@
  * Use {{{@Qualifier}}} with {{{@Autowired}}}
  * Define purpose of {{{@PostConstruct}}} and {{{@PreDestroy}}}
 
+== Miscellaneous  4 questions ==
+ * Write XML code to inject primitive/String values into a bean
+ * Write XML code to inject List/Set/Map/Properties into a bean
+ * Write XML code to inject null values into a bean
+ * Identify the different {{{ApplicationContexts}}} along with the default resource prefix for each - classpath, file system, web
+ * List all the resource prefixes that can be used when pointing to the XML configuration file when creating an Application Context.
+ * Identify the correct way to point to a Spring configuration file within a package.
+ * Use Property Placeholder to refer to external properties in the Spring XML configuration
+ * Use abstract and parent properties for bean inheritance
+ * Write code to use the p namespace
+ * Differentiate between id and name attributes when creating a bean
+ * Describe a scenario where {{{<aop:scoped-proxy />}}} is needed
