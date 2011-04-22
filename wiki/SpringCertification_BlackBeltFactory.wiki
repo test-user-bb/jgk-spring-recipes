@@ -83,7 +83,7 @@
  * List limitations of Spring AOP when compared with AspectJ
 
 == Data Access and Transactions ==
- * List advantages of DataAccessException over SQLException
+ * List advantages of {{{DataAccessException}}} over {{{SQLException}}}
  * Write XML to define a datasource using a JNDI reference
  * Write XML to define a datasource using a standalone connection pool
 === JdbcTemplate  3 questions ===
@@ -107,7 +107,7 @@
  * Write XML code to configure a JTA transaction manager
  * Write XML code to configure transactions using AOP
  * Know XML to enable @Transaction
- * Understand how TransactionTemplate is used to rollback a transaction
+ * Understand how {{{TransactionTemplate}}} is used to rollback a transaction
  * Identify which exceptions cause a rollback by default
  * Understand main attributes for Transaction:
   * readOnly
@@ -140,3 +140,32 @@
  * Know the use of the {{{RestTemplate}}}
  * Write code using {{{RestTemplate}}}
  * Know the purpose of {{{@ResponseStatus}}} and {{{@ExceptionHandler}}}
+
+== Advanced Topics ==
+=== Remoting  2 questions ===
+ * Explain the benefits of Spring Remoting over direct RMI
+ * Know the goal of the RMI Service Exporter and RMI Proxy Generator
+ * Write XML code to configure the RMI Service Exporter and RMI Proxy Generator
+ * Identify the difference between the RMI Service Exporter, {{{HttpInvoker}}} and Hessian/Burlap
+ * Know whether HttpInvoker requires a web server on the server or client side
+
+=== Security  2 questions ===
+ * Define the Spring security filter chain
+ * Write XML code to configure Spring security intercept URLs
+ * Write XML code to configure method level security
+ * Write code using {{{@Secured}}} and {{{@RolesAllowed}}}
+ * List authentication manager types
+ * Know whether any authenticate managers support password encoding
+ * State the tag used in a JSP to see if authorized to certain role
+
+=== JMS  2 questions ===
+ * Know purpose of {{{JmsTemplate}}}
+ * Write XML code to declare JMS listener
+ * Write XML code to make a POJO a JMS listener
+ * Know whether JMS can run in Tomcat
+
+=== JMX  2 questions ===
+ * Know the role of the {{{MBeanExporter}}}
+ * Write XML code to export a POJO as an {{{MBean}}}
+ * Write XML code to register an existing {{{MBean}}} with the {{{MBeanServer}}}
+ * Know purpose of {{{@ManagedResource}}}, {{{@ManagedOperation}}} and {{{@ManagedAttribute}}}
