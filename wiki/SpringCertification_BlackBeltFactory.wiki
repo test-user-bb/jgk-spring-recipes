@@ -39,3 +39,35 @@
  * Write code to use the p namespace
  * Differentiate between id and name attributes when creating a bean
  * Describe a scenario where {{{<aop:scoped-proxy />}}} is needed
+
+== JavaConfig  2 questions ==
+ * Identify the purpose of the {{{@Bean}}} annotation
+ * Identify the purpose of the {{{@Configuration}}} annotation
+ * Write a method using {{{@Bean}}}
+ * Write code using one {{{@Bean}}} method that calls another {{{@Bean}}} method
+
+== Testing  3 questions ==
+ * Know the purpose of {{{SpringJUnit4ClassRunner}}}
+ * Write the annotation to set up the context configuration for one or more XML files
+ * Identify the annotation to enable transaction support in a test
+ * Differentiate between tests that commit and rollback their changes
+ * Define unit tests and integration tests including which access the Spring container
+
+== AOP ==
+ * Define AOP keywords
+  * Aspect
+  * Advice
+  * Pointcut
+  * Joinpoint
+ * Write basic pointcuts using
+  * execution()
+  * {{{*}}}
+  * {{{..}}}
+  * {{{+}}}
+ * Identify which classes/methods match a provided pointcut
+ * List the five Advice types
+  * {{{@Before}}}
+  * {{{@After}}}
+  * {{{@AfterReturning}}}
+  * {{{@AfterThrowing}}}
+  * {{{@Around}}}
