@@ -71,3 +71,34 @@
   * {{{@AfterReturning}}}
   * {{{@AfterThrowing}}}
   * {{{@Around}}}
+ * Write an Advice
+ * Identify which Advice types can accomplish a task
+ * Identify which Advice type is preferred when multiple can be used
+=== AOP: Configuration  2 questions ===
+ * State the XML configuration required to enable scanning for @Aspect
+ * Use code to completely configure aspects in XML
+=== AOP: Proxies  2 questions ===
+ * Identify where proxies are created in the Spring lifecycle
+ * Know proxies share interface with object they wrap
+ * List limitations of Spring AOP when compared with AspectJ
+
+== Data Access and Transactions ==
+ * List advantages of DataAccessException over SQLException
+ * Write XML to define a datasource using a JNDI reference
+ * Write XML to define a datasource using a standalone connection pool
+=== JdbcTemplate  3 questions ===
+ * State whether JdbcTemplate throws checked or unchecked exceptions
+ * State whether you throw checked or unchecked exceptions in the callback methods
+ * Know when to use SimpleJdbcTemplate and JdbcTemplate
+ * Write code using JdbcTemplate to write select and update queries
+ * Write code using JdbcTemplate to pass parameters to a query
+ * Know when to use each of the following callbacks and write code using them:
+  * RowMapper
+  * RowCallbackHandler
+  * ResultSetExtractor
+=== Hibernate  1 question ===
+ * Write XML to configure a {{{SessionFactoryBean}}} in the following ways:
+  * listing each entity
+  * scanning for annotations
+  * listing each hbm file
+
