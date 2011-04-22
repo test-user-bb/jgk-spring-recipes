@@ -18,3 +18,12 @@
  * Know that {{{BeanPostProcessors}}} allow for custom modification of new bean instances, e.g. checking for marker interfaces or wrapping them with proxies.
  * Know that {{{BeanFactoryPostProcessors}}} for custom modification of an application context's bean definitions, adapting the bean property values of the context's underlying bean factory.
  * Know the container lifecycle sequence with respect to XML Parsing, {{{BeanFactoryPostProcessors}}}, {{{BeanPostProcessors}}}, validation, init method, {{{@PostConstruct}}}
+
+== Annotations  4 questions ==
+ * Know how to enable component scanning
+ * Know how to turn on scanning for annotations such as {{{@Required}}} and {{{@PreDestroy}}}
+ * Identify relationships between byType, byName and constructor autowiring
+ * Use {{{@Autowired}}} for field, setter and constructor injection
+ * Use {{{@Qualifier}}} with {{{@Autowired}}}
+ * Define purpose of {{{@PostConstruct}}} and {{{@PreDestroy}}}
+
