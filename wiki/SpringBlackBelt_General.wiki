@@ -11,7 +11,7 @@
  * Each bean is bound to a unique id.  The id of the bean, by convention, reflects the service the bean provides to clients.
  * The container ({{{ApplicationContext}}}) encapsulates the bean implementations chosen for a given deployment.  In other words, the container _conceals implementation details_.
 
- * Be able to write XML code for constructor injection
- * Be able to write XML code for setter injection
- * List the (non-web) scopes for beans
- * Identify the default scope for beans
+=== Be able to write XML code for constructor injection ===
+=== Be able to write XML code for setter injection ===
+=== List the (non-web) scopes for beans ===
+=== Identify the default scope for beans ===
