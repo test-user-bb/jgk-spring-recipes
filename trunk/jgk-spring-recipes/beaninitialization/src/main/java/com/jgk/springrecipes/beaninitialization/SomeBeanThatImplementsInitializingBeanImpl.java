@@ -10,7 +10,6 @@ public class SomeBeanThatImplementsInitializingBeanImpl implements InitializingB
 {
 	@Override
 	public void afterPropertiesSet() throws Exception {
-		// TODO Auto-generated method stub
 		System.out.println("Just constructed...doing some initialization with afterPropertiesSet");
 		
 	}
