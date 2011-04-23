@@ -1,4 +1,4 @@
-package org.blackbelt.lifecycle;
+package com.jgk.springrecipes.blackbelt.lifecycle;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
