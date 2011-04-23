@@ -20,8 +20,12 @@
 	<dependencies>
 	</dependencies>
 	<modules>
+		<module>blackbelt.annotations</module>
+		<module>blackbelt.aop</module>
 		<module>blackbelt.general</module>
+		<module>blackbelt.javaconfig</module>
 		<module>blackbelt.lifecycle</module>
 		<module>blackbelt.miscellaneous</module>
+		<module>blackbelt.testing</module>
 	</modules>
 </project>
