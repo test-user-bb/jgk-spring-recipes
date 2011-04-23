@@ -1,38 +1,26 @@
 package com.jgk.springrecipes.blackbelt.general;
 
-import junit.framework.Test;
-import junit.framework.TestCase;
-import junit.framework.TestSuite;
+import org.junit.BeforeClass;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+
+import static org.junit.Assert.*;
 
 /**
- * Unit test for simple App.
+ * http://code.google.com/p/jgk-spring-recipes/wiki/SpringBlackBelt_General?ts=1303573764&updated=SpringBlackBelt_General
  */
-public class BlackbeltGeneralTest 
-    extends TestCase
-{
-    /**
-     * Create the test case
-     *
-     * @param testName name of the test case
-     */
-    public BlackbeltGeneralTest( String testName )
-    {
-        super( testName );
-    }
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(locations={"classpath:/BlackbeltGeneralTest-config.xml"})
+public class BlackbeltGeneralTest {
+	@BeforeClass
+	public static void onlyOnce() {
+//		System.out.println("Before starting");
+	}
 
-    /**
-     * @return the suite of tests being tested
-     */
-    public static Test suite()
-    {
-        return new TestSuite( BlackbeltGeneralTest.class );
-    }
-
-    /**
-     * Rigourous Test :-)
-     */
-    public void testApp()
-    {
-        assertTrue( true );
-    }
+	@Test
+	public void testApp() {
+		assertTrue(true);
+	}
 }
