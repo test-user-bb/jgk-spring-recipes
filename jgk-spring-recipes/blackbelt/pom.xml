@@ -20,8 +20,8 @@
 	<dependencies>
 	</dependencies>
 	<modules>
-		<module>blackbelt.miscellaneous</module>
 		<module>blackbelt.general</module>
 		<module>blackbelt.lifecycle</module>
+		<module>blackbelt.miscellaneous</module>
 	</modules>
 </project>
