@@ -9,6 +9,12 @@
 			              http://www.springframework.org/schema/context/spring-context-3.0.xsd							
 				              ">
 
+	<bean id="someBeanScopedSingleton" class="com.jgk.springrecipes.blackbelt.general.beans.SomeBeanScopedSingleton" scope="singleton">
+	</bean>
+	
+	<bean id="someBeanScopedPrototype" class="com.jgk.springrecipes.blackbelt.general.beans.SomeBeanScopedPrototype" scope="prototype">
+	</bean>
+	
 	<bean id="someBeanWithConstructor" class="com.jgk.springrecipes.blackbelt.general.beans.SomeBeanWithConstructor">
 		<constructor-arg ref="someBeanWithProperties"/>
 	</bean>
