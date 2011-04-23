@@ -40,7 +40,7 @@
  * Differentiate between id and name attributes when creating a bean
  * Describe a scenario where {{{<aop:scoped-proxy />}}} is needed
 
-== JavaConfig  2 questions ==
+== {{{JavaConfig}}}  2 questions ==
  * Identify the purpose of the {{{@Bean}}} annotation
  * Identify the purpose of the {{{@Configuration}}} annotation
  * Write a method using {{{@Bean}}}
@@ -93,9 +93,9 @@
  * Write code using JdbcTemplate to write select and update queries
  * Write code using JdbcTemplate to pass parameters to a query
  * Know when to use each of the following callbacks and write code using them:
-  * RowMapper
-  * RowCallbackHandler
-  * ResultSetExtractor
+  * {{{RowMapper}}}
+  * {{{RowCallbackHandler}}}
+  * {{{ResultSetExtractor}}}
 === Hibernate  1 question ===
  * Write XML to configure a {{{SessionFactoryBean}}} in the following ways:
   * listing each entity
