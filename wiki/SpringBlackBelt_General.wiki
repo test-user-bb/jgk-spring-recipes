@@ -19,5 +19,14 @@
 <bean id="someOtherBean" class="com.jgk.springrecipes.SomeOtherBean"/>
 }}}
 === Be able to write XML code for setter injection ===
+{{{
+<bean id="someBeanWithProperties" class="com.jgk.springrecipes.SomeBeanWithProperties">
+   <property name="someOtherBean" ref="yetAnotherBean"/>
+   <property name="someInteger" value="3"/>
+   <property name="someText" ref="Hello, jgk-spring-recipes"/>
+
+</bean>
+<bean id="someOtherBean" class="com.jgk.springrecipes.SomeOtherBean"/>
+}}}
 === List the (non-web) scopes for beans ===
 === Identify the default scope for beans ===
