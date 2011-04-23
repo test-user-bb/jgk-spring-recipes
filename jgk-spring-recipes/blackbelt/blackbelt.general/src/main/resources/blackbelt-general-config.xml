@@ -10,5 +10,10 @@
 				              ">
 
 
-
+	<bean id="someBeanWithProperties" class="com.jgk.springrecipes.blackbelt.general.beans.SomeBeanWithProperties">
+	   <property name="someOtherBean" ref="yetAnotherBean"/>
+	   <property name="someInteger" value="3"/>
+	   <property name="someText" value="Hello, jgk-spring-recipes"/>
+	</bean>
+	<bean id="yetAnotherBean" class="com.jgk.springrecipes.blackbelt.general.beans.SomeOtherBean"/>	
 </beans>
