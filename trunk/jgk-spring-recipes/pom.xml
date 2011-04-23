@@ -82,6 +82,7 @@
 	    <module>beandestroy</module>
 	    <module>beaninitialization</module>
 	    <module>beanpostprocessor</module>
+		<module>blackbelt</module>
 		<module>converters</module>
 		<module>factorymethod</module>
 		<module>hierarchy</module>
