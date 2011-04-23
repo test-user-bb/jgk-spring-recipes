@@ -1,4 +1,4 @@
-package org.blackbelt.lifecycle;
+package com.jgk.springrecipes.blackbelt.lifecycle;
 
 /**
  * Hello world!
