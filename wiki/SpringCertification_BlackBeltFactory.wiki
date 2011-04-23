@@ -86,8 +86,8 @@
  * List advantages of {{{DataAccessException}}} over {{{SQLException}}}
  * Write XML to define a datasource using a JNDI reference
  * Write XML to define a datasource using a standalone connection pool
-=== JdbcTemplate  3 questions ===
- * State whether JdbcTemplate throws checked or unchecked exceptions
+=== {{{JdbcTemplate}}}  3 questions ===
+ * State whether {{{JdbcTemplate}}} throws checked or unchecked exceptions
  * State whether you throw checked or unchecked exceptions in the callback methods
  * Know when to use SimpleJdbcTemplate and JdbcTemplate
  * Write code using JdbcTemplate to write select and update queries
