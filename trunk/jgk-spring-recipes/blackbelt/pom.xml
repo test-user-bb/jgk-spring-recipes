@@ -21,6 +21,6 @@
   <modules>
   	<module>blackbelt.miscellaneous</module>
   	<module>blackbelt.general</module>
-  	<module>blackbelt.lifecycle</module>
-  </modules>
+<!--   	<module>blackbelt.lifecycle</module>
+ -->  </modules>
 </project>
