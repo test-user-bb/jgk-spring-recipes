@@ -18,4 +18,15 @@
  * [http://static.springsource.org/spring/docs/3.0.x/spring-framework-reference/html/beans.html#beans-factory-autowire Autowiring...]
 === Use @Autowired for field, setter and constructor injection ===
 === Use @Qualifier with @Autowired ===
+{{{
+public class SomeBean {
+
+  @Autowired
+  @Qualifier("favoriteSob")
+  private SomeOtherBean sob;
+
+  // ...
+}
+
+}}}
 === Define purpose of @PostConstruct and @PreDestroy ===
