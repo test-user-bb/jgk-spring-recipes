@@ -39,4 +39,11 @@ public class SomeBean {
   }
 
 }}}
+
+{{{
+  <bean class="com.jgk.springrecipes.SomethingUsingSob">
+      <qualifier value="favorite"/>
+      <!-- inject any dependencies required by this bean -->
+  </bean
+}}}
 === Define purpose of @PostConstruct and @PreDestroy ===
