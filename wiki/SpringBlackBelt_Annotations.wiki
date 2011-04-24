@@ -15,6 +15,7 @@
 <context:component-scan base-package="com.jgk.springrecipes"/>
 }}}
 === Identify relationships between byType, byName and constructor autowiring ===
+ * [http://static.springsource.org/spring/docs/3.0.x/spring-framework-reference/html/beans.html#beans-factory-autowire Autowiring...]
 === Use @Autowired for field, setter and constructor injection ===
 === Use @Qualifier with @Autowired ===
 === Define purpose of @PostConstruct and @PreDestroy ===
