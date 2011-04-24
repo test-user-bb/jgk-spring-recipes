@@ -46,4 +46,7 @@ public class SomeBean {
       <!-- inject any dependencies required by this bean -->
   </bean
 }}}
-=== Define purpose of @PostConstruct and @PreDestroy ===
+=== Define purpose of {{{@PostConstruct}}} and {{{@PreDestroy}}} ===
+ * Related to {{{CommonBeanPostProcessor}}}
+ * {{{@PostConstruct}}} is akin to init-method
+ * {{{@PreDestroy}}} is akin to destroy-method
