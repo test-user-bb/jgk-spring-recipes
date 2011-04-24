@@ -11,6 +11,6 @@
 === Identify when singleton and prototype beans are instantiated ===
  * singleton - instantiated during application context initialization
  * prototype - instantiated when requested (e.g. {{{applicationContext.getBean('....');}}})
-=== Know that BeanPostProcessors allow for custom modification of new bean instances, e.g. checking for marker interfaces or wrapping them with proxies. ===
-=== Know that BeanFactoryPostProcessors for custom modification of an application context's bean definitions, adapting the bean property values of the context's underlying bean factory. ===
-=== Know the container lifecycle sequence with respect to XML Parsing, BeanFactoryPostProcessors, BeanPostProcessors, validation, init method, @PostConstruct ===
+=== Know that {{{BeanPostProcessor}}}s allow for custom modification of new bean instances, e.g. checking for marker interfaces or wrapping them with proxies. ===
+=== Know that {{{BeanFactoryPostProcessor}}}s for custom modification of an application context's bean definitions, adapting the bean property values of the context's underlying bean factory. ===
+=== Know the container lifecycle sequence with respect to XML Parsing, {{{BeanFactoryPostProcessor}}}s, {{{BeanPostProcessor}}}s, validation, init method, {{{@PostConstruct}}} ===
