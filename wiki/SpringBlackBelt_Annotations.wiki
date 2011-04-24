@@ -1,0 +1,20 @@
+#summary annotations
+
+== Annotations 4 questions ==
+=== Know how to enable component scanning ===
+{{{
+<context:component-scan base-package="com.jgk.springrecipes"/>
+}}}
+=== Know how to turn on scanning for annotations such as @Required and @PreDestroy ===
+ * 2 ways to do this:
+{{{
+<context:annotation-config/>
+}}}
+
+{{{
+<context:component-scan base-package="com.jgk.springrecipes"/>
+}}}
+=== Identify relationships between byType, byName and constructor autowiring ===
+=== Use @Autowired for field, setter and constructor injection ===
+=== Use @Qualifier with @Autowired ===
+=== Define purpose of @PostConstruct and @PreDestroy ===
