@@ -29,4 +29,7 @@ Change
 	<bean id="yetAnotherBean" class="com.jgk.springrecipes.blackbelt.general.beans.SomeOtherBean"/>	
 }}}
 === List the (non-web) scopes for beans ===
+ * singleton
+ * prototype
 === Identify the default scope for beans ===
+ * singleton
