@@ -1,0 +1,8 @@
+#summary One-sentence summary of this page.
+
+== Lifecycle 4 questions ==
+=== Use the init-method and destroy-method attributes in XML ===
+=== Identify when singleton and prototype beans are instantiated ===
+=== Know that BeanPostProcessors allow for custom modification of new bean instances, e.g. checking for marker interfaces or wrapping them with proxies. ===
+=== Know that BeanFactoryPostProcessors for custom modification of an application context's bean definitions, adapting the bean property values of the context's underlying bean factory. ===
+=== Know the container lifecycle sequence with respect to XML Parsing, BeanFactoryPostProcessors, BeanPostProcessors, validation, init method, @PostConstruct ===
