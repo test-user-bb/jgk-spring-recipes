@@ -29,4 +29,14 @@ public class SomeBean {
 }
 
 }}}
+
+{{{
+@Autowired
+  public void prepare(@Qualifier("favoriteSob") SomeOtherBean sob,
+                      Integer quantity) {
+      this.sob = sob;
+      this.quantity = quantity;
+  }
+
+}}}
 === Define purpose of @PostConstruct and @PreDestroy ===
