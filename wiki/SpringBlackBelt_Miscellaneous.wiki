@@ -70,9 +70,14 @@
 }}}
  * From spring:
 {{{
-By default, when the Spring container creates a proxy for a bean that is marked up with the <aop:scoped-proxy/> element, a CGLIB-based class proxy is created. This means that you need to have the CGLIB library in the classpath of your application.
+By default, when the Spring container creates a proxy for a 
+bean that is marked up with the <aop:scoped-proxy/> element, 
+a CGLIB-based class proxy is created. This means that you need 
+to have the CGLIB library in the classpath of your application.
 
-Note: CGLIB proxies only intercept public method calls! Do not call non-public methods on such a proxy; they will not be delegated to the scoped target object.
+Note: CGLIB proxies only intercept public method calls! 
+Do not call non-public methods on such a proxy; they will not be 
+delegated to the scoped target object.
 
 Alternatively, you can configure the Spring container to create 
 standard JDK interface-based proxies for such scoped beans, 
