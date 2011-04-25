@@ -57,3 +57,14 @@
 === Write code to use the p namespace === 
 === Differentiate between id and name attributes when creating a bean === 
 === Describe a scenario where <aop:scoped-proxy /> is needed === 
+ * Definitions of beans scoped at the request, session, globalSession and custom-scope levels require the {{{<aop:scoped-proxy/>}}} element
+ * Example:
+{{{
+<bean id="legoPreferences" class="com.jgk.springrecipes.LegoPreferences" scope="session">
+    <aop:scoped-proxy/>
+</bean>
+
+<bean id="legoManager" class="com.jgk.springrecipes.LegoManager">
+    <property name="legoPreferences" ref="legoPreferences"/>
+</bean
+}}}
