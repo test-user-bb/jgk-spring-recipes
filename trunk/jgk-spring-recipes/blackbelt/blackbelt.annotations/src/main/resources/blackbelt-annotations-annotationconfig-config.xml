@@ -10,8 +10,23 @@
 				              ">
 
  	<context:annotation-config/>
+ 	<import resource="blackbelt-annotations-propertyplaceholder-config.xml"/>
  	<bean id="myBeanWithRequiredAndPreDestroy" class="com.jgk.springrecipes.blackbelt.annotations.beans.MyBeanWithRequiredAndPreDestroy">
  		<property name="myBeanWithComponent" ref="myBeanWithComponent"></property>
  	</bean>
  	<bean id="myBeanWithComponent" class="com.jgk.springrecipes.blackbelt.annotations.beans.MyBeanWithComponent"/>
+ 	<bean id="somePropertyAwareBean" class="com.jgk.springrecipes.blackbelt.annotations.beans.SomePropertyAwareBean">
+ 		<property name="spring" value="${spring}"></property>
+ 		<property name="age" value="${spring-age}"></property>
+ 		<property name="url" value="${spring-url}"></property>
+ 		<property name="props" >
+ 			<props>
+ 			 	<prop key="spring">${spring}</prop>
+ 			 	<prop key="spring-age">${spring-age}</prop>
+ 			 	<prop key="spring-url">${spring-url}</prop>
+ 			</props>
+ 		</property>
+ 		
+ 	</bean>
+ 	
 </beans>
