@@ -2,6 +2,33 @@
 
 == Miscellaneous 4 questions ==
 === Write XML code to inject primitive/String values into a bean === 
+{{{
+	<bean id="myMiscellaneousListSetMapPropertiesBean" class="com.jgk.springrecipes.blackbelt.miscellaneous.MyMiscellaneousListSetMapPropertiesBean">
+		<property name="map">
+		 	 <map>
+		 	 	<entry key="Fred" value="Flintstone"/>
+		 	 	<entry key="Barney" value="Rubble"/>
+		 	 	<entry key="Sam" value="Slate"/>
+		 	 </map>
+		</property>
+		<property name="set">
+			<set>
+				<value>one</value>
+				<value>two</value>
+				<value>three</value>
+			</set>
+		</property>
+		<property name="props">
+			<value>
+			first: Mike
+			second: Carol
+			third: Greg
+			forth: Marcia
+			</value>
+		</property>
+	</bean>
+
+}}}
 === Write XML code to inject List/Set/Map/Properties into a bean === 
 === Write XML code to inject null values into a bean === 
 === Identify the different ApplicationContexts along with the default resource prefix for each - classpath, file system, web === 
