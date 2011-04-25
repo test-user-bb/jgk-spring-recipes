@@ -40,8 +40,17 @@
 }}}
 === Write XML code to inject List/Set/Map/Properties into a bean === 
 === Write XML code to inject null values into a bean === 
-=== Identify the different ApplicationContexts along with the default resource prefix for each - classpath, file system, web === 
+=== Identify the different {{{ApplicationContext}}}s along with the default resource prefix for each - classpath, file system, web === 
+ * File, Url, Web, Classpath
+  * ClassPathResource	 Uses classpath as the default to load resources.
+  * FileSystemResource	 Uses file system as the default to load resources.
+  * ServletContextResource	 Uses web context as the default. Ex: '/WEB-INF/applicationContext.xml'
+  * UrlResource	 Loads URL resources as the default. Built on top of java.net.URL and appropriately can handle 'http:', 'ftp:', and 'file:'
 === List all the resource prefixes that can be used when pointing to the XML configuration file when creating an Application Context. === 
+ * classpath:
+ * file:
+ * ftp:
+ * http:
 === Identify the correct way to point to a Spring configuration file within a package. === 
 === Use Property Placeholder to refer to external properties in the Spring XML configuration === 
 === Use abstract and parent properties for bean inheritance === 
