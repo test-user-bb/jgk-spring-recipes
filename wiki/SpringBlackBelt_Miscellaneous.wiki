@@ -39,7 +39,10 @@
 	</bean>
 }}}
 === Write XML code to inject List/Set/Map/Properties into a bean === 
-=== Write XML code to inject null values into a bean === 
+=== Write XML code to inject null values into a bean ===
+{{{
+<null/>
+}}}
 === Identify the different {{{ApplicationContext}}}s along with the default resource prefix for each - classpath, file system, web === 
  * File, Url, Web, Classpath
   * ClassPathResource	 Uses classpath as the default to load resources.
