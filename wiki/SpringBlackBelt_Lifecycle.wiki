@@ -14,3 +14,14 @@
 === Know that {{{BeanPostProcessor}}}s allow for custom modification of new bean instances, e.g. checking for marker interfaces or wrapping them with proxies. ===
 === Know that {{{BeanFactoryPostProcessor}}}s for custom modification of an application context's bean definitions, adapting the bean property values of the context's underlying bean factory. ===
 === Know the container lifecycle sequence with respect to XML Parsing, {{{BeanFactoryPostProcessor}}}s, {{{BeanPostProcessor}}}s, validation, init method, {{{@PostConstruct}}} ===
+ # Instantiate context
+ # XML file
+ # Bean Factory Post Processing
+ # Bean Post Processing
+ # validation
+ # init method
+ # {{{@PostConstruct}}}
+ # use bean
+ # close context
+ # {{{@PreDestroy}}}
+ # destroy-method
