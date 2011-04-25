@@ -1,0 +1,8 @@
+#summary One-sentence summary of this page.
+
+== Testing 3 questions ==
+=== Know the purpose of SpringJUnit4ClassRunner ===
+=== Write the annotation to set up the context configuration for one or more XML files ===
+=== Identify the annotation to enable transaction support in a test ===
+=== Differentiate between tests that commit and rollback their changes ===
+=== Define unit tests and integration tests including which access the Spring container ===
