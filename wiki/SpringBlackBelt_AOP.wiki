@@ -25,6 +25,9 @@
  * Using the most specific advice type provides a simpler programming model with less potential for errors. For example, you do not need to invoke the proceed() method on the JoinPoint used for around advice, and hence cannot fail to invoke it.
 === AOP: Configuration 2 questions ===
 ==== State the XML configuration required to enable scanning for @Aspect ====
+{{{
+	<aop:aspectj-autoproxy/>
+}}}
 ==== Use code to completely configure aspects in XML ====
 === AOP: Proxies 2 questions ===
 ==== Identify where proxies are created in the Spring lifecycle ====
