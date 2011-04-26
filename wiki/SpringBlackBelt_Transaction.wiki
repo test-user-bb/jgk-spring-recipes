@@ -20,6 +20,7 @@
 }}}
 === Write XML code to configure a JTA transaction manager ===
  * If you use JTA in a Java EE container then you use a container {{{DataSource}}}, obtained through JNDI, in conjunction with Spring's {{{JtaTransactionManager}}}.
+ * The {{{JtaTransactionManager}}} does not need to know about the {{{DataSource}}}, or any other specific resources, because it uses the container's global transaction management infrastructure.
 {{{
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
