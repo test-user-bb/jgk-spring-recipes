@@ -2,10 +2,10 @@
 
 == [http://static.springsource.org/spring/docs/3.0.x/spring-framework-reference/html/aop.html Spring AOP] ==
 === Define AOP keywords ===
- * Aspect
- * Advice
- * Pointcut
- * Joinpoint
+ * Aspect - a modularization of a concern that cuts across multiple classes.
+ * Advice - action taken by an aspect at a particular join point.
+ * Pointcut - a predicate that matches join points.
+ * Joinpoint - a point during the execution of a program, such as the execution of a method or the handling of an exception.
 === Write basic pointcuts using ===
  * {{{execution()}}}
  * {{{*}}}
