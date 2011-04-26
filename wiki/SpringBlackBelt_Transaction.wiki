@@ -1,5 +1,6 @@
 #summary Transactions in Spring
 
+= [http://static.springsource.org/spring/docs/3.0.x/spring-framework-reference/html/transaction.html Spring Transactions] =
 == Transaction 3 questions ==
 === Write XML code to configure a local transaction manager ===
 === Write XML code to configure a JTA transaction manager ===
