@@ -10,12 +10,12 @@
  * {{{RowMapper}}}
   * Usage
 {{{
-		Username username = jdbcTemplate.queryForObject(
-		        "select username, password, password_reminder, interim_name, person_id, user_type from username where username = ?",
-		        new Object[]{usernameName},
-		        new UsernameRowMapper()
-		        );		
-		return username;
+Username username = jdbcTemplate.queryForObject(
+ "select username, password, password_reminder, interim_name, person_id, user_type from username where username = ?",
+ new Object[]{usernameName},
+ new UsernameRowMapper()
+);		
+return username;
 
 }}}
   * RowMapper
