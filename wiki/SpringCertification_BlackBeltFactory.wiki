@@ -1,6 +1,6 @@
 #summary Black Belt Factory - Spring 3 Certification Mock
 
-= Spring 3 Certification Mock =
+= Spring 3 Certification Mock = 
 
  * [http://www.blackbeltfactory.com/QuestionnaireDefDisplay.wwa?questPublicId=1712 Black Belt Factory]
 
