@@ -1,0 +1,19 @@
+#summary Transactions in Spring
+
+== Transaction 3 questions ==
+=== Write XML code to configure a local transaction manager ===
+=== Write XML code to configure a JTA transaction manager ===
+=== Write XML code to configure transactions using AOP ===
+=== Know XML to enable @Transaction ===
+=== Understand how TransactionTemplate is used to rollback a transaction ===
+=== Identify which exceptions cause a rollback by default ===
+ * {{{RuntimeException}}}s
+===  Understand main attributes for Transaction: ===
+ * readOnly
+ * isolation
+ * propagation
+ * rollbackFor
+ * noRollbackFor
+=== State the default isolation and propagation settings ===
+=== Know the difference between PROPAGATION_REQUIRED and PROPAGATIONS_REQUIRES_NEW ===
+=== Know the difference between READ_COMMITTED and READ_UNCOMMITTED ===
