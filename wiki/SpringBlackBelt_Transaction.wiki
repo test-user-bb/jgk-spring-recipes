@@ -109,6 +109,7 @@
 === Identify which exceptions cause a rollback by default ===
  * {{{RuntimeException}}}s
  * roll back is automatic only on unchecked exceptions
+ * In its default configuration, the Spring Framework's transaction infrastructure code only marks a transaction for rollback in the case of runtime, unchecked exceptions; that is, when the thrown exception is an instance or subclass of RuntimeException. (Errors will also - by default - result in a rollback). Checked exceptions that are thrown from a transactional method do not result in rollback in the default configuration.
 ===  Understand main attributes for Transaction: ===
  * readOnly - read-only transaction can be used when your code reads but does not modify data. Read-only transactions can be a useful optimization in some cases, such as when you are using Hibernate.
  * isolation - The degree to which this transaction is isolated from the work of other transactions.
