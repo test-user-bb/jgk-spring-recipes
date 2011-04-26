@@ -8,9 +8,11 @@
  * Joinpoint - a point during the execution of a program, such as the execution of a method or the handling of an exception.
 === Write basic pointcuts using ===
  * {{{execution()}}}
- * {{{*}}}
- * {{{..}}}
+ * {{{*}}} matches a method taking one parameter of any type
+ * {{{..}}} matches any number of parameters (zero or more)
  * {{{+}}}
+ * {{{()}}} matches a method that takes no parameters
+ * {{{(*,String)}}} matches a method taking two parameters, the first can be of any type, the second must be a String
 === Identify which classes/methods match a provided pointcut ===
 === List the five Advice types ===
  * {{{@Before}}} - Advice that executes before a join point, but which does not have the ability to prevent execution flow proceeding to the join point (unless it throws an exception).
