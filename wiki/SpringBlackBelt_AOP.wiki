@@ -30,3 +30,5 @@
 ==== Identify where proxies are created in the Spring lifecycle ====
 ==== Know proxies share interface with object they wrap ====
 ==== List limitations of Spring AOP when compared with AspectJ ====
+ * Spring AOP only method execution join points (advising the execution of methods on Spring beans).
+ * Field interception is not implemented.
