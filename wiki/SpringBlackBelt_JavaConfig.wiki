@@ -13,7 +13,20 @@
 Caused by: java.lang.IllegalStateException: CGLIB is required to process @Configuration classes. Either add CGLIB to the classpath or remove the following @Configuration bean definitions: [myConfig]
 
 }}}
-
+=== Maven Dependencies ===
+{{{
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <cglib.version>2.2</cglib.version>
+  </properties>
+  <dependencies>
+	<dependency>
+		<groupId>cglib</groupId>
+		<artifactId>cglib-nodep</artifactId>
+		<version>${cglib.version}</version>
+	</dependency>
+  </dependencies>
+}}}
 === NOTES ===
  * *Note*
   * Beware that, in order for JavaConfig to work, you must include the CGLIB jar in your list of dependencies.
