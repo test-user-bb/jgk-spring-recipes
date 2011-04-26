@@ -10,9 +10,9 @@
 === Identify which exceptions cause a rollback by default ===
  * {{{RuntimeException}}}s
 ===  Understand main attributes for Transaction: ===
- * readOnly
- * isolation
- * propagation
+ * readOnly - read-only transaction can be used when your code reads but does not modify data. Read-only transactions can be a useful optimization in some cases, such as when you are using Hibernate.
+ * isolation - The degree to which this transaction is isolated from the work of other transactions.
+ * propagation - Typically, all code executed within a transaction scope will run in that transaction. However, you have the option of specifying the behavior in the event that a transactional method is executed when a transaction context already exists. For example, code can continue running in the existing transaction (the common case); or the existing transaction can be suspended and a new transaction created.
  * rollbackFor
  * noRollbackFor
 === State the default isolation and propagation settings ===
