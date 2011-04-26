@@ -16,7 +16,6 @@ Caused by: java.lang.IllegalStateException: CGLIB is required to process @Config
 === Maven Dependencies ===
 {{{
   <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <cglib.version>2.2</cglib.version>
   </properties>
   <dependencies>
@@ -28,8 +27,7 @@ Caused by: java.lang.IllegalStateException: CGLIB is required to process @Config
   </dependencies>
 }}}
 === NOTES ===
- * *Note*
-  * Beware that, in order for JavaConfig to work, you must include the CGLIB jar in your list of dependencies.
+ * Beware that, in order for JavaConfig to work, you must include the CGLIB jar in your list of dependencies.
  * There are a few restrictions due to the fact that CGLIB dynamically adds features at startup-time:
   * Configuration classes should not be final
   * They should have a constructor with no arguments
