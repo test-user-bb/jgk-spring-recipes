@@ -8,7 +8,7 @@
 === Write code using {{{JdbcTemplate}}} to pass parameters to a query ===
 === Know when to use each of the following callbacks and write code using them: ===
  * {{{RowMapper}}}
-  * Usage
+  * Usage: get an object
 {{{
 Username username = jdbcTemplate.queryForObject(
  "select username, password, password_reminder, interim_name, person_id, user_type from username where username = ?",
