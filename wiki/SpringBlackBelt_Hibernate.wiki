@@ -10,4 +10,4 @@
 
 ==== scanning for annotations ====
 
-==== isting each hbm file ====
+==== listing each hbm file ====
