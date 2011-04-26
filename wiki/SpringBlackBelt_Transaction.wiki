@@ -6,7 +6,7 @@
 === Write XML code to configure a JTA transaction manager ===
 === Write XML code to configure transactions using AOP ===
 === Know XML to enable @Transaction ===
-=== Understand how TransactionTemplate is used to rollback a transaction ===
+=== Understand how {{{TransactionTemplate}}} is used to rollback a transaction ===
 === Identify which exceptions cause a rollback by default ===
  * {{{RuntimeException}}}s
 ===  Understand main attributes for Transaction: ===
