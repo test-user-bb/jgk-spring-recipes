@@ -21,6 +21,7 @@
 === Write an Advice ===
 === Identify which Advice types can accomplish a task
 === Identify which Advice type is preferred when multiple can be used ===
+ *  recommend that you use the least powerful advice type that can implement the required behavior.
 === AOP: Configuration 2 questions ===
 ==== State the XML configuration required to enable scanning for @Aspect ====
 ==== Use code to completely configure aspects in XML ====
