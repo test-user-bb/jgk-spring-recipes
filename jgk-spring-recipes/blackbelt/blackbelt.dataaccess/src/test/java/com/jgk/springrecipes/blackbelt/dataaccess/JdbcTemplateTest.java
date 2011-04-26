@@ -20,8 +20,6 @@ import com.jgk.springrecipes.blackbelt.dataaccess.domain.UsernameRowMapper;
 
 public class JdbcTemplateTest extends DataAccessTestFixture {
 	
-	private boolean legalHost;
-	
 	@Autowired @Qualifier(value="usernameDao")
 	private UsernameDao usernameDao;
 	
@@ -102,20 +100,6 @@ public class JdbcTemplateTest extends DataAccessTestFixture {
 		return username;
 	}
 
-	@Before
-	public void checkHost() {
-		try {
-			String hostName = InetAddress.getLocalHost().getHostName();
-			String hostAddress = InetAddress.getLocalHost().getHostAddress();
-//			System.out.println("host name: " + hostName);
-//			System.out.println("host address: " + hostAddress);
-			legalHost=hostAddress.startsWith("192.168.6.");
-		} catch (UnknownHostException e) {
-			e.printStackTrace();
-		}
-		
-	}
-	
 	private String getDate_yyyyMMdd() {
 		SimpleDateFormat s = new SimpleDateFormat("yyyy/MM/dd");
 		return s.format(new Date());
