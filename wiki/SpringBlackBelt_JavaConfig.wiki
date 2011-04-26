@@ -13,3 +13,10 @@
 Caused by: java.lang.IllegalStateException: CGLIB is required to process @Configuration classes. Either add CGLIB to the classpath or remove the following @Configuration bean definitions: [myConfig]
 
 }}}
+
+=== NOTES ===
+ * *Note*
+  * Beware that, in order for JavaConfig to work, you must include the CGLIB jar in your list of dependencies.
+ * There are a few restrictions due to the fact that CGLIB dynamically adds features at startup-time:
+  * Configuration classes should not be final
+  * They should have a constructor with no arguments
