@@ -1,0 +1,30 @@
+#summary One-sentence summary of this page.
+
+== AOP ==
+=== Define AOP keywords ===
+ * Aspect
+ * Advice
+ * Pointcut
+ * Joinpoint
+=== Write basic pointcuts using ===
+execution()
+*
+..
++
+=== Identify which classes/methods match a provided pointcut ===
+=== List the five Advice types ===
+@Before
+@After
+@AfterReturning
+@AfterThrowing
+@Around
+=== Write an Advice ===
+=== Identify which Advice types can accomplish a task
+=== Identify which Advice type is preferred when multiple can be used ===
+=== AOP: Configuration 2 questions ===
+==== State the XML configuration required to enable scanning for @Aspect ====
+==== Use code to completely configure aspects in XML ====
+=== AOP: Proxies 2 questions ===
+==== Identify where proxies are created in the Spring lifecycle ====
+==== Know proxies share interface with object they wrap ====
+==== List limitations of Spring AOP when compared with AspectJ ====
