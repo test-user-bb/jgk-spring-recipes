@@ -52,6 +52,7 @@
 === Understand how {{{TransactionTemplate}}} is used to rollback a transaction ===
 === Identify which exceptions cause a rollback by default ===
  * {{{RuntimeException}}}s
+ * roll back is automatic only on unchecked exceptions
 ===  Understand main attributes for Transaction: ===
  * readOnly - read-only transaction can be used when your code reads but does not modify data. Read-only transactions can be a useful optimization in some cases, such as when you are using Hibernate.
  * isolation - The degree to which this transaction is isolated from the work of other transactions.
