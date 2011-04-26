@@ -13,6 +13,11 @@
  * {{{+}}}
  * {{{()}}} matches a method that takes no parameters
  * {{{(*,String)}}} matches a method taking two parameters, the first can be of any type, the second must be a String
+=== Format of an execution expression ===
+{{{
+execution(modifiers-pattern? ret-type-pattern declaring-type-pattern? name-pattern(param-pattern)
+          throws-pattern?)
+}}}
 === Identify which classes/methods match a provided pointcut ===
 === List the five Advice types ===
  * {{{@Before}}} - Advice that executes before a join point, but which does not have the ability to prevent execution flow proceeding to the join point (unless it throws an exception).
