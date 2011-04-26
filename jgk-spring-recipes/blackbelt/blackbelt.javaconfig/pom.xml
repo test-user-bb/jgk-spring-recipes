@@ -14,7 +14,13 @@
   <url>http://maven.apache.org</url>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <cglib.version>2.2</cglib.version>
   </properties>
-  <dependencies>
+	  <dependencies>
+	<dependency>
+		<groupId>cglib</groupId>
+		<artifactId>cglib-nodep</artifactId>
+		<version>${cglib.version}</version>
+	</dependency>
   </dependencies>
 </project>
