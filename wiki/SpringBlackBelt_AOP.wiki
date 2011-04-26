@@ -21,7 +21,8 @@
 === Write an Advice ===
 === Identify which Advice types can accomplish a task
 === Identify which Advice type is preferred when multiple can be used ===
- *  recommend that you use the least powerful advice type that can implement the required behavior.
+ * Recommend that you use the least powerful advice type that can implement the required behavior.
+ * Using the most specific advice type provides a simpler programming model with less potential for errors. For example, you do not need to invoke the proceed() method on the JoinPoint used for around advice, and hence cannot fail to invoke it.
 === AOP: Configuration 2 questions ===
 ==== State the XML configuration required to enable scanning for @Aspect ====
 ==== Use code to completely configure aspects in XML ====
