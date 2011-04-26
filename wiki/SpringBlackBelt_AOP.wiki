@@ -29,6 +29,19 @@
 	<aop:aspectj-autoproxy/>
 }}}
 ==== Use code to completely configure aspects in XML ====
+{{{
+	<aop:config>
+		<aop:aspect id="saveAndGetAspect" ref="anotherPctAspect">
+			<aop:pointcut id="savePointcut"
+				expression="execution(* com.jgk.springrecipes.aop.pct.*.save*(..))" />
+			<aop:pointcut id="getPointcut"
+				expression="execution(* com.jgk.springrecipes..*.get*(..))" />
+			<aop:before pointcut-ref="savePointcut" method="saveit" />	
+			<aop:before pointcut-ref="getPointcut" method="getit" />	
+		</aop:aspect>
+	</aop:config>
+
+}}}
 === AOP: Proxies 2 questions ===
 ==== Identify where proxies are created in the Spring lifecycle ====
 ==== Know proxies share interface with object they wrap ====
