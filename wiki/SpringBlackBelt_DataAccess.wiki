@@ -1,7 +1,7 @@
 #summary data access
 
 == [http://static.springsource.org/spring/docs/3.0.x/spring-framework-reference/html/spring-data-tier.html Spring Data Access]  ==
-=== List advantages of DataAccessException over SQLException ===
+=== List advantages of {{{DataAccessException}}} over SQLException ===
  * allows you to handle most persistence exceptions, which are non-recoverable, only in the appropriate layers, without annoying boilerplate catches, throws, and exception declarations. You can still trap and handle exceptions as necessary. Remember that JDBC exceptions (including DB-specific dialects) are also converted to the same hierarchy, meaning that you can perform some operations with JDBC within a consistent programming model.
 === Write XML to define a datasource using a JNDI reference ===
  * New way with jee namespace:
