@@ -11,3 +11,9 @@
 ==== scanning for annotations ====
 
 ==== listing each hbm file ====
+ * Usage:
+{{{
+}}}
+ * Mapping file:  Username.hbm.xml
+{{{
+}}}
