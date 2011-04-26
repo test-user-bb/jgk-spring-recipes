@@ -7,9 +7,9 @@
  * Pointcut
  * Joinpoint
 === Write basic pointcuts using ===
-execution()
-*
-..
+ * {{{execution()}}}
+ * {{{*}}}
+ * {{{..}}}
 +
 === Identify which classes/methods match a provided pointcut ===
 === List the five Advice types ===
