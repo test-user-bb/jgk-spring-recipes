@@ -6,7 +6,7 @@
  * Advice - action taken by an aspect at a particular join point.
  * Pointcut - a predicate that matches join points.
  * Joinpoint - a point during the execution of a program, such as the execution of a method or the handling of an exception.
-=== Write basic pointcuts using ===
+=== Write basic pointcuts using [http://www.eclipse.org/aspectj/doc/released/progguide/semantics-pointcuts.html HELP] ===
  * {{{execution()}}}
  * {{{*}}} matches a method taking one parameter of any type
  * {{{..}}} matches any number of parameters (zero or more)
