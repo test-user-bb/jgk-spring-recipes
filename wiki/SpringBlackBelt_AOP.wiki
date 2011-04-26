@@ -26,7 +26,7 @@ execution(modifiers-pattern? ret-type-pattern declaring-type-pattern? name-patte
  * {{{@AfterThrowing}}} - Advice to be executed if a method exits by throwing an exception.
  * {{{@Around}}} - Advice that surrounds a join point such as a method invocation. This is the most powerful kind of advice. Around advice can perform custom behavior before and after the method invocation. It is also responsible for choosing whether to proceed to the join point or to shortcut the advised method execution by returning its own return value or throwing an exception.
 === Write an Advice ===
-=== Identify which Advice types can accomplish a task
+=== Identify which Advice types can accomplish a task ===
 === Identify which Advice type is preferred when multiple can be used ===
  * Recommend that you use the least powerful advice type that can implement the required behavior.
  * Using the most specific advice type provides a simpler programming model with less potential for errors. For example, you do not need to invoke the proceed() method on the JoinPoint used for around advice, and hence cannot fail to invoke it.
