@@ -1,6 +1,6 @@
 #summary One-sentence summary of this page.
 
-== AOP ==
+== [http://static.springsource.org/spring/docs/3.0.x/spring-framework-reference/html/aop.html Spring AOP] ==
 === Define AOP keywords ===
  * Aspect
  * Advice
@@ -10,7 +10,7 @@
  * {{{execution()}}}
  * {{{*}}}
  * {{{..}}}
-+
+ * {{{+}}}
 === Identify which classes/methods match a provided pointcut ===
 === List the five Advice types ===
 @Before
