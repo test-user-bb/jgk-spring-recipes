@@ -13,11 +13,11 @@
  * {{{+}}}
 === Identify which classes/methods match a provided pointcut ===
 === List the five Advice types ===
-@Before
-@After
-@AfterReturning
-@AfterThrowing
-@Around
+ * @Before
+ * @After
+ * @AfterReturning
+ * @AfterThrowing
+ * @Around
 === Write an Advice ===
 === Identify which Advice types can accomplish a task
 === Identify which Advice type is preferred when multiple can be used ===
