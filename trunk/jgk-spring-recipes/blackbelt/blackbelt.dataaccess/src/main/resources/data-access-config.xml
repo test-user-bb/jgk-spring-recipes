@@ -28,8 +28,14 @@
 	</bean>
 	<bean id="myDefaultPrefixNamingStrategy" class="org.hibernate.cfg.DefaultNamingStrategy" />
 	<bean id="mySessionFactory"
-		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
-		<property name="dataSource" ref="dataSource" />
+		class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
+<!-- 		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+ -->		<property name="dataSource" ref="dataSource" />
+ 		<property name="annotatedClasses">
+ 			<list>
+ 				<value>com.jgk.springrecipes.blackbelt.dataaccess.domain.LegoBrick</value>
+ 			</list>
+ 		</property>
 		<property name="mappingDirectoryLocations">
 			<list>
 				<value>${hibernate-mappings-dir}</value>
