@@ -1,7 +1,7 @@
 #summary data access using Hibernate
 
 == Hibernate 1 question ==
-=== Write XML to configure a SessionFactoryBean in the following ways: ===
+=== Write XML to configure a {{{SessionFactoryBean}}} in the following ways: ===
  * listing each entity
  * scanning for annotations
  * listing each hbm file
