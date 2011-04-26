@@ -1,9 +1,11 @@
 #summary jdbcTemplate
 
-== {{{JdbcTemplate}}} 3 questions ==
+== [http://static.springsource.org/spring/docs/3.0.x/javadoc-api/org/springframework/jdbc/core/JdbcTemplate.html {{{JdbcTemplate}}}] 3 questions ==
 === State whether {{{JdbcTemplate}}} throws checked or unchecked exceptions ===
+ * unchecked {{{DataAccessException}}}
 === State whether you throw checked or unchecked exceptions in the callback methods ===
 === Know when to use {{{SimpleJdbcTemplate}}} and {{{JdbcTemplate}}} ===
+ * {{{SimpleJdbcTemplate}}} class wraps the classic {{{JdbcTemplate}}} and leverages Java 5 language features such as varargs and autoboxing.
 === Write code using {{{JdbcTemplate}}} to write select and update queries ===
 === Write code using {{{JdbcTemplate}}} to pass parameters to a query ===
 === Know when to use each of the following callbacks and write code using them: ===
