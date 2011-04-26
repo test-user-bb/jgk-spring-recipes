@@ -18,7 +18,7 @@ Username username = jdbcTemplate.queryForObject(
 return username;
 
 }}}
-  * RowMapper
+  * {{{RowMapper}}}
 {{{
 public class UsernameRowMapper implements RowMapper<Username> {
 
