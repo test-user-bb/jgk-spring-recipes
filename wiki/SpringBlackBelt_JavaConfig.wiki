@@ -7,3 +7,9 @@
  * Annotating a class with the @Configuration indicates that the class can be used by the Spring IoC container as a source of bean definitions.
 === Write a method using {{{@Bean}}} === 
 === Write code using one {{{@Bean}}} method that calls another {{{@Bean}}} method === 
+
+=== What if you do this on a class? ===
+{{{
+Caused by: java.lang.IllegalStateException: CGLIB is required to process @Configuration classes. Either add CGLIB to the classpath or remove the following @Configuration bean definitions: [myConfig]
+
+}}}
