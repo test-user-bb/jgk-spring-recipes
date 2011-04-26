@@ -1,1 +1,6 @@
 #summary data access
+
+== Data Access and Transactions ==
+=== List advantages of DataAccessException over SQLException ===
+=== Write XML to define a datasource using a JNDI reference ===
+=== Write XML to define a datasource using a standalone connection pool ===
