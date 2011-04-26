@@ -152,8 +152,7 @@ equality for these methods must be consistent with the database equality for the
 to which the key is mapped.
  * Embeddable classes are not annotated as Entity. Embeddable classes must be annotated as
 Embeddable or denoted in the XML descriptor as such.
- * Relationships among entities may be one-to-one, one-to-many, many-to-one, or many-to-many. Relationships
-are polymorphic.
+ * Relationships among entities may be one-to-one, one-to-many, many-to-one, or many-to-many. Relationships are polymorphic.
  * Relationships may be bidirectional or unidirectional. A bidirectional relationship has both an owning
 side and an inverse side. A unidirectional relationship has only an owning side. The owning side of a
 relationship determines the updates to the relationship in the database.
