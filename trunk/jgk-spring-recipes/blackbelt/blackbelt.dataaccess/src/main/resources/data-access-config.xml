@@ -18,6 +18,24 @@
         <property name="username" value="${jdbc.username}"/>
         <property name="password" value="${jdbc.password}"/>
     </bean>
+    
+  	<bean id="myDefaultPrefixNamingStrategy" class="org.hibernate.cfg.DefaultNamingStrategy"/>
+ <bean id="mySessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+    <property name="dataSource" ref="dataSource"/>
+    <property name="mappingResources">
+      <list>
+      		<value>${hibernate-mappings-dir}/Username.hbm.xml</value>
+      </list>
+    </property>
+	<property name="namingStrategy">
+		<ref local="myDefaultPrefixNamingStrategy" />
+	</property>
+    <property name="hibernateProperties">
+    	<props>
+    		<prop key="hibernate.dialect">${hibernate.dialect}</prop>
+    	</props>
+    </property>
+  </bean>   
 
 	<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
 		<constructor-arg ref="dataSource"/>
