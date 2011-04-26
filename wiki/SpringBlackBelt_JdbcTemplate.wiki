@@ -60,6 +60,16 @@ public class UsernameRowMapper implements RowMapper<Username> {
 
 }}}
  * {{{ResultSetExtractor}}}
+  * Usage:
+{{{
+	private List<Username> getUsernameObjectsWithResultSetExtractor() {
+		String sql = "select username, password, password_reminder, interim_name, person_id, user_type from username ";
+		return jdbcTemplate.query(sql, new UsernameResultSetExtractor());
+		
+	}
+
+}}}
+  * Implementation:
 {{{
 
 public class UsernameResultSetExtractor implements ResultSetExtractor<List<Username>> {
