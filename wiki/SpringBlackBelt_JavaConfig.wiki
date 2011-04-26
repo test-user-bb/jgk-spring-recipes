@@ -1,0 +1,7 @@
+#summary Java-based container configuration
+
+== [http://static.springsource.org/spring/docs/3.0.x/spring-framework-reference/html/beans.html#beans-java ]JavaConfig 2 questions ==
+=== Identify the purpose of the {{{@Bean}}} annotation === 
+=== Identify the purpose of the {{{@Configuration}}} annotation === 
+=== Write a method using {{{@Bean}}} === 
+=== Write code using one {{{@Bean}}} method that calls another {{{@Bean}}} method === 
