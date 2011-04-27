@@ -5,6 +5,9 @@
 
 == General Configuration 1 question ==
 === State the goal of a {{{ViewResolver}}}, {{{DispatcherServlet}}} and {{{HandlerMapping}}} ===
+ * {{{ViewResolver}}} - provides a mapping between view names and actual views. The View interface addresses the preparation of the request and hands the request over to one of the view technologies.
+ * {{{DispatcherServlet}}} -
+ * {{{HandlerMapping}}} -
 === Understand the difference between the web and main {{{ApplicationContext}}} ===
 == Controllers 2 questions ==
 === Write web.xml code to setup {{{DispatcherServlet}}} and {{{ContextLoaderListener}}} ===
