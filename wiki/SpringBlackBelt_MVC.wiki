@@ -51,9 +51,9 @@
 </web-app>
 }}}
 === Know the usage of {{{@Controller}}} and {{{@RequestMapping}}} ===
- * {{{@Controller}}} -
+ * {{{@Controller}}} - indicates that a particular class serves the role of a controller.
  * {{{@RequestMapping}}} -
-
+_Note: To enable autodetection of such annotated controllers, you add component scanning to your configuration._ {{{<context:component-scan base-package="com.jgk.springrecipes.blackbelt.mvc.controllers"/> }}}
 === State the purpose of the return value of a {{{@RequestMapping}}} method ===
  * {{{@RequestMapping}}} -
 === Identify the main parameter types that can be passed to a {{{@RequestMapping}}} method ===
