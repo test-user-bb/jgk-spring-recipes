@@ -14,7 +14,29 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(value="classpath:/DataAccessTest-config.xml")
 abstract public class DataAccessTestFixture {
-	protected boolean legalHost;
+	protected static boolean legalHost;
+	 
+	static {
+		try {
+			String hostName = InetAddress.getLocalHost().getHostName();
+			String hostAddress = InetAddress.getLocalHost().getHostAddress();
+//			System.out.println("host name: " + hostName);
+//			System.out.println("host address: " + hostAddress);
+			legalHost=hostAddress.startsWith("192.168.6.");
+			if(!legalHost) {
+				// use inmemory settings
+				
+				System.setProperty("jdbc.driverClassName", "org.hsqldb.jdbcDriver");// :oracle.jdbc.OracleDriver
+				System.setProperty("jdbc.url", "jdbc:hsqldb:mem:JgkSpringRecipesInMemoryDatabase");// :jdbc:oracle:thin:@lugnut-ora.gs.local:1521:clutch
+				System.setProperty("jdbc.username", "sa");// :emtest
+				System.setProperty("jdbc.password", "");// emtest
+				System.setProperty("hibernate.dialect", "org.hibernate.dialect.HSQLDialect");// =org.hibernate.dialect.Oracle10gDialect
+			}
+		} catch (UnknownHostException e) {
+			e.printStackTrace();
+		}
+		
+	}
 	
 
 	@Autowired
@@ -26,15 +48,15 @@ abstract public class DataAccessTestFixture {
 	
 	@Before
 	public void checkHost() {
-		try {
-			String hostName = InetAddress.getLocalHost().getHostName();
-			String hostAddress = InetAddress.getLocalHost().getHostAddress();
-//			System.out.println("host name: " + hostName);
-//			System.out.println("host address: " + hostAddress);
-			legalHost=hostAddress.startsWith("192.168.6.");
-		} catch (UnknownHostException e) {
-			e.printStackTrace();
-		}
+//		try {
+//			String hostName = InetAddress.getLocalHost().getHostName();
+//			String hostAddress = InetAddress.getLocalHost().getHostAddress();
+////			System.out.println("host name: " + hostName);
+////			System.out.println("host address: " + hostAddress);
+//			legalHost=hostAddress.startsWith("192.168.6.");
+//		} catch (UnknownHostException e) {
+//			e.printStackTrace();
+//		}
 		
 	}
 	
