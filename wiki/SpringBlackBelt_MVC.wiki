@@ -86,5 +86,6 @@ public String findOwner(@PathVariable String ownerId, Model model) {
   return "displayOwner"
 }}}
 === Know the use of the {{{RestTemplate}}} ===
+ * {{{RestTemplate}}} is the core class for client-side access to *RESTful* services.
 === Write code using {{{RestTemplate}}} ===
 === Know the purpose of {{{@ResponseStatus}}} and {{{@ExceptionHandler}}} ===
