@@ -72,10 +72,10 @@ _Note: To enable autodetection of such annotated controllers, you add component 
 }}}
 == REST 2 questions ==
 === Identify the proper scenario for using ===
- * GET
- * POST
- * PUT
- * DELETE
+ * GET - read
+ * POST - update/change
+ * PUT - create
+ * DELETE - delete/remove
 === Write code using {{{@PathVariable}}} ===
  * {{{@PathVariable}}} method parameter annotation to indicate that a method parameter should be bound to the value of a URI template variable.
 {{{
