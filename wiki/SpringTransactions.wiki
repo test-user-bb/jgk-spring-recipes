@@ -51,5 +51,9 @@ Place Spring Transaction stuff here...
 }}}
  * When using the @Transactional annotation by itself without any parameters, the propagation mode is set to REQUIRED, the read-only flag is set to false, the transaction isolation level is set to the database default (usually READ_COMMITTED), and the transaction will not roll back on a checked exception.
 
+== {{{@Transactional}}} properties ==
+|| Property || Type || Description ||
+|| value || String || Optional.  Name of the transaction manager to be used ||
+
 == Resources ==
  * [http://www.ibm.com/developerworks/java/library/j-ts1.html IBM Transaction Pitfalls]
