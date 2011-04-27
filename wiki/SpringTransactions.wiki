@@ -54,6 +54,14 @@ Place Spring Transaction stuff here...
 == {{{@Transactional}}} properties ==
 || Property || Type || Description ||
 || value || String || Optional.  Name of the transaction manager to be used ||
+|| propagation || enum: Propagation ||   ||
+|| isolation || enum: Isolation ||   ||
+|| readOnly || boolean ||   ||
+|| timeout || int (seconds) ||   ||
+|| rollbackFor || Array of Class objects, which must be derived fromThrowable. || Optional array of exception classes that must cause rollback.  ||
+|| rollbackForClassname || Array of String class names. Classes must be derived from Throwable. || Optional array of names of exception classes that mustcause rollback.  ||
+|| noRollbackFor || Array of Class objects, which must be derived fromThrowable. || Optional array of exception classes that must not cause rollback.  ||
+|| noRollbackForClassname || Array of String class names, which must be derived fromThrowable. || Optional array of names of exception classes that must not cause rollback.  ||
 
 == Resources ==
  * [http://www.ibm.com/developerworks/java/library/j-ts1.html IBM Transaction Pitfalls]
