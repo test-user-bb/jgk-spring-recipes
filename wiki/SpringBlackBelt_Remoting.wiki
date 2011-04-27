@@ -1,4 +1,4 @@
-#summary One-sentence summary of this page.
+#summary remoting (Advanced Topic)
 
 == Remoting 2 questions ==
 === Explain the benefits of Spring Remoting over direct RMI ===
