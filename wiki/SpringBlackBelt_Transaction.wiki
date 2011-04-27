@@ -117,8 +117,8 @@
  * rollbackFor
  * noRollbackFor
 === State the default isolation and propagation settings ===
- * Default propagation:  REQUIRED
- * Isolation level is DEFAULT.
+ * Default propagation:  REQUIRED (PROPAGATION_REQUIRED)
+ * Isolation level is DEFAULT (ISOLATION_DEFAULT)
  * Transaction is read/write.
  * Transaction timeout defaults to the default timeout of the underlying transaction system, or none if timeouts are not supported.
  * Any {{{RuntimeException}}} triggers rollback, and any checked Exception does not.
