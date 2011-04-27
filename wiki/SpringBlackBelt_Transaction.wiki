@@ -122,5 +122,7 @@
  * Transaction is read/write.
  * Transaction timeout defaults to the default timeout of the underlying transaction system, or none if timeouts are not supported.
  * Any {{{RuntimeException}}} triggers rollback, and any checked Exception does not.
-=== Know the difference between PROPAGATION_REQUIRED and PROPAGATIONS_REQUIRES_NEW ===
+=== Know the difference between PROPAGATION_REQUIRED and PROPAGATION_REQUIRES_NEW ===
+ * PROPAGATION_REQUIRED
+ * PROPAGATION_REQUIRES_NEW - uses a completely independent transaction for each affected transaction scope. In that case, the underlying physical transactions are different and hence can commit or roll back independently, with an outer transaction not affected by an inner transaction's rollback status.
 === Know the difference between READ_COMMITTED and READ_UNCOMMITTED ===
