@@ -106,6 +106,7 @@
 <tx:annotation-driven transaction-manager="transactionManager"/>
 }}}
 === Understand how {{{TransactionTemplate}}} is used to rollback a transaction ===
+ * Code within the callback can roll the transaction back by calling the setRollbackOnly() method on the supplied {{{TransactionStatus}}}:
 {{{
 transactionTemplate.execute(new TransactionCallbackWithoutResult() {
 
