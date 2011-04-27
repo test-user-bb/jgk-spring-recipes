@@ -27,5 +27,6 @@
 </bean>
 }}}
 === Write XML code to configure the RMI Service Exporter and RMI Proxy Generator ===
+_NOTE: see previous section._
 === Identify the difference between the RMI Service Exporter, HttpInvoker and Hessian/Burlap ===
 === Know whether {{{HttpInvoker}}} requires a web server on the server or client side ===
