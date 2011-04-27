@@ -11,10 +11,54 @@
 === Understand the difference between the web and main {{{ApplicationContext}}} ===
 == Controllers 2 questions ==
 === Write web.xml code to setup {{{DispatcherServlet}}} and {{{ContextLoaderListener}}} ===
+ * web.xml:
+{{{
+<?xml version="1.0" encoding="ASCII"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	version="2.5">
+	<display-name>blackbelt-mvc</display-name>
+	
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>/WEB-INF/blackbeltmvc-webapp-config.xml</param-value>
+	</context-param>
+	
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+	
+	<servlet>
+		<servlet-name>blackbeltmvc</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>blackbeltmvc</servlet-name>
+		<url-pattern>/blackbeltmvc/*</url-pattern>
+	</servlet-mapping>
+
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>
+}}}
 === Know the usage of {{{@Controller}}} and {{{@RequestMapping}}} ===
+ * {{{@Controller}}} -
+ * {{{@RequestMapping}}} -
+
 === State the purpose of the return value of a {{{@RequestMapping}}} method ===
+ * {{{@RequestMapping}}} -
 === Identify the main parameter types that can be passed to a {{{@RequestMapping}}} method ===
 === State the goal of {{{@RequestParam}}} ===
+ * {{{@RequestParam}}} -
 == REST 2 questions ==
 === Identify the proper scenario for using ===
  * GET
