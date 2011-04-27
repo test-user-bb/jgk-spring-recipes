@@ -4,7 +4,7 @@
 === Define the Spring security filter chain ===
 === Write XML code to configure Spring security intercept URLs ===
 === Write XML code to configure method level security ===
-=== Write code using @Secured and @RolesAllowed ===
+=== Write code using {{{@Secured}}} and {{{@RolesAllowed}}} ===
 === List authentication manager types ===
 === Know whether any authenticate managers support password encoding ===
 === State the tag used in a JSP to see if authorized to certain role ===
