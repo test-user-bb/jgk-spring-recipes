@@ -52,13 +52,24 @@
 }}}
 === Know the usage of {{{@Controller}}} and {{{@RequestMapping}}} ===
  * {{{@Controller}}} - indicates that a particular class serves the role of a controller.
- * {{{@RequestMapping}}} -
+ * {{{@RequestMapping}}} - used to map URLs such as /appointments onto an entire class or a particular handler method. Typically the class-level annotation maps a specific request path (or path pattern) onto a form controller, with additional method-level annotations narrowing the primary mapping for a specific HTTP method request method ("GET"/"POST") or specific HTTP request parameters.
 _Note: To enable autodetection of such annotated controllers, you add component scanning to your configuration._ {{{<context:component-scan base-package="com.jgk.springrecipes.blackbelt.mvc.controllers"/> }}}
 === State the purpose of the return value of a {{{@RequestMapping}}} method ===
  * {{{@RequestMapping}}} -
 === Identify the main parameter types that can be passed to a {{{@RequestMapping}}} method ===
 === State the goal of {{{@RequestParam}}} ===
- * {{{@RequestParam}}} - used to map URLs such as /appointments onto an entire class or a particular handler method. Typically the class-level annotation maps a specific request path (or path pattern) onto a form controller, with additional method-level annotations narrowing the primary mapping for a specific HTTP method request method ("GET"/"POST") or specific HTTP request parameters.
+ * {{{@RequestParam}}} - parameters for access to specific Servlet request parameters. Parameter values are converted to the declared method argument type.
+{{{
+	/**
+	 * http://localhost:8080/blackbelt.mvc/blackbeltmvc/withparams?name=Jed&age=52
+	 */
+	@RequestMapping(value="/withparams")
+	public String withparams( @RequestParam Integer age, @RequestParam String name ) {
+		System.out.println("Name: " + name +", age="+age);
+		return "redirect:http://java.sun.com";
+	}
+
+}}}
 == REST 2 questions ==
 === Identify the proper scenario for using ===
  * GET
@@ -66,6 +77,14 @@ _Note: To enable autodetection of such annotated controllers, you add component 
  * PUT
  * DELETE
 === Write code using {{{@PathVariable}}} ===
+ * {{{@PathVariable}}} method parameter annotation to indicate that a method parameter should be bound to the value of a URI template variable.
+{{{
+@RequestMapping(value="/owners/{ownerId}", method=RequestMethod.GET)
+public String findOwner(@PathVariable String ownerId, Model model) {
+  Owner owner = ownerService.findOwner(ownerId);  
+  model.addAttribute("owner", owner);  
+  return "displayOwner"
+}}}
 === Know the use of the {{{RestTemplate}}} ===
 === Write code using {{{RestTemplate}}} ===
 === Know the purpose of {{{@ResponseStatus}}} and {{{@ExceptionHandler}}} ===
