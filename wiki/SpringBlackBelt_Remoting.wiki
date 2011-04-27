@@ -29,4 +29,6 @@
 === Write XML code to configure the RMI Service Exporter and RMI Proxy Generator ===
 _NOTE: see previous section._
 === Identify the difference between the RMI Service Exporter, HttpInvoker and Hessian/Burlap ===
+ * Spring HTTP invokers use the standard Java serialization mechanism to expose services through HTTP.
+ * Hessian offers a binary HTTP-based remoting protocol. It is developed by Caucho and more information about Hessian itself can be found at [http://www.caucho.com CAUCHO].
 === Know whether {{{HttpInvoker}}} requires a web server on the server or client side ===
