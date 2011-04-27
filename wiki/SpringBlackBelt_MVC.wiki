@@ -104,3 +104,17 @@ public String findOwner(@PathVariable String ownerId, Model model) {
 
 }}}
 === Know the purpose of {{{@ResponseStatus}}} and {{{@ExceptionHandler}}} ===
+ * {{{@ResponseStatus}}} - Marks a method or exception class with the status code and reason that should be returned. The status code is applied to the HTTP response when the handler method is invoked, or whenever said exception is thrown.
+ * {{{@ExceptionHandler}}} - use the @ExceptionHandler method annotation within a controller to specify which method is invoked when an exception of a specific type is thrown during the execution of controller methods.
+{{{
+@Controller
+public class SimpleController {
+
+  // other controller method omitted
+
+  @ExceptionHandler(IOException.class)
+  public String handleIOException(IOException ex, HttpServletRequest request) {
+    return ClassUtils.getShortName(ex.getClass());
+  }
+}
+}}}
