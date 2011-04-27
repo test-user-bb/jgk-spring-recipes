@@ -1,5 +1,5 @@
 #summary spring security
-= [http://static.springsource.org/spring-security/site/ Spring Security] =
+= [http://static.springsource.org/spring-security/site/ Spring Security] | [http://static.springsource.org/spring-security/site/reference.html ref] | [http://static.springsource.org/spring-security/site/docs/3.0.x/reference/springsecurity.html HTML] | [http://static.springsource.org/spring-security/site/docs/3.0.x/apidocs/index.html javadoc/API] =
 == Security 2 questions ==
 === Define the Spring security filter chain ===
 === Write XML code to configure Spring security intercept URLs ===
