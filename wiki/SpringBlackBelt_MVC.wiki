@@ -88,4 +88,19 @@ public String findOwner(@PathVariable String ownerId, Model model) {
 === Know the use of the {{{RestTemplate}}} ===
  * {{{RestTemplate}}} is the core class for client-side access to *RESTful* services.
 === Write code using {{{RestTemplate}}} ===
+{{{
+	@RequestMapping(value="/cnn")
+	public @ResponseBody String cnn() {
+		RestTemplate rt = new RestTemplate();
+		URI uri=null;
+		try {
+			uri = new URI("http://cnn.com");
+		} catch (URISyntaxException e) {
+			e.printStackTrace();
+		}
+		String res = rt.getForObject(uri, String.class);
+		return res;
+	}
+
+}}}
 === Know the purpose of {{{@ResponseStatus}}} and {{{@ExceptionHandler}}} ===
