@@ -140,3 +140,5 @@ transactionTemplate.execute(new TransactionCallbackWithoutResult() {
  * PROPAGATION_REQUIRED
  * PROPAGATION_REQUIRES_NEW - uses a completely independent transaction for each affected transaction scope. In that case, the underlying physical transactions are different and hence can commit or roll back independently, with an outer transaction not affected by an inner transaction's rollback status.
 === Know the difference between READ_COMMITTED and READ_UNCOMMITTED ===
+ * READ_COMMITTED - dirty reads are prevented; non-repeatable reads and phantom reads can occur.
+ * READ_UNCOMMITTED - dirty reads, non-repeatable reads and phantom reads can occur.
