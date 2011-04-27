@@ -8,3 +8,9 @@
 === List authentication manager types ===
 === Know whether any authenticate managers support password encoding ===
 === State the tag used in a JSP to see if authorized to certain role ===
+{{{
+<%@ taglib prefix="security" uri="http://www.springframework.org/security/tags" %>
+<security:authorize access="hasRole('ROLE_SUPERVISOR')">
+   You have "ROLE_SUPERVISOR" (this text is surrounded by &lt;security:authorize&gt; tags).
+</security:authorize>
+}}}
