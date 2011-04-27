@@ -106,6 +106,19 @@
 <tx:annotation-driven transaction-manager="transactionManager"/>
 }}}
 === Understand how {{{TransactionTemplate}}} is used to rollback a transaction ===
+{{{
+transactionTemplate.execute(new TransactionCallbackWithoutResult() {
+
+  protected void doInTransactionWithoutResult(TransactionStatus status) {
+    try {
+      updateOperation1();
+      updateOperation2();
+    } catch (SomeBusinessExeption ex) {
+      status.setRollbackOnly();
+    }
+  }
+});
+}}}
 === Identify which exceptions cause a rollback by default ===
  * {{{RuntimeException}}}s
  * roll back is automatic only on unchecked exceptions
