@@ -83,6 +83,7 @@ public class SomeController {
 
 </beans>
 }}}
+ * {{{mvc:annotation-driven}}} - This tag registers the DefaultAnnotationHandlerMapping and AnnotationMethodHandlerAdapter beans that are required for Spring MVC to dispatch requests to @Controllers.
 == Pieces of the Spring MVC Puzzle ==
  * DispatcherServlet
  * Handlers
