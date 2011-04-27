@@ -58,7 +58,7 @@ _Note: To enable autodetection of such annotated controllers, you add component 
  * {{{@RequestMapping}}} -
 === Identify the main parameter types that can be passed to a {{{@RequestMapping}}} method ===
 === State the goal of {{{@RequestParam}}} ===
- * {{{@RequestParam}}} -
+ * {{{@RequestParam}}} - used to map URLs such as /appointments onto an entire class or a particular handler method. Typically the class-level annotation maps a specific request path (or path pattern) onto a form controller, with additional method-level annotations narrowing the primary mapping for a specific HTTP method request method ("GET"/"POST") or specific HTTP request parameters.
 == REST 2 questions ==
 === Identify the proper scenario for using ===
  * GET
