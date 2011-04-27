@@ -1,3 +1,24 @@
 #summary One-sentence summary of this page.
 
 = [http://static.springsource.org/spring/docs/3.0.x/spring-framework-reference/html/mvc.html Spring MVC] =
+
+
+== General Configuration 1 question ==
+=== State the goal of a {{{ViewResolver}}}, {{{DispatcherServlet}}} and {{{HandlerMapping}}} ===
+=== Understand the difference between the web and main {{{ApplicationContext}}} ===
+== Controllers 2 questions ==
+=== Write web.xml code to setup {{{DispatcherServlet}}} and {{{ContextLoaderListener}}} ===
+=== Know the usage of {{{@Controller}}} and {{{@RequestMapping}}} ===
+=== State the purpose of the return value of a {{{@RequestMapping}}} method ===
+=== Identify the main parameter types that can be passed to a {{{@RequestMapping}}} method ===
+=== State the goal of {{{@RequestParam}}} ===
+== REST 2 questions ==
+=== Identify the proper scenario for using ===
+ * GET
+ * POST
+ * PUT
+ * DELETE
+=== Write code using {{{@PathVariable}}} ===
+=== Know the use of the {{{RestTemplate}}} ===
+=== Write code using {{{RestTemplate}}} ===
+=== Know the purpose of {{{@ResponseStatus}}} and {{{@ExceptionHandler}}} ===
