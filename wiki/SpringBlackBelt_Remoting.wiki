@@ -32,3 +32,4 @@ _NOTE: see previous section._
  * Spring HTTP invokers use the standard Java serialization mechanism to expose services through HTTP.
  * Hessian offers a binary HTTP-based remoting protocol. It is developed by Caucho and more information about Hessian itself can be found at [http://www.caucho.com CAUCHO].
 === Know whether {{{HttpInvoker}}} requires a web server on the server or client side ===
+ * For the client it doesn't matter, the server has to be a {{{Web Server}}} (i.e. tomcat, jetty or the like).
