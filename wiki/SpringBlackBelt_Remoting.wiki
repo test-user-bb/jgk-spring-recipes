@@ -1,5 +1,5 @@
 #summary remoting (Advanced Topic)
-
+= [http://static.springsource.org/spring/docs/3.0.x/spring-framework-reference/html/remoting.html Spring Remoting] =
 == Remoting 2 questions ==
 === Explain the benefits of Spring Remoting over direct RMI ===
 === Know the goal of the RMI Service Exporter and RMI Proxy Generator ===
