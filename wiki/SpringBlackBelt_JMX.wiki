@@ -20,6 +20,10 @@
  </bean>
 }}}
 === Write XML code to register an existing MBean with the MBeanServer ===
+{{{
+<context:mbean-export/>
+}}}
+
 === Know purpose of {{{@ManagedResource}}}, {{{@ManagedOperation}}} and {{{@ManagedAttribute}}} ===
  * {{{@ManagedResource}}} - marks a bean for export to JMX.
  * {{{@ManagedOperation}}} - Each method you wish to expose as an operation must be marked with the {{{@ManagedOperation}}} annotation.
