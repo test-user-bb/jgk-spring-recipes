@@ -10,7 +10,7 @@
  * 50 multiple-choice
  * Time:  90 minutes
  * Passing score: 76% (38 of 50 correct)
- * Test Series: CoreSpringV3.0 Core Spring 3.0 Certification - English (ENU)
+ * Test Series: {{{CoreSpringV3.0 Core Spring 3.0 Certification - English (ENU)}}}
  * $US 150.00
 
 == Exam Locations ==
