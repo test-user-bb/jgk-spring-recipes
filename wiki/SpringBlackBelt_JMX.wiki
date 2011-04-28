@@ -9,6 +9,16 @@
 <context:mbean-export/>
 }}}
 === Write XML code to export a POJO as an MBean ===
+{{{
+ <bean id="someService" class="com.jgk.springrecipes.jmx.services.SomeServiceImpl"/>
+ <bean class="org.springframework.jmx.export.MBeanExporter">
+   <property name="beans">
+      <map>
+          <entry key="service:name=someService" value-ref="someService"/>
+      </map>
+   </property>
+ </bean>
+}}}
 === Write XML code to register an existing MBean with the MBeanServer ===
 === Know purpose of {{{@ManagedResource}}}, {{{@ManagedOperation}}} and {{{@ManagedAttribute}}} ===
  * {{{@ManagedResource}}} - marks a bean for export to JMX.
