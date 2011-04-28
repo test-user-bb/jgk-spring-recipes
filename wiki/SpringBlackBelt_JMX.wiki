@@ -1,10 +1,30 @@
-#summary One-sentence summary of this page.
+#summary spring JMX
+= [http://static.springsource.org/spring/docs/3.0.x/spring-framework-reference/html/jmx.html Spring JMX] =
 
 == JMX 2 questions ==
 === Know the role of the {{{MBeanExporter}}} ===
+ * core class in Spring's JMX framework is the {{{MBeanExporter}}}. This class is responsible for taking your Spring beans and registering them with a JMX {{{MBeanServer}}}.
 === Write XML code to export a POJO as an MBean ===
 === Write XML code to register an existing MBean with the MBeanServer ===
 === Know purpose of {{{@ManagedResource}}}, {{{@ManagedOperation}}} and {{{@ManagedAttribute}}} ===
+ * {{{@ManagedResource}}} -
+ * {{{@ManagedOperation}}} -
+ * {{{@ManagedAttribute}}} -
+ * Sample:
+{{{
+@ManagedResource(description="some desc of JMX mbean")
+public class MyBeanImpl implements MyBean {
+  @ManagedAttribute(description="some desc")
+  public int getSomeInfoAboutTheBean() {
+     // ...
+     return 3;
+  }
+ @ManagedOperation(description="more descriptive info here")
+ public void dosomething() {
+    // code to do something
+ }
+}
+}}}
 === XML to create {{{MBeanServer}}} ===
  * Namespace:
 {{{
