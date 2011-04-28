@@ -35,11 +35,13 @@ public class JdbcTemplateTest extends DataAccessTestFixture {
 	
 	@Test
 	public void testUsernameDao() {
-		List<Username> u = usernameDao.findAll();
-		for (Username username : u) {
-			System.out.println(username);
+		if(legalHost) {
+			List<Username> u = usernameDao.findAll();
+			for (Username username : u) {
+				System.out.println(username);
+			}
+			usernameRepository.findAll();
 		}
-		usernameRepository.findAll();
 	}
 	
 	@Test
