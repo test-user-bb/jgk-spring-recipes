@@ -17,7 +17,7 @@
 	</security:http>
 	
 	
-	<security:authentication-manager>
+	<security:authentication-manager alias="authenticationManager">
 		<security:authentication-provider>
 		
 <!-- 			<security:user-service properties="/WEB-INF/myusers.properties"/>
