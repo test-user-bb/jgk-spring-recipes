@@ -4,4 +4,4 @@
 === Know the role of the {{{MBeanExporter}}} ===
 === Write XML code to export a POJO as an MBean ===
 === Write XML code to register an existing MBean with the MBeanServer ===
-=== Know purpose of @ManagedResource, @ManagedOperation and @ManagedAttribute ===
+=== Know purpose of {{{@ManagedResource}}}, {{{@ManagedOperation}}} and {{{@ManagedAttribute}}} ===
