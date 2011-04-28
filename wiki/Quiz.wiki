@@ -335,7 +335,7 @@ xsi:schemaLocation="http://www.springframework.org/schema/util http://www.spring
   * type=...
  * Use this XML attribute when a constructor has been overloaded to support multiple parameters of the same type.
   * index=...
- * The 3 types of ApplicationContexts.
-  * Classpath
-  * FileSystem
-  * WebApplication
+ * The 3 types of {{{ApplicationContext}}}s.
+  * {{{Classpath}}}
+  * {{{FileSystem}}}
+  * {{{WebApplication}}}
