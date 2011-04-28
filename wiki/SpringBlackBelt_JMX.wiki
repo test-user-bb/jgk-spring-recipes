@@ -23,6 +23,18 @@ public class MyBeanImpl implements MyBean {
  public void dosomething() {
     // code to do something
  }
+ @ManagedAttribute(defaultValue="monkeyBurger", persistPeriod=300)
+  public String getName() {
+    return name;
+  }
+  @ManagedOperation(description="Add two numbers")
+  @ManagedOperationParameters({
+    @ManagedOperationParameter(name = "x", description = "The first number"),
+    @ManagedOperationParameter(name = "y", description = "The second number")})
+  public int add(int x, int y) {
+    return x + y;
+  }
+
 }
 }}}
 === XML to create {{{MBeanServer}}} ===
