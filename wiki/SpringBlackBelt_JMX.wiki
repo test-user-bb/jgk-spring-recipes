@@ -7,9 +7,9 @@
 === Write XML code to export a POJO as an MBean ===
 === Write XML code to register an existing MBean with the MBeanServer ===
 === Know purpose of {{{@ManagedResource}}}, {{{@ManagedOperation}}} and {{{@ManagedAttribute}}} ===
- * {{{@ManagedResource}}} -
- * {{{@ManagedOperation}}} -
- * {{{@ManagedAttribute}}} -
+ * {{{@ManagedResource}}} - marks a bean for export to JMX.
+ * {{{@ManagedOperation}}} - Each method you wish to expose as an operation must be marked with the {{{@ManagedOperation}}} annotation.
+ * {{{@ManagedAttribute}}} - each property you wish to expose must be marked with the ManagedAttribute annotation.
  * Sample:
 {{{
 @ManagedResource(description="some desc of JMX mbean")
