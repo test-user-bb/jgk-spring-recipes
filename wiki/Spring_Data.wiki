@@ -1,5 +1,5 @@
 #summary Hades replacement
-
+= [http://www.springsource.org/spring-data/jpa Spring Data JPA] =
 === [http://www.springsource.org/spring-data Spring Data] JPA 1.0.0.M2 ===
  * [http://www.springsource.org/node/3074 Spring Data JPA 1.0.0.M2]
  * [http://static.springsource.org/spring-data/data-jpa/docs/1.0.0.M2/reference/html/ Reference Docs]
