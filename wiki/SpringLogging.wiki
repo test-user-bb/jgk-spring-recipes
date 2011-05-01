@@ -1,0 +1,3 @@
+#summary issues around logging with Spring framework
+
+= [http://static.springsource.org/spring/docs/3.0.x/spring-framework-reference/html/overview.html#d0e743 Logging] =
