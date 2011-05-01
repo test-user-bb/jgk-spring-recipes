@@ -1,0 +1,14 @@
+#summary usage of spring-data in cooperation with JPA and Hibernate
+
+== Items ==
+ * Maven (pom.xml)
+  * Project management
+  * Dependencies
+  * Repositories
+ * Java Source
+  * Domain
+  * Repository
+  * Test
+ * Hibernate Configuration
+ * Spring Configuration
+ * Logging Configuration
