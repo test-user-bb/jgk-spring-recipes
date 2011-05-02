@@ -13,7 +13,7 @@
  * JPA Configuration (persistence.xml, orm.xml)
  * Spring Configuration
  * Logging Configuration
- * Stack trace
+ * Stack trace _{{{Caused by: java.lang.IllegalStateException: No supertype found}}}_
 
 === Maven (pom.xml) ===
  * pom.xml:
