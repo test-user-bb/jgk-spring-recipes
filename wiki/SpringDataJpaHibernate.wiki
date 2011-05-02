@@ -326,7 +326,7 @@ public class SimpleSpringDataWithJpaAndHibernateTest {
 
 }}}
 === Hibernate Mapping File (.hbm.xml) ===
- * Camera.hbm.xml
+ * Camera.hbm.xml (to be replaced by entity-mapping in the *orm.xml*)
 {{{
 <?xml version="1.0" encoding="UTF-8"?>
 
