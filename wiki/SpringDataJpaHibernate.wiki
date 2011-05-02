@@ -22,7 +22,7 @@
 === Java Source ===
 ==== Domain ====
 ==== Repository ====
- * 2 repositories based on spring-data.  One based on domain Book annotated with {{{@Entity}}} (BookRepository) and one based on domain Camera based on hibernate mapping file (CameraRepository)
+ * 2 repositories based on spring-data.  One based on domain Book annotated with {{{@Entity}}} ({{{BookRepository}}}) and one based on domain Camera based on hibernate mapping file ({{{CameraRepository}}})
  * {{{BookRepository}}}
 {{{
 package com.jgk.spring.data.jpa.repository;
