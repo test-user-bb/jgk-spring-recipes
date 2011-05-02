@@ -18,6 +18,4 @@
 			insert="true" column="password" />
 
 	</class>
-<!-- 
- -->
 </hibernate-mapping>
