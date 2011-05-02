@@ -1,5 +1,6 @@
 #summary usage of spring-data in cooperation with JPA and Hibernate
 
+== [http://forum.springsource.org/showthread.php?t=108645 Spring Forum Thread] ==
 == Items ==
  * Maven (pom.xml)
   * Project management
