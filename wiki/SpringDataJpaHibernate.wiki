@@ -22,6 +22,33 @@
 === Java Source ===
 ==== Domain ====
 ==== Repository ====
+ * 2 repositories based on spring-data.  One based on domain Book annotated with {{{@Entity}}} (BookRepository) and one based on domain Camera based on hibernate mapping file (CameraRepository)
+ * {{{BookRepository}}}
+{{{
+package com.jgk.spring.data.jpa.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.jgk.spring.data.jpa.domain.Book;
+
+public interface BookRepository extends JpaRepository<Book, Long> {
+
+}
+
+}}}
+ * {{{CameraRepository}}}
+{{{
+package com.jgk.spring.data.jpa.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.jgk.spring.data.jpa.domain.Camera;
+
+public interface CameraRepository extends JpaRepository<Camera, Long> {
+
+}
+
+}}}
 ==== Test ====
  * {{{SimpleSpringDataWithJpaAndHibernateTest.java}}}
 {{{
