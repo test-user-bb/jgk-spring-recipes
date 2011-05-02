@@ -1,26 +1,64 @@
 package com.jgk.spring.data.jpa;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.inject.Inject;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.springframework.context.ApplicationContext;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import com.jgk.spring.data.jpa.domain.Book;
+import com.jgk.spring.data.jpa.domain.Camera;
+import com.jgk.spring.data.jpa.repository.BookRepository;
+import com.jgk.spring.data.jpa.repository.CameraRepository;
+
+
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations={"classpath:/SimpleSpringDataWithJpaAndHibernateTest-config.xml"})
+@SuppressWarnings("serial")
 public class SimpleSpringDataWithJpaAndHibernateTest {
 	
-//	@Inject
-//	ApplicationContext applicationContext;
+	@Inject
+	BookRepository bookRepository;
+	
+	@Inject
+	CameraRepository cameraRepository;
 	
 	@Test
-	public void testApp() {
-		assertTrue(true);
-//		assertNotNull(applicationContext);
-//		System.out.println(applicationContext);
+	public void testCamera() {
+		List<Camera> cameras = new ArrayList<Camera>() {{
+			add(Camera.createCamera("Kodak","110"));
+			add(Camera.createCamera("Nikon","SLR"));
+		}};
+		for (Camera camera : cameras) {
+			cameraRepository.save(camera);
+			System.out.println(camera.getId());
+		}
+		
+		List<Camera> camerasRetrieved=cameraRepository.findAll();
+		
+		assertEquals(cameras.size(), camerasRetrieved.size());
+		
+	}
+	
+	@Test
+	public void testBook() {
+		List<Book> books = new ArrayList<Book>() {{
+			add(Book.createBook("Moby Dick","Melville"));
+			add(Book.createBook("Of Mice and Men","Steinbeck"));
+		}};
+		for (Book book : books) {
+			bookRepository.save(book);
+			System.out.println(book.getId());
+		}
+		
+		List<Book> booksRetrieved=bookRepository.findAll();
+		assertEquals(books.size(), booksRetrieved.size());
+		
 	}
 }

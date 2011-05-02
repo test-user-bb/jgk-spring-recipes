@@ -38,7 +38,11 @@ public class Book implements Serializable {
 	public void setAuthor(String author) {
 		this.author = author;
 	}
-	
-	
+	public static Book createBook(String title, String author) {
+		Book book = new Book();
+		book.setTitle(title);
+		book.setAuthor(author);
+		return book;
+	}
 	
 }
