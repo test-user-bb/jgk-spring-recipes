@@ -1,6 +1,6 @@
 #summary how to do it
 
-=== Method: 1 ===
+=== Method: 1 [http://static.springsource.org/spring/docs/3.0.x/spring-framework-reference/html/aop.html#aop-aj-ltw Spring reference] ===
  * Use the {{{@Configurable}}} annotation
  * Use {{{-javaagent}}} Java 5 VM flag
 {{{
