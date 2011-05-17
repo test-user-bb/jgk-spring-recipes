@@ -8,6 +8,19 @@
 }}}
  * Use {{{<context:spring-configured/>}}} in your Spring config
  * Do not include {{{<context:load-time-weaver/>}}}
+ * Include file on classpath {{{META-INF/aop.xml}}}
+{{{
+<!DOCTYPE aspectj PUBLIC
+        "-//AspectJ//DTD//EN" "http://www.eclipse.org/aspectj/dtd/aspectj.dtd">
+<aspectj>
+    <weaver options="-verbose">
+        <include within="com.gs.fdb..*"/>
+    </weaver>
+    <aspects>
+        <aspect name="org.springframework.beans.factory.aspectj.AbstractInterfaceDrivenDependencyInjectionAspect"/>
+    </aspects>
+</aspectj>
+}}}
 
 {{{
 @Configurable(preConstruction=true,dependencyCheck=true)
