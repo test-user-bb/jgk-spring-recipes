@@ -10,8 +10,20 @@
  * Include {{{<context:load-time-weaver/>}}}
   * Registers weaving beans:
 {{{
+DEFAULT:
 org.springframework.context.weaving.AspectJWeavingEnabler@6f69b66e
+
+without weaver-class defined:
 org.springframework.context.weaving.DefaultContextLoadTimeWeaver@44755866 (named loadTimeWeaver)
+
+with: 
+loadTimeWeaver-org.springframework.instrument.classloading.InstrumentationLoadTimeWeaver@30943653
+<context:load-time-weaver weaver-class="org.springframework.instrument.classloading.InstrumentationLoadTimeWeaver"/>
+
+NOT SURE (since does not work in junit test):
+    <context:load-time-weaver weaver-class="org.springframework.instrument.classloading.ReflectiveLoadTimeWeaver"/>
+(from dependency:  spring-instrument-tomcat)
+
 }}}
  * Include file on classpath {{{META-INF/aop.xml}}}
  * Spring config:
