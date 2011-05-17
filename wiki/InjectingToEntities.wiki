@@ -11,7 +11,7 @@
   * Registers weaving beans:
 {{{
 org.springframework.context.weaving.AspectJWeavingEnabler@6f69b66e
-org.springframework.context.weaving.DefaultContextLoadTimeWeaver@44755866
+org.springframework.context.weaving.DefaultContextLoadTimeWeaver@44755866 (named loadTimeWeaver)
 }}}
  * Include file on classpath {{{META-INF/aop.xml}}}
  * Spring config:
