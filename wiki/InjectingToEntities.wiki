@@ -9,6 +9,33 @@
  * Use {{{<context:spring-configured/>}}} in your Spring config
  * Include {{{<context:load-time-weaver/>}}}
  * Include file on classpath {{{META-INF/aop.xml}}}
+ * Maven dependencies:
+{{{
+	<properties>
+		<aspectjweaver.version>1.6.8</aspectjweaver.version>
+		<aspectjrt.version>1.6.8</aspectjrt.version>
+		<spring.version>3.0.5.RELEASE</spring.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-instrument</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+ 		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjweaver</artifactId>
+			<version>${aspectjweaver.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjrt</artifactId>
+			<version>${aspectjrt.version}</version>
+		</dependency>
+	</dependencies>
+
+}}}
 === One Method ===
  * Use the {{{@Configurable}}} annotation
  * Use {{{-javaagent}}} Java 5 VM flag
