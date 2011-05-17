@@ -1,0 +1,3 @@
+#summary aop.xml
+
+ * lives in *META-INF/aop.xml*
