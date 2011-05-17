@@ -7,6 +7,7 @@
 -javaagent:/Users/jkroub/.m2/repository/org/springframework/spring-instrument/3.0.5.RELEASE/spring-instrument-3.0.5.RELEASE.jar
 }}}
  * Use {{{<context:spring-configured/>}}} in your Spring config
+ * Next:  _{{{Remember that the LoadTimeWeaver exists just as a mechanism for Spring's LTW infrastructure to add one or more ClassFileTransformers.}}}_
  * Include {{{<context:load-time-weaver/>}}}
   * Registers weaving beans:
 {{{
