@@ -21,7 +21,26 @@
     </aspects>
 </aspectj>
 }}}
+ * Maven dependencies:
+{{{
+	<properties>
+		<aspectjweaver.version>1.6.8</aspectjweaver.version>
+		<aspectjrt.version>1.6.8</aspectjrt.version>
+	</properties>
 
+	<dependencies>
+ 		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjweaver</artifactId>
+			<version>${aspectjweaver.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjrt</artifactId>
+			<version>${aspectjrt.version}</version>
+		</dependency>
+	</dependencies>
+}}}
 {{{
 @Configurable(preConstruction=true,dependencyCheck=true)
 @Entity
