@@ -1,0 +1,47 @@
+#summary how to do it
+
+=== One Method ===
+ * Use the {{{@Configurable}}} annotation
+ * Use {{{-javaagent}}} Java 5 VM flag
+{{{
+ -javaagent:/Users/jkroub/.m2/repository/org/aspectj/aspectjweaver/1.6.8/aspectjweaver-1.6.8.jar
+}}}
+ * Use {{{<context:spring-configured/>}}} in your Spring config
+ * Do not include {{{<context:load-time-weaver/>}}}
+
+{{{
+@Configurable(preConstruction=true,dependencyCheck=true)
+@Entity
+@Table(name="RNDC14")
+public class Rndc14 implements Serializable {
+	private static final long serialVersionUID = 1L;
+
+	@Transient
+	Robcd0Repository robcd0Repository;
+	
+	
+	public Robcd0Repository getRobcd0Repository() {
+		return robcd0Repository;
+	}
+	@Inject 
+	public void setRobcd0Repository( Robcd0Repository robcd0Repository) {
+		this.robcd0Repository = robcd0Repository;
+	}
+
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	@Column(name="NDC")
+	private String ndc;
+
+	@Column(name="AD")
+	private String ad;
+
+       ...more content here....
+	public List<Robcd0> getOrangeBookRecords() {
+		List<Robcd0> res = getRobcd0Repository().findCustomHereWithParam(getObc());
+		return res;
+	}
+	
+}
+
+}}}
