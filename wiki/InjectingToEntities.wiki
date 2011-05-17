@@ -1,5 +1,14 @@
 #summary how to do it
 
+=== Method: 1 ===
+ * Use the {{{@Configurable}}} annotation
+ * Use {{{-javaagent}}} Java 5 VM flag
+{{{
+-javaagent:/Users/jkroub/.m2/repository/org/springframework/spring-instrument/3.0.5.RELEASE/spring-instrument-3.0.5.RELEASE.jar
+}}}
+ * Use {{{<context:spring-configured/>}}} in your Spring config
+ * Include {{{<context:load-time-weaver/>}}}
+ * Include file on classpath {{{META-INF/aop.xml}}}
 === One Method ===
  * Use the {{{@Configurable}}} annotation
  * Use {{{-javaagent}}} Java 5 VM flag
