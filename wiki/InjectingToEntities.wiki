@@ -8,6 +8,11 @@
 }}}
  * Use {{{<context:spring-configured/>}}} in your Spring config
  * Include {{{<context:load-time-weaver/>}}}
+  * Registers weaving beans:
+{{{
+org.springframework.context.weaving.AspectJWeavingEnabler@6f69b66e
+org.springframework.context.weaving.DefaultContextLoadTimeWeaver@44755866
+}}}
  * Include file on classpath {{{META-INF/aop.xml}}}
  * Spring config:
 {{{
