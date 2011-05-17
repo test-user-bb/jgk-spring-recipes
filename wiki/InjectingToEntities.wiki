@@ -2,7 +2,7 @@
 
 === Method: 1 [http://static.springsource.org/spring/docs/3.0.x/spring-framework-reference/html/aop.html#aop-aj-ltw Spring reference] ===
  * Use the {{{@Configurable}}} annotation
- * Use {{{-javaagent}}} Java 5 VM flag
+ * Use {{{-javaagent}}} Java 5 VM flag - this requires spring-instrument since need {{{InstrumentationSavingAgent}}}
 {{{
 -javaagent:/Users/jkroub/.m2/repository/org/springframework/spring-instrument/3.0.5.RELEASE/spring-instrument-3.0.5.RELEASE.jar
 }}}
