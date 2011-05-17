@@ -1,0 +1,4 @@
+#summary java.lang.instrument
+
+= Introduction =
+ * [http://download.oracle.com/javase/6/docs/api/java/lang/instrument/package-summary.html java.lang.instrument]
