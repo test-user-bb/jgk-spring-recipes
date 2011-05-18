@@ -15,4 +15,4 @@
 
 == Installation ==
  * java -jar aspectj...jar
- [http://i299.photobucket.com/albums/mm283/javapda/Screenshot2011-05-17at114915PM.png Screen 1]
+ [http://i299.photobucket.com/albums/mm283/javapda/Screenshot2011-05-17at114915PM.png]
