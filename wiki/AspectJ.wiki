@@ -1,0 +1,5 @@
+#summary aspectj
+
+
+== [http://www.eclipse.org/aspectj/ AspectJ] ==
+ * [http://www.eclipse.org/aspectj/doc/released/progguide/index.html Programming Guide]
