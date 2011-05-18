@@ -3,6 +3,7 @@
 
 == [http://www.eclipse.org/aspectj/ AspectJ] ==
 === Resources ===
+ * [http://eclipse.org/aspectj/docs.php docs]
  * [http://www.eclipse.org/aspectj/doc/released/progguide/index.html Programming Guide]
  * [http://eclipse.org/aspectj/doc/released/faq.php faq]
 === Other ===
