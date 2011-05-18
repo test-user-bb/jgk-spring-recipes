@@ -2,6 +2,8 @@
 
 
 == ajc Help ==
+ * [http://eclipse.org/aspectj/doc/released/devguide/index.html ajc developer guide]
+ * command-line help:
 {{{
 
 	Usage: <options> <source file | @argfile>..
