@@ -6,6 +6,7 @@
  * [http://eclipse.org/aspectj/docs.php docs]
  * [http://www.eclipse.org/aspectj/doc/released/progguide/index.html Programming Guide]
  * [http://eclipse.org/aspectj/doc/released/faq.php faq]
+ * [http://eclipse.org/aspectj/docs.php Eclipse plugin]
 === Other ===
  * Initial thoughts on the aspectj documentation:
   * Start rant
