@@ -8,6 +8,7 @@
  * [http://eclipse.org/aspectj/doc/released/faq.php faq]
  * [http://eclipse.org/aspectj/docs.php Eclipse plugin]
  * [http://www.cs.ubc.ca/~kdvolder/Workshops/OOPSLA2001/submissions/12-nordberg.pdf Aspect-Oriented Dependency Inversion (.pdf)]
+ * AspectJ mailing list: *{{{aspectj-dev@eclipse.org}}}*
 === Other ===
  * Initial thoughts on the aspectj documentation:
   * Start rant
