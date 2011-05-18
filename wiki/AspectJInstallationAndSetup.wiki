@@ -1,0 +1,25 @@
+#summary simple install instructions
+
+= Introduction =
+ * Download
+ * Install
+ * Post install setup
+
+=== Download ===
+ * download from [http://eclipse.org/aspectj/downloads.php Aspectj Downloads] page
+
+=== Install ===
+{{{
+java -jar aspectj-1.6.11.jar
+}}}
+=== Post install setup ===
+ * modify PATH by editing .bash_profile
+ * when aspectJ required simply include the jar (aspectj-1.6.11.jar) on the classpath
+
+=== Screenshots ===
+ [http://i299.photobucket.com/albums/mm283/javapda/Screenshot2011-05-17at114915PM.png]
+ [http://i299.photobucket.com/albums/mm283/javapda/Screenshot2011-05-17at114904PM.png]
+ [http://i299.photobucket.com/albums/mm283/javapda/Screenshot2011-05-17at114859PM.png]
+ [http://i299.photobucket.com/albums/mm283/javapda/Screenshot2011-05-17at114852PM.png]
+ [http://i299.photobucket.com/albums/mm283/javapda/Screenshot2011-05-17at114751PM.png]
+ [http://i299.photobucket.com/albums/mm283/javapda/Screenshot2011-05-17at114651PM.png]
