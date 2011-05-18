@@ -1,0 +1,17 @@
+#summary some example aspects
+
+ [AspectJExamples#How_to_log_on_an_exception? How to log on an exception?]
+
+=== How to log on an exception? ===
+{{{
+aspect PublicErrorLogging {
+    Log log = new Log();
+
+    pointcut publicInterface(Object o):
+        call(public * com.jgk.springrecipes.*.*(..)) && target(o);
+
+    after(Object o) throwing (Error e): publicInterface(o) {
+        log.write(o, e);
+    }
+}
+}}}
