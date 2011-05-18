@@ -3,6 +3,7 @@
  [AspectJExamples#How_to_log_on_an_exception? How to log on an exception?]
 
 === How to log on an exception? ===
+ * whenever any public method of an interface or class in the com.jgk.springrecipes package throws an error, that error is logged before being thrown to its caller.
 {{{
 aspect PublicErrorLogging {
     Log log = new Log();
