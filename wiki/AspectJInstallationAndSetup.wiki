@@ -1,6 +1,6 @@
 #summary simple install instructions
 
-= Introduction =
+== Summary ==
  * Download
  * Install
  * Post install setup
