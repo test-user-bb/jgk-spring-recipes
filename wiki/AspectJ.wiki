@@ -9,4 +9,5 @@
   * Significantly into the document and no descriptions of how to actually do things.
   * WTF is this ... countless caveats about considering this and that without ever showing a single practical example of the system in use.  _Q:  Do the authors want AOP to be adopted or do they simply like to hear themselves talk?_  
   * This is one of the most tedious pieces of technical documentation that I can remember reading in recent history.
+  * This reminds me of another tedious tome read during a masters program by Cornbluth?  It was like alphabet soup and buzz-word compliance...lots of parsley but no meat.
   * OK, rant completed.
