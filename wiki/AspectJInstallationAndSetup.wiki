@@ -14,6 +14,9 @@ java -jar aspectj-1.6.11.jar
 }}}
 === Post install setup ===
  * modify PATH by editing .bash_profile
+{{{
+export PATH="${PATH}:/Users/jkroub/aspectj1.6/bin"
+}}}
  * when aspectJ required simply include the jar (aspectj-1.6.11.jar) on the classpath
 
 === Screenshots ===
