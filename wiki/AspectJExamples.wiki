@@ -4,7 +4,7 @@
  * [AspectJExamples#How_to_aspect_static_main? How to aspect static main?]
 
 === How to aspect static main? ===
-Simple example where we shoot messages out around a static main call.
+Simple example where we shoot messages out _*around*_ a static main call.
 === Simple:staticArtifacts ===
  * java (.java) source to be advised
  * aspects (.aj)
