@@ -10,6 +10,15 @@
  * [http://www.cs.ubc.ca/~kdvolder/Workshops/OOPSLA2001/submissions/12-nordberg.pdf Aspect-Oriented Dependency Inversion (.pdf)]
  * AspectJ mailing list: *{{{aspectj-dev@eclipse.org}}}*
  * [http://www.aosd.net/wiki/index.php?title=Glossary AOP Glossary]
+=== How does it work? ===
+ * How it works with aspectj:
+  * Create your regular program (.java files)
+  * Create aspects (.aj files) that work on the Classes in your .java files
+  * Place all the interesting files (and ajc options) in a *.lst file.
+  * Run the aspectj compiler (include aspectjrt.jar in your classpath), give the name of the .lst file mentioned above.
+
+Now you have all your .class files that have been weaved (or enhanced) with aspects.
+
 === Other ===
  * Initial thoughts on the aspectj documentation:
   * Start rant
