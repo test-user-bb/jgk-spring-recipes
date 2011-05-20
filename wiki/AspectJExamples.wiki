@@ -1,7 +1,7 @@
 #summary some example aspects
 
- [AspectJExamples#How_to_log_on_an_exception? How to log on an exception?]
- [AspectJExamples#How_to_aspect_static_main? How to aspect static main?]
+ * [AspectJExamples#How_to_log_on_an_exception? How to log on an exception?]
+ * [AspectJExamples#How_to_aspect_static_main? How to aspect static main?]
 
 === How to aspect static main? ===
 Simple example where we shoot messages out around a static main call.
