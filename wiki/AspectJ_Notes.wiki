@@ -1,7 +1,7 @@
 #summary info about AspectJ
 
 = Introduction =
- * a language specification (new elements like 'aspect' - which is analogous to 'class')
+ * a language specification (new elements (pseudo-keywords) like 'aspect' - which is analogous to 'class')
  * an implementation of AOP
  * Syntax choices:
   * traditional
