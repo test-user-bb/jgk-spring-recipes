@@ -41,3 +41,15 @@ pointcut publicOperation() : execution(public * *.*(..));
  * the _this_ object
  * method arguments
   
+=== Static crosscutting ===
+ * Inter-type declaration (aka _introduction_)
+ * alters static structcre of :
+  * classes
+  * interfaces
+  * aspects
+ * enables adding a method or field to a class
+ * enables declare a type to implement an interface.
+ * The following makes weaver assign {{{AccessTracked}}} interface as parent of the {{{MessageCommunicator}}} class:
+{{{
+  declare parents:  MessageCommunicator implements AccessTracked;
+}}}
