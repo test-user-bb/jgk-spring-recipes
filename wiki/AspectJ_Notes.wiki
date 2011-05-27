@@ -1,0 +1,20 @@
+#summary info about AspectJ
+
+= Introduction =
+ * a language specification (new elements like 'aspect' - which is analogous to 'class')
+ * an implementation of AOP
+ * Syntax choices:
+  * traditional
+  * {{{@AspectJ}}}
+ * Crosscutting constructs:
+  * common (join point, pointcut, and aspect)
+  * dynamic (advice)
+  * static (inter-type declarations and weave-time declarations)
+ * Wildcards ({{{*}}})
+ * {{{..}}} any method parameters
+== Pointcuts ==
+ * select execution of any public method in the system:
+{{{
+execution(public * *.*(..))
+}}}
+  
