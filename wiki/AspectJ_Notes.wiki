@@ -12,6 +12,7 @@
   * static (inter-type declarations and weave-time declarations)
  * Wildcards ({{{*}}})
  * {{{..}}} any method parameters
+ * {{{+}}} wildcard denotes subtypes.
 == Pointcuts ==
  * select execution of any public method in the system:
 {{{
@@ -41,7 +42,7 @@ pointcut publicOperation() : execution(public * *.*(..));
  * the _this_ object
  * method arguments
   
-=== Static crosscutting ===
+=== Static crosscutting (VERY COOL!) ===
  * Inter-type declaration (aka _introduction_)
  * alters static structcre of :
   * classes
