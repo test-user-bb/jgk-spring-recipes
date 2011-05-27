@@ -17,6 +17,7 @@
   * Place all the interesting files (and ajc options) in a {{{*.lst}}} file.
   * Run the aspectj compiler (include aspectjrt.jar in your classpath), give the name of the .lst file mentioned above.
   * [http://www.manning.com/laddad/laddad_cover150.jpg] Fender - Books - Computer - Manning - Manning - AspectJ in Action Enterprise AOP with Spring Applications 2nd-2010.pdf
+  * [http://manning.com/laddad2/ AspectJ in Action Code]
 
 Now you have all your .class files that have been weaved (or enhanced) with aspects.
 
