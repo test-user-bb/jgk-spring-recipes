@@ -17,4 +17,27 @@
 {{{
 execution(public * *.*(..))
 }}}
+ * same with a name given to the pointcut:
+{{{
+pointcut publicOperation() : execution(public * *.*(..));
+}}}
+
+=== Aspect ===
+ * contains the code expressing the weaving rules for both dynamcic and static crosscutting.
+ * aspectcs can have :
+  * data
+  * methods
+  * nested classes
+=== Advice ===
+ * advice is the code executed at a join point selected by a pointcut.
+ * advice can execute:
+  * before
+  * after
+  * around
+ * body of advice encapsulates the logic to be executed upon reaching a join point.
+
+=== Parts of a join point ===
+ * method name
+ * the _this_ object
+ * method arguments
   
