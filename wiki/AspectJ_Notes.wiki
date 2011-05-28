@@ -9,6 +9,14 @@
   * Source weaving
   * Binary weaving
   * Load-time weaving
+==== Source Weaving ====
+ * weaver is part of the compiler
+ * input is java source and aspect source
+ * aspects can be written in traditional or {{{@AspectJ}}} notation
+==== Binary Weaving ====
+ * input to weaver is .class (java and aspect) in byte-code form
+ * can use jar files or class files produced using java compiler
+
 === {{{@AspectJ}}} syntax ===
  * available with Java 5 annotations
  * main advantage of this syntax style is that you can compile your code using a plain Java compiler
