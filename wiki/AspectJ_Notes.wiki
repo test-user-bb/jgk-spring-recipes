@@ -1,5 +1,7 @@
 #summary info about AspectJ
 
+=== stuff ===
+ * you can use the aspects written using {{{@AspectJ}}} in a Spring application without needing the AspectJ weaver
 === Spring + {{{AspectJ}}} ===
  * uses dynamic proxies
  * Due to the use of proxies, it exposes method execution join points only for objects created by the Spring container (commonly known as Spring beans)
