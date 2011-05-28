@@ -11,6 +11,12 @@
 || before || @Before ||
 || after || @After ||
 || around || @Around ||
+ 
+=== Ways to use {{{@AspectJ}}} syntax ===
+ * Simplest way:  use the ajc compiler instead of javac
+ * Alternate 1: include binary weaving, where code compiled using javac is then woven using *ajc*
+ * Alternate 2: load-time weaving (LTW), where classes are woven as they’re being loaded into the VM
+
 
 
  
