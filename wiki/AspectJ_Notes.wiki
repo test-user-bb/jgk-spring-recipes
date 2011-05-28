@@ -16,7 +16,14 @@
 ==== Binary Weaving ====
  * input to weaver is .class (java and aspect) in byte-code form
  * can use jar files or class files produced using java compiler
-
+ * General steps:
+  * compile .java (non-aspects) and place in location 'x'
+  * compile .aj/.java (aspects) and place in location 'y'
+  * weave classes:
+{{{
+ajc –inpath x;y –aspectpath y –d woven
+}}}
+   * _The –inpath option specifies the path to the classes that are weaving targets. Because you used javac to compile the aspects, you must also pass those to –inpath so that ajc can add the necessary support methods. The -aspectpath option specifies the path to the aspects to be woven in._
 === {{{@AspectJ}}} syntax ===
  * available with Java 5 annotations
  * main advantage of this syntax style is that you can compile your code using a plain Java compiler
