@@ -1,5 +1,8 @@
 #summary info about AspectJ
 
+=== Spring + {{{AspectJ}}} ===
+ * uses dynamic proxies
+ * Due to the use of proxies, it exposes method execution join points only for objects created by the Spring container (commonly known as Spring beans)
 === Weaver ===
  * Weaver is used to:
   * weave together classes and aspects so the advice gets executed
