@@ -7,8 +7,8 @@
                                               ">
                                               
                                               
-		<aop:aspectj-autoproxy/>                                              
 	<!-- 
+		<aop:aspectj-autoproxy/>                                              
 	
 	<aop:aspectj-autoproxy /> <bean id="messageCommunicator" class="ajia.messaging.MessageCommunicator" 
 		/> <bean id="securityAspect" class="ajia.security.SecurityAspect" /> 
