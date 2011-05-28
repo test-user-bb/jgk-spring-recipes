@@ -43,7 +43,7 @@ _NOTE: aop.xml can include a lot more configuration information, including point
   * You enable LTW by including the –javaagent option when starting the VM:
 {{{
 > java –classpath classes;aspects
-➥ -javaagent:%ASPECTJ_HOME%\lib\aspectjweaver.jar ajia.main.Main
+➥ -javaagent:%ASPECTJ_HOME%\lib\aspectjweaver.jar aspinaction.Main
 }}}
 === {{{@AspectJ}}} syntax ===
  * available with Java 5 annotations
