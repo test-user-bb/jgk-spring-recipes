@@ -4,7 +4,7 @@
 	<groupId>com.jgk.springrecipes</groupId>
 	<artifactId>jgk-springrecipes-aspects</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<description>Shows how Spring can use aop</description>
+	<description>CHANGE: Shows how Spring can use aop</description>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<spring.version>3.0.5.RELEASE</spring.version>
