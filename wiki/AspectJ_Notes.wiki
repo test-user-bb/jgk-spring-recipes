@@ -4,6 +4,7 @@
  * available with Java 5 annotations
  * main advantage of this syntax style is that you can compile your code using a plain Java compiler
  * The disadvantage of {{{@AspectJ}}} syntax is its verbosity in expressing the same constructs and its limitations in expressing certain constructs, especially in the static crosscutting category.
+ 
 = Introduction =
  * a language specification (new elements (pseudo-keywords) like 'aspect' - which is analogous to 'class')
  * an implementation of AOP
