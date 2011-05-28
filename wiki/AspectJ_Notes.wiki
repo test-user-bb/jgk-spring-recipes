@@ -4,7 +4,7 @@
  * [http://www.eclipse.org/ajdt/downloads AJDT Plugin]
  * [http://www.springsource.com/developer/sts Spring Tool Suite (STS)]
  * [http://www.springsource.com/files/uploads/all/images/product/Logo_sts.png http://www.springsource.com/files/uploads/all/images/product/Logo_sts.png]
-=== stuff ===
+=== stuff here ===
  * you can use the aspects written using {{{@AspectJ}}} in a Spring application without needing the AspectJ weaver
 === Spring + {{{AspectJ}}} ===
  * uses dynamic proxies
