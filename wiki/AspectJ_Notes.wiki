@@ -31,7 +31,7 @@ ajc –inpath x;y –aspectpath y –d woven
   * classloader
   * VM- and application server–specific class preprocessor (weaves the classes as they’re loaded into
 the VM)
- * {{{META-INF/aop.xml}}}:
+ * {{{META-INF/aop.xml}}} configuration file:
 {{{
 <aspectj>
   <aspects>
@@ -39,6 +39,7 @@ the VM)
   </aspects>
 </aspectj>
 }}}
+_NOTE: aop.xml can include a lot more configuration information, including pointcut definitions._
 === {{{@AspectJ}}} syntax ===
  * available with Java 5 annotations
  * main advantage of this syntax style is that you can compile your code using a plain Java compiler
