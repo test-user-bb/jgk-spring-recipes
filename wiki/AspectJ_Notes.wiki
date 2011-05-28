@@ -1,5 +1,14 @@
 #summary info about AspectJ
 
+=== Weaver ===
+ * Weaver is used to:
+  * weave together classes and aspects so the advice gets executed
+  * inter-type declarations affect the static structure
+  * weave-time declarations produce warnings and errors
+ * Types of weaving models:
+  * Source weaving
+  * Binary weaving
+  * Load-time weaving
 === {{{@AspectJ}}} syntax ===
  * available with Java 5 annotations
  * main advantage of this syntax style is that you can compile your code using a plain Java compiler
