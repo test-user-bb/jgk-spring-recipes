@@ -24,6 +24,21 @@
 ajc –inpath x;y –aspectpath y –d woven
 }}}
    * _The –inpath option specifies the path to the classes that are weaving targets. Because you used javac to compile the aspects, you must also pass those to –inpath so that ajc can add the necessary support methods. The -aspectpath option specifies the path to the aspects to be woven in._
+==== Load-Time Weaving ====
+ * uses a combination of configuration file (e.g. aop.xml), .class files (binary classes and aspects), load-time agent.
+ * load-time agent forms:
+  * Java VM Tools Interface (JVMTI) agent
+  * classloader
+  * VM- and application server–specific class preprocessor (weaves the classes as they’re loaded into
+the VM)
+ * {{{META-INF/aop.xml}}}:
+{{{
+<aspectj>
+  <aspects>
+    <aspect name="aspinaction.aspects.security.SecurityAspect"/>
+  </aspects>
+</aspectj>
+}}}
 === {{{@AspectJ}}} syntax ===
  * available with Java 5 annotations
  * main advantage of this syntax style is that you can compile your code using a plain Java compiler
