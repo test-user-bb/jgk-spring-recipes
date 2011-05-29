@@ -3,7 +3,7 @@
 
 == ajc Help ==
  * [http://eclipse.org/aspectj/doc/released/devguide/index.html ajc developer guide]
- * [http://www.eclipse.org/aspectj/doc/released/devguide/ajc-ref.html ajc detail]
+ * [http://www.eclipse.org/aspectj/doc/released/devguide/ajc-ref.html ajc compiler/weaver detail]
  * command-line help:
 {{{
 
