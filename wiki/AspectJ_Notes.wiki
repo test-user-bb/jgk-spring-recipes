@@ -54,8 +54,7 @@ the VM)
 </aspectj>
 }}}
 _NOTE: aop.xml can include a lot more configuration information, including pointcut definitions._
- * load-time weaver requires that you explicitly specify each aspect in an aop.xml file in the META-INF directory on the classpath.  Because many classpath entries (jar files and directories) may contain an
-aop.xml file, the *weaver uses them all* by combining the information in them.
+ * load-time weaver requires that you explicitly specify each aspect in an aop.xml file in the META-INF directory on the classpath.  Because many classpath entries (jar files and directories) may contain an aop.xml file, the *weaver uses them all* by combining the information in them.
   * You enable LTW by including the –javaagent option when starting the VM:
 {{{
 > java –classpath classes;aspects
@@ -78,9 +77,6 @@ aop.xml file, the *weaver uses them all* by combining the information in them.
  * Alternate 1: include binary weaving, where code compiled using javac is then woven using *ajc*
  * Alternate 2: load-time weaving (LTW), where classes are woven as they’re being loaded into the VM
 
-
-
- 
 = Introduction =
  * a language specification (new elements (pseudo-keywords) like 'aspect' - which is analogous to 'class')
  * an implementation of AOP
