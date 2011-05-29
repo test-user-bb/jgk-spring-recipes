@@ -45,6 +45,7 @@ ajc –inpath x;y –aspectpath y –d woven
   * classloader
   * VM- and application server–specific class preprocessor (weaves the classes as they’re loaded into
 the VM)
+=== {{{aop.xml}}} ===
  * {{{META-INF/aop.xml}}} configuration file:
 {{{
 <aspectj>
