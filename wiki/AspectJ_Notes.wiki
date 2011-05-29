@@ -57,6 +57,7 @@ the VM)
   </aspects>
 </aspectj>
 }}}
+ * Unlike with traditional or {{{@AspectJ}}} syntax, you can’t define or override methods in the base aspect.
  * Note that you can replace the binary operators || and && with OR and AND for pointcuts written using XML. This substitution is especially helpful for writing the && operator, which in XML is written &amp;&amp;.
 
 _NOTE: aop.xml can include a lot more configuration information, including pointcut definitions._
