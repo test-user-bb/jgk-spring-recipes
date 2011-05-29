@@ -53,6 +53,8 @@ the VM)
   </aspects>
 </aspectj>
 }}}
+ * Note that you can replace the binary operators || and && with OR and AND for pointcuts written using XML. This substitution is especially helpful for writing the && operator, which in XML is written &amp;&amp;.
+
 _NOTE: aop.xml can include a lot more configuration information, including pointcut definitions._
  * load-time weaver requires that you explicitly specify each aspect in an aop.xml file in the META-INF directory on the classpath.  Because many classpath entries (jar files and directories) may contain an aop.xml file, the *weaver uses them all* by combining the information in them.
  * {{{aop.xml}}} files provide information about the aspects and classes participating in load-time weaving. The weaver intercepts loading of any class to weave in appropriate aspects.
