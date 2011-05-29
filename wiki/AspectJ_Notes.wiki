@@ -50,6 +50,9 @@ the VM)
 <aspectj>
   <aspects>
     <aspect name="aspinaction.aspects.security.SecurityAspect"/>
+    <concrete-aspect name="ajia.monitoring.JDBCMonitoring" extends="ajia.monitoring.Monitoring">
+      <pointcut name="monitored" expression="call(* java.sql.*.*(..))"/>
+    </concrete-aspect>
   </aspects>
 </aspectj>
 }}}
