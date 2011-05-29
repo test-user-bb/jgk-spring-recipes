@@ -59,9 +59,15 @@ _NOTE: aop.xml can include a lot more configuration information, including point
  * You can also use the *{{{-Dorg.aspectj.weaver.loadtime.configuration}}}* VM option to specify an explicit list of files instead of using the default ones on the classpath. This option is useful when you want to try multiple load-time weaver
 configurations quickly.
   * You enable LTW by including the –javaagent option when starting the VM:
+   * Unix
 {{{
 > java –classpath classes;aspects
-➥ -javaagent:%ASPECTJ_HOME%\lib\aspectjweaver.jar aspinaction.Main
+➥ -javaagent:${ASPECTJ_HOME}/lib/aspectjweaver.jar com.jgk.springrecipes.someapp.Main
+}}}
+   * Windows
+{{{
+> java –classpath classes;aspects
+➥ -javaagent:%ASPECTJ_HOME%\lib\aspectjweaver.jar com.jgk.springrecipes.someapp.Main
 }}}
 === {{{@AspectJ}}} syntax ===
  * available with Java 5 annotations
