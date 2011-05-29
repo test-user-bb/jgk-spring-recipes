@@ -1,5 +1,10 @@
 #summary info about AspectJ
 
+=== {{{aspectjrt.jar}}} ===
+ * {{{aspectjrt.jar}}} file contains:
+  * definitions for the various user accessible AspectJ types such as JoinPoint and Signature
+  * various @AspectJ annotations
+  * internal AspectJ types utilized during runtime
 === Eclipse + AspectJ ===
  * [http://www.eclipse.org/ajdt/downloads AJDT Plugin]
  * [http://www.springsource.com/developer/sts Spring Tool Suite (STS)]
