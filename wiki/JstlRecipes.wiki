@@ -1,4 +1,4 @@
-#summary One-sentence summary of this page.
+#summary jstl usages
 
 === fmt ===
  * Need the following page directive:
