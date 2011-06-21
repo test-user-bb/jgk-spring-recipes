@@ -499,7 +499,7 @@ predetermined period of time)
   * Operating System Security
   * JVM (sandbox) Security
 == Logout ==
- * Adding a logout link
+ * [http://static.springsource.org/spring-security/site/petclinic-tutorial.html Adding a logout link]
 {{{
 <a href="{context-url}/j_spring_security_logout" htmlEscape="true" />">
 }}}
