@@ -498,3 +498,8 @@ predetermined period of time)
   * [http://en.wikipedia.org/wiki/Intrusion_detection_system IDS]
   * Operating System Security
   * JVM (sandbox) Security
+== Logout ==
+ * Adding a logout link
+{{{
+<a href="{context-url}/j_spring_security_logout" htmlEscape="true" />">
+}}}
