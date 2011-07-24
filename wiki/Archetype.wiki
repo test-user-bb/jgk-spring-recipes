@@ -1,0 +1,8 @@
+#summary archetype
+
+
+== Archetype ==
+{{{
+groupId: org.apache.maven.archetypes
+artifactId: maven-archetype-webapp
+}}}
