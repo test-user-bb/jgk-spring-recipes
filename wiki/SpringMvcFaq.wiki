@@ -1,4 +1,4 @@
-#summary One-sentence summary of this page.
+#summary about spring mvc
 
  * [SpringMvcFaq#Why_are_my_@Controller_annotations_ignored? Why are my @Controller annotations ignored?]
  * [SpringMvcFaq#]
