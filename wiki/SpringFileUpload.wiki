@@ -1,0 +1,5 @@
+#summary spring mvc project
+
+== setup ==
+=== pom.xml ===
+=== project name ===
