@@ -2,6 +2,12 @@
 
 === articles ===
  * [http://static.springsource.org/spring/docs/3.0.0.M3/spring-framework-reference/html/ch16s08.html springframework mvc fileupload]
+== requirements ==
+ * upload an image
+ * generate a new name for image (perhaps numbered)
+ * generate a thumbnail for image
+ * store image(s) to system (file? db? other?)
+ * store info about images (size, dimensions, original name, date/time)
 == setup ==
 === project name: jgk-spring-recipes-fileupload ===
 === fileupload-webapp-config.xml ===
