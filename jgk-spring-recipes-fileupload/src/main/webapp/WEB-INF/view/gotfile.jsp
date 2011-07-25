@@ -8,6 +8,9 @@
 </head>
 <body>
 
-Huray, got the file
+Huray, got the file ${jed}
+<br/>
+${originalFileName}
+${fileLength}
 </body>
 </html>
