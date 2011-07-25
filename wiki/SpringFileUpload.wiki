@@ -1,5 +1,7 @@
 #summary spring mvc project
 
+=== articles ===
+ * [http://static.springsource.org/spring/docs/3.0.0.M3/spring-framework-reference/html/ch16s08.html springframework mvc fileupload]
 == setup ==
 === project name ===
 === fileupload-webapp-config.xml ===
