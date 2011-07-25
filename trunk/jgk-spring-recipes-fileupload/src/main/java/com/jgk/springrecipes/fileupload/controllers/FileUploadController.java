@@ -44,7 +44,8 @@ public class FileUploadController {
 			System.out.println("file name: " + f.getName());
 			System.out.println("Size: "+f.getSize());
 			System.out.println("Original file name: " + f.getOriginalFilename());
-			
+			mov.addObject("originalFileName",f.getOriginalFilename());
+			mov.addObject("fileLength",f.getSize());
 			
 		} else {
 			System.out.println("NO FILE PROVIDED");
