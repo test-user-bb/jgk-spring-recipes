@@ -3,7 +3,7 @@
 === articles ===
  * [http://static.springsource.org/spring/docs/3.0.0.M3/spring-framework-reference/html/ch16s08.html springframework mvc fileupload]
 == setup ==
-=== project name ===
+=== project name: jgk-spring-recipes-fileupload ===
 === fileupload-webapp-config.xml ===
 {{{
 <?xml version="1.0" encoding="UTF-8"?>
