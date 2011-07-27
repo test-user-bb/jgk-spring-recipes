@@ -16,6 +16,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<servlet-api.version>2.5</servlet-api.version>
 		<spring.version>3.0.5.RELEASE</spring.version>
+		<javax.inject.version>1.0-PFD-1</javax.inject.version>
 		<jsp-api.version>2.2</jsp-api.version>
 		<jstl.version>1.2</jstl.version>
 		<junit.version>4.8.2</junit.version>
@@ -27,6 +28,12 @@
 	</properties>
 
 	<dependencies>
+		<dependency>
+			<groupId>javax.inject</groupId>
+			<artifactId>javax.inject</artifactId>
+			<version>${javax.inject.version}</version>
+		</dependency>
+
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-api</artifactId>
@@ -55,12 +62,12 @@
 			<version>${spring.version}</version>
 			<type>jar</type>
 			<scope>runtime</scope>
-<!--			<exclusions>-->
-<!--				<exclusion>-->
-<!--					<groupId>commons-logging</groupId>-->
-<!--					<artifactId>commons-logging</artifactId>-->
-<!--				</exclusion>-->
-<!--			</exclusions>-->
+			<!-- <exclusions> -->
+			<!-- <exclusion> -->
+			<!-- <groupId>commons-logging</groupId> -->
+			<!-- <artifactId>commons-logging</artifactId> -->
+			<!-- </exclusion> -->
+			<!-- </exclusions> -->
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -69,7 +76,7 @@
 			<type>jar</type>
 			<scope>compile</scope>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-test</artifactId>
@@ -91,13 +98,13 @@
 			<type>jar</type>
 			<scope>provided</scope>
 		</dependency>
-        <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>jstl</artifactId>
-            <version>${jstl.version}</version>
-            <scope>runtime</scope>
-        </dependency>
-		
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+			<version>${jstl.version}</version>
+			<scope>runtime</scope>
+		</dependency>
+
 		<dependency>
 			<groupId>commons-fileupload</groupId>
 			<artifactId>commons-fileupload</artifactId>
@@ -127,6 +134,6 @@
 				</configuration>
 			</plugin>
 		</plugins>
-		
+
 	</build>
 </project>
