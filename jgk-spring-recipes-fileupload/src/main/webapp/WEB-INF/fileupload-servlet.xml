@@ -14,8 +14,13 @@
 				              ">
 
 	<!-- JSR-303 support will be detected on classpath and enabled automatically -->
-	<context:component-scan base-package="com.jgk.springrecipes.fileupload.controllers" />
+	<context:component-scan
+		base-package="com.jgk.springrecipes.fileupload.controllers, com.jgk.springrecipes.fileupload.service" />
 	<mvc:annotation-driven />
+	<bean id="imageArchiveDir" class="java.io.File">
+		<constructor-arg value="WEB-INF/image.archive" />
+	</bean>
+
 	<bean id="multipartResolver"
 		class="org.springframework.web.multipart.commons.CommonsMultipartResolver" />
 

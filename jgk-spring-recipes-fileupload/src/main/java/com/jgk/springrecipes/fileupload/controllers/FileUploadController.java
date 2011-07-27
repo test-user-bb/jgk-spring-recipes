@@ -1,20 +1,21 @@
 package com.jgk.springrecipes.fileupload.controllers;
 
-import java.io.IOException;
-
+import javax.inject.Inject;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.validation.BindException;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
-@Controller //(value="fileUploadController")
+import com.jgk.springrecipes.fileupload.service.ImageFileService;
+
+@Controller
 public class FileUploadController {
 
+	@Inject ImageFileService imageFileService;
+	
 	@RequestMapping(value="/gravy")
 	public @ResponseBody String gravy() {
 		StringBuilder sb = new StringBuilder();
@@ -28,25 +29,14 @@ public class FileUploadController {
 				HttpServletResponse response,
 				ModelAndView mov,
 				FileUploadBean bean) {
-		System.out.println("HOWDY FRIEND");
-		System.out.println(bean);
+//		System.out.println("HOWDY FRIEND");
+//		System.out.println("imageFileService:"+imageFileService.getText());
+//		System.out.println(bean);
+//		System.out.println(bean.getDescription());
+		
 		if(bean.getFile()!=null) {
 			System.out.println("DOING SOMETHING WITH THE FILE");
-			MultipartFile f = bean.getFile();
-			try {
-				byte[] data= f.getBytes();
-				System.out.println(data.length);
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-			System.out.println("Content Type: " + f.getContentType());
-			System.out.println("file name: " + f.getName());
-			System.out.println("Size: "+f.getSize());
-			System.out.println("Original file name: " + f.getOriginalFilename());
-			mov.addObject("originalFileName",f.getOriginalFilename());
-			mov.addObject("fileLength",f.getSize());
-			
+			imageFileService.archiveImageFileUpload(bean);
 		} else {
 			System.out.println("NO FILE PROVIDED");
 		}
@@ -54,4 +44,16 @@ public class FileUploadController {
 		mov.setViewName("gotfile");
 		return mov;
 	}
+	
+	@RequestMapping(value="/list")
+	public ModelAndView listUploadedFiles(
+			HttpServletRequest request,
+			HttpServletResponse response,
+			ModelAndView mov
+			) {
+		mov.addObject("stuff","there is stuff here");
+		mov.setViewName("image.list");
+		return mov;
+	}
+
 }

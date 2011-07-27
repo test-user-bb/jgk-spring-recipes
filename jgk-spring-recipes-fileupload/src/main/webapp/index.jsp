@@ -1,8 +1,14 @@
 <html>
 <head>
 <title>File Upload</title>
+<script type="text/javascript">
+function loadertime() {
+document.getElementById("remoteHostName").value=window.location.hostname;
+}
+
+</script>
 </head>
-<body>
+<body onload="loadertime()">
 	<h2>jgk-spring-recipes - File Upload</h2>
 	and more here
 
@@ -14,7 +20,14 @@
 	<div>
 		<form method="post" action="fileupload/upload.form"
 			enctype="multipart/form-data">
-			<input type="file" name="file" /> <input type="submit" />
+			<input type="file" name="file" /> 
+			<br/>
+			<input type="text" id="remoteHostName" name="remoteHostName"/>
+			<br/>
+			Description: <textarea id="file_description" name="description" rows="5" cols="30"></textarea>
+			<br/>
+			<input type="submit" />
+			
 		</form>
 	</div>
 </body>
