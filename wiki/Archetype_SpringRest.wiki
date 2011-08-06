@@ -4,3 +4,8 @@
  * When creating a new project where you know you are going to want spring and REST capabilities, this archetype can get you started.
  * creates a maven war project with some directory structures
  * when completed you will have a working restful web application
+
+== location of source ==
+ * [http://java.com here]
+== using the archetype ==
+ * here
