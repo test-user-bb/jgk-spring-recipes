@@ -1,4 +1,4 @@
-#summary archetype
+#summary webapp archetype
 
 
 == Archetype ==
