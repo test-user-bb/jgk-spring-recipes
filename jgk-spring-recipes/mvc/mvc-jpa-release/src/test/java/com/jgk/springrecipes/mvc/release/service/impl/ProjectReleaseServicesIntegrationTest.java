@@ -10,6 +10,7 @@ import javax.inject.Inject;
 
 import org.apache.log4j.Logger;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;
@@ -76,6 +77,7 @@ public class ProjectReleaseServicesIntegrationTest {
 		assertNotNull(releaseUserService);
 		assertNotNull(projectService);
 	}
+	@Ignore
 	@Test
 	public void basic() {
 //		System.out.println(releaseService);
