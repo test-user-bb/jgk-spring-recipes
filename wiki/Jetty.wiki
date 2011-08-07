@@ -34,3 +34,19 @@ mvn jetty:run
 {{{
 mvn -Djetty.port=9999 jetty:run
 }}}
+ * you can place configuration properties in an external file and reference inside the plugin configuration section:
+{{{
+        <configuration>
+             <jettyConfig>myjetty.xml</jettyConfig>
+        </configuration>
+}}}
+ * 
+{{{
+        <configuration>
+             <webAppConfig>
+               <contextPath>/test</contextPath>
+               <tempDirectory>${project.build.directory}/work</tempDirectory>
+
+             </webAppConfig>
+        </configuration>
+}}}
