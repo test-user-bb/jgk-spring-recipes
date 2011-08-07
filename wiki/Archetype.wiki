@@ -6,7 +6,12 @@
 groupId: org.apache.maven.archetypes
 artifactId: maven-archetype-webapp
 }}}
+=== command to run ===
+{{{
+mvn archetype:create -DgroupId=com.jgk.myapp -DartifactId=jgkmyapp -DarchetypeArtifactId=maven-archetype-webapp
 
+}}}
+=== output ===
 {{{
 CMD=mvn archetype:create -DgroupId=com.jgk.myapp -DartifactId=jgkmyapp -DarchetypeArtifactId=maven-archetype-webapp
 [INFO] Scanning for projects...
