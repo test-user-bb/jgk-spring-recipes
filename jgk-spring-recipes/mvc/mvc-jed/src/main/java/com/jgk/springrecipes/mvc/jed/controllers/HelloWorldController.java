@@ -36,7 +36,7 @@ public class HelloWorldController {
 	@RequestMapping("/friend")
 	@ResponseBody
 	public String theFriend() {
-		return "<html><body><h1>FRIEND Hello There MOFO JSON</h1></body></html>";
+		return "<html><body><h1>FRIEND Hello There  JSON</h1></body></html>";
 	}
 	@RequestMapping("/json")
 	@ResponseBody
