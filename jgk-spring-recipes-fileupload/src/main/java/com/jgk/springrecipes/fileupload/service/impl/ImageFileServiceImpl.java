@@ -1,9 +1,14 @@
 package com.jgk.springrecipes.fileupload.service.impl;
 
 import java.awt.image.BufferedImage;
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.IOException;
 import java.util.Date;
+import java.util.List;
+import java.util.Properties;
 
 import javax.inject.Inject;
 
@@ -14,6 +19,7 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.support.RequestContextUtils;
 
 import com.jgk.springrecipes.fileupload.controllers.FileUploadBean;
+import com.jgk.springrecipes.fileupload.misc.ImageInfo;
 import com.jgk.springrecipes.fileupload.service.ImageFileService;
 import com.jgk.springrecipes.util.image.ImageUtil;
 import com.jgk.springrecipes.util.image.ThumbnailGenerator;
@@ -23,7 +29,7 @@ public class ImageFileServiceImpl implements ImageFileService {
 	private File imageArchiveDir;
 	private File counterFile;
 	private static final String COUNTER_FILENAME="counter";
-
+	private List<ImageInfo> imageInfoList;
 	public ImageFileServiceImpl() {
 		super();
 		String imageArchiveDirectoryName = System
@@ -53,6 +59,25 @@ public class ImageFileServiceImpl implements ImageFileService {
 		}
 		counter = getCounterFromFile();
 		System.out.println("Counter is: "+counter);
+		for (Integer i = 0 ; i < counter; i++) {
+			Properties p = new Properties();
+			File f = new File(imageArchiveDir,i+".properties");
+			if(f.exists()) {
+				BufferedReader br = null;
+				try {
+					br = new BufferedReader(new FileReader(f));
+					p.load(br);
+					br.close();
+					ImageInfo ii = ImageInfo.createImageInfo(p);
+				} catch (FileNotFoundException e) {
+					e.printStackTrace();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			} else {
+				System.out.println("Missing file "+f.getAbsolutePath());
+			}
+		}
 	}
 
 	// public static File imageArchiveDir
@@ -145,6 +170,11 @@ public class ImageFileServiceImpl implements ImageFileService {
 		sb.append("description:").append(description).append("\n");
 		sb.append("timestamp:").append(new Date().toString()).append("\n");
 		return sb.toString();
+	}
+
+	@Override
+	public List<ImageInfo> getImageInfoList() {
+		return imageInfoList;
 	}
 
 }
