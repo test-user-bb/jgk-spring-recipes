@@ -3,21 +3,51 @@ package com.jgk.springrecipes.rest.json;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
+import java.util.HashMap;
+import java.util.Map;
 
 import org.codehaus.jackson.JsonGenerationException;
 import org.codehaus.jackson.JsonParseException;
 import org.codehaus.jackson.map.JsonMappingException;
 import org.codehaus.jackson.map.ObjectMapper;
+import org.junit.Before;
 import org.junit.Test;
 
-public class JacksonTest {
 
+public class JacksonTest {
+	private ObjectMapper mapper;
+	@Before
+	public void setup() {
+		mapper = new ObjectMapper(); // can reuse, share globally
+		
+	}
+
+	@Test
+	public void testSimpleBinding() {
+		Map<String,Object> userData = new HashMap<String,Object>();
+		Map<String,String> nameStruct = new HashMap<String,String>();
+		nameStruct.put("first", "Joe");
+		nameStruct.put("last", "Sixpack");
+		userData.put("name", nameStruct);
+		userData.put("gender", "MALE");
+		userData.put("verified", Boolean.FALSE);
+		userData.put("userImage", "Rm9vYmFyIQ==");
+		try {
+			mapper.writeValue(new File("target/user-modified-map.json"), userData);
+		} catch (JsonGenerationException e) {
+			e.printStackTrace();
+		} catch (JsonMappingException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
 	@Test
 	public void testSimple() {
 		System.out.println(getJson());
 		URL url = JacksonTest.class.getClassLoader().getResource("testdata/user.json");
 		System.out.println(url);
-		ObjectMapper mapper = new ObjectMapper(); // can reuse, share globally
 		User user = null;
 		try {
 			user = mapper.readValue(new File(url.getFile()), User.class);
