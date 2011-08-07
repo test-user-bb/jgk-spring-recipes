@@ -10,6 +10,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;
@@ -39,6 +40,7 @@ public class MyHadesTest {
 		
 	}
 	
+	@Ignore
 	@Test
 	public void testIt() {
 		System.out.println(userDao);
