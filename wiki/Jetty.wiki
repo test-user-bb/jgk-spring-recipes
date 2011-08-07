@@ -16,7 +16,7 @@
         <configuration>
         </configuration>
 
-     </plugin
+     </plugin>
   </plugins>
   ...
 </build>
