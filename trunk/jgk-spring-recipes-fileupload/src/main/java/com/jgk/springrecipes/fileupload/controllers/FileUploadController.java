@@ -52,6 +52,7 @@ public class FileUploadController {
 			ModelAndView mov
 			) {
 		mov.addObject("stuff","there is stuff here");
+		mov.addObject("ii",imageFileService.getImageInfoList());
 		mov.setViewName("image.list");
 		return mov;
 	}
