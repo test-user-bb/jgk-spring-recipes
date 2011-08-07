@@ -29,3 +29,8 @@ mvn jetty:run
 {{{
   http://localhost:8080/jedweb
 }}}
+= Customizations/Configurations =
+ * by default jetty listens on 8080, you can change this by setting the {{{jetty.port}}} system property:
+{{{
+mvn -Djetty.port=9999 jetty:run
+}}}
