@@ -1,5 +1,12 @@
 #summary archetype for spring and rest
 
+ * [Archetype_SpringRest#Introduction]
+ * [Archetype_SpringRest#create_archetype_from_the_project]
+ * [Archetype_SpringRest#install_the_archetype_locally]
+ * [Archetype_SpringRest#using_the_archetype]
+ * [Archetype_SpringRest#test_in_jetty]
+ * [Archetype_SpringRest#location_of_source]
+
 = Introduction =
  * When creating a new project where you know you are going to want spring and REST capabilities, this archetype can get you started.
  * creates a maven war project with some directory structures
@@ -7,6 +14,7 @@
  * to make this happen, the project skeleton was first manually created
  * then use mvn to make an archetype based on the project:
 
+== create archetype from the project ==
 {{{
 jgk-spring-rest jkroub$ mvn archetype:create-from-project
 [INFO] Scanning for projects...
