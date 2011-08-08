@@ -120,21 +120,21 @@ Choose archetype:
 1: local -> maven-archetype-webapp (-)
 2: local -> jgk-spring-rest-archetype (jgk-spring-rest-archetype)
 Choose a number: : 2
-Define value for property 'groupId': : com.jgk.testarchetype.springrest
-Define value for property 'artifactId': : com.jgk.restafari
+Define value for property 'groupId': : com.jgk.testspringrest
+Define value for property 'artifactId': : jgk-spring-rest
 Define value for property 'version':  1.0-SNAPSHOT: : 
-Define value for property 'package':  com.jgk.testarchetype.springrest: : 
+Define value for property 'package':  com.jgk.testspringrest: : 
 Confirm properties configuration:
-groupId: com.jgk.testarchetype.springrest
-artifactId: com.jgk.restafari
+groupId: com.jgk.testspringrest
+artifactId: jgk-spring-rest
 version: 1.0-SNAPSHOT
-package: com.jgk.testarchetype.springrest
- Y: : Y
+package: com.jgk.testspringrest
+ Y: : 
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time: 1:48.043s
-[INFO] Finished at: Sun Aug 07 22:08:09 MST 2011
+[INFO] Total time: 43.793s
+[INFO] Finished at: Sun Aug 07 22:11:54 MST 2011
 [INFO] Final Memory: 7M/265M
 [INFO] ------------------------------------------------------------------------
 
