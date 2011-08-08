@@ -101,6 +101,15 @@ archetype jkroub$ mvn install
 
 }}}
 == using the archetype ==
+ * the {{{archetype:generate}}} is used
+ * user is prompted for some information:
+  * the locally installed archetype to use (here it is #2)
+  * {{{groupId}}}
+  * {{{artifactId}}}
+  * {{{version}}}
+  * {{{package}}}
+ * since this is a spring-based web application, there is a servlet configuration file that is read by the context when the web application is boot-strapped.  For this archetype it is called {{{jgk-spring-rest-webapp-config.xml}}}, which is related to the {{{artifactId}}}.  If you specify {{{jgk-spring-rest}}} as the artifactId then all will be well.  If you specify a different {{{artifactId}}} you will need to rename the configuration file.
+jgk-spring-rest
 {{{
  jkroub$ mvn archetype:generate -DarchetypeCatalog=local
 [INFO] Scanning for projects...
