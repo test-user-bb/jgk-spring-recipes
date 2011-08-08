@@ -60,7 +60,7 @@ jgk-spring-rest jkroub$ mvn archetype:create-from-project
 [INFO] ------------------------------------------------------------------------
 
 }}}
- * Next, install the archetype locally:
+== install the archetype locally ==
 {{{
 jgk-spring-rest jkroub$ cd target/generated-sources/archetype/
 archetype jkroub$ mvn install
@@ -100,7 +100,7 @@ archetype jkroub$ mvn install
 [INFO] ------------------------------------------------------------------------
 
 }}}
- * now use the archetype:
+== using the archetype ==
 {{{
  jkroub$ mvn archetype:generate -DarchetypeCatalog=local
 [INFO] Scanning for projects...
@@ -150,5 +150,3 @@ http://localhost:8080/jgk-spring-rest/
 }}}
 == location of source ==
  * [https://jgk-spring-recipes.googlecode.com/svn/trunk/jgk-spring-rest here]
-== using the archetype ==
- * here
