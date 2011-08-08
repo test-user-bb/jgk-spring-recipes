@@ -139,7 +139,16 @@ package: com.jgk.testspringrest
 [INFO] ------------------------------------------------------------------------
 
 }}}
+== test in jetty ==
+ * run jetty
+{{{
+$ mvn jetty:run
+}}}
+ * access in browser:
+{{{
+http://localhost:8080/jgk-spring-rest/
+}}}
 == location of source ==
- * [http://java.com here]
+ * [https://jgk-spring-recipes.googlecode.com/svn/trunk/jgk-spring-rest here]
 == using the archetype ==
  * here
