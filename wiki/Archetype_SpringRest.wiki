@@ -8,7 +8,8 @@
  * then use mvn to make an archetype based on the project:
 
 {{{
-jgk-spring-rest jkroub$ mvn archetype:create-from-project[INFO] Scanning for projects...
+jgk-spring-rest jkroub$ mvn archetype:create-from-project
+[INFO] Scanning for projects...
 [INFO]                                                                         
 [INFO] ------------------------------------------------------------------------
 [INFO] Building JGK Spring and REST Webapp 1.0-SNAPSHOT
@@ -24,41 +25,15 @@ jgk-spring-rest jkroub$ mvn archetype:create-from-project[INFO] Scanning for pro
 [INFO] Setting default version: 1.0-SNAPSHOT
 [INFO] Setting default package: com.jgk.springrecipes.rest
 [INFO] Scanning for projects...
-Downloading: http://repo1.maven.org/maven2/org/apache/maven/archetype/archetype-packaging/2.0/archetype-packaging-2.0.pom
-Downloaded: http://repo1.maven.org/maven2/org/apache/maven/archetype/archetype-packaging/2.0/archetype-packaging-2.0.pom (2 KB at 1.7 KB/sec)
-Downloading: http://repo1.maven.org/maven2/org/apache/maven/archetype/archetype-packaging/2.0/archetype-packaging-2.0.jar
-Downloaded: http://repo1.maven.org/maven2/org/apache/maven/archetype/archetype-packaging/2.0/archetype-packaging-2.0.jar (8 KB at 19.7 KB/sec)
 [INFO]                                                                         
 [INFO] ------------------------------------------------------------------------
 [INFO] Building jgk-spring-rest-archetype 1.0-SNAPSHOT
 [INFO] ------------------------------------------------------------------------
-Downloading: http://repo1.maven.org/maven2/org/apache/maven/plugins/maven-install-plugin/maven-metadata.xml
-Downloaded: http://repo1.maven.org/maven2/org/apache/maven/plugins/maven-install-plugin/maven-metadata.xml (503 B at 1.2 KB/sec)
-Downloading: http://repo1.maven.org/maven2/org/apache/maven/plugins/maven-resources-plugin/maven-metadata.xml
-Downloaded: http://repo1.maven.org/maven2/org/apache/maven/plugins/maven-resources-plugin/maven-metadata.xml (657 B at 1.3 KB/sec)
-Downloading: http://repo1.maven.org/maven2/org/apache/maven/plugins/maven-deploy-plugin/maven-metadata.xml
-Downloaded: http://repo1.maven.org/maven2/org/apache/maven/plugins/maven-deploy-plugin/maven-metadata.xml (585 B at 1.1 KB/sec)
-Downloading: http://repo1.maven.org/maven2/org/apache/maven/plugins/maven-resources-plugin/2.5/maven-resources-plugin-2.5.jar
-Downloaded: http://repo1.maven.org/maven2/org/apache/maven/plugins/maven-resources-plugin/2.5/maven-resources-plugin-2.5.jar (26 KB at 14.5 KB/sec)
 [INFO] 
 [INFO] --- maven-resources-plugin:2.5:resources (default-resources) @ jgk-spring-rest-archetype ---
-Downloading: http://repo1.maven.org/maven2/org/apache/maven/plugins/maven-resources-plugin/2.5/maven-resources-plugin-2.5.pom
-Downloaded: http://repo1.maven.org/maven2/org/apache/maven/plugins/maven-resources-plugin/2.5/maven-resources-plugin-2.5.pom (7 KB at 15.5 KB/sec)
-Downloading: http://repo1.maven.org/maven2/org/apache/maven/plugins/maven-plugins/19/maven-plugins-19.pom
-Downloaded: http://repo1.maven.org/maven2/org/apache/maven/plugins/maven-plugins/19/maven-plugins-19.pom (0 B at 0.0 KB/sec)
-Downloading: http://repo1.maven.org/maven2/org/apache/maven/maven-parent/19/maven-parent-19.pom
-Downloaded: http://repo1.maven.org/maven2/org/apache/maven/maven-parent/19/maven-parent-19.pom (0 B at 0.0 KB/sec)
-Downloading: http://repo1.maven.org/maven2/org/apache/apache/9/apache-9.pom
-Downloaded: http://repo1.maven.org/maven2/org/apache/apache/9/apache-9.pom (0 B at 0.0 KB/sec)
-Downloading: http://repo1.maven.org/maven2/org/apache/maven/shared/maven-filtering/1.0/maven-filtering-1.0.pom
-Downloaded: http://repo1.maven.org/maven2/org/apache/maven/shared/maven-filtering/1.0/maven-filtering-1.0.pom (6 KB at 16.1 KB/sec)
-Downloading: http://repo1.maven.org/maven2/org/apache/maven/shared/maven-shared-components/16/maven-shared-components-16.pom
-Downloaded: http://repo1.maven.org/maven2/org/apache/maven/shared/maven-shared-components/16/maven-shared-components-16.pom (0 B at 0.0 KB/sec)
-Downloading: http://repo1.maven.org/maven2/org/apache/maven/shared/maven-filtering/1.0/maven-filtering-1.0.jar
-Downloaded: http://repo1.maven.org/maven2/org/apache/maven/shared/maven-filtering/1.0/maven-filtering-1.0.jar (42 KB at 108.9 KB/sec)
 [debug] execute contextualize
 [WARNING] Using platform encoding (MacRoman actually) to copy filtered resources, i.e. build is platform dependent!
-[INFO] Copying 28 resources
+[INFO] Copying 27 resources
 [INFO] 
 [INFO] --- maven-resources-plugin:2.5:testResources (default-testResources) @ jgk-spring-rest-archetype ---
 [debug] execute contextualize
@@ -71,24 +46,23 @@ Downloaded: http://repo1.maven.org/maven2/org/apache/maven/shared/maven-filterin
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time: 10.001s
-[INFO] Finished at: Sun Aug 07 21:44:39 MST 2011
+[INFO] Total time: 1.756s
+[INFO] Finished at: Sun Aug 07 22:03:59 MST 2011
 [INFO] Final Memory: 6M/265M
 [INFO] ------------------------------------------------------------------------
 [INFO] Archetype created in /Users/jkroub/Documents/workspace-jgk-spring-recipes/jgk-spring-rest/target/generated-sources/archetype
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time: 17.166s
-[INFO] Finished at: Sun Aug 07 21:44:40 MST 2011
+[INFO] Total time: 6.130s
+[INFO] Finished at: Sun Aug 07 22:03:59 MST 2011
 [INFO] Final Memory: 7M/265M
 [INFO] ------------------------------------------------------------------------
 
 }}}
  * Next, install the archetype locally:
 {{{
-$ cd target/generated-sources/archetype/
-$ mvn install
+jgk-spring-rest jkroub$ cd target/generated-sources/archetype/
 archetype jkroub$ mvn install
 [INFO] Scanning for projects...
 [INFO]                                                                         
@@ -99,7 +73,7 @@ archetype jkroub$ mvn install
 [INFO] --- maven-resources-plugin:2.5:resources (default-resources) @ jgk-spring-rest-archetype ---
 [debug] execute contextualize
 [WARNING] Using platform encoding (MacRoman actually) to copy filtered resources, i.e. build is platform dependent!
-[INFO] Copying 28 resources
+[INFO] Copying 27 resources
 [INFO] 
 [INFO] --- maven-resources-plugin:2.5:testResources (default-testResources) @ jgk-spring-rest-archetype ---
 [debug] execute contextualize
@@ -113,14 +87,6 @@ archetype jkroub$ mvn install
 [INFO] --- maven-archetype-plugin:2.0:integration-test (default-integration-test) @ jgk-spring-rest-archetype ---
 [INFO] 
 [INFO] --- maven-install-plugin:2.3.1:install (default-install) @ jgk-spring-rest-archetype ---
-Downloading: http://repo1.maven.org/maven2/org/apache/maven/plugins/maven-install-plugin/2.3.1/maven-install-plugin-2.3.1.pom
-Downloaded: http://repo1.maven.org/maven2/org/apache/maven/plugins/maven-install-plugin/2.3.1/maven-install-plugin-2.3.1.pom (0 B at 0.0 KB/sec)
-Downloading: http://repo1.maven.org/maven2/org/codehaus/plexus/plexus-digest/1.0/plexus-digest-1.0.pom
-Downloaded: http://repo1.maven.org/maven2/org/codehaus/plexus/plexus-digest/1.0/plexus-digest-1.0.pom (0 B at 0.0 KB/sec)
-Downloading: http://repo1.maven.org/maven2/org/codehaus/plexus/plexus-components/1.1.7/plexus-components-1.1.7.pom
-Downloaded: http://repo1.maven.org/maven2/org/codehaus/plexus/plexus-components/1.1.7/plexus-components-1.1.7.pom (0 B at 0.0 KB/sec)
-Downloading: http://repo1.maven.org/maven2/org/codehaus/plexus/plexus-digest/1.0/plexus-digest-1.0.jar
-Downloaded: http://repo1.maven.org/maven2/org/codehaus/plexus/plexus-digest/1.0/plexus-digest-1.0.jar (0 B at 0.0 KB/sec)
 [INFO] Installing /Users/jkroub/Documents/workspace-jgk-spring-recipes/jgk-spring-rest/target/generated-sources/archetype/target/jgk-spring-rest-archetype-1.0-SNAPSHOT.jar to /Users/jkroub/.m2/repository/com/jgk/springrecipes/rest/jgk-spring-rest-archetype/1.0-SNAPSHOT/jgk-spring-rest-archetype-1.0-SNAPSHOT.jar
 [INFO] Installing /Users/jkroub/Documents/workspace-jgk-spring-recipes/jgk-spring-rest/target/generated-sources/archetype/pom.xml to /Users/jkroub/.m2/repository/com/jgk/springrecipes/rest/jgk-spring-rest-archetype/1.0-SNAPSHOT/jgk-spring-rest-archetype-1.0-SNAPSHOT.pom
 [INFO] 
@@ -128,9 +94,48 @@ Downloaded: http://repo1.maven.org/maven2/org/codehaus/plexus/plexus-digest/1.0/
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time: 4.725s
-[INFO] Finished at: Sun Aug 07 21:48:02 MST 2011
+[INFO] Total time: 3.036s
+[INFO] Finished at: Sun Aug 07 22:04:58 MST 2011
 [INFO] Final Memory: 6M/265M
+[INFO] ------------------------------------------------------------------------
+
+}}}
+ * now use the archetype:
+{{{
+ jkroub$ mvn archetype:generate -DarchetypeCatalog=local
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building Maven Stub Project (No POM) 1
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] >>> maven-archetype-plugin:2.0:generate (default-cli) @ standalone-pom >>>
+[INFO] 
+[INFO] <<< maven-archetype-plugin:2.0:generate (default-cli) @ standalone-pom <<<
+[INFO] 
+[INFO] --- maven-archetype-plugin:2.0:generate (default-cli) @ standalone-pom ---
+[INFO] Generating project in Interactive mode
+[INFO] No archetype defined. Using maven-archetype-quickstart (org.apache.maven.archetypes:maven-archetype-quickstart:1.0)
+Choose archetype:
+1: local -> maven-archetype-webapp (-)
+2: local -> jgk-spring-rest-archetype (jgk-spring-rest-archetype)
+Choose a number: : 2
+Define value for property 'groupId': : com.jgk.testarchetype.springrest
+Define value for property 'artifactId': : com.jgk.restafari
+Define value for property 'version':  1.0-SNAPSHOT: : 
+Define value for property 'package':  com.jgk.testarchetype.springrest: : 
+Confirm properties configuration:
+groupId: com.jgk.testarchetype.springrest
+artifactId: com.jgk.restafari
+version: 1.0-SNAPSHOT
+package: com.jgk.testarchetype.springrest
+ Y: : Y
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 1:48.043s
+[INFO] Finished at: Sun Aug 07 22:08:09 MST 2011
+[INFO] Final Memory: 7M/265M
 [INFO] ------------------------------------------------------------------------
 
 }}}
