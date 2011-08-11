@@ -12,10 +12,22 @@
     </layout> 
   </appender> 
 
-  <root> 
-    <priority value ="debug" /> 
-    <appender-ref ref="console" /> 
-  </root>
+	<logger name="com.jgk">
+		<level value="error" />
+		<appender-ref ref="console" />
+	</logger>
+	<logger name="org.springframework.orm.jpa">
+		<level value="error" />
+		<appender-ref ref="console" />
+	</logger>
+	<logger name="org.springframework">
+		<level value="error" />
+		<appender-ref ref="console" />
+	</logger>
+	<root>
+		<priority value="error" />
+		<appender-ref ref="console" />
+	</root>
   
 </log4j:configuration>
 }}}
