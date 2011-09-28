@@ -1,4 +1,4 @@
-#summary One-sentence summary of this page.
+#summary more about spring mvc
 
 = [http://static.springsource.org/spring/docs/3.0.x/spring-framework-reference/html/mvc.html Spring MVC] =
 
