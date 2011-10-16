@@ -7,6 +7,27 @@
   * @Autowired is more powerful.  It can be applied to constructor, field, setter method or even a config method.
   * See the [http://static.springsource.org/spring/docs/3.0.x/javadoc-api/ javadoc]
 
+ * @Required is useful when you are using xml to configure beans.  In this context, a bean is configured with xml.  As such, a bean may have a method annotated with @Required.  That means that the xml configured bean is expected to have a {{{<property/>}}} clause with a property satisfying the setter method.
+  * An example may help in understanding:
+   * Enveloping class using @Required:
+{{{
+public class SomeXmlConfiguredSpringBeanObject {
+
+	Runtimer runtimer;
+	@Required
+	public void setRuntimer(Runtimer runtimer) {
+		this.runtimer = runtimer;
+	}
+}
+
+}}}
+   * Spring configuration in xml:
+{{{
+	<bean id="sxc" class="com.jgk.simplespring.SomeXmlConfiguredSpringBeanObject">
+		<property name="runtimer" ref="runtimer"></property>
+	</bean>
+}}}
+  * If you load the application context with this setup, the sxc bean will successfully be created since the *runtimer" property is satisfied.  However, if you comment out the {{{<property/>}}} clause and reload the application context you will get: {{{org.springframework.beans.factory.BeanInitializationException: Property 'runtimer' is required for bean 'sxc'}}}
  * How does Spring respond if a *@Required* annotation is not satisfied?
   * _{{{BeanInitializationException}}}_
 {{{
