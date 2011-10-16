@@ -1,5 +1,13 @@
 #summary Question and answer
 
+ * @Required vs. @Autowired
+
+  * @Required and @Autowired have some overlapping capabilities.
+  * I think the difference in behavior can be traced to when they were introduced.  @Required is older (since 2.0) than @Autowired (since 2.5).
+  * @Required marks a method (only a method) as being required. This is usually on a setter method.
+  * @Autowired is more powerful.  It can be applied to constructor, field, setter method or even a config method.
+  * See the [http://static.springsource.org/spring/docs/3.0.x/javadoc-api/ javadoc]
+
  * How does Spring respond if a *@Required* annotation is not satisfied?
   * _{{{BeanInitializationException}}}_
 {{{
