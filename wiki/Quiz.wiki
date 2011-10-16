@@ -27,7 +27,7 @@ public class SomeXmlConfiguredSpringBeanObject {
 		<property name="runtimer" ref="runtimer"></property>
 	</bean>
 }}}
-  * If you load the application context with this setup, the sxc bean will successfully be created since the *runtimer" property is satisfied.  However, if you comment out the {{{<property/>}}} clause and reload the application context you will get: {{{org.springframework.beans.factory.BeanInitializationException: Property 'runtimer' is required for bean 'sxc'}}}
+  * If you load the application context with this setup, the sxc bean will successfully be created since the *runtimer* property is satisfied.  However, if you comment out the {{{<property/>}}} clause and reload the application context you will get: {{{org.springframework.beans.factory.BeanInitializationException: Property 'runtimer' is required for bean 'sxc'}}}
  * How does Spring respond if a *@Required* annotation is not satisfied?
   * _{{{BeanInitializationException}}}_
 {{{
