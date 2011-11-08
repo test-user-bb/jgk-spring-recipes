@@ -20,6 +20,7 @@ Caused by: org.hibernate.cache.NoCachingEnabledException: Second-level cache is 
 
 }}}
 
+---- 
 == Proper Settings ==
 {{{
 
