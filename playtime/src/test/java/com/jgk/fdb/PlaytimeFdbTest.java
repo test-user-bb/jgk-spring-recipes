@@ -27,6 +27,8 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.test.annotation.Rollback;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.jgk.fdb.domain.Radimmo5;
 import com.jgk.fdb.domain.Radimmo5PK;
@@ -39,7 +41,9 @@ public class PlaytimeFdbTest {
     @Inject protected ApplicationContext applicationContext;
     @Inject protected Radimmo5Repository radimmo5Repository;
     @PersistenceContext protected EntityManager entityManager;
-    @Test @Rollback(value=false)
+    
+    @Test @Rollback(value=true)
+    @Transactional(propagation=Propagation.REQUIRED)
     public void testing() {
         persistSomeData(300);
         List<Radimmo5> list = radimmo5Repository.findAll();
@@ -51,6 +55,9 @@ public class PlaytimeFdbTest {
         for (Radimmo5 radimmo5 : p.getContent()) {
             System.out.println(radimmo5);
         }
+//        System.out.println("BEFORE DELETE: " + radimmo5Repository.count());
+//        radimmo5Repository.deleteAll();
+//        System.out.println("AFTER DELETE: " + radimmo5Repository.count());
         
         assertTrue(true);
         assertEquals(1, 1);
