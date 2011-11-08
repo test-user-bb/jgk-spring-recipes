@@ -3,7 +3,7 @@
 = Related =
  * [http://forum.springsource.org/showthread.php?110176-SpringDataJpa-Cannot-use-Pageable-with-an-Entity-that-has-a-composite-key-amp-Oracle&highlight=pageable Forum Entry]
  * [https://jira.terracotta.org/jira/browse/EHC-881 from terracotta jira]
- * [https://hibernate.onjira.com/browse/HHH-5419 COUNT operator]
+ * [https://hibernate.onjira.com/browse/HHH-5419 COUNT operator] - Oliver indicates a problem in Oracle and other RDBMS.
 
 == Code to reproduce ==
 
