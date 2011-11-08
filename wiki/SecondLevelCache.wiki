@@ -1,6 +1,25 @@
 #summary Shows problem regarding Second-level cache
 
-= Introduction =
+= Related =
+ * [http://forum.springsource.org/showthread.php?110176-SpringDataJpa-Cannot-use-Pageable-with-an-Entity-that-has-a-composite-key-amp-Oracle&highlight=pageable Forum Entry]
+ * [https://jira.terracotta.org/jira/browse/EHC-881 from terracotta jira]
+ * [https://hibernate.onjira.com/browse/HHH-5419 COUNT operator]
+
+== Code to reproduce ==
+
+== Error ==
+{{{
+Caused by: org.hibernate.cache.NoCachingEnabledException: Second-level cache is not enabled for usage [hibernate.cache.use_second_level_cache | hibernate.cache.use_query_cache]
+	at org.hibernate.cache.internal.NoCachingRegionFactory.buildTimestampsRegion(NoCachingRegionFactory.java:81)
+	at org.hibernate.cache.spi.UpdateTimestampsCache.<init>(UpdateTimestampsCache.java:63)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:459)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1726)
+	at org.hibernate.ejb.EntityManagerFactoryImpl.<init>(EntityManagerFactoryImpl.java:76)
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:907)
+	... 44 more
+
+}}}
+
 == Proper Settings ==
 {{{
 
