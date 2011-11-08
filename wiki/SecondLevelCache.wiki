@@ -21,7 +21,7 @@ Caused by: org.hibernate.cache.NoCachingEnabledException: Second-level cache is 
 }}}
 
 === Cause ===
- * using incorrect properties.
+ * using incorrect properties (should use `hibernate.cache.region.factory_class`, not `hibernate.cache.provider_class`)
  * here is a proper persistence.xml:
 {{{
 <?xml version="1.0" encoding="UTF-8"?>
