@@ -11,13 +11,16 @@
                 http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
 
 	<tx:annotation-driven transaction-manager="transactionManager" />
-	<!-- <jpa:repositories base-package="com.gs.firstdb.repository" -->
-	<!-- entity-manager-factory-ref="entityManagerFactory"> -->
-
-	<!-- </jpa:repositories> -->
+	<jpa:repositories base-package="com.jgk.fdb.repository"
+			entity-manager-factory-ref="entityManagerFactory">
+	</jpa:repositories>
 	<context:component-scan base-package="com.jgk.fdb" />
 	<context:property-placeholder location="classpath:/firstdb.project.properties" />
-	
+	<tx:annotation-driven transaction-manager="transactionManager" />
+	<bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
+		<property name="entityManagerFactory" ref="entityManagerFactory" />
+<!-- 		<property name="dataSource" ref="dataSource" /> -->
+	</bean>
 	<bean id="entityManagerFactory"
 		class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
 
