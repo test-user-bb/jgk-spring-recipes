@@ -1,0 +1,4 @@
+#summary One-sentence summary of this page.
+
+= Links =
+ * [http://forum.springsource.org/showthread.php?115682-Migrating-application-context-configuration-to-Spring-3.1-and-Hibernate-4.0&highlight=org.hibernate.cache.CacheProvider Forum Entry]
