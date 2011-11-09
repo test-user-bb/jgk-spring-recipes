@@ -4,3 +4,4 @@
  * [https://jira.springsource.org/browse/SPR-8096 Hibernate 4 support in Spring 3.1.0.RC1]
  * [http://forum.springsource.org/showthread.php?115682-Migrating-application-context-configuration-to-Spring-3.1-and-Hibernate-4.0&highlight=org.hibernate.cache.CacheProvider Forum Entry]
  * [http://forum.springsource.org/showthread.php?117222-HibernateDaoSupport-for-Hibernate4&p=386866#post386866 Forum-HibernateDaoSupport for Hibernate4]
+ * [http://www.springsource.org/download Download Spring]
