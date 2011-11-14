@@ -9,7 +9,7 @@
 
 == Issues ==
  * [https://issues.springsource.org/browse/SPR-8776 SPR-8776]
-  * *NoSuchMethodError: org.hibernate.SessionFactory.openSession()Lorg/hibernate/classic/Session;* 
+  * *`NoSuchMethodError: org.hibernate.SessionFactory.openSession()Lorg/hibernate/classic/Session;`* 
 {{{
 java.lang.NoSuchMethodError: org.hibernate.SessionFactory.openSession()Lorg/hibernate/classic/Session;
 	at org.springframework.orm.hibernate4.HibernateTransactionManager.doBegin(HibernateTransactionManager.java:328)
