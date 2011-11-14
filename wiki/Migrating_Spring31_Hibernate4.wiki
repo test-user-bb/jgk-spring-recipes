@@ -8,7 +8,7 @@
  * [http://community.jboss.org/wiki/HibernateCoreMigrationGuide40 Hibernate 4 migration guide]
 
 == Issues ==
- * [https://issues.springsource.org/browse/SPR-8776 SPR-8776]
+ * [https://issues.springsource.org/browse/SPR-8776 SPR-8776] - fixed in 3.1 RC2
   * *`NoSuchMethodError: org.hibernate.SessionFactory.openSession()Lorg/hibernate/classic/Session;`* 
 {{{
 java.lang.NoSuchMethodError: org.hibernate.SessionFactory.openSession()Lorg/hibernate/classic/Session;
