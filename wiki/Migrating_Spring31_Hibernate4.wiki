@@ -80,7 +80,7 @@ org.hibernate.HibernateException: No session currently bound to execution contex
 	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
 
 }}}
-* `No CurrentSessionContext configured!`
+ * `No CurrentSessionContext configured!`
 {{{
 org.hibernate.HibernateException: No CurrentSessionContext configured!
 	at org.hibernate.internal.SessionFactoryImpl.getCurrentSession(SessionFactoryImpl.java:872)
