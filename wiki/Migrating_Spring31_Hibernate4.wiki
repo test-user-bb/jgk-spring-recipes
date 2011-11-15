@@ -41,7 +41,12 @@ java.lang.NoSuchMethodError: org.hibernate.SessionFactory.openSession()Lorg/hibe
 
 
 }}}
- * *`No session currently bound to execution context`*
+ * Session related issues
+  * Resolution:
+{{{
+<prop key="hibernate.current_session_context_class">org.springframework.orm.hibernate4.SpringSessionContext</prop>
+}}}
+  * *`No session currently bound to execution context`*
 {{{
 org.hibernate.HibernateException: No session currently bound to execution context
 	at org.hibernate.context.internal.ManagedSessionContext.currentSession(ManagedSessionContext.java:72)
@@ -80,8 +85,8 @@ org.hibernate.HibernateException: No session currently bound to execution contex
 	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
 
 }}}
- * `No CurrentSessionContext configured!`
-  * This happens when missing *`<prop key="hibernate.current_session_context_class">managed</prop>`*
+  * `No CurrentSessionContext configured!`
+   * This happens when missing *`<prop key="hibernate.current_session_context_class">managed</prop>`*
 {{{
 org.hibernate.HibernateException: No CurrentSessionContext configured!
 	at org.hibernate.internal.SessionFactoryImpl.getCurrentSession(SessionFactoryImpl.java:872)
@@ -143,7 +148,7 @@ org.hibernate.HibernateException: No CurrentSessionContext configured!
 
 
 }}}
-* `UserType` derivatives are failing.
+ * `UserType` derivatives are failing.
 {{{
 org.hibernate.PropertyAccessException: IllegalArgumentException occurred while calling setter of com.gs.firstdb.Rddcmma1.ddxcnSl
 	at org.hibernate.property.BasicPropertyAccessor$BasicSetter.set(BasicPropertyAccessor.java:119)
