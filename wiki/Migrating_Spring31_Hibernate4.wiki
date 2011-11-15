@@ -81,6 +81,7 @@ org.hibernate.HibernateException: No session currently bound to execution contex
 
 }}}
  * `No CurrentSessionContext configured!`
+  * This happens when missing *`<prop key="hibernate.current_session_context_class">managed</prop>`*
 {{{
 org.hibernate.HibernateException: No CurrentSessionContext configured!
 	at org.hibernate.internal.SessionFactoryImpl.getCurrentSession(SessionFactoryImpl.java:872)
