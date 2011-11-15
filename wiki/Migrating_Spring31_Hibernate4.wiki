@@ -7,6 +7,7 @@
  * [http://www.springsource.org/download Download Spring]
  * [http://community.jboss.org/wiki/HibernateCoreMigrationGuide40 Hibernate 4 migration guide]
  * Forum [http://forum.springsource.org/showthread.php?117647-How-to-stay-up-to-date-with-the-latest-Release-Candidate-(RC)-RC2 How to stay up to date with the latest Release Candidate (RC)? RC2]
+ * Forum [http://forum.springsource.org/showthread.php?117655-No-CurrentSessionContext-configured!-No-session-currently-bound-to-execution-context No CurrentSessionContext configured!, No session currently bound to execution context]
 
 == Issues ==
  * [https://issues.springsource.org/browse/SPR-8776 SPR-8776] - fixed in [http://www.springsource.org/node/3122 3.1 RC2]
