@@ -3,6 +3,8 @@ package com.javapda.formarten.dao;
 import java.util.List;
 
 import javax.inject.Inject;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -17,12 +19,15 @@ import com.javapda.formarten.domain.FootballPlayer;
 @Repository
 public class FootballPlayerHibernateDao implements FootballPlayerDao {
     
+    @PersistenceContext EntityManager entityManager;
+    
     @Inject ApplicationContext applicationContext;
 
     @Inject private SessionFactory sessionFactory;
     protected Session getCurrentSession()  {
-        Session session = sessionFactory.getCurrentSession();
-        return session;
+//        Session session = sessionFactory.getCurrentSession();
+//        return session;
+            return (Session) entityManager.getDelegate();
     }
     protected static final Log log = LogFactory
             .getLog(FootballPlayerHibernateDao.class);
