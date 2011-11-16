@@ -1,0 +1,105 @@
+Hello Marten,
+
+Thank you for looking at this issue.
+
+This maven project includes a very simple domain model (FootballPlayer), dao (FootballPlayerDao) and service (SportsService).
+The intention is to reproduce the situation described in the Spring Forum thread (http://forum.springsource.org/showthread.php?117655-No-CurrentSessionContext-configured!-No-session-currently-bound-to-execution-context)
+entitled "No CurrentSessionContext configured!, No session currently bound to execution context".
+
+NOTE: this project uses spring 3.1.0.RC1 and hibernate 4.0.0.CR5 as mentioned in the Forum post.
+
+This project contains 3 tests (described below):
+TEST1) TraditionalLocalSessionFactoryBeanTest
+TEST2) EntityManagerFactoryDerivedSessionFactoryTest
+TEST3) EntityManagerFactoryDerivedSessionFactoryWithoutUsingHibernate_current_session_context_classPropertyTest
+
+It is TEST3 that fails without the property "hibernate.current_session_context_class" set.
+
+----------------------------------------------------------------------------------------
+
+TEST1:TraditionalLocalSessionFactoryBeanTest
+- this is a safe test.  it is based on (as the name implies) a traditional LocalSessionFactoryBean usage.
+
+TEST2:EntityManagerFactoryDerivedSessionFactoryTest
+- this test passes
+- this test uses a configuration file (EntityManagerFactory-derived-SessionFactory-test-spring-main-config.xml) 
+that includes the setting of the "hibernate.current_session_context_class" to "org.springframework.orm.hibernate4.SpringSessionContext".
+
+TEST3:EntityManagerFactoryDerivedSessionFactoryWithoutUsingHibernate_current_session_context_classPropertyTest
+- this test FAILs
+- this test does not include the "hibernate.current_session_context_class" property in the EntityManagerFactory configuration.
+- when run this test fails with: "No CurrentSessionContext configured!" as described in the forum post.
+org.hibernate.HibernateException: No CurrentSessionContext configured!
+	at org.hibernate.internal.SessionFactoryImpl.getCurrentSession(SessionFactoryImpl.java:872)
+	at com.javapda.formarten.dao.FootballPlayerHibernateDao.getCurrentSession(FootballPlayerHibernateDao.java:24)
+	at com.javapda.formarten.dao.FootballPlayerHibernateDao.save(FootballPlayerHibernateDao.java:41)
+	at com.javapda.formarten.dao.SportsServiceImpl.saveFootballPlayer(SportsServiceImpl.java:29)
+	at com.javapda.formarten.EntityManagerFactoryDerivedSessionFactoryWithoutUsingHibernate_current_session_context_classPropertyTest.testing(EntityManagerFactoryDerivedSessionFactoryWithoutUsingHibernate_current_session_context_classPropertyTest.java:37)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:44)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:41)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:20)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:74)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:83)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:72)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:231)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:49)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:193)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:52)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:191)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:42)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:184)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:236)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:174)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:49)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+- if you uncomment the line "<prop key="hibernate.current_session_context_class">managed</prop>" and re-run the TEST3 test you get: "No session currently bound to execution context"
+org.hibernate.HibernateException: No session currently bound to execution context
+	at org.hibernate.context.internal.ManagedSessionContext.currentSession(ManagedSessionContext.java:72)
+	at org.hibernate.internal.SessionFactoryImpl.getCurrentSession(SessionFactoryImpl.java:874)
+	at com.javapda.formarten.dao.FootballPlayerHibernateDao.getCurrentSession(FootballPlayerHibernateDao.java:24)
+	at com.javapda.formarten.dao.FootballPlayerHibernateDao.save(FootballPlayerHibernateDao.java:41)
+	at com.javapda.formarten.dao.SportsServiceImpl.saveFootballPlayer(SportsServiceImpl.java:29)
+	at com.javapda.formarten.EntityManagerFactoryDerivedSessionFactoryWithoutUsingHibernate_current_session_context_classPropertyTest.testing(EntityManagerFactoryDerivedSessionFactoryWithoutUsingHibernate_current_session_context_classPropertyTest.java:37)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:44)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:41)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:20)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:74)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:83)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:72)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:231)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:49)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:193)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:52)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:191)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:42)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:184)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:236)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:174)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:49)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+
+
