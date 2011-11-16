@@ -1,4 +1,4 @@
-#summary One-sentence summary of this page.
+#summary spring 3.1.0.RC1 and hibernate 4.0.0.CR5
 
 = Links =
  * [http://blog.springsource.com/2009/03/03/building-spring-3/ Building Spring 3]
