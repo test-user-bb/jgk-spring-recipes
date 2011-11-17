@@ -15,7 +15,7 @@
 {{{
 $ svn co https://src.springsource.org/svn/spring-framework/trunk spring-framework
 }}}
- * build it (cd build-spring-framework) - ant 'Total time: 13 minutes 3 seconds'
+ * build it (cd build-spring-framework) - 'Total time: 13 minutes 3 seconds'
 {{{
 $ cd build-spring-framework
 $ ant
