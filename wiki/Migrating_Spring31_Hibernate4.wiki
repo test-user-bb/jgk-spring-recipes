@@ -28,6 +28,22 @@ $ ant jar
 {{{
 $ ant install-maven
 }}}
+ * NOTE: at the top level of the spring checkout directory there is a file called {{{build.properties}}} that contains some properties that are used during the build process to construct the names of the artifacts.
+{{{
+## For GA releases
+#release.type=release
+#build.stamp=RELEASE
+
+## For milestone releases
+#release.type=milestone
+#build.stamp=M1
+
+## For trunk development / ci builds
+release.type=integration
+#build.stamp=BUILD-SNAPSHOT
+build.stamp=RC1-GSSHADE-1
+
+}}}
 
 == Issues ==
  * [https://issues.springsource.org/browse/SPR-8776 SPR-8776] - fixed in [http://www.springsource.org/node/3122 3.1 RC2]
