@@ -24,7 +24,8 @@ $ ant
 {{{
 $ ant jar
 }}}
- * deploy to local maven repository: 
+=== Useful Activities ===
+ * install to local maven repository
 {{{
 $ ant install-maven
 }}}
@@ -42,7 +43,11 @@ $ ant install-maven
 release.type=integration
 #build.stamp=BUILD-SNAPSHOT
 build.stamp=RC1-GSSHADE-1
-
+}}}
+ * after building (ant) the directory {springframework_home}/integration-repo will contain directories that can be copied to your local maven directory with the build.properties incorporated names.
+{{{
+$ cd {springframework_home}/integration-repo
+$ cp -a org.springframework* ~/.m2/repository/org/springframework
 }}}
 
 == Issues ==
