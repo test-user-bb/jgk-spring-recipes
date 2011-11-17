@@ -10,7 +10,7 @@
  * [http://community.jboss.org/wiki/HibernateCoreMigrationGuide40 Hibernate 4 migration guide]
  * Forum [http://forum.springsource.org/showthread.php?117647-How-to-stay-up-to-date-with-the-latest-Release-Candidate-(RC)-RC2 How to stay up to date with the latest Release Candidate (RC)? RC2]
  * Forum [http://forum.springsource.org/showthread.php?117655-No-CurrentSessionContext-configured!-No-session-currently-bound-to-execution-context No CurrentSessionContext configured!, No session currently bound to execution context]
-== Building Spring ==
+== Building Spring [http://blog.springsource.com/2009/03/03/building-spring-3/ blog instructions] ==
  * download source from svn
 {{{
 $ svn co https://src.springsource.org/svn/spring-framework/trunk spring-framework
