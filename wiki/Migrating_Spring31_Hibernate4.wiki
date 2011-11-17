@@ -27,7 +27,8 @@ $ ant jar
 === Useful Activities ===
  * install to local maven repository
 {{{
-$ ant install-maven
+$ ant install-maven-central   <== in spring- prefix format
+$ ant install-maven        <== in org.springframework. prefix format
 }}}
  * NOTE: at the top level of the spring checkout directory there is a file called {{{build.properties}}} that contains some properties that are used during the build process to construct the names of the artifacts.
 {{{
