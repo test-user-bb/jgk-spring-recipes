@@ -4,6 +4,8 @@ import static org.junit.Assert.assertEquals;
 
 import java.sql.Types;
 
+import oracle.jdbc.OracleTypes;
+
 import org.hibernate.type.AbstractSingleColumnStandardBasicType;
 import org.hibernate.type.BigDecimalType;
 import org.hibernate.type.BigIntegerType;
@@ -36,6 +38,7 @@ public class CheckSqlTypes {
     public void testin() {
         showTypes();
         showHibTypes();
+        showOracleTypes();
         // System.out.println(Types.VARCHAR);
         // System.out.println(StringType.INSTANCE.getSqlTypeDescriptor().getSqlType());
         assertEquals(Types.VARCHAR, StringType.INSTANCE.getSqlTypeDescriptor().getSqlType());
@@ -66,6 +69,67 @@ public class CheckSqlTypes {
         assertEquals(Types.VARCHAR, UrlType.INSTANCE.getSqlTypeDescriptor().getSqlType());
     }
     
+    private void showOracleTypes() {
+        // TODO Auto-generated method stub
+        OT[] ots = new OT[] {
+                new OT(OracleTypes.ARRAY,"ARRAY"),
+                new OT(OracleTypes.BFILE,"BFILE"),
+                new OT(OracleTypes.BIGINT,"BIGINT"),
+                new OT(OracleTypes.BINARY,"BINARY"),
+                new OT(OracleTypes.BINARY_DOUBLE,"BINARY_DOUBLE"),
+                new OT(OracleTypes.BINARY_FLOAT,"BINARY_FLOAT"),
+                new OT(OracleTypes.BIT,"BIT"),
+                new OT(OracleTypes.BLOB,"BLOB"),
+                new OT(OracleTypes.BOOLEAN,"BOOLEAN"),
+                new OT(OracleTypes.CHAR,"CHAR"),
+                new OT(OracleTypes.CLOB,"CLOB"),
+                new OT(OracleTypes.CURSOR,"CURSOR"),
+                new OT(OracleTypes.DATALINK,"DATALINK"),
+                new OT(OracleTypes.DATE,"DATE"),
+                new OT(OracleTypes.DECIMAL,"DECIMAL"),
+                new OT(OracleTypes.DOUBLE,"DOUBLE"),
+                new OT(OracleTypes.FIXED_CHAR,"FIXED_CHAR"),
+                new OT(OracleTypes.FLOAT,"FLOAT"),
+                new OT(OracleTypes.INTEGER,"INTEGER"),
+                new OT(OracleTypes.INTERVALDS,"INTERVALDS"),
+                new OT(OracleTypes.INTERVALYM,"INTERVALYM"),
+                new OT(OracleTypes.JAVA_OBJECT,"JAVA_OBJECT"),
+                new OT(OracleTypes.JAVA_STRUCT,"JAVA_STRUCT"),
+                new OT(OracleTypes.LONGNVARCHAR,"LONGNVARCHAR"),
+                new OT(OracleTypes.LONGVARBINARY,"LONGVARBINARY"),
+                new OT(OracleTypes.LONGVARCHAR,"LONGVARCHAR"),
+                new OT(OracleTypes.NCHAR,"NCHAR"),
+                new OT(OracleTypes.NCLOB,"NCLOB"),
+                new OT(OracleTypes.NULL,"NULL"),
+                new OT(OracleTypes.NUMBER,"NUMBER"),
+                new OT(OracleTypes.NUMERIC,"NUMERIC"),
+                new OT(OracleTypes.NVARCHAR,"NVARCHAR"),
+                new OT(OracleTypes.OPAQUE,"OPAQUE"),
+                new OT(OracleTypes.OTHER,"OTHER"),
+                new OT(OracleTypes.PLSQL_INDEX_TABLE,"PLSQL_INDEX_TABLE"),
+                new OT(OracleTypes.RAW,"RAW"),
+                new OT(OracleTypes.REAL,"REAL"),
+                new OT(OracleTypes.REF,"REF"),
+                new OT(OracleTypes.ROWID,"ROWID"),
+                new OT(OracleTypes.SMALLINT,"SMALLINT"),
+                new OT(OracleTypes.SQLXML,"SQLXML"),
+                new OT(OracleTypes.STRUCT,"STRUCT"),
+                new OT(OracleTypes.TIME,"TIME"),
+                new OT(OracleTypes.TIMESTAMP,"TIMESTAMP"),
+                new OT(OracleTypes.TIMESTAMPLTZ,"TIMESTAMPLTZ"),
+                new OT(OracleTypes.TIMESTAMPNS,"TIMESTAMPNS (deprecated)"),
+                new OT(OracleTypes.TIMESTAMPTZ,"TIMESTAMPTZ"),
+                new OT(OracleTypes.TINYINT,"TINYINT"),
+                new OT(OracleTypes.VARBINARY,"VARBINARY"),
+                new OT(OracleTypes.VARCHAR,"VARCHAR"),
+        };
+        System.out.println("Oracle Types");
+
+        for (OT ot : ots) {
+            System.out.printf("%-30s: %5d\n", ot.name, ot.type);
+        }
+    }
+
     void showHibTypes() {
         MT[] mts = new MT[] {
                 new MT(BigDecimalType.INSTANCE.getSqlTypeDescriptor().getSqlType(),"BigDecimalType-NUMERIC"),
@@ -94,7 +158,7 @@ public class CheckSqlTypes {
         };
         System.out.println("Hibernate Types");
         for (MT mt : mts) {
-            System.out.printf("%-30s: %d\n", mt.name, mt.type);
+            System.out.printf("%-30s: %5d\n", mt.name, mt.type);
 
         }
 
@@ -141,10 +205,20 @@ public class CheckSqlTypes {
         };
         System.out.println("SQL Types");
         for (MT mt : mts) {
-            System.out.printf("%-20s: %d\n", mt.name, mt.type);
+            System.out.printf("%-20s: %5d\n", mt.name, mt.type);
         }
     }
 
+    private class OT {
+        private int type;
+        private String name;
+        public OT(int type, String name) {
+            this.type=type;
+            this.name = name;
+        }
+
+        
+    }
     private class MT {
         private int type;
         private String name;
