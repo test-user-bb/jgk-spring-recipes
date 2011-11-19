@@ -42,30 +42,29 @@ VARCHAR             :    12
 
 == Hibernate Types ==
 {{{
-BigDecimalType-NUMERIC        : 2
-BigIntegerType-NUMERIC        : 2
-IntegerType-INTEGER           : 4
-ShortType-SMALLINT            : 5
-StringType-VARCHAR            : 12
-DoubleType-DOUBLE             : 8
-BinaryType-VARBINARY          : -3
-BlobType-BLOB                 : 2004
-CharacterType-CHAR            : 1
-CharArrayType-VARCHAR         : 12
-ClobType-CLOB                 : 2005
-DateType-DATE                 : 91
-FloatType-FLOAT               : 6
-ImageType-LONGVARBINARY       : -4
-LocaleType-VARCHAR            : 12
-LongType-BIGINT               : -5
-TextType-LONGVARCHAR          : -1
-TimestampType-TIMESTAMP       : 93
-TimeType-TIME                 : 92
-TimeZoneType-VARCHAR          : 12
-TrueFalseType-CHAR            : 1
-YesNoType-CHAR                : 1
-UrlType-VARCHAR               : 12
-
+BigDecimalType-NUMERIC        :     2
+BigIntegerType-NUMERIC        :     2
+IntegerType-INTEGER           :     4
+ShortType-SMALLINT            :     5
+StringType-VARCHAR            :    12
+DoubleType-DOUBLE             :     8
+BinaryType-VARBINARY          :    -3
+BlobType-BLOB                 :  2004
+CharacterType-CHAR            :     1
+CharArrayType-VARCHAR         :    12
+ClobType-CLOB                 :  2005
+DateType-DATE                 :    91
+FloatType-FLOAT               :     6
+ImageType-LONGVARBINARY       :    -4
+LocaleType-VARCHAR            :    12
+LongType-BIGINT               :    -5
+TextType-LONGVARCHAR          :    -1
+TimestampType-TIMESTAMP       :    93
+TimeType-TIME                 :    92
+TimeZoneType-VARCHAR          :    12
+TrueFalseType-CHAR            :     1
+YesNoType-CHAR                :     1
+UrlType-VARCHAR               :    12
 }}}
 == Oracle Types ==
 {{{
