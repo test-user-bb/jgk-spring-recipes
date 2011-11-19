@@ -2,7 +2,6 @@
 
 == SQL Types ==
 {{{
-SQL Types
 ARRAY               :   2003
 BIGINT              :     -5
 BINARY              :     -2
