@@ -7,6 +7,7 @@
 		<provider>org.hibernate.ejb.HibernatePersistence</provider>
 		<class>com.jgk.fdb.domain.Radimef0</class>
 		<class>com.jgk.fdb.domain.Radimmo5</class>
+		<class>com.jgk.fdb.domain.JgkFakeUserTypes</class>
 		<exclude-unlisted-classes>true</exclude-unlisted-classes>
 		<properties>
 <!-- 			<property name="hibernate.dialect" value="org.hibernate.dialect.HSQLDialect" /> -->

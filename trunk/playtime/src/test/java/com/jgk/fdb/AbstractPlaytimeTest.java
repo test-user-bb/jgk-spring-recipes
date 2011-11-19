@@ -1,10 +1,5 @@
 package com.jgk.fdb;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertNull;
-import static org.junit.Assert.assertTrue;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -18,78 +13,38 @@ import javax.persistence.metamodel.EntityType;
 
 import org.hibernate.ejb.metamodel.EntityTypeImpl;
 import org.junit.Before;
-import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.context.ApplicationContext;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Pageable;
-import org.springframework.test.annotation.Rollback;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-import org.springframework.transaction.annotation.Propagation;
-import org.springframework.transaction.annotation.Transactional;
 
-import com.jgk.fdb.domain.Radimmo5;
-import com.jgk.fdb.domain.Radimmo5PK;
+import com.jgk.fdb.repository.JgkFakeUserTypesRepository;
 import com.jgk.fdb.repository.Radimmo5Repository;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(value = "classpath:/test-playtime-spring-beans-jpa-config.xml")
-public class PlaytimeFdbTest {
-    private Random rand;
+public abstract class AbstractPlaytimeTest {
+    protected Random rand;
     @Inject protected ApplicationContext applicationContext;
     @Inject protected Radimmo5Repository radimmo5Repository;
+    @Inject protected JgkFakeUserTypesRepository jgkFakeUserTypesRepository;
     @PersistenceContext protected EntityManager entityManager;
     
-    @Test @Rollback(value=true)
-    @Transactional(propagation=Propagation.REQUIRED)
-    public void testing() {
-        persistSomeData(300);
-        List<Radimmo5> list = radimmo5Repository.findAll();
-//        for (Radimmo5 radimmo5 : list) {
-//            System.out.println(radimmo5);
-//        }
-        Pageable page = new PageRequest(4, 5);
-        Page<Radimmo5> p = radimmo5Repository.findAll(page);
-        for (Radimmo5 radimmo5 : p.getContent()) {
-            System.out.println(radimmo5);
-        }
-//        System.out.println("BEFORE DELETE: " + radimmo5Repository.count());
-//        radimmo5Repository.deleteAll();
-//        System.out.println("AFTER DELETE: " + radimmo5Repository.count());
-        
-        assertTrue(true);
-        assertEquals(1, 1);
-        assertNotNull(new Object());
-        assertNull(null);
-    }
-    
-    private void persistSomeData(int num) {
-        for (int i = 0; i < num; i++) {
-            Radimmo5PK pk = new Radimmo5PK(rand.nextInt()*rand.nextInt()+rand.nextInt(), rand.nextInt());
-            Radimmo5 en = new Radimmo5(pk);
-            radimmo5Repository.save(en);
-            
-        }
-    }
-
     @Before public void onSetup() {
         rand = new Random( 19580427 );
 
         showBeans();
         showEntityNames();
     }
-    public void showBeans() {
+    protected void showBeans() {
         System.out.println("BEAN NAMES:");
         for (String bn : applicationContext.getBeanDefinitionNames()) {
             System.out.println(bn);
         }
-        System.out.println("JED TIME");
     }
     
     @SuppressWarnings("unused")
-    private void showEntityNames() {
+    protected void showEntityNames() {
         Set<EntityType<?>> set = entityManager.getMetamodel().getEntities();
         List<String> entityNames = new ArrayList<String>();
 //        System.out.println("Number of Entities: " + set.size());
@@ -97,9 +52,12 @@ public class PlaytimeFdbTest {
             @SuppressWarnings("rawtypes")
             EntityTypeImpl e = (EntityTypeImpl) entity;
 //            System.out.println(e.getName());
-            entityNames.add(e.getName());
+            if(e.getName()==null){
+                System.out.println("WHY ENTITY NAME NULL ");
+            }
+            entityNames.add(e.getName()!=null?e.getName():"NO-NAME-FOR-THIS-ENTITY");
         }
-        Collections.sort(entityNames);
+//        Collections.sort(entityNames);
         int idx=0;
         System.out.println("-------------------------------------------------------------------");
         for (String entityName : entityNames) {
