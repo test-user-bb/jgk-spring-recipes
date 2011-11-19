@@ -55,7 +55,7 @@ $ cp -a org.springframework* ~/.m2/repository/org/springframework
 
 == Issues ==
  * `ClassNotFoundException`
-  * Cause?
+  * Cause: using a `org.springframework.orm.hibernate3.LocalSessionFactoryBean` with spring 3.1.0.xxx, should use `org.springframework.orm.hibernate4.LocalSessionFactoryBean`.
 {{{
 Caused by: java.lang.ClassNotFoundException: org.hibernate.cache.CacheProvider
 }}}
