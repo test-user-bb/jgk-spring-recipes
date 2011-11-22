@@ -51,6 +51,6 @@ public class EntityManagerFactoryDerivedSessionFactoryTest {
           System.out.println(beanName);
       }
       System.out.println("THE-sessionFactory: " + applicationContext.getBean("sessionFactory"));
-  }
+    }
     
 }
