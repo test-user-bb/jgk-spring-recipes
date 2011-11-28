@@ -1,7 +1,7 @@
 #summary how to stay up to date with Spring
 
- [SpringUpdates#Building_Spring Building Spring]
- [SpringUpdates#Interesting ant targetsInteresting_ant_targets Interesting ant targets]
+ * [SpringUpdates#Building_Spring Building Spring]
+ * [SpringUpdates#Interesting_ant_targets Interesting ant targets]
 == Building Spring ==
  * [http://blog.springsource.com/2009/03/03/building-spring-3/ blog instructions]
  * download source from svn
