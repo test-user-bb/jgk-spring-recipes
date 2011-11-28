@@ -1,6 +1,8 @@
 #summary how to stay up to date with Spring
 
-== Building Spring [http://blog.springsource.com/2009/03/03/building-spring-3/ blog instructions] ==
+ [SpringUpdates#Building_Spring Building Spring]
+== Building Spring ==
+ * [http://blog.springsource.com/2009/03/03/building-spring-3/ blog instructions]
  * download source from svn
 {{{
 $ svn co https://src.springsource.org/svn/spring-framework/trunk spring-framework
