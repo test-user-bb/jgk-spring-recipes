@@ -17,6 +17,17 @@ $ ant
 {{{
 $ ant jar
 }}}
+== Version Modify ==
+ * The default version is `3.1.0.BUILD-SNAPSHOT`.
+ * If you want to change this in your local maven, simple modify the pom.xml to indicate your desired build version:
+  * First modify the pom.xml files:
+{{{
+  $ groovy ReplaceStringInPomXmlFile.groovy
+}}}
+  * Next run the install-maven-central:
+{{{
+ $ ant install-maven-central
+}}}
 == Interesting ant targets ==
  * jar - build the software
  * install-maven
