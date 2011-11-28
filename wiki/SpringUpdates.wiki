@@ -14,3 +14,7 @@ $ ant
 {{{
 $ ant jar
 }}}
+== Interesting ant targets ==
+ * jar - build the software
+ * install-maven
+ * install-maven-central (THIS ONE)
