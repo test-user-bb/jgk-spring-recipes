@@ -2,6 +2,7 @@
 
  * [SpringUpdates#Building_Spring Building Spring]
  * [SpringUpdates#Interesting_ant_targets Interesting ant targets]
+ * [http://www.springsource.com/download/community Spring Downloads]
 == Building Spring ==
  * [http://blog.springsource.com/2009/03/03/building-spring-3/ blog instructions]
  * download source from svn
