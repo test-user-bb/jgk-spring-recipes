@@ -55,6 +55,19 @@ $ cp -a org.springframework* ~/.m2/repository/org/springframework
 }}}
 
 == Issues ==
+ * `ClassNotFoundException net.sf.ehcache.util.Timestamper`
+{{{
+Caused by: java.lang.ClassNotFoundException: net.sf.ehcache.util.Timestamper
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:202)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:190)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:306)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:301)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:247)
+	... 67 more
+
+
+}}}
  * `ClassNotFoundException`
   * Cause: using a `org.springframework.orm.hibernate3.LocalSessionFactoryBean` with spring 3.1.0.xxx, should use `org.springframework.orm.hibernate4.LocalSessionFactoryBean`.
 {{{
