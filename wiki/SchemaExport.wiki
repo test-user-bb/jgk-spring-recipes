@@ -1,0 +1,24 @@
+#summary hibernate way to generate ddl
+=== general ===
+ * SchemaExport is a Hibernate utility which generates DDL from your mapping files. 
+ * The generated schema includes:
+  * referential integrity constraints
+  * primary and foreign keys, for entity and collection tables. 
+ * It also creates tables and sequences for mapped identifier generators.
+=== format ===
+{{{
+java -cp hibernate_classpaths org.hibernate.tool.hbm2ddl.SchemaExport options mapping_files
+}}}
+=== options ===
+{{{
+--quiet	do not output the script to standard output
+--drop	only drop the tables
+--create	only create the tables
+--text	do not export to the database
+--output=my_schema.ddl	output the ddl script to a file
+--naming=eg.MyNamingStrategy	select a NamingStrategy
+--config=hibernate.cfg.xml	read Hibernate configuration from an XML file
+--properties=hibernate.properties	read database properties from a file
+--format	format the generated SQL nicely in the script
+--delimiter=;	set an end-of-line delimiter for the script
+}}}
