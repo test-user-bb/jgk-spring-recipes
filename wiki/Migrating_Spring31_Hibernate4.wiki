@@ -55,6 +55,27 @@ $ cp -a org.springframework* ~/.m2/repository/org/springframework
 }}}
 
 == Issues ==
+ * `org.hibernate.HibernateException: No Session found for current thread`
+{{{
+org.hibernate.HibernateException: No Session found for current thread
+	at org.springframework.orm.hibernate4.SpringSessionContext.currentSession(SpringSessionContext.java:97)
+	at org.hibernate.internal.SessionFactoryImpl.getCurrentSession(SessionFactoryImpl.java:881)
+	at com.gs.core.utils.hibernate.AbstractBaseHibernateDao.getCurrentSession(AbstractBaseHibernateDao.java:67)
+	at com.gs.core.domain.adt.PhoneHibernateDAO.getAllPhoneWithPhoneIds(PhoneHibernateDAO.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:318)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:183)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:150)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:110)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:172)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:202)
+	at $Proxy122.getAllPhoneWithPhoneIds(Unknown Source)
+	at com.gs.core.domain.adt.PhoneHibernateDAOIntegrationTest.testPhone(PhoneHibernateDAOIntegrationTest.java:29)
+
+}}}
  * `org.hibernate.exception.GenericJDBCException: This function is not supported`
   * Cause:  `<generator class="native">`
   * Fix: change to `<generator class="sequence">`
