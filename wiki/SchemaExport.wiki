@@ -67,3 +67,43 @@ echo ${CMD}
 ${CMD}
 
 }}}
+=== Tool ===
+{{{
+import java.io.File;
+import java.net.URL;
+
+import org.hibernate.cfg.DefaultNamingStrategy;
+import org.hibernate.tool.hbm2ddl.SchemaExport;
+import org.junit.Test;
+
+public class SchemaExportTest {
+
+    @Test public void doit() {
+        File hibProperties = new File(System.getProperty("user.home"),"bin/hsqldb.hibernate.properties");
+        if(hibProperties.exists()) {
+            
+            System.out.println(hibProperties.getAbsolutePath());
+            String[] args = new String[] {
+                    String.format("--properties=%s",new File(System.getProperty("user.home"),"bin/hsqldb.hibernate.properties").getAbsolutePath()),
+//                    String.format("--import=%s",new File(System.getProperty("user.home"),"bin/hsqldb.hibernate.sql").getAbsolutePath()),
+                    "--format",
+//                    "--text",  // do not export to database
+                    "--output=my_schema.ddl",  // output the ddl script to a file
+                    String.format("--naming=%s",DefaultNamingStrategy.class.getName()), // select a naming strategy
+//                    "--drop",  // only drop tables
+                    "--create", // only create tables
+//                    "--quiet",  // do not output script to standard out
+                    getMappingFile("com/gs/core/domain/adt/Address.hbm.xml"),
+            };
+//            System.getProperties().list(System.out);
+            SchemaExport.main(args);
+        }
+    }
+    private String getMappingFile(String pathToFile) {
+        URL url =SchemaExportTest.class.getClassLoader().getResource(pathToFile);
+        System.out.println(url.getFile());
+        return url.getFile();
+    }
+}
+
+}}}
