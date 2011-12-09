@@ -55,6 +55,9 @@ $ cp -a org.springframework* ~/.m2/repository/org/springframework
 }}}
 
 == Issues ==
+ * `org.hibernate.exception.GenericJDBCException: This function is not supported`
+  * Cause:  `<generator class="native">'
+  * Fix: change to `<generator class="sequence">`
  * `ClassNotFoundException net.sf.ehcache.util.Timestamper`
 {{{
 Caused by: java.lang.ClassNotFoundException: net.sf.ehcache.util.Timestamper
