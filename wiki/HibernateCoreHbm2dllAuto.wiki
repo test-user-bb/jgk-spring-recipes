@@ -1,0 +1,4 @@
+#summary hibernate.core.hbm2dll.auto
+
+
+Values
