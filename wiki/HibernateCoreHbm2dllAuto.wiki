@@ -1,4 +1,8 @@
 #summary hibernate.core.hbm2dll.auto
 
 
-Values
+== Values ==
+ * validate
+ * update
+ * create
+ * create-drop
