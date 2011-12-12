@@ -20,7 +20,7 @@
 		<junit.version>4.9</junit.version>
 		<log4j.version>1.2.12</log4j.version>
 		<org.springframework.version>3.1.0.RC2</org.springframework.version>
-		<org.springframework-security.version>3.0.7.RELEASE</org.springframework-security.version>
+		<org.springframework-security.version>3.1.0.RELEASE</org.springframework-security.version>
 		<servlet-api.version>2.5</servlet-api.version>
 		<slf4j-api.version>1.6.1</slf4j-api.version>
 		<slf4j-log4j12.version>1.6.1</slf4j-log4j12.version>
