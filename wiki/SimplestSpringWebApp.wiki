@@ -22,7 +22,7 @@
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
 	</listener>
 	<servlet>
-		<description>retrieves environment information (such as db conn params etc) during aplication startup</description>
+		<description>this is optional, retrieves environment information during application startup</description>
 		<display-name>Startup Servlet</display-name>
 		<servlet-name>startupservlet</servlet-name>
 		<servlet-class>com.jgk.spring31hib4.servlets.StartupServlet</servlet-class>
