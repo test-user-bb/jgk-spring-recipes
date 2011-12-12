@@ -56,6 +56,31 @@ $ cp -a org.springframework* ~/.m2/repository/org/springframework
 }}}
 
 == Issues ==
+ * `org.springframework.transaction.CannotCreateTransactionException: Could not open Hibernate Session for transaction; nested exception is org.hibernate.SessionException: Session is closed!`
+{{{
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.862 sec <<< FAILURE!
+testGetDiseaseByClinicalCode(com.gs.core.services.impl.ServiceImplIntegrationTest)  Time elapsed: 0.853 sec  <<< ERROR!
+org.springframework.transaction.CannotCreateTransactionException: Could not open Hibernate Session for transaction; nested exception is org.hibernate.SessionException: Session is closed!
+        at org.springframework.orm.hibernate4.HibernateTransactionManager.doBegin(HibernateTransactionManager.java:428)
+        at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:371)
+        at org.springframework.test.context.transaction.TransactionalTestExecutionListener$TransactionContext.startTransaction(TransactionalTestExecutionListener.java:513)
+        at org.springframework.test.context.transaction.TransactionalTestExecutionListener.startNewTransaction(TransactionalTestExecutionListener.java:271)
+        at org.springframework.test.context.transaction.TransactionalTestExecutionListener.beforeTestMethod(TransactionalTestExecutionListener.java:164)
+        at org.springframework.test.context.TestContextManager.beforeTestMethod(TestContextManager.java:358)
+        at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:73)
+        at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:31)
+        at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:83)
+        at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:72)
+        at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:231)
+        at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:49)
+        at org.junit.runners.ParentRunner$3.run(ParentRunner.java:193)
+        at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:52)
+        at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:191)
+        at org.junit.runners.ParentRunner.access$000(ParentRunner.java:42)
+        at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:184)
+        at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+
+}}}
  * `TransactionSynchronization.beforeCompletion threw exception org.hibernate.SessionException: Session is closed!`
 {{{
 ERROR TransactionSynchronizationUtils - TransactionSynchronization.beforeCompletion threw exception
