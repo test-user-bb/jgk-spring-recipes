@@ -1,4 +1,4 @@
-#summary web.xml with 2.4
+#summary web.xml with 2.4 version
 
 {{{
 <?xml version="1.0" encoding="UTF-8"?>
