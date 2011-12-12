@@ -1,4 +1,4 @@
-#summary One-sentence summary of this page.
+#summary web.xml for 2.5 version
 
 {{{
 <?xml version="1.0" encoding="UTF-8"?>
