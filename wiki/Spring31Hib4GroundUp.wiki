@@ -2,3 +2,11 @@
 
 = Introduction =
  * problems during integration has forced a rethink on strategy.  to that end we'll be building a fresh web app based on newest spring and hibernate and spring security to make sure the basics are working.
+
+== Steps ==
+ * create maven based web app (and test)
+ * add spring dependencies (and test)
+ * add hibernate dependencies (and test)
+ * add spring security dependencies (and test)
+ * add simple spring context to web.xml (and test)
+ * add some persistence (and test)
