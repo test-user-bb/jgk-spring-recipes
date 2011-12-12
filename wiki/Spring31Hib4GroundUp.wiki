@@ -14,7 +14,7 @@
 
 }}}
  * add spring dependencies (and test)
+ * add simple spring context to web.xml (and test)
  * add hibernate dependencies (and test)
  * add spring security dependencies (and test)
- * add simple spring context to web.xml (and test)
  * add some persistence (and test)
