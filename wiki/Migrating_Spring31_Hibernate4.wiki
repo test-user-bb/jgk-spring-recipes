@@ -56,8 +56,9 @@ $ cp -a org.springframework* ~/.m2/repository/org/springframework
 }}}
 
 == Issues ==
- * `java.io.InvalidClassException: org.springframework.security.core.context.SecurityContextImpl`
- * `local class incompatible: stream classdesc serialVersionUID = -8599415456903658526, local class serialVersionUID = 310`
+ * Spring Security (3.1.0.RELEASE)
+  * `java.io.InvalidClassException: org.springframework.security.core.context.SecurityContextImpl`
+  * `local class incompatible: stream classdesc serialVersionUID = -8599415456903658526, local class serialVersionUID = 310`
 {{{
 SEVERE: IOException while loading persisted sessions: java.io.InvalidClassException: org.springframework.security.core.context.SecurityContextImpl; local class incompatible: stream classdesc serialVersionUID = -8599415456903658526, local class serialVersionUID = 310
 java.io.InvalidClassException: org.springframework.security.core.context.SecurityContextImpl; local class incompatible: stream classdesc serialVersionUID = -8599415456903658526, local class serialVersionUID = 310
