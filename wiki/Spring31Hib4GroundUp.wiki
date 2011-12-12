@@ -1,0 +1,4 @@
+#summary starting from nothing.
+
+= Introduction =
+ * problems during integration has forced a rethink on strategy.  to that end we'll be building a fresh web app based on newest spring and hibernate and spring security to make sure the basics are working.
