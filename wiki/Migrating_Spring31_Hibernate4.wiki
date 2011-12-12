@@ -56,6 +56,24 @@ $ cp -a org.springframework* ~/.m2/repository/org/springframework
 }}}
 
 == Issues ==
+ * `TransactionSynchronization.beforeCompletion threw exception org.hibernate.SessionException: Session is closed!`
+{{{
+ERROR TransactionSynchronizationUtils - TransactionSynchronization.beforeCompletion threw exception
+org.hibernate.SessionException: Session is closed!
+	at org.hibernate.internal.AbstractSessionImpl.errorIfClosed(AbstractSessionImpl.java:126)
+	at org.hibernate.internal.SessionImpl.disconnect(SessionImpl.java:465)
+	at org.springframework.orm.hibernate4.SpringSessionSynchronization.beforeCompletion(SpringSessionSynchronization.java:107)
+	at org.springframework.transaction.support.TransactionSynchronizationUtils.triggerBeforeCompletion(TransactionSynchronizationUtils.java:106)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.triggerBeforeCompletion(AbstractPlatformTransactionManager.java:937)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processRollback(AbstractPlatformTransactionManager.java:834)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.rollback(AbstractPlatformTransactionManager.java:822)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.completeTransactionAfterThrowing(TransactionAspectSupport.java:411)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:114)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:172)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:202)
+	at $Proxy131.loadAll(Unknown Source)
+	at com.gs.core.services.ConceptTemplateServiceIntegrationTest.onTearDown(ConceptTemplateServiceIntegrationTest.java:557)
+}}}
  * Spring Security (3.1.0.RELEASE)
   * `java.io.InvalidClassException: org.springframework.security.core.context.SecurityContextImpl`
   * `local class incompatible: stream classdesc serialVersionUID = -8599415456903658526, local class serialVersionUID = 310`
