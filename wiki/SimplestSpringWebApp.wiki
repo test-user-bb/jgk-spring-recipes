@@ -6,7 +6,7 @@
  * spring-config.xml - spring configuration
 
 === pom.xml ===
- * look here
+ * look [PomXmlJee5WithSpring31Servlet25WithJSTL here]
 === web.xml ===
 {{{
 <?xml version="1.0" encoding="UTF-8"?>
