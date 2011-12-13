@@ -3,6 +3,10 @@
  * [http://static.springsource.org/spring-security/site/docs/3.0.x/apidocs/ javadoc]
  * [http://static.springsource.org/spring-security/site/start-here.html Getting Started]
  *  There is no real conceptual difference between a user who is “anonymously authenticated” and an unauthenticated user.
+== source from git ==
+{{{
+git clone git://git.springsource.org/spring-security/spring-security.git
+}}}
 == Scaffolding ==
  * You need some minimal stuff in your configuration:
 {{{
