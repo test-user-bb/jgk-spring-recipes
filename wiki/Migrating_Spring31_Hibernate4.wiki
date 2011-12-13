@@ -1,4 +1,4 @@
-#summary spring 3.1.0.RC1 and hibernate 4.0.0.CR5
+#summary spring 3.1.0.RC1 and hibernate 4.0.0.CR7
 
 = Links =
  * [Migrating_Spring31_Hibernate4#Issues Issues]
