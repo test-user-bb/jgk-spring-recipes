@@ -11,9 +11,15 @@
                                                         http://www.springframework.org/schema/context
                                                         http://www.springframework.org/schema/context/spring-context-3.1.xsd">
 
-<!-- 	<context:property-placeholder -->
-<!-- 		location="classpath:web-spring31-hib4.hibernate.properties" /> -->
-	<bean id="firstdb.sessionFactory"
+	<tx:annotation-driven/>
+	<bean id="transactionManager" name="web-spring31-hib4.TransactionManager"
+		class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+		<property name="sessionFactory">
+			<ref bean="web-spring31-hib4.sessionFactory" />
+		</property>
+	</bean>
+
+	<bean id="web-spring31-hib4.sessionFactory"
 		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
 		<property name="dataSource">
 			<ref bean="web-spring31-hib4.dataSource" />
@@ -34,6 +40,7 @@
 		</property>
 		<property name="mappingLocations">
 			<list>
+				<value>classpath:/mappings/Granny.hbm.xml</value>
 				<value>classpath:/mappings/Jed.hbm.xml</value>
 			</list>
 		</property>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping
+>
+    <class
+        name="com.jgk.spring31hib4.domain.Granny"
+        table="Granny"
+    >
+
+        <id
+            name="grannyId"
+            type="java.lang.Integer"
+        >
+                <column
+                    name="ID" 
+                />
+            <generator class="sequence">
+            	<param name="sequence">GENERIC_SEQUENCE</param>
+            </generator>
+        </id>
+
+
+
+        <property
+            name="birthdate"
+            type="java.util.Date" 
+            update="true"
+            insert="true"
+            column="BIRTHDATE"
+        />
+
+        <property
+            name="firstName"
+            type="java.lang.String"
+            update="true"
+            insert="true"
+            column="FIRST_NAME"
+        />
+
+
+        <property
+            name="lastName"
+            type="java.lang.String"
+            update="true"
+            insert="true"
+            column="LAST_NAME"
+        />
+
+    </class>
+
+</hibernate-mapping>
