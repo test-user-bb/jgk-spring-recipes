@@ -47,9 +47,8 @@ public class BasicSpringTest {
         tx.commit();
     }
     @Test public void testJdbcTemplate() {
-        System.out.println("Use jdbcTemplate");
         int count = jdbcTemplate.queryForInt("SELECT count(0) from user_tables");
-        System.out.println("count: " + count);
+        System.out.println("No. of user_tables: " + count);
         
     }
     
