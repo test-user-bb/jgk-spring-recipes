@@ -41,7 +41,7 @@ import com.jgk.spring31hib4.domain.Jed;
 @ContextConfiguration(locations={"classpath:spring-test-config.xml"})
 public class BasicSpringTest {
     
-    @Autowired @Qualifier(value="dbcpDataSource") DataSource ds;
+    @Autowired @Qualifier(value="dbcpDataSource1") DataSource ds;
     @Autowired ApplicationContext applicationContext;
     @Autowired JdbcTemplate jdbcTemplate;
     @Autowired SessionFactory sessionFactory;
@@ -54,7 +54,7 @@ public class BasicSpringTest {
     @AfterTransaction public void afterTransaction() {
         System.out.println("afterTransaction");
     }
-    @Transactional(value="web-spring31-hib4.TransactionManager")
+    @Transactional(value="web-spring31-hib4.TransactionManager1")
     @Rollback(false)
     @Test public void testingOther() {
         System.out.println(transactionManager);

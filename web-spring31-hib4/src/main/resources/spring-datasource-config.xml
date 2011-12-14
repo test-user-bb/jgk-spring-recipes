@@ -25,28 +25,28 @@
 <!-- 		<property name="acquireIncrement" value="1" /> -->
 <!-- 		<property name="acquireRetryAttempts" value="0" /> -->
 <!-- 	</bean> -->
-	<bean id="dbcpDataSource" class="org.apache.commons.dbcp.BasicDataSource"
+	<bean id="dbcpDataSource1" class="org.apache.commons.dbcp.BasicDataSource"
 		destroy-method="close">
 		<property name="maxActive">
 			<value>-1</value>
 		</property>
 		<property name="driverClassName">
-			<value>${db.driverClassName}</value>
+			<value>${db1.driverClassName}</value>
 		</property>
 		<property name="url">
-			<value>${db.url}</value>
+			<value>${db1.url}</value>
 		</property>
 		<property name="username">
-			<value>${db.username}</value>
+			<value>${db1.username}</value>
 		</property>
 		<property name="password">
-			<value>${db.password}</value>
+			<value>${db1.password}</value>
 		</property>
 	</bean>
-	<alias name="dbcpDataSource" alias="web-spring31-hib4.dataSource"/> 
+	<alias name="dbcpDataSource1" alias="web-spring31-hib4.dataSource1"/> 
 <!-- 	<alias name="c3poDataSource" alias="web-spring31-hib4.dataSource"/>  -->
 
 	<bean id="web-spring31-hib4.jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
-		<constructor-arg name="dataSource" ref="web-spring31-hib4.dataSource" />
+		<constructor-arg name="dataSource" ref="web-spring31-hib4.dataSource1" />
 	</bean>
 </beans>                                                        
