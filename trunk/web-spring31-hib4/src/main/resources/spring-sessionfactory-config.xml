@@ -12,17 +12,17 @@
                                                         http://www.springframework.org/schema/context/spring-context-3.1.xsd">
 
 	<tx:annotation-driven/>
-	<bean id="transactionManager" name="web-spring31-hib4.TransactionManager"
+	<bean id="transactionManager1" name="web-spring31-hib4.TransactionManager1"
 		class="org.springframework.orm.hibernate4.HibernateTransactionManager">
 		<property name="sessionFactory">
-			<ref bean="web-spring31-hib4.sessionFactory" />
+			<ref bean="web-spring31-hib4.sessionFactory1" />
 		</property>
 	</bean>
 
-	<bean id="web-spring31-hib4.sessionFactory"
+	<bean id="web-spring31-hib4.sessionFactory1"
 		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
 		<property name="dataSource">
-			<ref bean="web-spring31-hib4.dataSource" />
+			<ref bean="web-spring31-hib4.dataSource1" />
 		</property>
 		<!-- <property name="namingStrategy"> <ref local="firstdb.noPrefixNamingStrategy" 
 			/> </property> -->
@@ -46,10 +46,10 @@
 		</property>
 		<property name="hibernateProperties">
 			<props>
-				<prop key="hibernate.dialect">${hibernate.dialect}</prop>
-				<prop key="hibernate.show_sql">${hibernate.show_sql}</prop>
+				<prop key="hibernate.dialect">${db1.hibernate.dialect}</prop>
+				<prop key="hibernate.show_sql">${db1.hibernate.show_sql}</prop>
 <!-- 				<prop key="hibernate.hbm2dll.auto">${hibernate.hbm2dll.auto}</prop> -->
-				<prop key="hibernate.hbm2ddl.auto">${hibernate.hbm2ddl.auto}</prop>
+				<prop key="hibernate.hbm2ddl.auto">${db1.hibernate.hbm2ddl.auto}</prop>
 				<prop key="hibernate.cache.use_query_cache">true</prop>
 				<prop key="hibernate.cache.region.factory_class">org.hibernate.cache.ehcache.EhCacheRegionFactory
 				</prop>

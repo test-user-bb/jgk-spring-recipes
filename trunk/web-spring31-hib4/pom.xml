@@ -10,6 +10,10 @@
 	<name>web-spring31-hib4</name>
 	<url>http://maven.apache.org</url>
 	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<aspectjweaver.version>1.6.8</aspectjweaver.version>
+		<aspectjrt.version>1.6.8</aspectjrt.version>
+	
 		<c3p0.version>0.9.1.2</c3p0.version>
 		<cglib.version>2.2.2</cglib.version>
 		<commons-collections.version>3.2.1</commons-collections.version>
@@ -43,6 +47,17 @@
 	</properties>
 
 	<dependencies>
+		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjweaver</artifactId>
+			<version>${aspectjweaver.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjrt</artifactId>
+			<version>${aspectjrt.version}</version>
+		</dependency>
+	
 		<dependency>
 			<groupId>org.javassist</groupId>
 			<artifactId>javassist</artifactId>
@@ -128,6 +143,12 @@
 			<version>${org.hibernate.hibernate-validator.version}</version>
 		</dependency>
 
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-aop</artifactId>
+			<version>${org.springframework.version}</version>
+			<scope>compile</scope>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-jdbc</artifactId>

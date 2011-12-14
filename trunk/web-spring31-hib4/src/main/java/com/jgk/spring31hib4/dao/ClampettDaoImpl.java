@@ -6,6 +6,7 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.jgk.spring31hib4.domain.Granny;
 import com.jgk.spring31hib4.domain.Jed;
@@ -31,9 +32,10 @@ public class ClampettDaoImpl implements ClampettDao {
         }
         return (Jed) getCurrentSession().get(Jed.class, id);
     }
+    @Transactional(value="web-spring31-hib4.TransactionManager1")
     @Override
     public void save(Object entity) {
-        getCurrentSession().save(entity);
+        getCurrentSession().saveOrUpdate(entity);
         
     }
 
