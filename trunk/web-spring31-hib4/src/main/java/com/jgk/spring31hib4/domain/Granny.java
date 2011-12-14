@@ -6,6 +6,16 @@ public class Granny {
     private Integer grannyId;
     private Date birthdate;
     private String firstName,lastName;
+    private Jed jed;
+    
+    
+    public Jed getJed() {
+        return jed;
+    }
+
+    public void setJed(Jed jed) {
+        this.jed = jed;
+    }
 
     public Date getBirthdate() {
         return birthdate;

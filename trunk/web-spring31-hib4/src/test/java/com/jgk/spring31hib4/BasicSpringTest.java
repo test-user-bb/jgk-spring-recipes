@@ -25,6 +25,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.ApplicationContext;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.test.annotation.Rollback;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.transaction.AfterTransaction;
@@ -54,6 +55,7 @@ public class BasicSpringTest {
         System.out.println("afterTransaction");
     }
     @Transactional(value="web-spring31-hib4.TransactionManager")
+    @Rollback(false)
     @Test public void testingOther() {
         System.out.println(transactionManager);
         Jed jed = Jed.create("Jed","Clampett",mkdate("19550302"));
