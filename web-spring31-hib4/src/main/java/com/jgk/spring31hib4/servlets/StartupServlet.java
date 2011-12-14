@@ -44,7 +44,7 @@ public class StartupServlet extends HttpServlet {
                 .getAttribute(
                         WebApplicationContext.ROOT_WEB_APPLICATION_CONTEXT_ATTRIBUTE);
         ClampettDao clampettDao = wac.getBean(ClampettDao.class);
-        Jed jed = Jed.create("BEN", "FRANKLIN", new Date());
+        Jed jed = Jed.create("BEN", String.format("Thom-%d", System.currentTimeMillis()), new Date());
         startSession();
         clampettDao.save(jed);
         System.out.println(jed.getPersonId());
