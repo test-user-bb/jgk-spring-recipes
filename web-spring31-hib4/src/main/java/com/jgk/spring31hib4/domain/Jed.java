@@ -31,6 +31,7 @@ public class Jed {
         if(grannies==null) {
             grannies=new HashSet<Granny>();
         }
+        granny.setJed(this);
         grannies.add(granny);
     }
 
