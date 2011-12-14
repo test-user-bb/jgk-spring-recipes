@@ -5,6 +5,23 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class Jed {
+    @Override
+    public String toString() {
+        StringBuilder builder = new StringBuilder();
+        builder.append("Jed [personId=");
+        builder.append(personId);
+        builder.append(", birthdate=");
+        builder.append(birthdate);
+        builder.append(", firstName=");
+        builder.append(firstName);
+        builder.append(", lastName=");
+        builder.append(lastName);
+        builder.append(", grannies=");
+        builder.append(grannies);
+        builder.append("]");
+        return builder.toString();
+    }
+
     private Integer personId;
     private Date birthdate;
     private String firstName,lastName;
@@ -55,5 +72,13 @@ public class Jed {
 
     public void setPersonId(Integer personId) {
         this.personId = personId;
+    }
+
+    public static Jed create(String _firstName, String _lastName, Date _birthdate) {
+        Jed jed = new Jed();
+        jed.setFirstName(_firstName);
+        jed.setLastName(_lastName);
+        jed.setBirthdate(_birthdate);
+        return jed;
     }
 }

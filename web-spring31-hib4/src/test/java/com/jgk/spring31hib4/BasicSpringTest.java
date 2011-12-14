@@ -4,10 +4,15 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
 import javax.sql.DataSource;
+
+import junit.framework.Assert;
 
 import org.apache.commons.lang.time.DateUtils;
 import org.hibernate.Session;
@@ -27,6 +32,7 @@ import org.springframework.test.context.transaction.BeforeTransaction;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.jgk.spring31hib4.dao.ClampettDao;
 import com.jgk.spring31hib4.domain.Granny;
 import com.jgk.spring31hib4.domain.Jed;
 
@@ -39,17 +45,35 @@ public class BasicSpringTest {
     @Autowired JdbcTemplate jdbcTemplate;
     @Autowired SessionFactory sessionFactory;
     @Autowired PlatformTransactionManager transactionManager;
+    @Autowired ClampettDao clampettDao;
 
     @BeforeTransaction public void beforeTransaction() {
         System.out.println("beforeTransaction");
     }
     @AfterTransaction public void afterTransaction() {
         System.out.println("afterTransaction");
-        
     }
-    @Transactional
+    @Transactional(value="web-spring31-hib4.TransactionManager")
     @Test public void testingOther() {
         System.out.println(transactionManager);
+        Jed jed = Jed.create("Jed","Clampett",mkdate("19550302"));
+        jed.addGranny(Granny.createGranny("Franny", "Clinker", mkdate("19230723")));
+        jed.addGranny(Granny.createGranny("Sally", "Sampson", mkdate("19311112")));
+        System.out.println(jed);
+        clampettDao.save(jed);
+        System.out.println(jed);
+        Jed retrievedJed = clampettDao.getJedById(jed.getPersonId());
+        Assert.assertNotNull(retrievedJed);
+    }
+    private Date mkdate(String yyyymmdd) {
+        DateFormat df = new SimpleDateFormat("yyyyMMdd");
+        Date date = null;
+        try {
+            date= df.parse(yyyymmdd);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        return date;
     }
     @Ignore
     @Test public void testingTx() {
