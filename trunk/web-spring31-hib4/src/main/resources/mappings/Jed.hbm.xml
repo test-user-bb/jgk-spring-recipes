@@ -160,6 +160,26 @@
 <!--             column="WORK_PHONE_NUMBER" -->
 <!--         /> -->
 
+       <set
+            name="grannies"
+            lazy="true"
+            inverse="true"
+            cascade="all-delete-orphan"
+            sort="unsorted"
+        > 
+
+            <key
+                column="granny_id"
+            >
+            </key>
+
+            <one-to-many
+                  class="com.jgk.spring31hib4.domain.Granny"
+            />
+
+        </set>
+
+
     </class>
 
 </hibernate-mapping>

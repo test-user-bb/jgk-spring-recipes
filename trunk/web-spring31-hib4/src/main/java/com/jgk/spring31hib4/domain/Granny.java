@@ -1,29 +1,11 @@
 package com.jgk.spring31hib4.domain;
 
 import java.util.Date;
-import java.util.HashSet;
-import java.util.Set;
 
-public class Jed {
-    private Integer personId;
+public class Granny {
+    private Integer grannyId;
     private Date birthdate;
     private String firstName,lastName;
-    private Set<Granny> grannies;
-    
-    public void addGranny(Granny granny) {
-        if(grannies==null) {
-            grannies=new HashSet<Granny>();
-        }
-        grannies.add(granny);
-    }
-
-    public Set<Granny> getGrannies() {
-        return grannies;
-    }
-
-    public void setGrannies(Set<Granny> grannies) {
-        this.grannies = grannies;
-    }
 
     public Date getBirthdate() {
         return birthdate;
@@ -49,11 +31,21 @@ public class Jed {
         this.lastName = lastName;
     }
 
-    public Integer getPersonId() {
-        return personId;
+    public Integer getGrannyId() {
+        return grannyId;
     }
 
-    public void setPersonId(Integer personId) {
-        this.personId = personId;
+    public void setGrannyId(Integer grannyId) {
+        this.grannyId = grannyId;
     }
+
+    public static Granny createGranny(String _firstName, String _lastName,
+            Date _birthdate) {
+        Granny granny = new Granny();
+        granny.setFirstName(_firstName);
+        granny.setLastName(_lastName);
+        granny.setBirthdate(_birthdate);
+        return granny;
+    }
+
 }
