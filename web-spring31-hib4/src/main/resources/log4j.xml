@@ -26,13 +26,13 @@
 		<appender-ref ref="console" />
 	</logger>
 	<logger name="org.hibernate.SQL">
-		<level value="fatal" />
-<!-- 		<level value="trace" /> -->
-		<appender-ref ref="console" />
+<!-- 		<level value="fatal" /> -->
+		<level value="trace" />
+<!-- 		<appender-ref ref="console" /> -->
 	</logger>
 	<logger name="org.hibernate.tool.hbm2ddl">
-		<level value="fatal" />
-<!-- 		<level value="trace" /> -->
+<!-- 		<level value="fatal" /> -->
+		<level value="trace" />
 		<appender-ref ref="console" />
 	</logger>
 	<logger name="org.hibernate.type">
@@ -41,7 +41,7 @@
 		<appender-ref ref="console" />
 	</logger>
 	<root>
-		<priority value="error" />
+		<priority value="debug" />
 		<appender-ref ref="console" />
 	</root>
   
