@@ -36,6 +36,16 @@ public class StartupServlet extends HttpServlet {
         super();
     }
 
+    private void showBeans() {
+        WebApplicationContext wac = (WebApplicationContext) getServletContext()
+        .getAttribute(
+                WebApplicationContext.ROOT_WEB_APPLICATION_CONTEXT_ATTRIBUTE);
+        int count=0;
+        for(String beanName : wac.getBeanDefinitionNames()) {
+            count++;
+            System.out.printf("%d. %s\n", count, beanName);
+        }
+    }
     @Override
     public void init(ServletConfig config) throws ServletException {
         super.init(config);
@@ -43,6 +53,7 @@ public class StartupServlet extends HttpServlet {
         WebApplicationContext wac = (WebApplicationContext) getServletContext()
                 .getAttribute(
                         WebApplicationContext.ROOT_WEB_APPLICATION_CONTEXT_ATTRIBUTE);
+        showBeans();
         ClampettDao clampettDao = wac.getBean(ClampettDao.class);
         Jed jed = Jed.create("BEN", String.format("Thom-%d", System.currentTimeMillis()), new Date());
         startSession();
