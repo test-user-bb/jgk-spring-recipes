@@ -57,6 +57,7 @@ $ cp -a org.springframework* ~/.m2/repository/org/springframework
 
 == Issues ==
  * `org.springframework.transaction.CannotCreateTransactionException: Could not open Hibernate Session for transaction; nested exception is org.hibernate.SessionException: Session is closed!`
+  * spring forum entry [http://forum.springsource.org/showthread.php?120118-CannotCreateTransactionException-non-forked-integration-testing-quot-Session-is-closed HERE]
 {{{
 Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.862 sec <<< FAILURE!
 testGetDiseaseByClinicalCode(com.gs.core.services.impl.ServiceImplIntegrationTest)  Time elapsed: 0.853 sec  <<< ERROR!
