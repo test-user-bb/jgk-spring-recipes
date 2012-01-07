@@ -7,7 +7,7 @@
 <hibernate-mapping
 >
     <class
-        name="com.jgk.spring31hib4.domain.Granny"
+        name="com.jgk.spring31hib4.domains.clampett.Granny"
         table="Granny"
     >
 
@@ -23,7 +23,7 @@
             </generator>
         </id>
 
-	<many-to-one name="jed" class="com.jgk.spring31hib4.domain.Jed" column="JED_ID"/>
+	<many-to-one name="jed" class="com.jgk.spring31hib4.domains.clampett.Jed" column="JED_ID"/>
 
         <property
             name="birthdate"
