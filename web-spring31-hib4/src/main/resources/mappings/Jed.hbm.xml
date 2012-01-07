@@ -7,7 +7,7 @@
 <hibernate-mapping
 >
     <class
-        name="com.jgk.spring31hib4.domain.Jed"
+        name="com.jgk.spring31hib4.domains.clampett.Jed"
         table="Jed"
     >
 
@@ -174,7 +174,7 @@
             </key>
 
             <one-to-many
-                  class="com.jgk.spring31hib4.domain.Granny"
+                  class="com.jgk.spring31hib4.domains.clampett.Granny"
             />
 
         </set>

@@ -11,54 +11,7 @@
                                                         http://www.springframework.org/schema/context
                                                         http://www.springframework.org/schema/context/spring-context-3.1.xsd">
 
-	<tx:annotation-driven/>
-	<bean id="transactionManager1" name="web-spring31-hib4.TransactionManager1"
-		class="org.springframework.orm.hibernate4.HibernateTransactionManager">
-		<property name="sessionFactory">
-			<ref bean="web-spring31-hib4.sessionFactory1" />
-		</property>
-	</bean>
 
-	<bean id="web-spring31-hib4.sessionFactory1"
-		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
-		<property name="dataSource">
-			<ref bean="web-spring31-hib4.dataSource1" />
-		</property>
-		<!-- <property name="namingStrategy"> <ref local="firstdb.noPrefixNamingStrategy" 
-			/> </property> -->
-		<property name="packagesToScan">
-			
-			<list>
-				<value>com.jgk.spring31hib4</value>
-				<!-- <value>com.gs.firstdb</value> -->
-			</list>
-		</property>
-		<property name="mappingDirectoryLocations">
-			<list>
-<!-- 				<value>${firstdb.hibernate.mappings.1}</value> -->
-			</list>
-		</property>
-		<property name="mappingLocations">
-			<list>
-				<value>classpath:/mappings/Granny.hbm.xml</value>
-				<value>classpath:/mappings/Jed.hbm.xml</value>
-			</list>
-		</property>
-		<property name="hibernateProperties">
-			<props>
-				<prop key="hibernate.dialect">${db1.hibernate.dialect}</prop>
-				<prop key="hibernate.show_sql">${db1.hibernate.show_sql}</prop>
-<!-- 				<prop key="hibernate.hbm2dll.auto">${hibernate.hbm2dll.auto}</prop> -->
-				<prop key="hibernate.hbm2ddl.auto">${db1.hibernate.hbm2ddl.auto}</prop>
-				<prop key="hibernate.cache.use_query_cache">true</prop>
-				<prop key="hibernate.cache.region.factory_class">org.hibernate.cache.ehcache.EhCacheRegionFactory
-				</prop>
-				<prop key="hibernate.ejb.naming_strategy">org.hibernate.cfg.DefaultComponentSafeNamingStrategy
-				</prop>
-				<prop key="hibernate.cache.use_query_cache">true</prop>
-				<prop key="hibernate.cache.use_second_level_cache">true</prop>
+	<import resource="spring-sessionfactory-1-config.xml"/>
 
-			</props>
-		</property>
-	</bean>
 </beans>                                                        
