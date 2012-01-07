@@ -8,8 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.jgk.spring31hib4.domain.Granny;
-import com.jgk.spring31hib4.domain.Jed;
+import com.jgk.spring31hib4.domains.clampett.Granny;
+import com.jgk.spring31hib4.domains.clampett.Jed;
 
 @Component
 public class ClampettDaoImpl implements ClampettDao {
