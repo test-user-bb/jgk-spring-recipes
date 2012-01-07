@@ -34,8 +34,8 @@ import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.jgk.spring31hib4.dao.ClampettDao;
-import com.jgk.spring31hib4.domain.Granny;
-import com.jgk.spring31hib4.domain.Jed;
+import com.jgk.spring31hib4.domains.clampett.Granny;
+import com.jgk.spring31hib4.domains.clampett.Jed;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations={"classpath:spring-test-config.xml"})
