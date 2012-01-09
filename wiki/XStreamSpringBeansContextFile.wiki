@@ -29,7 +29,8 @@ import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
 public class SpringBeansFileExaminer {
     @Test
     public void testFromSpringFile() {
-        File file = new File("src/main/resources/spring-beans-core.xml");
+        File file = new File("src/main/resources/spring-beans-legacy.xml");
+//        File file = new File("src/main/resources/spring-beans-core.xml");
         Assert.assertTrue(file.exists());
         XStream xstream = new XStream();
         xstream.alias("bean", SpringBean.class);
@@ -52,11 +53,31 @@ public class SpringBeansFileExaminer {
                     new FileReader(file)));
             Collections.sort(sb.beans);
             int count = 0;
+            int targetCount=0;
+            int daoCount=0;
+            int serviceCount=0;
             for (SpringBean springBean : sb.beans) {
                 count++;
-                System.out.printf("%3d. %s, %s, %s\n", count, springBean.id,
-                        springBean.clazz, springBean.dependsOn);
+//                System.out.printf("%3d. %s, %s, %s\n", count, springBean.id,
+//                        springBean.clazz, springBean.dependsOn);
+                String id = springBean.id;
+                if(id!=null&&id.toUpperCase().endsWith("DAOTARGET")) {
+                    targetCount++;
+                    daoCount++;
+                    System.out.printf("* %s, %s\n", springBean.id, springBean.clazz);
+//                    System.out.printf("%3d. %s, %s\n", targetCount, springBean.id, springBean.clazz);
+                } 
+                if(id!=null&&id.toUpperCase().endsWith("SERVICETARGET")) {
+                    targetCount++;
+                    serviceCount++;
+                    System.out.printf("* %s, %s\n", springBean.id, springBean.clazz);
+//                    System.out.printf("%3d. %s, %s\n", targetCount, springBean.id, springBean.clazz);
+                } 
             }
+            System.out.printf("NO. TOTAL: %d\n",count);
+            System.out.printf("NO. TARGETS: %d\n",targetCount);
+            System.out.printf("NO. DAO TARGETS: %d\n",daoCount);
+            System.out.printf("NO. SERVICE TARGETS: %d\n",serviceCount);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } finally {
@@ -167,6 +188,8 @@ public class SpringBeansFileExaminer {
 
         @Override
         public int compareTo(SpringBean o) {
+            if(id==null) { return -1; }
+            if(o==null||o.id==null) { return 1; }
             return id.compareTo(o.id);
         }
 
