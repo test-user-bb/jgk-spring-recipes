@@ -13,25 +13,12 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Iterator;
 import java.util.List;
 
-import org.apache.commons.io.FileUtils;
 import org.junit.Assert;
-import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.Test;
 
-import com.gs.util.unittest.support.MySpringBeanXStreamTest.ConstructorArg;
-import com.gs.util.unittest.support.MySpringBeanXStreamTest.ConstructorArgConverter;
-import com.gs.util.unittest.support.MySpringBeanXStreamTest.Ref;
-import com.gs.util.unittest.support.MySpringBeanXStreamTest.RefConverter;
-import com.gs.util.unittest.support.MySpringBeanXStreamTest.SpringBean;
-import com.gs.util.unittest.support.MySpringBeanXStreamTest.SpringBeanConverter;
-import com.gs.util.unittest.support.MySpringBeanXStreamTest.SpringBeanProperty;
-import com.gs.util.unittest.support.MySpringBeanXStreamTest.SpringBeanPropertyConverter;
-import com.gs.util.unittest.support.MySpringBeanXStreamTest.SpringBeans;
-import com.gs.util.unittest.support.MySpringBeanXStreamTest.SpringBeansConverter;
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.converters.Converter;
 import com.thoughtworks.xstream.converters.MarshallingContext;
@@ -452,5 +439,4 @@ public class SpringBeansFileExaminer {
 
     }
 }
-
 </pre>
