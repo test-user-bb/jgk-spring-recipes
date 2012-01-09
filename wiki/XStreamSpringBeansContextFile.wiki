@@ -2,6 +2,6 @@
 
 = Introduction =
  * uses XStream to walk through and dump all the spring beans in a configuration file.
-
+  * [http://xstream.codehaus.org/converter-tutorial.html xstream converters]
 <pre>
 </pre>
