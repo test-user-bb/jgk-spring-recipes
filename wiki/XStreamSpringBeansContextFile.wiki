@@ -13,12 +13,25 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Iterator;
 import java.util.List;
 
+import org.apache.commons.io.FileUtils;
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.Test;
 
+import com.gs.util.unittest.support.MySpringBeanXStreamTest.ConstructorArg;
+import com.gs.util.unittest.support.MySpringBeanXStreamTest.ConstructorArgConverter;
+import com.gs.util.unittest.support.MySpringBeanXStreamTest.Ref;
+import com.gs.util.unittest.support.MySpringBeanXStreamTest.RefConverter;
+import com.gs.util.unittest.support.MySpringBeanXStreamTest.SpringBean;
+import com.gs.util.unittest.support.MySpringBeanXStreamTest.SpringBeanConverter;
+import com.gs.util.unittest.support.MySpringBeanXStreamTest.SpringBeanProperty;
+import com.gs.util.unittest.support.MySpringBeanXStreamTest.SpringBeanPropertyConverter;
+import com.gs.util.unittest.support.MySpringBeanXStreamTest.SpringBeans;
+import com.gs.util.unittest.support.MySpringBeanXStreamTest.SpringBeansConverter;
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.converters.Converter;
 import com.thoughtworks.xstream.converters.MarshallingContext;
@@ -26,9 +39,9 @@ import com.thoughtworks.xstream.converters.UnmarshallingContext;
 import com.thoughtworks.xstream.io.HierarchicalStreamReader;
 import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
 
-public class MySpringBeanXStreamTest {
-
-    @Test public void testFromSpringFile() {
+public class SpringBeansFileExaminer {
+    @Test
+    public void testFromSpringFile() {
         File file = new File("src/main/resources/spring-beans-core.xml");
         Assert.assertTrue(file.exists());
         XStream xstream = new XStream();
@@ -48,17 +61,19 @@ public class MySpringBeanXStreamTest {
         xstream.registerConverter(new SpringBeansConverter());
         BufferedReader br = null;
         try {
-            SpringBeans sb = (SpringBeans) xstream.fromXML(new BufferedReader(new FileReader(file)));
+            SpringBeans sb = (SpringBeans) xstream.fromXML(new BufferedReader(
+                    new FileReader(file)));
             Collections.sort(sb.beans);
-            int count=0;
+            int count = 0;
             for (SpringBean springBean : sb.beans) {
                 count++;
-                System.out.printf("%3d. %s, %s, %s\n", count, springBean.id,springBean.clazz, springBean.dependsOn);
+                System.out.printf("%3d. %s, %s, %s\n", count, springBean.id,
+                        springBean.clazz, springBean.dependsOn);
             }
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } finally {
-            if(br!=null) {
+            if (br != null) {
                 try {
                     br.close();
                 } catch (IOException e) {
@@ -68,12 +83,16 @@ public class MySpringBeanXStreamTest {
             }
         }
     }
+
     @Ignore
     @Test
     public void testNow() {
-        SpringBean springBean = new SpringBean("someBeanId","com.some.classname.HEREEE","noscope","someparent");
-        springBean.addConstructorArg(new ConstructorArg(new Ref("someConstructorArg")));
-        springBean.addConstructorArg(new ConstructorArg(new Ref("anotherConstructorArg")));
+        SpringBean springBean = new SpringBean("someBeanId",
+                "com.some.classname.HEREEE", "noscope", "someparent");
+        springBean.addConstructorArg(new ConstructorArg(new Ref(
+                "someConstructorArg")));
+        springBean.addConstructorArg(new ConstructorArg(new Ref(
+                "anotherConstructorArg")));
         springBean.addProperty(new SpringBeanProperty("someBeanProperty"));
 
         XStream xstream = new XStream();
@@ -91,7 +110,7 @@ public class MySpringBeanXStreamTest {
         xstream.registerConverter(new SpringBeanPropertyConverter());
         xstream.registerConverter(new ConstructorArgConverter());
         xstream.registerConverter(new SpringBeansConverter());
-        
+
         StringBuilder sb = new StringBuilder();
         sb.append("<beans>");
         sb.append("<bean class=\"freakClassHere\" id=\"Franklin\">");
@@ -108,66 +127,86 @@ public class MySpringBeanXStreamTest {
         SpringBeans b = (SpringBeans) xstream.fromXML(sb.toString());
         System.out.println(xstream.toXML(b));
     }
+
     static public class SpringBeans {
-        List<SpringBean> beans=new ArrayList<MySpringBeanXStreamTest.SpringBean>();
-        public SpringBeans(){}
+        List<SpringBean> beans = new ArrayList<SpringBean>();
+
+        public SpringBeans() {
+        }
+
         public void addSpringBean(SpringBean springBean) {
             this.beans.add(springBean);
         }
     }
+
     /**
      * http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+     * 
      * @author jkroub
-     *
+     * 
      */
-    static public class SpringBean implements Comparable<SpringBean>{
-        public SpringBean() {this(null,null,null,null);}
-        public SpringBean(String _id, String _clazz, String _scope, String _parent) {
-            this.id=_id;
-            this.clazz=_clazz;
-            this.scope=_scope;
-            this.parent=_parent;
+    static public class SpringBean implements Comparable<SpringBean> {
+        public SpringBean() {
+            this(null, null, null, null);
         }
+
+        public SpringBean(String _id, String _clazz, String _scope,
+                String _parent) {
+            this.id = _id;
+            this.clazz = _clazz;
+            this.scope = _scope;
+            this.parent = _parent;
+        }
+
         public void addProperty(SpringBeanProperty springBeanProperty) {
             this.properties.add(springBeanProperty);
-            
+
         }
+
         public void addConstructorArg(ConstructorArg constructorArg) {
             constructorArgs.add(constructorArg);
         }
+
         String id;
         String clazz;
         String scope;
         String parent;
-        List<ConstructorArg> constructorArgs = new ArrayList<MySpringBeanXStreamTest.ConstructorArg>();
-        List<SpringBeanProperty> properties = new ArrayList<MySpringBeanXStreamTest.SpringBeanProperty>();
+        List<ConstructorArg> constructorArgs = new ArrayList<ConstructorArg>();
+        List<SpringBeanProperty> properties = new ArrayList<SpringBeanProperty>();
         public String dependsOn;
         public String factoryMethod;
         public String factoryBean;
         public String lazyInit;
+
         @Override
         public int compareTo(SpringBean o) {
             return id.compareTo(o.id);
         }
-        
+
     }
+
     static public class SpringBeanProperty {
         public SpringBeanProperty(Ref _ref) {
-            this.ref=_ref;
+            this.ref = _ref;
         }
+
         public SpringBeanProperty(String _value) {
-            this.value=_value;
+            this.value = _value;
         }
+
         public SpringBeanProperty() {
         }
+
         String name;
         Ref ref;
         String value;
     }
 
-
     static public class ConstructorArg {
-        public ConstructorArg() {this(null);}
+        public ConstructorArg() {
+            this(null);
+        }
+
         public ConstructorArg(Ref _ref) {
             this.ref = _ref;
         }
@@ -176,7 +215,10 @@ public class MySpringBeanXStreamTest {
     }
 
     static public class Ref {
-        public Ref() {this(null);}
+        public Ref() {
+            this(null);
+        }
+
         public Ref(String _bean) {
             this.beanX = _bean;
         }
@@ -184,88 +226,95 @@ public class MySpringBeanXStreamTest {
         private String beanX;
     }
 
-
     static class RefConverter implements Converter {
         @Override
         public boolean canConvert(Class type) {
             boolean result = Ref.class.equals(type);
             return result;
         }
+
         @Override
         /** produce xml */
         public void marshal(Object source, HierarchicalStreamWriter writer,
                 MarshallingContext context) {
             Ref ref = (Ref) source;
         }
+
         @Override
         public Object unmarshal(HierarchicalStreamReader reader,
                 UnmarshallingContext context) {
             Ref b = new Ref();
-            b.beanX=reader.getAttribute("bean");
+            b.beanX = reader.getAttribute("bean");
             return b;
-        }        
+        }
     }
+
     static class ConstructorArgConverter implements Converter {
         @Override
         public boolean canConvert(Class type) {
             boolean result = ConstructorArg.class.equals(type);
             return result;
         }
+
         @Override
         /** produce xml */
         public void marshal(Object source, HierarchicalStreamWriter writer,
                 MarshallingContext context) {
             ConstructorArg constructorArg = (ConstructorArg) source;
-            if(constructorArg.ref!=null) {
+            if (constructorArg.ref != null) {
                 writer.startNode("ref");
-                if(constructorArg.ref.beanX!=null) {
+                if (constructorArg.ref.beanX != null) {
                     writer.addAttribute("bean", constructorArg.ref.beanX);
                 }
                 writer.endNode();
             }
         }
+
         @Override
         public Object unmarshal(HierarchicalStreamReader reader,
                 UnmarshallingContext context) {
             ConstructorArg b = new ConstructorArg();
-            if(reader.hasMoreChildren()) {
+            if (reader.hasMoreChildren()) {
                 reader.moveDown();
-                if("ref".equals(reader.getNodeName())) {
-                    b.ref=(Ref) context.convertAnother(b, Ref.class);
+                if ("ref".equals(reader.getNodeName())) {
+                    b.ref = (Ref) context.convertAnother(b, Ref.class);
                 }
-                
+
                 reader.moveUp();
             }
             return b;
         }
     }
+
     static class SpringBeanPropertyConverter implements Converter {
         @Override
         public boolean canConvert(Class type) {
             boolean result = SpringBeanProperty.class.equals(type);
             return result;
         }
+
         @Override
         /** produce xml */
         public void marshal(Object source, HierarchicalStreamWriter writer,
                 MarshallingContext context) {
             SpringBeanProperty prop = (SpringBeanProperty) source;
-            if(prop.name!=null) {
+            if (prop.name != null) {
                 writer.addAttribute("name", prop.name);
             }
-            if(prop.ref!=null && prop.ref.beanX!=null) {
+            if (prop.ref != null && prop.ref.beanX != null) {
                 writer.startNode("ref");
-                System.out.println("prop.ref:"+prop.ref);
-                System.out.println("prop.ref.beanX:"+prop.ref.beanX);
+                System.out.println("prop.ref:" + prop.ref);
+                System.out.println("prop.ref.beanX:" + prop.ref.beanX);
                 writer.addAttribute("bean", prop.ref.beanX);
                 writer.endNode();
             }
-            if(prop.value!=null) {
+            if (prop.value != null) {
                 writer.startNode("value");
                 writer.setValue(prop.value);
                 writer.endNode();
-            }            
+            }
         }
+
         @Override
         /** from xml to object */
         public Object unmarshal(HierarchicalStreamReader reader,
@@ -273,22 +322,24 @@ public class MySpringBeanXStreamTest {
             SpringBeanProperty b = new SpringBeanProperty();
             while (reader.hasMoreChildren()) {
                 reader.moveDown();
-                if("ref".equals(reader.getNodeName())) {
-                    b.ref=(Ref)context.convertAnother(b, Ref.class);
+                if ("ref".equals(reader.getNodeName())) {
+                    b.ref = (Ref) context.convertAnother(b, Ref.class);
                 } else if ("value".equals(reader.getNodeName())) {
-                    b.value=reader.getValue();
+                    b.value = reader.getValue();
                 }
                 reader.moveUp();
             }
             return b;
         }
     }
+
     static class SpringBeansConverter implements Converter {
         @Override
         public boolean canConvert(Class type) {
             boolean result = SpringBeans.class.equals(type);
             return result;
         }
+
         @Override
         /** produce xml */
         public void marshal(Object source, HierarchicalStreamWriter writer,
@@ -298,19 +349,22 @@ public class MySpringBeanXStreamTest {
                 context.convertAnother(bean);
             }
         }
+
         @Override
         public Object unmarshal(HierarchicalStreamReader reader,
                 UnmarshallingContext context) {
             SpringBeans b = new SpringBeans();
-            while(reader.hasMoreChildren()) {
+            while (reader.hasMoreChildren()) {
                 reader.moveDown();
-                SpringBean springBean = (SpringBean)context.convertAnother(b, SpringBean.class);
+                SpringBean springBean = (SpringBean) context.convertAnother(b,
+                        SpringBean.class);
                 b.addSpringBean(springBean);
                 reader.moveUp();
             }
             return b;
         }
     }
+
     static class SpringBeanConverter implements Converter {
 
         @Override
@@ -324,32 +378,32 @@ public class MySpringBeanXStreamTest {
         public void marshal(Object source, HierarchicalStreamWriter writer,
                 MarshallingContext context) {
             SpringBean b = (SpringBean) source;
-//            System.out.println(b);
-            if(b.id!=null) {
+            // System.out.println(b);
+            if (b.id != null) {
                 writer.addAttribute("id", b.id);
             }
-            if(b.clazz!=null) {
+            if (b.clazz != null) {
                 writer.addAttribute("class", b.clazz);
             }
-            if(b.scope!=null) {
+            if (b.scope != null) {
                 writer.addAttribute("scope", b.scope);
             }
-            if(b.parent!=null) {
+            if (b.parent != null) {
                 writer.addAttribute("parent", b.parent);
             }
-            if(b.lazyInit!=null) {
+            if (b.lazyInit != null) {
                 writer.addAttribute("lazy-init", b.lazyInit);
             }
-            if(b.dependsOn!=null) {
+            if (b.dependsOn != null) {
                 writer.addAttribute("depends-on", b.dependsOn);
             }
-            if(b.factoryMethod!=null) {
+            if (b.factoryMethod != null) {
                 writer.addAttribute("factory-method", b.factoryMethod);
             }
-            if(b.factoryBean!=null) {
+            if (b.factoryBean != null) {
                 writer.addAttribute("factory-bean", b.factoryBean);
             }
-            if(b.constructorArgs!=null && !b.constructorArgs.isEmpty()) {
+            if (b.constructorArgs != null && !b.constructorArgs.isEmpty()) {
                 List<ConstructorArg> c = b.constructorArgs;
                 for (ConstructorArg constructorArg : c) {
                     writer.startNode("constructor-arg");
@@ -357,7 +411,7 @@ public class MySpringBeanXStreamTest {
                     writer.endNode();
                 }
             }
-            if(b.properties!=null && !b.properties.isEmpty()) {
+            if (b.properties != null && !b.properties.isEmpty()) {
                 List<SpringBeanProperty> c = b.properties;
                 for (SpringBeanProperty prop : c) {
                     writer.startNode("property");
@@ -370,33 +424,33 @@ public class MySpringBeanXStreamTest {
         @Override
         public Object unmarshal(HierarchicalStreamReader reader,
                 UnmarshallingContext context) {
-            SpringBean b = new SpringBean();//_id, _clazz, _scope, _parent);
-            b.id=reader.getAttribute("id");
-            b.clazz=reader.getAttribute("class");
-            b.scope=reader.getAttribute("scope");
-            b.parent=reader.getAttribute("parent");
-            b.lazyInit=reader.getAttribute("lazy-init");
-            b.dependsOn=reader.getAttribute("depends-on");
-            b.factoryBean=reader.getAttribute("factory-bean");
-            b.factoryMethod=reader.getAttribute("factory-method");
+            SpringBean b = new SpringBean();// _id, _clazz, _scope, _parent);
+            b.id = reader.getAttribute("id");
+            b.clazz = reader.getAttribute("class");
+            b.scope = reader.getAttribute("scope");
+            b.parent = reader.getAttribute("parent");
+            b.lazyInit = reader.getAttribute("lazy-init");
+            b.dependsOn = reader.getAttribute("depends-on");
+            b.factoryBean = reader.getAttribute("factory-bean");
+            b.factoryMethod = reader.getAttribute("factory-method");
             while (reader.hasMoreChildren()) {
                 reader.moveDown();
-                if("constructor-arg".equals(reader.getNodeName())) {
-                    ConstructorArg ca = (ConstructorArg)context.convertAnother(b, ConstructorArg.class);
-                    
+                if ("constructor-arg".equals(reader.getNodeName())) {
+                    ConstructorArg ca = (ConstructorArg) context
+                            .convertAnother(b, ConstructorArg.class);
+
                     b.addConstructorArg(ca);
                 } else if ("property".equals(reader.getNodeName())) {
-                    SpringBeanProperty springBeanProperty = (SpringBeanProperty)context.convertAnother(b, SpringBeanProperty.class);
+                    SpringBeanProperty springBeanProperty = (SpringBeanProperty) context
+                            .convertAnother(b, SpringBeanProperty.class);
                     b.addProperty(springBeanProperty);
                 }
                 reader.moveUp();
             }
             return b;
         }
-        
-    }
-    
 
+    }
 }
 
 </pre>
