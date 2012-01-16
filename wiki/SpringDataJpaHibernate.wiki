@@ -450,7 +450,9 @@ public class SimpleSpringDataWithJpaAndHibernateTest {
 </entity-mappings>		
 }}}
 === Stack trace ===
- * The following stack trace is produced if you provide hibernate mapping files (.hbm.xml) for your entity classes and you do not annotate your entity classes with {{{@Entity}}}:
+ * The following stack trace is produced if you:
+  *  provide hibernate mapping files (.hbm.xml) for your entity classes and you do not annotate your entity classes with {{{@Entity}}}
+  * provide an annotated class (with {{{@Entity}}}) and also a mapping file (x.hbm.xml) reference in your persistence.xml.
 {{{
 java.lang.IllegalStateException: Failed to load ApplicationContext
 	at org.springframework.test.context.TestContext.getApplicationContext(TestContext.java:308)
