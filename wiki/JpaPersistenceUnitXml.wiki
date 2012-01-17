@@ -1,5 +1,5 @@
 #summary /META-INF/persistence.xml
-
+ * [JpaPersistenceUnitXml#Issues]
 = Introduction =
  * Format 2.0
 {{{
@@ -32,3 +32,6 @@
   
 </persistence>
 }}}
+
+== Issues ==
+ * the name of a file "persistence.xml" will be favored over those specified in the descriptor for an {{{EntityManagerFactory}}}.
