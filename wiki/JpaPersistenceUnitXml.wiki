@@ -1,5 +1,5 @@
 #summary /META-INF/persistence.xml
- * [JpaPersistenceUnitXml#Issues]
+ * [JpaPersistenceUnitXml#Issues Issues]
 = Introduction =
  * Format 2.0
 {{{
