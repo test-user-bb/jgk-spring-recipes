@@ -1,7 +1,8 @@
 #summary /META-INF/persistence.xml
  * [JpaPersistenceUnitXml#Issues Issues]
+ * [JpaPersistenceUnitXml#Format_2.0 Format 2.0]
 = Introduction =
- * Format 2.0
+== Format 2.0 ==
 {{{
 <?xml version="1.0" encoding="UTF-8"?>
 <persistence xmlns="http://java.sun.com/xml/ns/persistence"
