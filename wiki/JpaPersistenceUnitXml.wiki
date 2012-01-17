@@ -1,6 +1,7 @@
 #summary /META-INF/persistence.xml
  * [JpaPersistenceUnitXml#Issues Issues]
  * [JpaPersistenceUnitXml#Format_2.0 Format 2.0]
+ * [JpaPersistenceUnitXml#Format_1.0 Format 1.0]
 = Introduction =
 == Format 2.0 ==
 {{{
@@ -20,7 +21,7 @@
 </persistence>
 
 }}}
- * Format 1.0
+== Format 1.0 ==
 {{{
 <?xml version="1.0" encoding="UTF-8"?>
 <persistence version="1.0"
