@@ -38,7 +38,7 @@
 
 == Issues ==
  * the name of a file "persistence.xml" will be favored over those specified in the descriptor for an {{{EntityManagerFactory}}}.
-== EntityManagerFactory ==
+== {{{EntityManagerFactory}}} ==
 
 {{{
 	<bean id="myEntityManagerFactory"
