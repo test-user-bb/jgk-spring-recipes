@@ -18,6 +18,7 @@ import org.apache.commons.lang.time.DateUtils;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
+import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -49,12 +50,19 @@ public class TransactionSpringTest {
     @Autowired ClampettDao clampettDao;
 
     @BeforeTransaction public void beforeTransaction() {
-        System.out.println("beforeTransaction");
+        System.out.println("TT:beforeTransaction");
+        
     }
     @AfterTransaction public void afterTransaction() {
-        System.out.println("afterTransaction");
+        System.out.println("TT:afterTransaction");
     }
-    @Transactional(value="web-spring31-hib4.TransactionManager1")
+    @Before public void before() {
+        System.out.println("BEFORE");
+        for( String bn:applicationContext.getBeanDefinitionNames()) {
+            System.out.println(bn);
+        }
+    }
+//    @Transactional(value="web-spring31-hib4.TransactionManager1")
     //@Rollback(false)
     @Test public void testingOther() {
         System.out.println(transactionManager);

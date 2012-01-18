@@ -32,7 +32,7 @@ public class ClampettDaoImpl implements ClampettDao {
         }
         return (Jed) getCurrentSession().get(Jed.class, id);
     }
-    @Transactional(value="web-spring31-hib4.TransactionManager1")
+//    @Transactional(value="web-spring31-hib4.TransactionManager1")
     @Override
     public void save(Object entity) {
         getCurrentSession().saveOrUpdate(entity);

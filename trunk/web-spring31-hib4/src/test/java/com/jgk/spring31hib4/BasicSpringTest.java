@@ -18,6 +18,7 @@ import org.apache.commons.lang.time.DateUtils;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
+import org.junit.After;
 import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -31,7 +32,6 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.transaction.AfterTransaction;
 import org.springframework.test.context.transaction.BeforeTransaction;
 import org.springframework.transaction.PlatformTransactionManager;
-import org.springframework.transaction.annotation.Transactional;
 
 import com.jgk.spring31hib4.dao.ClampettDao;
 import com.jgk.spring31hib4.domains.clampett.Granny;
@@ -47,14 +47,22 @@ public class BasicSpringTest {
     @Autowired SessionFactory sessionFactory;
     @Autowired PlatformTransactionManager transactionManager;
     @Autowired ClampettDao clampettDao;
+    
+//    @After 
+    public void showBeans() {
+        for( String beanName : applicationContext.getBeanDefinitionNames()) {
+            System.out.println(beanName);
+        }
+    }
 
     @BeforeTransaction public void beforeTransaction() {
-        System.out.println("beforeTransaction");
+        System.out.println("GG:beforeTransaction");
+        
     }
     @AfterTransaction public void afterTransaction() {
-        System.out.println("afterTransaction");
+        System.out.println("GG:afterTransaction");
     }
-    @Transactional(value="web-spring31-hib4.TransactionManager1")
+//    @Transactional(value="web-spring31-hib4.TransactionManager1")
     @Rollback(false)
     @Test public void testingOther() {
         System.out.println(transactionManager);
