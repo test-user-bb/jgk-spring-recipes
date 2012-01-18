@@ -8,6 +8,7 @@
 		">
 
 	<aop:aspectj-autoproxy>
+		<aop:include name="FREAKIN-USAGE-TRACKING"/>
 		<aop:include name="sessionAspect"/>
 	</aop:aspectj-autoproxy>
 </beans>
