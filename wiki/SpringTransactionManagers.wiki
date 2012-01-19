@@ -17,3 +17,12 @@
       </property>
 </bean>
 }}}
+== Based on a {{{DataSource}}} ==
+{{{
+<bean id="myDataSourceBasedTransactionManager"
+      class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+      <property name="dataSource">
+            <ref bean="myDataSource"/>
+      </property>
+</bean>
+}}}
