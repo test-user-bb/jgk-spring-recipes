@@ -47,5 +47,10 @@ public class MySpringResearchConfigurationIntegrationTest {
         System.out.println("LATERE");
         System.out.println("ctx.getBean(Person.class): " + ctx.getBean(Person.class));
         System.out.println(ctx.getBean(Submarine.class));
+        System.out.println(ctx.getBean(Submarine.class));
+        System.out.println(ctx.getBean(Submarine.class));
+        System.out.println(ctx.getBean(Submarine.class));
+        ctx.getBean(Submarine.class);
+        
     }
 }
