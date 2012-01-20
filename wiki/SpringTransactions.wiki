@@ -1,7 +1,7 @@
 #summary Transaction Mania
 
 Place Spring Transaction stuff here...
- * [http://static.springsource.org/spring/docs/3.1.0.RELEASE/reference/htmlsingle/#transaction Spring transaction 3.1.0]
+ * [http://static.springsource.org/spring/docs/3.1.x/reference/htmlsingle/#transaction Spring transaction 3.1.x]
  * [http://static.springsource.org/spring/docs/3.0.x/spring-framework-reference/html/transaction.html#transaction-declarative Declarative Transactions 3.0]
 
 == Stuff ==
