@@ -10,7 +10,7 @@
   </appender> 
 
 	<logger name="com.jgk">
-		<level value="error" />
+		<level value="info" />
 		<appender-ref ref="console" />
 	</logger>
 	<logger name="org.springframework.orm.jpa">
