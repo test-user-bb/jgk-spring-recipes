@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping
+>
+    <class
+        name="com.jgk.webspring31hib4.domain.Book"
+        table="BOOK"
+    >
+
+        <id
+            name="id"
+            column="book_id"
+            type="java.lang.Integer"
+        >
+            <generator class="sequence">
+                <param name="sequence">GENERIC_SEQUENCE</param>
+            </generator>
+        </id>
+
+        <property
+            name="bookType"
+            type="com.jgk.webspring31hib4.enumeration.BookType"
+            update="true"
+            insert="true"
+            column="bookType"
+        />
+
+        <property
+            name="title"
+            type="java.lang.String"
+            update="true"
+            insert="true"
+            column="book_title"
+        />
+
+        <property
+            name="author"
+            type="java.lang.String"
+            update="true"
+            insert="true"
+            column="book_author"
+        />
+
+    </class>
+
+</hibernate-mapping>
