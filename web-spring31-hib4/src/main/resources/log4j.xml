@@ -10,7 +10,7 @@
   </appender> 
 
 	<logger name="com.jgk">
-		<level value="info" />
+		<level value="error" />
 		<appender-ref ref="console" />
 	</logger>
 	<logger name="org.springframework.orm.jpa">
@@ -18,7 +18,7 @@
 		<appender-ref ref="console" />
 	</logger>
 	<logger name="org.springframework">
-		<level value="debug" />
+		<level value="error" />
 		<appender-ref ref="console" />
 	</logger>
 	<logger name="org.hibernate">
