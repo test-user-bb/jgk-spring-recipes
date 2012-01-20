@@ -14,36 +14,40 @@
                                                         http://www.springframework.org/schema/context/spring-context-3.1.xsd">
 
 
-	<bean id="myPlatformTransactionManager" 
+	<bean id="myPlatformTransactionManager"
 		class="com.jgk.spring31hib4.research.MyPlatformTransactionManager">
 	</bean>
-	<bean id="myDataSourceBasedTransactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
-	  <property name="dataSource" ref="myDataSource"/>
-	</bean>	
-	<bean id="myDataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
-	  <property name="driverClassName" value="oracle.jdbc.OracleDriver" />
-	  <property name="url" value="jdbc:oracle:thin:@dev-db.gs.local:1521:dash" />
-	  <property name="username" value="inttest" />
-	  <property name="password" value="inttest" />
+	<bean id="myDataSourceBasedTransactionManager"
+		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="myDataSource" />
 	</bean>
-	<bean id="mySessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
-	  <property name="dataSource" ref="myDataSource" />
-	  <property name="mappingResources">
-	  <list>
-	    <value>mappings/book.hbm.xml</value>
-<!-- 	    <value>org/springframework/samples/petclinic/hibernate/petclinic.hbm.xml</value> -->
-	  </list>
-	  </property>
-	  <property name="hibernateProperties">
-	    <value>
-	      hibernate.dialect=org.hibernate.dialect.Oracle10gDialect
-	    </value>
-	  </property>
-	</bean>	
-	<bean id="mySessionFactoryBasedTransactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
-	  <property name="sessionFactory" ref="mySessionFactory" />
-	</bean>	
-	
+	<bean id="myDataSource" class="org.apache.commons.dbcp.BasicDataSource"
+		destroy-method="close">
+		<property name="driverClassName" value="oracle.jdbc.OracleDriver" />
+		<property name="url" value="jdbc:oracle:thin:@dev-db.gs.local:1521:dash" />
+		<property name="username" value="inttest" />
+		<property name="password" value="inttest" />
+	</bean>
+	<bean id="mySessionFactory"
+		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<property name="dataSource" ref="myDataSource" />
+		<property name="mappingResources">
+			<list>
+				<value>mappings/book.hbm.xml</value>
+				<!-- <value>org/springframework/samples/petclinic/hibernate/petclinic.hbm.xml</value> -->
+			</list>
+		</property>
+		<property name="hibernateProperties">
+			<value>
+				hibernate.dialect=org.hibernate.dialect.Oracle10gDialect
+			</value>
+		</property>
+	</bean>
+	<bean id="mySessionFactoryBasedTransactionManager"
+		class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+		<property name="sessionFactory" ref="mySessionFactory" />
+	</bean>
+
 	<bean id="myEntityManagerFactory"
 		class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
 		<property name="dataSource" ref="myDataSource" />
@@ -63,15 +67,31 @@
 				<entry key="hibernate.cache.region.factory_class" value="org.hibernate.cache.ehcache.EhCacheRegionFactory" />
 			</map>
 		</property>
-	</bean>    
-    
-	<bean id="myJpaBasedTransactionManager"
-		class="org.springframework.orm.jpa.JpaTransactionManager">
-		<property name="entityManagerFactory"
-			ref="myEntityManagerFactory" />
-        <property name="dataSource" ref="myDataSource" />
 	</bean>
-		
+
+	<bean id="myJpaBasedTransactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
+		<property name="entityManagerFactory" ref="myEntityManagerFactory" />
+		<property name="dataSource" ref="myDataSource" />
+	</bean>
+
+	<bean id="fooService" class="com.jgk.spring31hib4.service.impl.DefaultFooService" />
+	<tx:advice id="fooServiceTransactionAdvice"
+		transaction-manager="myDataSourceBasedTransactionManager">
+		<tx:attributes>
+			<!-- all methods starting with 'get' are read-only -->
+			<tx:method name="get*" read-only="true" />
+			<!-- other methods use the default transaction settings (see below) -->
+			<tx:method name="*" />
+		</tx:attributes>
+	</tx:advice>
+	<!-- ensure that the above transactional advice runs for any execution of 
+		an operation defined by the FooService interface -->
+	<aop:config>
+		<aop:pointcut id="fooServiceOperation"
+			expression="execution(* com.jgk.spring31hib4.service.FooService.*(..))" />
+		<aop:advisor advice-ref="fooServiceTransactionAdvice" pointcut-ref="fooServiceOperation" />
+	</aop:config>
+
 	<!-- <tx:advice id="test-tx-advice" transaction-manager="transactionManager1"> -->
 	<!-- <tx:attributes> -->
 	<!-- <tx:method name="*" propagation="REQUIRED" /> -->

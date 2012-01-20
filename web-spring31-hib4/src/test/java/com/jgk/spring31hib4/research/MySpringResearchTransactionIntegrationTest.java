@@ -20,10 +20,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.jdbc.datasource.DataSourceUtils;
 import org.springframework.orm.hibernate4.SessionFactoryUtils;
+import org.springframework.orm.jpa.EntityManagerFactoryUtils;
 import org.springframework.test.annotation.Rollback;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.transaction.annotation.Transactional;
+
+import com.jgk.spring31hib4.service.FooService;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations={"classpath:research/my-spring-research-transaction-config-test.xml"})
@@ -33,9 +36,17 @@ public class MySpringResearchTransactionIntegrationTest {
     @Autowired DataSource dataSource;
     @Autowired SessionFactory sessionFactory;
     @Autowired EntityManagerFactory emf;
+    @Autowired FooService fooService;
+    @Test public void testFooService() {
+        fooService.getFoo("JED");
+    }
     @Test public void testDataSource() {
         Connection conn = DataSourceUtils.getConnection(dataSource);
         System.out.println("Connection: " + conn);
+    }
+    @Test public void testEntityManagerFactory() {
+        EntityManagerFactory emfMyPersistenceUnit=EntityManagerFactoryUtils.findEntityManagerFactory(applicationContext, "myPersistenceUnitName");
+        System.out.println(emfMyPersistenceUnit);
     }
     @Test public void testSessionFactory() {
         DataSource ds = SessionFactoryUtils.getDataSource(sessionFactory);
