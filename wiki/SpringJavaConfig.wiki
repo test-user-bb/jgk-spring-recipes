@@ -1,0 +1,6 @@
+#summary use java to config vs. xml
+
+
+== Info ==
+ * in order for {{{JavaConfig}}} to work, you must include the CGLIB jar in your list of dependencies.
+ * All {{{@Configuration}}} classes are subclassed at startup-time with CGLIB.
