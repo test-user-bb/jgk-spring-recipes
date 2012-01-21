@@ -18,7 +18,11 @@ public class TransactionManagerConfig {
     @Autowired @Qualifier("firstdbDataSource") DataSource firstdbDataSource;
     @Autowired @Qualifier("hcpcsDataSource") DataSource hcpcsDataSource;
     @Autowired @Qualifier("firstdbSessionFactory") SessionFactory firstdbSessionFactory;
+    @Autowired @Qualifier("hcpcsSessionFactory") SessionFactory hcpcsSessionFactory;
     
+    @Bean PlatformTransactionManager hcpcsSessionFactoryTransactionManager() {
+        return new HibernateTransactionManager(hcpcsSessionFactory);
+    }
     @Bean PlatformTransactionManager firstdbSessionFactoryTransactionManager() {
         return new HibernateTransactionManager(firstdbSessionFactory);
     }
