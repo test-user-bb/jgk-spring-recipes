@@ -5,6 +5,14 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
+import javax.persistence.TypedQuery;
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.Root;
+
 import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -33,6 +41,35 @@ public class MySpringResearchConfigurationIntegrationTest {
     @Autowired ApplicationContext applicationContext;
     @Autowired @Qualifier("firstdbSessionFactory") SessionFactory firstdbSessionFactory;
     @Autowired @Qualifier("hcpcsSessionFactory") SessionFactory hcpcsSessionFactory;
+    @PersistenceContext(name="hcpcsEntityManagerFactory") EntityManager hcpcsEntityManager;
+    @Test public void testHcpcsEntityManagerFactory() {
+        // http://www.altuure.com/2010/09/23/jpa-criteria-api-by-samples-part-i/
+        CriteriaBuilder criteriaBuilder = hcpcsEntityManager.getCriteriaBuilder();
+//        CriteriaQuery<Object> criteriaQuery = criteriaBuilder.createQuery();
+//        Root<HcpcsCategory> from = criteriaQuery.from(HcpcsCategory.class);
+//        CriteriaQuery<Object> select = criteriaQuery.select(from);
+//        TypedQuery<Object> typedQuery = hcpcsEntityManager.createQuery(select);
+//        List<Object> resultList = typedQuery.getResultList();
+//        for (Object object : resultList) {
+//            System.out.println(object);
+//        }
+//        if(true)return;
+        CriteriaQuery<HcpcsCategory> q = criteriaBuilder.createQuery(HcpcsCategory.class);
+        Root<HcpcsCategory> hcpcsCategoryRoot = q.from(HcpcsCategory.class);
+        System.out.println(q.select(hcpcsCategoryRoot));
+//        TypedQuery<HcpcsCategory> tq = hcpcsEntityManager.createQuery(q.select(hcpcsCategoryRoot));
+//        List<HcpcsCategory> list = tq.getResultList();
+        List<HcpcsCategory> list= hcpcsEntityManager.createQuery("from HcpcsCategory").getResultList();
+        for (HcpcsCategory hcpcsCategory : list) {
+            System.out.println(hcpcsCategory);
+        }
+        
+        Query query = hcpcsEntityManager.createQuery("from HcpcsCategory s");
+        List<HcpcsCategory> queryList = query.getResultList();
+        for (HcpcsCategory hcpcsCategory : queryList) {
+            System.out.println(hcpcsCategory);
+        }
+    }
     @Test public void testHcpcsSessionFactory() {
         Session session = hcpcsSessionFactory.openSession();
         Criteria crit = session.createCriteria(HcpcsCategory.class);

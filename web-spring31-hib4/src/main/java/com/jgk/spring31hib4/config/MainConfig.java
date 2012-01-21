@@ -13,7 +13,7 @@ import com.jgk.spring31hib4.simplebeans.Person;
 
 @Configuration
 @ComponentScan(basePackages={"com.jgk.spring31hib4.simplebeans"})
-@Import(value={SessionFactoriesConfig.class, TransactionManagerConfig.class, DataSourcesPropertiesConfig.class, DataSourcesConfig.class, AuxSubsystemConfig.class, CondensateSubsystemConfig.class})
+@Import(value={EntityManagerFactoriesConfig.class, SessionFactoriesConfig.class, TransactionManagerConfig.class, DataSourcesPropertiesConfig.class, DataSourcesConfig.class, AuxSubsystemConfig.class, CondensateSubsystemConfig.class})
 public class MainConfig {
     @Autowired @Qualifier(value="auxSubsystemName") String auxSubsystem;
     @Autowired @Qualifier(value="condensateSubsystemName") String condensateSubsystem;
