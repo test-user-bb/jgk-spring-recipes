@@ -1,5 +1,6 @@
 package com.jgk.spring31hib4.config;
 
+import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
 
 import org.apache.log4j.Logger;
@@ -10,6 +11,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import org.springframework.orm.hibernate4.HibernateTransactionManager;
+import org.springframework.orm.jpa.JpaTransactionManager;
 import org.springframework.transaction.PlatformTransactionManager;
 
 @Configuration
@@ -19,7 +21,15 @@ public class TransactionManagerConfig {
     @Autowired @Qualifier("hcpcsDataSource") DataSource hcpcsDataSource;
     @Autowired @Qualifier("firstdbSessionFactory") SessionFactory firstdbSessionFactory;
     @Autowired @Qualifier("hcpcsSessionFactory") SessionFactory hcpcsSessionFactory;
+//    @Autowired @Qualifier("firstdbEntityManagerFactory") EntityManagerFactory firstdbEntityManagerFactory;
+    @Autowired @Qualifier("hcpcsEntityManagerFactory") EntityManagerFactory hcpcsEntityManagerFactory;
     
+    @Bean PlatformTransactionManager hcpcsEntityManagerTransactionManager() {
+        return new JpaTransactionManager(hcpcsEntityManagerFactory);
+    }
+//    @Bean PlatformTransactionManager firstdbEntityManagerTransactionManager() {
+//        return new JpaTransactionManager(firstdbEntityManagerFactory);
+//    }
     @Bean PlatformTransactionManager hcpcsSessionFactoryTransactionManager() {
         return new HibernateTransactionManager(hcpcsSessionFactory);
     }

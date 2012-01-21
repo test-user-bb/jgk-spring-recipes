@@ -114,7 +114,7 @@ public class HcpcsCategory implements Serializable {
         builder.append(", parent=");
         builder.append(parent);
         builder.append(", children=");
-        builder.append(showChildren());
+//        builder.append(showChildren());
 //        builder.append(children.size());
         builder.append(", fgcolor=");
         builder.append(fgcolor);
