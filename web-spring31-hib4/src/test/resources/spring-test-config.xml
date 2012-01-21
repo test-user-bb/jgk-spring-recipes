@@ -21,6 +21,8 @@
 		<context:exclude-filter type="assignable" expression="com.jgk.spring31hib4.config.CondensateSubsystemConfig"/>
 		<context:exclude-filter type="assignable" expression="com.jgk.spring31hib4.config.DataSourcesConfig"/>
 		<context:exclude-filter type="assignable" expression="com.jgk.spring31hib4.config.DataSourcesPropertiesConfig"/>
+		<context:exclude-filter type="assignable" expression="com.jgk.spring31hib4.config.SessionFactoriesConfig"/>
+		<context:exclude-filter type="assignable" expression="com.jgk.spring31hib4.config.TransactionManagerConfig"/>
 	</context:component-scan>
 	<aop:aspectj-autoproxy>
 		<aop:include name="testAspect"/>

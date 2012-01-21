@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping
+>
+    <class
+        name="com.jgk.spring31hib4.domains.firstdb.Radimef0"
+        table="RADIMEF0"
+    >
+
+        <id
+            name="adiEfftc"
+            column="ADI_EFFTC"
+            type="java.lang.String"
+        >
+            <generator class="assigned">
+            </generator>
+        </id>
+
+        <property
+            name="adiEfftxt"
+            type="java.lang.String"
+            update="true"
+            insert="true"
+            column="ADI_EFFTXT"
+            length="50"
+        />
+    </class>
+
+</hibernate-mapping>
