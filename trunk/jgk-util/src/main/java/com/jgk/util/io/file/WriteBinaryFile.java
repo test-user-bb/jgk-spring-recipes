@@ -21,6 +21,20 @@ public class WriteBinaryFile {
 		}
 		
 	}
+	public void writeRandomLongs(File file, Integer num) {
+        Random r = new Random(System.currentTimeMillis());
+        try {
+        	DataOutputStream os = new DataOutputStream(new FileOutputStream(file));
+        	for (int i = 0 ; i < num ; i++) {
+    			os.writeLong(r.nextLong());
+			}
+			os.flush();
+			os.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+	}
     public static void main(String[] argv) throws IOException {
         System.out.println(System.getProperty("user.home"));
 //        if(true)return;
