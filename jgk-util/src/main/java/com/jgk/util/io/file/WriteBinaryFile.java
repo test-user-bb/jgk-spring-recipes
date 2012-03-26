@@ -7,6 +7,34 @@ import java.io.IOException;
 import java.util.Random;
 
 public class WriteBinaryFile {
+	public void writeRandomDoubles(File file, Integer num) {
+        Random r = new Random(System.currentTimeMillis());
+        try {
+        	DataOutputStream os = new DataOutputStream(new FileOutputStream(file));
+        	for (int i = 0 ; i < num ; i++) {
+    			os.writeDouble(r.nextDouble());
+			}
+			os.flush();
+			os.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+	}
+	public void writeRandomFloats(File file, Integer num) {
+        Random r = new Random(System.currentTimeMillis());
+        try {
+        	DataOutputStream os = new DataOutputStream(new FileOutputStream(file));
+        	for (int i = 0 ; i < num ; i++) {
+    			os.writeFloat(r.nextFloat());
+			}
+			os.flush();
+			os.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+	}
 	public void writeRandomInts(File file, Integer num) {
         Random r = new Random(System.currentTimeMillis());
         try {
