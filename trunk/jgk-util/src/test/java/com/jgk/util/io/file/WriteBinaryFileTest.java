@@ -8,6 +8,30 @@ import org.junit.Test;
 
 public class WriteBinaryFileTest {
 
+	@Test public void testWriteFloat() {
+		WriteBinaryFile wbf = new WriteBinaryFile();
+		File targetDir = new File("target");
+		if (!targetDir.exists()) {
+			throw new RuntimeException("Missing target directory: "+targetDir.getAbsolutePath());
+		}
+		File file = new File(targetDir,"testBinaryFloat.dat");
+		wbf.writeRandomFloats(file, 1);
+		Assert.assertEquals(4, file.length());
+		file.delete();
+		Assert.assertFalse(file.exists());
+	}
+	@Test public void testWriteDoubles() {
+		WriteBinaryFile wbf = new WriteBinaryFile();
+		File targetDir = new File("target");
+		if (!targetDir.exists()) {
+			throw new RuntimeException("Missing target directory: "+targetDir.getAbsolutePath());
+		}
+		File file = new File(targetDir,"testBinaryDouble.dat");
+		wbf.writeRandomDoubles(file, 1);
+		Assert.assertEquals(8, file.length());
+		file.delete();
+		Assert.assertFalse(file.exists());
+	}
 	@Test public void testWriteLongs() {
 		WriteBinaryFile wbf = new WriteBinaryFile();
 		File targetDir = new File("target");
