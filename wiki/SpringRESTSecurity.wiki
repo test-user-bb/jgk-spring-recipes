@@ -13,3 +13,22 @@
 == Main Security Processes ==
  * *Authentication* - process of establishing a principal is who they claim to be (a “principal” generally means a user, device or some other system which can perform an action in your application).
  * *Authorization* - deciding whether a principal should be allowed access to a resource.
+
+Spring Security Authentication technologies support:
+ * HTTP BASIC authentication headers
+ * HTTP Digest authentication headers
+ * HTTP X.509 client certificate exchange
+ *  LDAP
+ * Form-based authentication (for simple user interface needs)
+ * OpenID authentication
+ * Authentication based on pre-established request headers (such as Computer Associates Siteminder)
+ * JA-SIG Central Authentication Service (otherwise known as CAS, which is a popular open source single sign-on system)
+ * Transparent authentication context propagation for Remote Method Invocation (RMI) and HttpInvoker (a Spring remoting protocol)
+ * Automatic "remember-me" authentication (so you can tick a box to avoid re-authentication for a predetermined period of time)
+ * Anonymous authentication (allowing every unauthenticated call to automatically assume a particular security identity)
+ * Run-as authentication (which is useful if one call should proceed with a different security identity)
+ * Java Authentication and Authorization Service (JAAS)
+ * JEE container autentication
+ * Kerberos
+ * Third Party (Java Open Source Single Sign On (JOSSO),OpenNMS Network Management Platform,
+AppFuse,AndroMDA,Mule ESB,Direct Web Request (DWR),Grails,Tapestry,JTrac,Jasypt,Roller,Elastic Path,Atlassian Crowd)
