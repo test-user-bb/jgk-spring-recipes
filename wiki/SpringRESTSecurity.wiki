@@ -10,3 +10,6 @@
   * [http://www.baeldung.com/2011/11/06/restful-web-service-discoverability-part-4/ Part 4 - RESTful web service discoverability]
   * [http://www.baeldung.com/2011/11/13/rest-service-discoverability-with-spring-part-5/ Part 5 - RESTful discoverability]
  
+== Main Security Processes ==
+ * *Authentication* - process of establishing a principal is who they claim to be (a “principal” generally means a user, device or some other system which can perform an action in your application).
+ * *Authorization* - deciding whether a principal should be allowed access to a resource.
