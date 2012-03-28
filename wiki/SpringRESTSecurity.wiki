@@ -37,7 +37,11 @@ AppFuse,AndroMDA,Mule ESB,Direct Web Request (DWR),Grails,Tapestry,JTrac,Jasypt,
 === Source ===
  * to get the source code for spring security:
 {{{
-git clone git://git.springsource.org/spring-security/spring-security.git
+git clone https://github.com/SpringSource/spring-security
+}}}
+ * or using git protocol:
+{{{
+git clone git://github.com/SpringSource/spring-security.git
 }}}
 
 === sample security config ===
