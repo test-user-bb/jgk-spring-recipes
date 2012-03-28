@@ -4,4 +4,9 @@
  * [http://static.springsource.org/spring-security/site/docs/3.1.x/reference/springsecurity-single.html Spring 3.x Security]
  * [http://www.owasp.org OWASP] - has top 10 vulnerabilities]
  * [http://www.baeldung.com/2011/10/20/bootstraping-a-web-application-with-spring-3-1-and-java-based-configuration-part-1/ Part 1 of 5 Series on RESTful Spring Security ]
+  * [http://www.baeldung.com/2011/10/20/bootstraping-a-web-application-with-spring-3-1-and-java-based-configuration-part-1/ Part 1 - Bootstrapping a web app in Spring 3.1 + JavaConfig]
+  * [http://www.baeldung.com/2011/10/25/building-a-restful-web-service-with-spring-3-1-and-java-based-configuration-part-2/ Part 2 - RESTful web service in spring 3.1 + JavaConfig]
+  * [http://www.baeldung.com/2011/10/31/securing-a-restful-web-service-with-spring-security-3-1-part-3/ Part 3 - Securing restful web service with spring 3.1 security]
+  * [http://www.baeldung.com/2011/11/06/restful-web-service-discoverability-part-4/ Part 4 - RESTful web service discoverability]
+  * [http://www.baeldung.com/2011/11/13/rest-service-discoverability-with-spring-part-5/ Part 5 - RESTful discoverability]
  
