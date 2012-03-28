@@ -1,7 +1,7 @@
 #summary getting secure with REST
 
 = References =
- * [http://static.springsource.org/spring-security/site/docs/3.1.x/reference/springsecurity-single.html Spring 3.x Security] | [http://www.springsource.org/download/community Download Spring]
+ * [http://static.springsource.org/spring-security/site/docs/3.1.x/reference/springsecurity-single.html Spring 3.x Security] | [http://www.springsource.org/download/community download Spring]
  * [http://www.owasp.org OWASP] - has top 10 vulnerabilities]
  * [http://www.baeldung.com/2011/10/20/bootstraping-a-web-application-with-spring-3-1-and-java-based-configuration-part-1/ Part 1 of 5 Series on RESTful Spring Security ]
   * [http://www.baeldung.com/2011/10/20/bootstraping-a-web-application-with-spring-3-1-and-java-based-configuration-part-1/ Part 1 - Bootstrapping a web app in Spring 3.1 + JavaConfig]
