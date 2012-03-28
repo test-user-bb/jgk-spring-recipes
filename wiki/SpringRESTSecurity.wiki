@@ -32,4 +32,10 @@ Spring Security Authentication technologies support:
  * Kerberos
  * Third Party (Java Open Source Single Sign On (JOSSO),OpenNMS Network Management Platform,
 AppFuse,AndroMDA,Mule ESB,Direct Web Request (DWR),Grails,Tapestry,JTrac,Jasypt,Roller,Elastic Path,Atlassian Crowd)
- * Your own authentication systems (see below)
+ * Your own authentication systems 
+
+=== Source ===
+ * to get the source code for spring security:
+{{{
+git clone git://git.springsource.org/spring-security/spring-security.git
+}}}
