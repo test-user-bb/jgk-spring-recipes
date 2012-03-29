@@ -62,7 +62,8 @@ git clone git://github.com/SpringSource/spring-security.git
 
 == Plan ==
  * Create a project to showcase each of the mechanisms in Spring security.
-  * autoconfig
+  * autoconfig (form provided by spring default)
+  * autoconfig with basic authentication (form provided by browser)
   * form login
   * basic authentication
   * ldap?
