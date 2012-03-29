@@ -115,6 +115,7 @@
     	<module>jgk-springsecurity-autoconfig</module>
     	<module>jgk-springsecurity-autoconfig-basicauthentication</module>
     	<module>jgk-springsecurity-autoconfig-formbased</module>
+    	<module>jgk-springsecurity-autoconfig-passwordencoded</module>
     </modules>
       
 </project>
