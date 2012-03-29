@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:beans="http://www.springframework.org/schema/beans"
+	xmlns:jdbc="http://www.springframework.org/schema/jdbc" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jpa="http://www.springframework.org/schema/data/jpa" xmlns:sec="http://www.springframework.org/schema/security"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+            http://www.springframework.org/schema/jdbc
+            http://www.springframework.org/schema/jdbc/spring-jdbc-3.1.xsd
+			http://www.springframework.org/schema/data/jpa
+			http://www.springframework.org/schema/data/jpa/spring-jpa.xsd
+			http://www.springframework.org/schema/security 
+	   		http://www.springframework.org/schema/security/spring-security-3.1.xsd
+            http://www.springframework.org/schema/tx
+            http://www.springframework.org/schema/tx/spring-tx-3.1.xsd
+            http://www.springframework.org/schema/context
+            http://www.springframework.org/schema/context/spring-context-3.1.xsd">
+
+
+	<http auto-config='true'>
+		<intercept-url pattern="/**" access="ROLE_USER" />
+		<logout delete-cookies="JSESSIONID" />
+		<openid-login authentication-failure-handler-ref="openIDAuthenticationFailureHandler"                     
+                  user-service-ref="userOpenIdDetailsService" always-use-default-target="true" default-target-url="/redirectAfterLogin/">                  
+	        <attribute-exchange>
+	            <openid-attribute name="axContactEmail" type="http://axschema.org/contact/email" required="true"/>
+	            <openid-attribute name="oiContactEmail" type="http://schema.openid.net/contact/email" required="true"/>
+	            <openid-attribute name="axNamePersonFullname" type="http://axschema.org/namePerson" required="true"/>
+	            <openid-attribute name="axNamePersonFriendlyName" type="http://axschema.org/namePerson/friendly" required="true"/>
+	            <openid-attribute name="axNamePersonFirstName" type="http://axschema.org/namePerson/first" required="true"/>
+	            <openid-attribute name="axNamePersonLastName" type="http://axschema.org/namePerson/last" required="true"/>
+	        </attribute-exchange>
+    	</openid-login>		
+<!-- 		<openid-login /> -->
+<!-- 		<openid-login login-page="/openidlogin.jsp" -->
+<!-- 			user-service-ref="registeringUserService" authentication-failure-url="/openidlogin.jsp?login_error=true"> -->
+<!-- 			<attribute-exchange identifier-match="https://www.google.com/.*"> -->
+<!--                 <openid-attribute name="email" type="http://axschema.org/contact/email" required="true" count="1"/> -->
+<!--                 <openid-attribute name="firstname" type="http://axschema.org/namePerson/first" required="true" /> -->
+<!--                 <openid-attribute name="lastname" type="http://axschema.org/namePerson/last" required="true" /> -->
+<!--             </attribute-exchange> -->
+<!-- 		</openid-login> -->
+	</http>
+
+	<authentication-manager>
+		<authentication-provider>
+			<user-service>
+				<user name="http://openid-provider.appspot.com/javapda" authorities="ROLE_USER, ROLE_ADMIN"/>
+<!-- 				<user name="jed" password="jed" authorities="ROLE_USER, ROLE_ADMIN" /> -->
+<!-- 				<user name="jimi" password="jimispassword" authorities="ROLE_USER, ROLE_ADMIN" /> -->
+			</user-service>
+		</authentication-provider>
+	</authentication-manager>
+
+</beans:beans>
