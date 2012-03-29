@@ -113,6 +113,7 @@
     </dependencies>
     <modules>
     	<module>jgk-springsecurity-autoconfig</module>
+    	<module>jgk-springsecurity-autoconfig-basicauthentication</module>
     </modules>
       
 </project>

@@ -5,14 +5,15 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JGK-jgk-springsecurity-autoconfig</title>
+        <title>JGK-jgk-springsecurity-autoconfig-basicauthentication</title>
     </head>
     <body>
-        <h1>autoconfig</h1>
-        <h2>jgk-springsecurity-autoconfig</h2>
-        <p>NOTES:<br/>
-        makes use of LoginUrlAuthenticationEntryPoint
+        <h1>autoconfig + basic authentication</h1>
+        <h2>jgk-springsecurity-autoconfig-basicauthentication</h2>
+        <p>NOTE:<br/>
+        Makes use of BasicAuthenticationEntryPoint
         </p>
         <a href="<%= request.getContextPath() %>/j_spring_security_logout">Logout</a>
+        
     </body>
 </html>
