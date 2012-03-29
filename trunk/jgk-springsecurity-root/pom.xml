@@ -1,5 +1,5 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.jgk.springrecipes.springsecurity</groupId>
   <artifactId>jgk-springsecurity-root</artifactId>
@@ -25,6 +25,7 @@
 		<jaxb-api.version>2.2.4</jaxb-api.version>
 		<spring.version>3.1.0.RELEASE</spring.version>
 		<spring-security.version>3.1.0.RELEASE</spring-security.version>
+		<openid4java.version>0.9.6</openid4java.version>
 		<!-- VERSIONS - logging -->
 		<org.slf4j.version>1.6.4</org.slf4j.version>
     </properties>
@@ -101,6 +102,12 @@
 			<version>${spring-security.version}</version>
 		</dependency>
 		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-openid</artifactId>
+			<version>${spring-security.version}</version>
+		</dependency>
+		
+		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-tx</artifactId>
 			<version>${spring.version}</version>
@@ -110,12 +117,28 @@
 			<artifactId>spring-aop</artifactId>
 			<version>${spring.version}</version>
 		</dependency>        
+		<dependency>
+			<groupId>org.openid4java</groupId>
+			<artifactId>openid4java-nodeps</artifactId>
+			<version>${openid4java.version}</version>
+			<type>jar</type>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient</artifactId>
+			<version>4.1.1</version>
+			<type>jar</type>
+			<scope>compile</scope>
+		</dependency>
     </dependencies>
     <modules>
     	<module>jgk-springsecurity-autoconfig</module>
     	<module>jgk-springsecurity-autoconfig-basicauthentication</module>
     	<module>jgk-springsecurity-autoconfig-formbased</module>
+    	<module>jgk-springsecurity-autoconfig-openid</module>
     	<module>jgk-springsecurity-autoconfig-passwordencoded</module>
+    	<module>jgk-springsecurity-jakub</module>
     </modules>
       
 </project>
