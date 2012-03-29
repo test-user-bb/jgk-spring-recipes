@@ -13,6 +13,7 @@
 == Main Security Processes ==
  * *Authentication* - process of establishing a principal is who they claim to be (a “principal” generally means a user, device or some other system which can perform an action in your application).
  * *Authorization* - deciding whether a principal should be allowed access to a resource.
+ * [http://code.google.com/p/rest-assured/wiki/Usage#Static_imports RESTAssured]
 
 Spring Security Authentication technologies support:
  * HTTP BASIC authentication headers
