@@ -3,7 +3,7 @@
 	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
 	id="WebApp_ID" version="3.0">
-	<display-name>jgk-springsecurity-autoconfig</display-name>
+	<display-name>jgk-springsecurity-autoconfig-basicauthentication</display-name>
 
 	<context-param>
 		<param-name>contextClass</param-name>
@@ -13,7 +13,7 @@
 	</context-param>
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
-		<param-value>com.jgk.springrecipes.springsecurity.autoconfig.config.web</param-value>
+		<param-value>com.jgk.springrecipes.springsecurity.autoconfig.basicauthentication.config.web</param-value>
 	</context-param>
 	<listener>
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
