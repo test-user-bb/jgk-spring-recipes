@@ -7,6 +7,6 @@ import org.springframework.context.annotation.ImportResource;
 @ImportResource(value={ "classpath*:jgk-springsecurity-jakub-web-security-config.xml" })
 public class JakubWebSecurityConfig {
     public JakubWebSecurityConfig() {
-        System.out.println("JakubWebConfig");
+        System.out.println("JakubWebSecurityConfig");
     }
 }

@@ -17,19 +17,52 @@
             http://www.springframework.org/schema/context
             http://www.springframework.org/schema/context/spring-context-3.1.xsd">
 
-
-	<http auto-config='true'>
+	<http pattern="/login.jsp*" security="none"/>
+	<http auto-config="true">
+		<session-management session-fixation-protection="migrateSession" />
+		<!-- Make sure you are not sending login/password in plain text on open 
+			channel. Use SSL (https) instead -->
+<!-- 		<intercept-url pattern="/login" requires-channel="https" /> -->
+<!-- 		<intercept-url pattern="/j_spring_security_check" -->
+<!-- 			requires-channel="https" /> -->
 		<intercept-url pattern="/**" access="ROLE_USER" />
-		<logout delete-cookies="JSESSIONID" />
-	</http>
+<!-- 		<intercept-url pattern="/**" requires-channel="http" /> -->
 
-	<authentication-manager>
-		<authentication-provider>
-			<user-service>
-				<user name="jed" password="jed" authorities="ROLE_USER, ROLE_ADMIN" />
-				<user name="jimi" password="jimispassword" authorities="ROLE_USER, ROLE_ADMIN" />
-			</user-service>
-		</authentication-provider>
-	</authentication-manager>
+		<!-- form login -->
+		<form-login login-page="/login.jsp" login-processing-url="/j_spring_security_check"
+			always-use-default-target="true" default-target-url="/" />
+
+		<!-- logout -->
+		<logout logout-url="/j_spring_security_logout" delete-cookies="JSESSIONID" />
+
+		<!-- remember me -->
+		<remember-me key="rememberMeKey" user-service-ref="userDetailsService" />
+	</http>
+	
+	<!-- authentication manager and password hashing -->
+<authentication-manager alias="authenticationManager">
+    <authentication-provider ref="myDaoAuthenticationProvider"/>
+</authentication-manager>
+<beans:bean id="daoAuthenticationProvider" class="org.springframework.security.authentication.dao.DaoAuthenticationProvider">
+    <beans:property name="userDetailsService" ref="userDetailsService"/>
+    <beans:property name="saltSource">
+        <beans:bean class="org.springframework.security.authentication.dao.ReflectionSaltSource">
+            <beans:property name="userPropertyToUse" value="username"/>
+        </beans:bean>
+    </beans:property>
+    <beans:property name="passwordEncoder" ref="myShaPasswordEncoder"/>
+</beans:bean>
+<beans:bean id="passwordEncoder" class="org.springframework.security.authentication.encoding.ShaPasswordEncoder">
+    <beans:constructor-arg index="0" value="256"/>
+</beans:bean>
+
+<!-- 	<authentication-manager> -->
+<!-- 		<authentication-provider> -->
+<!-- 			<user-service> -->
+<!-- 				<user name="jed" password="jed" authorities="ROLE_USER, ROLE_ADMIN" /> -->
+<!-- 				<user name="jimi" password="jimispassword" authorities="ROLE_USER, ROLE_ADMIN" /> -->
+<!-- 			</user-service> -->
+<!-- 		</authentication-provider> -->
+<!-- 	</authentication-manager> -->
 
 </beans:beans>
