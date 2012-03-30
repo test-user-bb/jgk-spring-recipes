@@ -140,6 +140,7 @@
     	<module>jgk-springsecurity-autoconfig-passwordencoded</module>
     	<module>jgk-springsecurity-jakub</module>
     	<module>jgk-springsecurity-customfilter-first</module>
+    	<module>jgk-springsecurity-theory</module>
     </modules>
       
 </project>

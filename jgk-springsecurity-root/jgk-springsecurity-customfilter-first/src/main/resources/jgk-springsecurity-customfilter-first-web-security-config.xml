@@ -17,13 +17,15 @@
             http://www.springframework.org/schema/context
             http://www.springframework.org/schema/context/spring-context-3.1.xsd">
 
-	<http auto-config="true">
+	<http auto-config="false" entry-point-ref="myLoginUrlAuthenticationEntryPoint">
+		
 		<intercept-url pattern="/**" access="ROLE_USER" />
 		<logout logout-url="/j_spring_security_logout" />
+		<custom-filter position="FORM_LOGIN_FILTER" ref="myUsernamePasswordAuthenticationFilter"  />
 	</http>
 
 
-	<authentication-manager>
+	<authentication-manager alias="authenticationManager">
 		<authentication-provider>
 			<user-service>
 				<user name="jed" password="jed" authorities="ROLE_USER, ROLE_ADMIN" />

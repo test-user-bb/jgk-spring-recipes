@@ -5,6 +5,8 @@ import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 
+import org.springframework.web.context.support.WebApplicationContextUtils;
+
 /**
  * Servlet implementation class AutoconfigStartupServlet
  */
@@ -25,6 +27,9 @@ public class AutoconfigStartupServlet extends HttpServlet {
 	 */
 	public void init(ServletConfig config) throws ServletException {
 		System.out.println("AutoconfigStartupServlet");
+		for (String beanName : WebApplicationContextUtils.getWebApplicationContext(config.getServletContext()).getBeanDefinitionNames()) {
+		    System.out.println("bean: "+beanName);
+		}
 	}
 
 }
