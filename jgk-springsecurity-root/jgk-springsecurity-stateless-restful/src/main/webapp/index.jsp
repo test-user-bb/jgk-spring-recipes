@@ -5,9 +5,15 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>JGK-jgk-springsecurity-stateless-restful</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <h1>autoconfig + stateless-restful</h1>
+        <h2>jgk-springsecurity-stateless-restful</h2>
+        <p>NOTE:<br/>
+        Makes use of ?
+        </p>
+        <a href="<%= request.getContextPath() %>/j_spring_security_logout">Logout</a>
+        <br/>
     </body>
 </html>
