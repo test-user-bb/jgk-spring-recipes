@@ -162,6 +162,7 @@
     	<module>jgk-springsecurity-autoconfig-formbased</module>
     	<module>jgk-springsecurity-autoconfig-openid</module>
     	<module>jgk-springsecurity-autoconfig-passwordencoded</module>
+    	<module>jgk-springsecurity-controller</module>
     	<module>jgk-springsecurity-jakub</module>
     	<module>jgk-springsecurity-customfilter-first</module>
     	<module>jgk-springsecurity-theory</module>
