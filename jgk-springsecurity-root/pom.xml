@@ -139,6 +139,7 @@
     	<module>jgk-springsecurity-autoconfig-openid</module>
     	<module>jgk-springsecurity-autoconfig-passwordencoded</module>
     	<module>jgk-springsecurity-jakub</module>
+    	<module>jgk-springsecurity-customfilter-first</module>
     </modules>
       
 </project>
