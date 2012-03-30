@@ -141,6 +141,7 @@
     	<module>jgk-springsecurity-jakub</module>
     	<module>jgk-springsecurity-customfilter-first</module>
     	<module>jgk-springsecurity-theory</module>
+    	<module>jgk-springsecurity-stateless-restful</module>
     </modules>
       
 </project>
