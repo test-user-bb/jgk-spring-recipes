@@ -37,7 +37,7 @@
 		</init-param>
 		<init-param>
 			<param-name>contextConfigLocation</param-name>
-			<param-value>com.jgk.springrecipes.springsecurity.stateless.restful.controller</param-value>
+			<param-value>com.jgk.springrecipes.springsecurity.stateless.restful.config.dispatcher.rest</param-value>
 		</init-param>
 		<load-on-startup>1</load-on-startup>
 	</servlet>
