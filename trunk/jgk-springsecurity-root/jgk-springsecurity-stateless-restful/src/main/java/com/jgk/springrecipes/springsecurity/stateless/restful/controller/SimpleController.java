@@ -12,10 +12,18 @@ public class SimpleController {
     public SimpleController() {
         System.out.println("SimpleController");
     }
-    @RequestMapping(value="/simple")
+    @RequestMapping(value="/")
     public @ResponseBody List<String> restRoot() {
         List<String> deployHelp = new ArrayList<String>();
-        deployHelp.add("Root for root");
+        deployHelp.add("Root for root, this is the default page");
+        deployHelp.add(String.format(" - ../%s/","ROOT TIME"));
+        return deployHelp;
+    }
+    
+    @RequestMapping(value="/simple")
+    public @ResponseBody List<String> restSimple() {
+        List<String> deployHelp = new ArrayList<String>();
+        deployHelp.add("Simple for root");
         deployHelp.add(String.format(" - ../%s/","SOMI"));
         return deployHelp;
     }
