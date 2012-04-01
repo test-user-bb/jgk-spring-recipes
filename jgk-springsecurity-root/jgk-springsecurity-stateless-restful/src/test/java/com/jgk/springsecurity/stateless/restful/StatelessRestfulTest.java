@@ -14,8 +14,19 @@ import com.jayway.restassured.response.Response;
 public class StatelessRestfulTest {
     
     @Test public void tester() {
-        Response r = RestAssured.given().auth().preemptive().basic("rest", "rest").get("http://localhost:8080/jgk-springsecurity-stateless-restful/rest/api/help/", new HashMap<String,String>());
+        String[] restfulUrls = new String[] {
+                "http://localhost:8080/jgk-springsecurity-stateless-restful/rest/api/",
+                "http://localhost:8080/jgk-springsecurity-stateless-restful/rest/api/help/",
+                "http://localhost:8080/jgk-springsecurity-stateless-restful/rest/api/BOGEY/"
+        };
+        for (String restfulUrl : restfulUrls) {
+            checkUrl(restfulUrl);
+        }
+    }
+    private void checkUrl( String restfulUrl ) {
+        Response r = RestAssured.given().auth().preemptive().basic("rest", "rest").get(restfulUrl, new HashMap<String,String>());
         System.out.println(r.asString());
+        
     }
     private String interrogateResponse(Response r) {
         StringBuilder sb = new StringBuilder();
