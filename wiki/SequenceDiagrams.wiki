@@ -1,0 +1,4 @@
+#summary creating sequence diagrams
+
+= Introduction =
+ * [http://www.websequencediagrams.com/ online Sequence Diagrams]
