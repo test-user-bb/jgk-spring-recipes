@@ -22,6 +22,7 @@
 
 	<http pattern="/rest/**" entry-point-ref="restEntryPoint" >
 		<intercept-url pattern="/rest/api/**" access="ROLE_REMOTE" />
+		<intercept-url pattern="/rest/**" access="ROLE_REMOTE" />
 		<sec:http-basic/>
 	</http>
 	<http auto-config="true" >
