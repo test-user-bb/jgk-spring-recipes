@@ -1,0 +1,2 @@
+  * Client-Side REST on client `RestTemplate`
+  * Server-Side REST: marshall data out of a RESTful request using @RequestMapping and @PathVariable annotations and return different views as determined by the request's Context-Type header.

@@ -1,0 +1,34 @@
+### HSQL Support ###
+```
+   <jdbc:embedded-database id="dataSource" type="HSQL">
+        <jdbc:script location="classpath:/com/jgk/springrecipes/jdbc/embedded/hsqldb-schema.sql"/>
+        <jdbc:script location="classpath:/com/jgk/springrecipes/jdbc/embedded/hsqldb-test-data.sql"/>
+    </jdbc:embedded-database>   
+```
+### Basic ###
+```
+<jdbc:embedded-database id="dataSource">
+  <jdbc:script location="classpath:schema.sql"/>
+  <jdbc:script location="classpath:test-data.sql"/>
+</jdbc:embedded-database              
+
+```
+
+### Spring Configuration ###
+```
+<beans xmlns="http://www.springframework.org/schema/beans"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+		xsi:schemaLocation="http://www.springframework.org/schema/beans
+							http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+							http://www.springframework.org/schema/jdbc
+							http://www.springframework.org/schema/jdbc/spring-jdbc-3.0.xsd
+							
+				              "							
+              >
+   <jdbc:embedded-database id="dataSource" type="HSQL">
+        <jdbc:script location="classpath:/com/jgk/springrecipes/jdbc/embedded/hsqldb-schema.sql"/>
+        <jdbc:script location="classpath:/com/jgk/springrecipes/jdbc/embedded/hsqldb-test-data.sql"/>
+    </jdbc:embedded-database>    
+</beans>
+```

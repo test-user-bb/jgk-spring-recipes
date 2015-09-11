@@ -1,0 +1,31 @@
+[HERE](http://www.springframework.org/schema/)
+
+  * aop/
+  * batch/
+  * beans/
+  * cache/
+  * context/
+  * data/
+  * dm-server/
+  * faces/
+  * flex/
+  * gemfire/
+  * integration/
+  * jdbc/
+  * jee/
+  * jms/
+  * lang/
+  * mobile/
+  * mvc/
+  * osgi-compendium/
+  * osgi/
+  * oxm/
+  * redis/
+  * security/
+  * task/
+  * tool/
+  * tx/
+  * util/
+  * web-services/
+  * webflow-config/
+  * webflow/

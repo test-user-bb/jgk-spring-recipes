@@ -1,0 +1,1 @@
+  * [Scopes](http://static.springsource.org/spring/docs/3.0.0.RC1/spring-framework-reference/html/ch03s05.html)

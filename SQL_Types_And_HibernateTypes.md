@@ -1,0 +1,119 @@
+## SQL Types ##
+```
+ARRAY               :  2003
+BIGINT              :    -5
+BINARY              :    -2
+BIT                 :    -7
+BLOB                :  2004
+BOOLEAN             :    16
+CHAR                :     1
+CLOB                :  2005
+DATALINK            :    70
+DATE                :    91
+DECIMAL             :     3
+DISTINCT            :  2001
+DOUBLE              :     8
+FLOAT               :     6
+INTEGER             :     4
+JAVA_OBJECT         :  2000
+LONGNVARCHAR        :   -16
+LONGVARBINARY       :    -4
+LONGVARCHAR         :    -1
+NCHAR               :   -15
+NCLOB               :  2011
+NULL                :     0
+NUMERIC             :     2
+NVARCHAR            :    -9
+OTHER               :  1111
+REAL                :     7
+REAL                :  2006
+ROWID               :    -8
+SMALLINT            :     5
+SQLXML              :  2009
+STRUCT              :  2002
+TIME                :    92
+TIMESTAMP           :    93
+TINYINT             :    -6
+VARBINARY           :    -3
+VARCHAR             :    12
+```
+
+## Hibernate Types ##
+```
+BigDecimalType-NUMERIC        :     2
+BigIntegerType-NUMERIC        :     2
+IntegerType-INTEGER           :     4
+ShortType-SMALLINT            :     5
+StringType-VARCHAR            :    12
+DoubleType-DOUBLE             :     8
+BinaryType-VARBINARY          :    -3
+BlobType-BLOB                 :  2004
+CharacterType-CHAR            :     1
+CharArrayType-VARCHAR         :    12
+ClobType-CLOB                 :  2005
+DateType-DATE                 :    91
+FloatType-FLOAT               :     6
+ImageType-LONGVARBINARY       :    -4
+LocaleType-VARCHAR            :    12
+LongType-BIGINT               :    -5
+TextType-LONGVARCHAR          :    -1
+TimestampType-TIMESTAMP       :    93
+TimeType-TIME                 :    92
+TimeZoneType-VARCHAR          :    12
+TrueFalseType-CHAR            :     1
+YesNoType-CHAR                :     1
+UrlType-VARCHAR               :    12
+```
+## Oracle Types ##
+```
+ARRAY                         :  2003
+BFILE                         :   -13
+BIGINT                        :    -5
+BINARY                        :    -2
+BINARY_DOUBLE                 :   101
+BINARY_FLOAT                  :   100
+BIT                           :    -7
+BLOB                          :  2004
+BOOLEAN                       :    16
+CHAR                          :     1
+CLOB                          :  2005
+CURSOR                        :   -10
+DATALINK                      :    70
+DATE                          :    91
+DECIMAL                       :     3
+DOUBLE                        :     8
+FIXED_CHAR                    :   999
+FLOAT                         :     6
+INTEGER                       :     4
+INTERVALDS                    :  -104
+INTERVALYM                    :  -103
+JAVA_OBJECT                   :  2000
+JAVA_STRUCT                   :  2008
+LONGNVARCHAR                  :   -16
+LONGVARBINARY                 :    -4
+LONGVARCHAR                   :    -1
+NCHAR                         :   -15
+NCLOB                         :  2011
+NULL                          :     0
+NUMBER                        :     2
+NUMERIC                       :     2
+NVARCHAR                      :    -9
+OPAQUE                        :  2007
+OTHER                         :  1111
+PLSQL_INDEX_TABLE             :   -14
+RAW                           :    -2
+REAL                          :     7
+REF                           :  2006
+ROWID                         :    -8
+SMALLINT                      :     5
+SQLXML                        :  2009
+STRUCT                        :  2002
+TIME                          :    92
+TIMESTAMP                     :    93
+TIMESTAMPLTZ                  :  -102
+TIMESTAMPNS (deprecated)      :  -100
+TIMESTAMPTZ                   :  -101
+TINYINT                       :    -6
+VARBINARY                     :    -3
+VARCHAR                       :    12
+```
